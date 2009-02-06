@@ -1,0 +1,12 @@
+" 1.2 (created: 2008/08/16 18:51:52)
+" Mappings
+imap <C-v> <C-v>
+
+" Options
+set editor=emacs
+
+" Abbreviations
+
+source! ~/.vimperatorrc.local
+
+" vim: set ft=vimperator:
