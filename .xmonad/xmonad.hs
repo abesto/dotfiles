@@ -33,7 +33,8 @@ main = do
     din <- spawnPipe myStatusBar
     din2 <- spawnPipe myTopBar
 --    din3 <- spawnPipe myBottomBar
-    spawn "~/.init.sh"
+
+    spawn "~/.xinitrc"
 
     xmonad $ myUrgencyHook $ defaultConfig
        { normalBorderColor = "#0f0f0f"

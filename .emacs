@@ -7,6 +7,7 @@
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/site/cedet/speedbar"))
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/site/org-6.21a"))
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/site/doxymacs"))
+(add-to-list 'load-path (expand-file-name "~/.emacs.d/site/egg"))
 
 ;;;;;;;;;;;;;;;;;;;
 ;; Generic stuff ;;
@@ -14,6 +15,7 @@
 (require 'doremi-cmd)
 (require 'color-theme)
 (require 'tex-site)
+(require 'egg)
 (color-theme-initialize)
 (autoload 'word-count-mode "word-count" "Minor mode to count words" t)
 (autoload 'htmlize-file "htmlize" "Load FILE, fontify it, convert it to HTML, and save the result." t)
