@@ -21,10 +21,10 @@
 (autoload 'htmlize-file "htmlize" "Load FILE, fontify it, convert it to HTML, and save the result." t)
 (autoload 'htmlize-buffer "htmlize" "Fontify buffer, convert it to HTML, and open the result in a new buffer." t)
 
-(global-set-key "\M-+" 'word-count-set-marker)
+(global-set-key "\M--" 'word-count-set-marker)
 
 (load "my-generic") ; Settings I always want
-(load "my-ido")  ; fuzzy search for M-x
+(load "my-ido")     ; fuzzy search for M-x
 (load "my-viper")
 
 ;;;;;;;;;;;;;;;;;;;;;;
