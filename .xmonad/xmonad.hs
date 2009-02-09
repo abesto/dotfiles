@@ -34,7 +34,6 @@ main = do
     din2 <- spawnPipe myTopBar
 --    din3 <- spawnPipe myBottomBar
 
-    spawn "~/.xinitrc"
 
     xmonad $ myUrgencyHook $ defaultConfig
        { normalBorderColor = "#0f0f0f"
@@ -117,6 +116,7 @@ myManageHook = composeAll . concat $
     , [className =? "Gran Paradiso" --> doF (W.shift "www")]
     , [className =? "Pidgin" --> doF (W.shift "im")]
     , [className =? "Thunderbird" --> doF (W.shift "mail")]
+    , [className =? "Claws-mail" --> doF (W.shift "mail")]
     ]
     where
     myFloats = ["Gimp", "gimp", "Xmessage"]

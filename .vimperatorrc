@@ -3,7 +3,7 @@
 imap <C-v> <C-v>
 
 " Options
-set editor=emacs
+set editor=~/vimperator-emacs.sh
 
 " Abbreviations
 
