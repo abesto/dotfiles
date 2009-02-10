@@ -5,8 +5,6 @@
 (set-default 'fill-column 80) ; 80. standard. good.
 (setq visible-bell t)         ; Can't go beeping around at midnight, now can I?
 
-(setq scroll-conservatively 2)     ; vim-style scrolling
-(setq scroll-margin 2)             ; and again
 (show-paren-mode)
 
 (load "toggle-fullscreen")
