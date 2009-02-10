@@ -63,7 +63,6 @@ main = do
        , ("M-m", windows $ W.greedyView "mail")
        , ("M-i", windows $ W.greedyView "im")
        , ("M-b", toggleWS)
-       , ("M-C-n", nextWS)
        -- MPC
        , ("M-S-w", spawn "mpc toggle")
        , ("M-S-p", spawn "mpc prev")

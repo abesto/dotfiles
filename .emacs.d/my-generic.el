@@ -7,6 +7,7 @@
 
 (setq scroll-conservatively 2)     ; vim-style scrolling
 (setq scroll-margin 2)             ; and again
+(show-paren-mode)
 
 (load "toggle-fullscreen")
 (nix-fullscreen)                        ;Start maximized
