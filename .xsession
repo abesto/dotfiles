@@ -10,7 +10,8 @@ if [[ $? == 0 ]]; then
     if [[ $? == 0 ]]; then
 	xterm -e "yaourt -Syu" &
     fi
-    claws-mail &
+    # claws-mail &
+    xterm "mutt" -T "mutt" &
     firefox &
 else
     zenity --question --text="stalonetray + nm-applet?"
@@ -21,5 +22,4 @@ else
 fi
 
 emacs &
-xterm "mutt" -T "mutt" &
 xmonad
