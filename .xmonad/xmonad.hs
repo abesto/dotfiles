@@ -32,8 +32,6 @@ import qualified XMonad.StackSet as W
 main = do
     din <- spawnPipe myStatusBar
     din2 <- spawnPipe myTopBar
---    din3 <- spawnPipe myBottomBar
-
 
     xmonad $ myUrgencyHook $ defaultConfig
        { normalBorderColor = "#0f0f0f"
@@ -41,7 +39,7 @@ main = do
        , terminal = "xterm"
        , layoutHook = myLayout
        , manageHook = newManageHook <+> manageDocks
-       , workspaces = map show [1..9] ++ ["mail", "im", "www"]
+       , workspaces = ["1:emacs"] ++ map show [2..9] ++ ["mail", "im", "www"]
        --, workspaces = ["1:irc", "2:www", "3:music"] ++ map show [4..9]
        , numlockMask = mod2Mask
        , modMask = mod1Mask
@@ -62,13 +60,6 @@ main = do
        , ("M-w", windows $ W.greedyView "www")
        , ("M-m", windows $ W.greedyView "mail")
        , ("M-i", windows $ W.greedyView "im")
-       -- MPC
-       , ("M-S-w", spawn "mpc toggle")
-       , ("M-S-p", spawn "mpc prev")
-       , ("M-S-n", (do {spawn "mpc next"; showSong}))
-       , ("M-<KP_Multiply>", spawn "mpc seek +3%")
-       , ("M-<KP_Divide>", spawn "mpc seek -3%")
-       , ("M-S-m", showSong)
        -- Volume control
        , ("M-<KP_Add>", spawn "amixer set PCM 5%+")
        , ("M-<KP_Subtract>", spawn "amixer set PCM 5%-")
@@ -88,7 +79,6 @@ wfarrPrompt = defaultXPConfig { font              = "-xos4-terminus-medium-r-nor
 --myFont = "xft:DejaVu Vera Sans Mono:pixelsize=12"
 myFont    = "-xos4-terminus-medium-r-normal-*-12-*-*-*-c-*-iso10646-1"
 myFontBig = "-xos4-terminus-bold-r-normal-*-32-*-*-*-*-*-iso10646-1"
-showSong  = spawn ("(mpc | head -n1; sleep 1.5) | dzen2 -y '500' -h '40' -fn '" ++ myFontBig ++ "' -bg '#000040' -fg '#8080CC' -e")
 
 -- Statusbars
 myStatusBar = "dzen2 -x '0' -y '0' -h '12' -w '600' -ta 'l' -fg '#f0f0ff' -bg '#0f0f0f' -fn '" ++ myFont ++ "'"
@@ -115,6 +105,7 @@ myManageHook = composeAll . concat $
     , [className =? "Pidgin" --> doF (W.shift "im")]
     , [className =? "Thunderbird" --> doF (W.shift "mail")]
     , [className =? "Claws-mail" --> doF (W.shift "mail")]
+    , [title =? "mutt" --> doF (W.shift "mail")]
     ]
     where
     myFloats = ["Gimp", "gimp", "Xmessage"]

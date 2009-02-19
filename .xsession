@@ -20,4 +20,6 @@ else
     fi
 fi
 
+emacs &
+xterm "mutt" -T "mutt" &
 xmonad

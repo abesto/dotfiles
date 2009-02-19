@@ -45,12 +45,15 @@
 (autoload 'my-latex-init "my-latex-init")
 (autoload 'blog-init "blog" "Blogging stuff" t)
 (autoload 'my-php-init "my-php-init")
+(autoload 'my-mail-init "my-mail-init")
 
 ;; Mode and mode-like hooks
 ;; (add-hook 'python-mode-hook 'my-python-init)
 (add-hook 'LaTeX-mode-hook 'my-latex-init)
 (add-hook 'ruby-mode-hook 'my-ruby-init)
-(push '("\\.blog\\'" . blog-init) auto-mode-alist)
+(add-hook 'mail-mode-hook 'my-mail-init)
+(add-to-list 'auto-mode-alist '("mutt-keyrit_notepad" . mail-mode))
+(add-to-list 'auto-mode-alist '("vimperator*" . blog-init))
 
 ;; Customize
 (custom-set-variables
