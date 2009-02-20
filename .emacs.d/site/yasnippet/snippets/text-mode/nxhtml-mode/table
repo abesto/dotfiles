@@ -2,6 +2,6 @@
 #name : <table ...>...</table>
 #group : table
 # --
-<table width="$1" cellspacing="$2" cellpadding="$3" border="$4">
+<table>
   $0
 </table>
