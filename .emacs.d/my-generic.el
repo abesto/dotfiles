@@ -12,6 +12,7 @@
 
 (setq-default indent-tabs-mode nil)     ;I always want spaces instead of tabs
 (setq confirm-kill-emacs 'yes-or-no-p)
+(server-start)
 
 (mouse-avoidance-mode 'exile)           ;Move mouse when cursor is over it
 
