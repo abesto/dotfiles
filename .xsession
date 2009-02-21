@@ -3,23 +3,12 @@
  xmodmap .xmodmap
 # xpmroot háttérkép &
 
-zenity --question --text="Kapcsolódjunk a T-Online-hoz?"
+zenity --question --text="mutt?"
 if [[ $? == 0 ]]; then
-    xterm -e "sudo pppoe-start" &
-    zenity --question --text="Yaourt update (yaourt -Syu)?"
-    if [[ $? == 0 ]]; then
-	xterm -e "yaourt -Syu" &
-    fi
-    # claws-mail &
-    xterm "mutt" -T "mutt" &
-    firefox &
-else
-    zenity --question --text="stalonetray + nm-applet?"
-    if [[ $? == 0 ]]; then
-        stalonetray &
-        nm-applet &
-    fi
+    xterm 'mutt' -T 'mutt' &
 fi
 
 emacs &
+stalonetray &
+nm-applet &
 xmonad

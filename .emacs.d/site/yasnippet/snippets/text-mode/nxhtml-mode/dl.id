@@ -1,5 +1,5 @@
 #contributor : Rodrigo Setti <rodrigosetti@gmail.com>
-#name : <dl> ... </dl>
+#name : <dl id="..."> ... </dl>
 #group : list
 # --
 <dl id="$1">

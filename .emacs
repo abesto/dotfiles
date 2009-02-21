@@ -34,6 +34,7 @@
 ;(autoload 'jde-mode "jde" "JDE mode." t)
 ;(load "my-lisp-init")   ; SLIME for editing lisp
 (load "my-nxhtml-init") ; nxhtml for HTML+CSS+JS+PHP+Whatever
+(load-nxhtml) ; need this almost always
 (load "my-haskell-init")
 ;(set-default-font "-adobe-courier-medium-r-normal--18-180-75-75-m-110-iso8859-1")
 
