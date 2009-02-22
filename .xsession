@@ -1,12 +1,7 @@
 #!/bin/sh
 
- xmodmap .xmodmap
+xmodmap .xmodmap
 # xpmroot háttérkép &
-
-zenity --question --text="mutt?"
-if [[ $? == 0 ]]; then
-    xterm 'mutt' -T 'mutt' &
-fi
 
 emacs &
 stalonetray &
