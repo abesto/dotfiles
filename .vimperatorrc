@@ -3,7 +3,7 @@
 imap <C-v> <C-v>
 
 " Options
-set editor=emacsclient
+set editor=emacsclient -c
 
 " Abbreviations
 

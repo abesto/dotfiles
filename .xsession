@@ -3,7 +3,8 @@
 xmodmap .xmodmap
 # xpmroot háttérkép &
 
-emacs &
+emacs --daemon&
 stalonetray &
 nm-applet &
+~/mutt &
 xmonad

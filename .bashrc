@@ -11,6 +11,8 @@ alias yup='yaourt -Syu'
 alias y='yaourt -Sy'
 alias ys='yaourt'
 
+alias ec='emacsclient'
+
 export OOO_FORCE_DESKTOP=gnome
 
 eval `dircolors -b`

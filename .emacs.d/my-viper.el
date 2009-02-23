@@ -14,12 +14,6 @@
 (setq scroll-margin 5)             ; and again
 
 ;; Unbind accented chars
-(define-key viper-vi-basic-map "ö" 'viper-nil)
-(define-key viper-vi-basic-map "ü" 'viper-nil)
-(define-key viper-vi-basic-map "ó" 'viper-nil)
-(define-key viper-vi-basic-map "ő" 'viper-nil)
-(define-key viper-vi-basic-map "ú" 'viper-nil)
-(define-key viper-vi-basic-map "é" 'viper-nil)
-(define-key viper-vi-basic-map "á" 'viper-nil)
-(define-key viper-vi-basic-map "ű" 'viper-nil)
-(define-key viper-vi-basic-map "í" 'viper-nil)
+(let ((accents "öüóőúéáűí"))
+     (dotimes (num (length accents))
+             (define-key viper-vi-basic-map (string (aref accents num)) 'viper-nil)))
