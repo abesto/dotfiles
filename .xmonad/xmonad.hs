@@ -39,7 +39,7 @@ main = do
        , terminal = "xterm"
        , layoutHook = myLayout
        , manageHook = newManageHook <+> manageDocks
-       , workspaces = ["1:emacs"] ++ map show [2..9] ++ ["mail", "im", "www"]
+       , workspaces = map show [1..9] ++ ["mail", "im", "www"]
        --, workspaces = ["1:irc", "2:www", "3:music"] ++ map show [4..9]
        , numlockMask = mod2Mask
        , modMask = mod1Mask
@@ -53,7 +53,7 @@ main = do
        ("M-S-f", spawn "firefox")
        , ("M-S-<Return>", spawn "xterm")
        , ("M-S-o", spawn "soffice")
-       , ("M-S-e", spawn "emacs")
+       , ("M-S-e", spawn "emacsclient -c")
        -- Prompt
        , ("M-p", shellPrompt wfarrPrompt)
        -- Workspaces
