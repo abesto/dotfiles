@@ -32,11 +32,16 @@
 ;;;;;;;;;;;;;;;;;;;;;;
 ;;; Each contains load-* to... load it
 ;(autoload 'jde-mode "jde" "JDE mode." t)
-;(load "my-lisp-init")   ; SLIME for editing lisp
-(load "my-nxhtml-init") ; nxhtml for HTML+CSS+JS+PHP+Whatever
-(load-nxhtml) ; need this almost always
-(load "my-haskell-init")
-;(set-default-font "-adobe-courier-medium-r-normal--18-180-75-75-m-110-iso8859-1")
+(load "my-slime-init")    ; SLIME for editing lisp
+(load "my-nxhtml-init")  ; nxhtml for HTML+CSS+JS+PHP+Whatever
+(load "my-haskell-init") ;
+
+;; Load them on startup if running in daemon mode
+(if (daemonp)
+    (progn
+      (load-slime)
+      (load-nxhtml)
+      (load-haskell)))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; My mode startup scripts ;;
