@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 xmodmap .xmodmap
 # xpmroot háttérkép &

@@ -17,3 +17,6 @@
 (let ((accents "öüóőúéáűí"))
      (dotimes (num (length accents))
              (define-key viper-vi-basic-map (string (aref accents num)) 'viper-nil)))
+
+(define-key viper-insert-basic-map "" 'delete-char)
+(define-key viper-vi-basic-map "" 'delete-char)

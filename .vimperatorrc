@@ -3,10 +3,8 @@
 imap <C-v> <C-v>
 
 " Options
-set editor=emacsclient -c
+set editor='emacsclient -c'
 
 " Abbreviations
-
-source! ~/.vimperatorrc.local
 
 " vim: set ft=vimperator:
