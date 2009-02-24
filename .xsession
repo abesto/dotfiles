@@ -7,4 +7,5 @@ emacs --daemon&
 stalonetray &
 nm-applet &
 ~/mutt &
+firefox &
 xmonad
