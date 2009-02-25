@@ -1,10 +1,19 @@
 (defun load-nxhtml ()
   (interactive)
-  (load (expand-file-name "~/.emacs.d/site/nxhtml/autostart.el"))
-  (setq ido-execute-command-cache nil)
+  (load (expand-file-name "~/.emacs.d/site/nxhtml/autostart.el"))  ;Load nxhtml
+  (setq ido-execute-command-cache nil) ;Update ido-mode command-completion
   (tabkey2-mode)
+
+  ;; yasnippet
   (require 'yasnippet)
   (yas/initialize)
   (yas/load-directory "~/.emacs.d/site/yasnippet")
-  (add-hook 'php-mode-hook 'my-php-init)
+
+  ;; doxymacs
+  (require 'doxymacs)
+  (defun php-doxymacs-font-lock-hook ()
+    (if (eq major-mode 'php-mode)
+        (doxymacs-font-lock)))
+  (add-hook 'font-lock-mode-hook 'php-doxymacs-font-lock-hook)
+  (add-hook 'php-mode-hook 'doxymacs-mode)
 )
