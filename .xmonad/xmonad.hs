@@ -56,6 +56,13 @@ main = do
        , ("M-S-e", spawn "emacsclient -c")
        -- Prompt
        , ("M-p", shellPrompt wfarrPrompt)
+       -- MPC
+       , ("M-S-w", spawn "mpc toggle")
+       , ("M-S-p", spawn "mpc prev")
+       , ("M-S-n", (do {spawn "mpc next"; showSong}))
+       , ("M-<KP_Multiply>", spawn "mpc seek +3%")
+       , ("M-<KP_Divide>", spawn "mpc seek -3%")
+       , ("M-S-m", showSong)
        -- Workspaces
        , ("M-w", windows $ W.greedyView "www")
        , ("M-m", windows $ W.greedyView "mail")
@@ -79,6 +86,7 @@ wfarrPrompt = defaultXPConfig { font              = "-xos4-terminus-medium-r-nor
 --myFont = "xft:DejaVu Vera Sans Mono:pixelsize=12"
 myFont    = "-xos4-terminus-medium-r-normal-*-12-*-*-*-c-*-iso10646-1"
 myFontBig = "-xos4-terminus-bold-r-normal-*-32-*-*-*-*-*-iso10646-1"
+showSong  = spawn ("(mpc | head -n1; sleep 1.5) | dzen2 -y '400' -h '40' -fn '" ++ myFontBig ++ "' -bg '#000040' -fg '#8080CC' -e")
 
 -- Statusbars
 myStatusBar = "dzen2 -x '0' -y '0' -h '12' -w '600' -ta 'l' -fg '#f0f0ff' -bg '#0f0f0f' -fn '" ++ myFont ++ "'"

@@ -3,9 +3,9 @@
 xmodmap .xmodmap
 # xpmroot háttérkép &
 
-emacs --daemon&
-stalonetray &
+emacs --daemon &
 nm-applet &
 ~/mutt &
 firefox &
+stalonetray -w &
 xmonad
