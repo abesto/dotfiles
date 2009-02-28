@@ -146,6 +146,7 @@ function enclose (text)
 end
 
 -- Widget icons
+--[[
 icon_cpu  = beautiful.icon_cpu  or awful.util.getdir("config") .. "/themes/default/icons/cpu.png"
 icon_bat  = beautiful.icon_bat  or awful.util.getdir("config") .. "/themes/default/icons/bat.png"
 icon_mem  = beautiful.icon_mem  or awful.util.getdir("config") .. "/themes/default/icons/mem.png"
@@ -153,9 +154,10 @@ icon_mem  = beautiful.icon_mem  or awful.util.getdir("config") .. "/themes/defau
 --icon_down = beautiful.icon_down or awful.util.getdir("config") .. "/themes/default/icons/down.png"
 icon_time = beautiful.icon_time or awful.util.getdir("config") .. "/themes/default/icons/time.png"
 icon_temp = beautiful.icon_temp or awful.util.getdir("config") .. "/themes/default/icons/temp.png"
+--icon_wifi = beautiful.icon_wifi or awful.util.getdir("config") .. "/themes/default/icons/wifi.png"
+--]]
 icon_play = beautiful.icon_play or awful.util.getdir("config") .. "/themes/default/icons/play.png"
 icon_stop = beautiful.icon_stop or awful.util.getdir("config") .. "/themes/default/icons/stop.png"
---icon_wifi = beautiful.icon_wifi or awful.util.getdir("config") .. "/themes/default/icons/wifi.png"
 
 -- Kinda-sorta-music
 function show_song ()
@@ -195,15 +197,15 @@ spacer_widget = widget({ type = "textbox", name = "spacer_widget", align = "righ
 spacer_widget.text = spacer
 
 -- Date
-date_icon   = widget({ type = "imagebox", name ="date_icon", align = "right" })
-date_icon.image = image(icon_time)
+--date_icon   = widget({ type = "imagebox", name ="date_icon", align = "right" })
+--date_icon.image = image(icon_time)
 date_widget = widget({ type = "textbox", name = "date_widget", align = "right" })
 date_widget:buttons({button({ }, 1, function () awful.util.spawn("org") end)})
 wicked.register(date_widget, "date", enclose("%d %b, %H:%M"))
 
 -- CPU
-cpu_icon       = widget({ type = "imagebox", name = "cpu_icon", align = "right" })
-cpu_icon.image = image(icon_cpu)
+--cpu_icon       = widget({ type = "imagebox", name = "cpu_icon", align = "right" })
+--cpu_icon.image = image(icon_cpu)
 cpufreq_widget = widget({ type = "textbox", name = "cpufreq_widget", align = "right" })
 wicked.register(cpufreq_widget, "function", function (widgets, args)
     local cmd = "cat /proc/cpuinfo | grep 'cpu MHz' | cut -d':' -f2"
@@ -215,8 +217,8 @@ wicked.register(cpufreq_widget, "function", function (widgets, args)
 end, 5)
 
 -- Battery
-battery_icon        = widget({ type ="imagebox", name = "battery_icon", align = "right" })
-battery_icon.image  = image(icon_bat)
+--battery_icon        = widget({ type ="imagebox", name = "battery_icon", align = "right" })
+--battery_icon.image  = image(icon_bat)
 battery_widget_text = widget({ type = "textbox", name = "battery_widget_text", align = "right" })
 wicked.register(battery_widget_text, 'function', function (widgets, args)
     local cmd = "acpi -b"
@@ -227,13 +229,13 @@ wicked.register(battery_widget_text, 'function', function (widgets, args)
     local text
 
     if string.find(l, "Discharging") then
-       battery_icon.visible        = true
+       --battery_icon.visible        = true
        battery_widget_text.visible = true
        local perc = string.sub(l, string.find(l, "%d*%d*%d%%"))
        local remaining = string.sub(l, string.find(l, "%d*%d*:*%d*%d*:%d%d"))
        text = remaining .. " (" .. perc .. ")"
     else
-       battery_icon.visible        = false
+       --battery_icon.visible        = false
 	   battery_widget_text.visible = false
     end
 
@@ -241,8 +243,8 @@ wicked.register(battery_widget_text, 'function', function (widgets, args)
 end, 10)
 
 -- {{{ Memory
-membar_icon       = widget({ type = "imagebox", name = "membar_icon", align = "right" })
-membar_icon.image = image(icon_mem)
+--membar_icon       = widget({ type = "imagebox", name = "membar_icon", align = "right" })
+--membar_icon.image = image(icon_mem)
 membar_widget     = widget({ type = "textbox", name = "membar_widget", align = "right" })
 --wicked.register(membar_widget, "mem", "$1%", 3)
 
@@ -271,8 +273,8 @@ end
 -- }}}
 
 -- Temp
-temp_icon       = widget({ type = "imagebox", name = "temp_icon", align = "right" })
-temp_icon.image = image(icon_temp)
+--temp_icon       = widget({ type = "imagebox", name = "temp_icon", align = "right" })
+--temp_icon.image = image(icon_temp)
 temp_widget     = widget({ type = "textbox", name = "temp_widget", align = "right" })
 wicked.register(temp_widget, 'function', function (widget, args)
     local cmd = "acpi -tB | awk '{print $4}' | cut -d'.' -f1"
