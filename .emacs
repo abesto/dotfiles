@@ -44,6 +44,8 @@
 (add-hook 'mail-mode-hook 'my-mail-init)
 (add-to-list 'auto-mode-alist '("mutt-keyrit_notepad" . mail-mode))
 (add-to-list 'auto-mode-alist '("vimperator*" . blog-init))
+(setq auto-mode-alist (cons '("\\.lua$" . lua-mode) auto-mode-alist))
+(autoload 'lua-mode "lua-mode" "Lua editing mode." t)
 
 ;;;;;;;;;;;;;;;;;;;;;;
 ;; Big environemnts ;;

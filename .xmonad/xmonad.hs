@@ -54,6 +54,7 @@ main = do
        , ("M-S-<Return>", spawn "xterm")
        , ("M-S-o", spawn "soffice")
        , ("M-S-e", spawn "emacsclient -c")
+       , ("M-S-d", spawn "pcmanfm")
        -- Prompt
        , ("M-p", shellPrompt wfarrPrompt)
        -- MPC

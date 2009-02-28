@@ -28,8 +28,11 @@ export LESS_TERMCAP_so=$'\E[01;44;33m'
 export LESS_TERMCAP_ue=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[01;32m'
 
-export EDITOR='emacsclient -c'
-export VISUAL='emacsclient -c'
+#export EDITOR='emacsclient -c'
+#export VISUAL='emacsclient -c'
+
+export EDITOR='vim'
+export VISUAL='vim'
 
 set show-all-if-ambiguous on
 

@@ -1,11 +1,12 @@
 #!/bin/bash
 
-xmodmap .xmodmap
-# xpmroot háttérkép &
+xmodmap .xmodmap &
+feh --bg-scale ~/g24.jpg
 
 emacs --daemon &
 nm-applet &
+
 ~/mutt &
 firefox &
-stalonetray -w &
+
 xmonad
