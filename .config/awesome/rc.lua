@@ -14,8 +14,8 @@ require("naughty")
 -- {{{ Variable definitions
 -- Themes define colours, icons, and wallpapers
 -- The default is a dark theme
-theme_path = "/usr/share/awesome/themes/default/theme"
--- theme_path = "/home/abesto/.config/awesome/themes/xeno"
+-- theme_path = "/usr/share/awesome/themes/default/theme"
+theme_path = "/home/abesto/.config/awesome/themes/theme"
 -- Uncommment this for a lighter theme
 -- theme_path = "/usr/share/awesome/themes/sky/theme"
 
@@ -31,7 +31,6 @@ editor_cmd = "emacsclient -c"
 
 -- Autorun programs
 autorun = true
-autorun = false
 autorunApps =
 {
    "nm-applet",
@@ -427,11 +426,12 @@ for s = 1, screen.count() do
 			   key({ modkey, "Shift"   }, "q", awesome.quit),
 
                -- Mine.
-			   key({ modkey, "Shift"   }, "n", function () awful.util.spawn('mpc next'); show_song() end),
+			   --key({ modkey, "Shift"   }, "n", function () awful.util.spawn('mpc next'); show_song() end),
+			   key({ modkey, "Shift"   }, "n", function () awful.util.spawn('mpc next') end),
 			   key({ modkey, "Shift"   }, "w", function () awful.util.spawn('mpc toggle') end),
 			   key({ modkey, "Shift"   }, "f", function () awful.util.spawn('firefox') end),
 			   key({ modkey, "Shift"   }, "e", function () awful.util.spawn(editor_cmd) end),
-               key({ modkey, "Shift"   }, "m", show_song),
+                           key({ modkey, "Shift"   }, "m", show_song),
                -- eof mine
 
 			   key({ modkey,           }, "l",     function () awful.tag.incmwfact( 0.05)    end),
