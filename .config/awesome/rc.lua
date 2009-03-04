@@ -36,11 +36,13 @@ editor_cmd = "emacsclient -c"
 autorun = true
 autorunApps =
 {
+   "mpc load minden",
+   "mpc random",
    "nm-applet",
    "xmodmap ~/.xmodmap",
    "firefox",
    "~/mutt",
-   "emacs --daemon"
+   "emacs --daemon",
 }
 if autorun then
    for app = 1, #autorunApps do
@@ -434,7 +436,8 @@ for s = 1, screen.count() do
 			   key({ modkey, "Shift"   }, "w", function () awful.util.spawn('mpc toggle') end),
 			   key({ modkey, "Shift"   }, "f", function () awful.util.spawn('firefox') end),
 			   key({ modkey, "Shift"   }, "e", function () awful.util.spawn(editor_cmd) end),
-                           key({ modkey, "Shift"   }, "m", show_song),
+			   key({ modkey, "Shift"   }, "o", function () awful.util.spawn('soffice') end),
+               key({ modkey, "Shift"   }, "m", show_song),
                -- eof mine
 
 			   key({ modkey,           }, "l",     function () awful.tag.incmwfact( 0.05)    end),
@@ -447,13 +450,15 @@ for s = 1, screen.count() do
 			   key({ modkey, "Shift"   }, "space", function () awful.layout.inc(layouts, -1) end),
 
 			   -- Prompt
-			   key({ modkey }, "p",
+			   key({ modkey }, "F1",
 			   function ()
 			       awful.prompt.run({ prompt = "Run: " },
 			       mypromptbox[mouse.screen],
 			       awful.util.spawn, awful.completion.bash,
 			       awful.util.getdir("cache") .. "/history")
 			   end),
+
+			   key({ modkey }, "p", function () awful.util.spawn('gmrun') end),
 
 			   key({ modkey }, "F4",
 			   function ()
