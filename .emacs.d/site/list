@@ -1,0 +1,31 @@
+Stuff in .emacs.d/site
+These are third-party packages I won't push into the git repo, but here's a list for reference.
+Lines ending in .el are .el files obviously, while the others are directories.
+
+auctex
+cedet
+color-theme.el
+doremi-cmd.el
+doremi.el
+doxymacs
+egg
+elib
+files
+haskell-mode-2.4
+htmlize.el
+lua-mode.el
+mmm-mode
+mode-compile.el
+nuke-trailing-whitespace.el
+nxhtml
+org-6.21a
+rect-mark.el
+redo.el
+ring+.el
+slime
+tex-site.el
+themes
+vimperator.el
+vimpulse.el
+word-count.el
+yasnippet
