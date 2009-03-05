@@ -165,15 +165,36 @@ icon_stop = beautiful.icon_stop or awful.util.getdir("config") .. "/themes/defau
 
 -- Kinda-sorta-music
 function show_song ()
-   local c = io.popen("ruby /home/abesto/.config/awesome/mpd.rb")
-   track = c:read("*line")
-   time = c:read("*line")
-   naughty.notify({
-                     title = track,
-                     text = time,
-                     timeout = 3,
-                     icon = icon
-                  })
+   local np_file = io.popen('mpc 2> /dev/null')
+   local track = np_file:read("*line")
+   local icon = ''
+
+   if track == nil or track:find("volume:") then
+      return
+   else
+      track = track:gsub('&', '&amp;')
+
+      local status = np_file:read("*line")
+      np_file:close()
+
+      if status:find("playing") then
+         icon = icon_play
+      else
+         icon = icon_stop
+      end
+
+      local dur_pattern = "%d+:%d+/%d+:%d+"
+      local duration = string.find(status, dur_pattern) and string.sub(status, string.find(status, dur_pattern)) or ""
+
+      music = naughty.notify({
+                                title = track,
+                                text = duration,
+                                --timeout = 3,
+                                icon = icon
+                             })
+      -- timeout=3 seems to stop working after some time.. kill the notification on our on
+      awful.util.spawn("sleep 3; echo \"music.die()\n\" | awesome-client")
+   end
 end
 
 -- Spacer
