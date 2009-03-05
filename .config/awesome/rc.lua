@@ -11,8 +11,6 @@ keybinding({ modkey }, "F2", revelation.revelation):add()
 -- Notification library
 require("naughty")
 
-require("abesto") -- my functions
-
 -- {{{ Variable definitions
 -- Themes define colours, icons, and wallpapers
 -- The default is a dark theme
@@ -38,6 +36,7 @@ autorunApps =
 {
    "mpc load minden",
    "mpc random",
+   "mpc pause",
    "nm-applet",
    "xmodmap ~/.xmodmap",
    "firefox",
@@ -186,6 +185,7 @@ function show_song ()
       local dur_pattern = "%d+:%d+/%d+:%d+"
       local duration = string.find(status, dur_pattern) and string.sub(status, string.find(status, dur_pattern)) or ""
 
+      if music then music.die() end
       music = naughty.notify({
                                 title = track,
                                 text = duration,
