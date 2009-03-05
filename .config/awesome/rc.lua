@@ -32,7 +32,6 @@ editor_cmd = "emacsclient -c"
 
 -- Autorun programs
 autorun = true
-autorun = false
 autorunApps =
 {
    "mpc load minden",
@@ -448,6 +447,7 @@ for s = 1, screen.count() do
 			   key({ modkey, "Shift"   }, "q", awesome.quit),
 
                -- Mine.
+			   key({ modkey, "Shift"   }, "p", function () awful.util.spawn('mpc prev'); show_song() end),
 			   key({ modkey, "Shift"   }, "n", function () awful.util.spawn('mpc next'); show_song() end),
 			   --key({ modkey, "Shift"   }, "n", function () awful.util.spawn('mpc next') end),
 			   key({ modkey, "Shift"   }, "w", function () awful.util.spawn('mpc toggle') end),
