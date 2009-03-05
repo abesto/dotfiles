@@ -32,6 +32,7 @@ editor_cmd = "emacsclient -c"
 
 -- Autorun programs
 autorun = true
+autorun = false
 autorunApps =
 {
    "mpc load minden",
@@ -162,7 +163,22 @@ icon_temp = beautiful.icon_temp or awful.util.getdir("config") .. "/themes/defau
 icon_play = beautiful.icon_play or awful.util.getdir("config") .. "/themes/default/icons/play.png"
 icon_stop = beautiful.icon_stop or awful.util.getdir("config") .. "/themes/default/icons/stop.png"
 
--- Kinda-sorta-music
+--music
+local mnot = nil --Music notification object
+
+-- awesome.hooks.timer seems to forget about killing the notifications, so work around that
+-- bof timer workaround, part 1
+local kill_command = "sleep 3; echo 'kill_mnot()' | awesome-client"
+
+function kill_mnot ()
+   if mnot then
+      awful.util.spawn("~/.config/awesome/kill_mnot.sh")
+      mnot.die()
+      mnot = nil
+   end
+end
+-- eof timer workaround, part 1
+
 function show_song ()
    local np_file = io.popen('mpc 2> /dev/null')
    local track = np_file:read("*line")
@@ -185,15 +201,14 @@ function show_song ()
       local dur_pattern = "%d+:%d+/%d+:%d+"
       local duration = string.find(status, dur_pattern) and string.sub(status, string.find(status, dur_pattern)) or ""
 
-      if music then music.die() end
-      music = naughty.notify({
-                                title = track,
-                                text = duration,
+      kill_mnot()
+      mnot =  naughty.notify({
+                                title = "MPD",
+                                text = track.."\n"..duration,
                                 --timeout = 3,
                                 icon = icon
                              })
-      -- timeout=3 seems to stop working after some time.. kill the notification on our on
-      awful.util.spawn("sleep 3; echo \"music.die()\n\" | awesome-client")
+      awful.util.spawn(kill_command) -- timer workaround, part 2
    end
 end
 
@@ -433,8 +448,8 @@ for s = 1, screen.count() do
 			   key({ modkey, "Shift"   }, "q", awesome.quit),
 
                -- Mine.
-			   --key({ modkey, "Shift"   }, "n", function () awful.util.spawn('mpc next'); show_song() end),
-			   key({ modkey, "Shift"   }, "n", function () awful.util.spawn('mpc next') end),
+			   key({ modkey, "Shift"   }, "n", function () awful.util.spawn('mpc next'); show_song() end),
+			   --key({ modkey, "Shift"   }, "n", function () awful.util.spawn('mpc next') end),
 			   key({ modkey, "Shift"   }, "w", function () awful.util.spawn('mpc toggle') end),
 			   key({ modkey, "Shift"   }, "f", function () awful.util.spawn('firefox') end),
 			   key({ modkey, "Shift"   }, "e", function () awful.util.spawn(editor_cmd) end),
