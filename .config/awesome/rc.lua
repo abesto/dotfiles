@@ -32,7 +32,6 @@ editor_cmd = "emacsclient -c"
 
 -- Autorun programs
 autorun = true
-autorun = false
 autorunApps =
 {
    "mpc load minden",
