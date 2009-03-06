@@ -32,6 +32,7 @@ editor_cmd = "emacsclient -c"
 
 -- Autorun programs
 autorun = true
+autorun = false
 autorunApps =
 {
    "mpc load minden",
@@ -142,6 +143,10 @@ function colorize (text, color)
    return '<span color="' .. color .. '">' .. text .. '</span>'
 end
 
+function highlight(text)
+   return '<span color="white"><b>'..text..'</b></span>'
+end
+
 function enclose (text)
    pre = colorize('[', 'yellow')
    post = colorize(']', 'yellow')
@@ -223,19 +228,6 @@ date_widget = widget({ type = "textbox", name = "date_widget", align = "right" }
 date_widget:buttons({button({ }, 1, function () awful.util.spawn("org") end)})
 wicked.register(date_widget, "date", enclose("%d %b, %H:%M"))
 
--- CPU
---cpu_icon       = widget({ type = "imagebox", name = "cpu_icon", align = "right" })
---cpu_icon.image = image(icon_cpu)
-cpufreq_widget = widget({ type = "textbox", name = "cpufreq_widget", align = "right" })
-wicked.register(cpufreq_widget, "function", function (widgets, args)
-    local cmd = "cat /proc/cpuinfo | grep 'cpu MHz' | cut -d':' -f2"
-    local f = io.popen(cmd)
-    local l = f:read()
-    f:close()
-
-    return string.format(enclose("CPU: %.2fGHz "), l / 1000)
-end, 5)
-
 -- Battery
 --battery_icon        = widget({ type ="imagebox", name = "battery_icon", align = "right" })
 --battery_icon.image  = image(icon_bat)
@@ -288,21 +280,18 @@ function memInfo()
     memInUse = memTotal - memFree
     memUsePct = math.floor(memInUse / memTotal * 100)
 
-    membar_widget.text = enclose("Mem: "..memUsePct.."%"..spacer.."("..memInUse.."M)")
+    membar_widget.text = enclose(highlight("Mem: ")..memUsePct.."%"..spacer.."("..memInUse.."M)")
 end
 -- }}}
 
--- Temp
---temp_icon       = widget({ type = "imagebox", name = "temp_icon", align = "right" })
---temp_icon.image = image(icon_temp)
-temp_widget     = widget({ type = "textbox", name = "temp_widget", align = "right" })
-wicked.register(temp_widget, 'function', function (widget, args)
-    local cmd = "acpi -tB | awk '{print $4}' | cut -d'.' -f1"
-    local f = io.popen(cmd)
-    local l = f:read()
-    f:close()
-    return l and enclose('Temp: '..l..'°') or ""
-end, 3)
+cpuwidget = widget({
+    type = 'textbox',
+    name = 'cpuwidget',
+    align = 'right'
+})
+
+wicked.register(cpuwidget, wicked.widgets.cpu,
+                enclose(highlight('CPU: ').."$1%"))
 
 netwidget = widget({
     type = 'textbox',
@@ -311,7 +300,7 @@ netwidget = widget({
 })
 
 wicked.register(netwidget, wicked.widgets.net,
-                enclose('${eth0 down} / ${eth0 up} '),
+                enclose(highlight('Net: ')..'${eth0 down} / ${eth0 up} '),
 nil, nil, 3)
 
 -- Create a systray
@@ -373,25 +362,13 @@ for s = 1, screen.count() do
                            mypromptbox[s],
                            mytextbox,
                            mylayoutbox[s],
-
---                           battery_icon,
                            battery_widget_text,
-
                            netwidget,
-
---                           cpu_icon,
---                           cpufreq_widget,
-
---                           membar_icon,
                            membar_widget,
-
---                           temp_icon,
-                           temp_widget,
-
---                           date_icon,
+                           cpuwidget,
                            date_widget,
-
-                           s == 1 and mysystray or nil }
+                           s == 1 and mysystray or nil,
+                        }
 			   mywibox[s].screen = s
 		       end
 		       -- }}}
