@@ -171,7 +171,7 @@ local kill_command = "sleep 3; echo 'kill_mnot()' | awesome-client"
 
 function kill_mnot ()
    if mnot then
-      awful.util.spawn("~/.config/awesome/kill_mnot.sh")
+      awful.util.spawn("~/.config/awesome/kill_mnot.sh") --kill the killers
       mnot.die()
       mnot = nil
    end
@@ -179,6 +179,7 @@ end
 -- eof timer workaround, part 1
 
 function show_song ()
+   kill_mnot()
    local np_file = io.popen('mpc 2> /dev/null')
    local track = np_file:read("*line")
    local icon = ''
@@ -200,7 +201,6 @@ function show_song ()
       local dur_pattern = "%d+:%d+/%d+:%d+"
       local duration = string.find(status, dur_pattern) and string.sub(status, string.find(status, dur_pattern)) or ""
 
-      kill_mnot()
       mnot =  naughty.notify({
                                 title = "MPD",
                                 text = track.."\n"..duration,

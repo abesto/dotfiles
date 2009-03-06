@@ -73,6 +73,10 @@ main = do
        , ("M-<KP_Subtract>", spawn "amixer set PCM 5%-")
        ]
 
+startFocus command workspace = do
+        spawn command
+	windows $ W.greedyView workspace
+
 wfarrPrompt :: XPConfig
 wfarrPrompt = defaultXPConfig { font              = "-xos4-terminus-medium-r-normal-*-12-*-*-*-c-*-iso10646-1"
                               , bgColor           = "black"
