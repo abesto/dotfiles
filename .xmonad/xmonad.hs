@@ -124,7 +124,9 @@ myManageHook = composeAll . concat $
     myFloats = ["Gimp", "gimp", "Xmessage"]
     myOtherFloats = ["Downloads", "*Preferences*", "Save As..."]
     myIgnores = []
-newManageHook = myManageHook <+> manageHook defaultConfig
+myViewHook = composeAll . concat $
+    [ [className =? "Gran Paradiso" --> doF (W.greedyView "www")]]
+newManageHook = myViewHook <+> myManageHook <+> manageHook defaultConfig
 
 -- dynamicLog pretty printer for dzen:
 myDzenPP h = defaultPP

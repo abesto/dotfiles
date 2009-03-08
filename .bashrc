@@ -11,7 +11,10 @@ alias la='ls -a'
 alias yup='yaourt -Syu'
 alias y='yaourt -Sy'
 alias ys='yaourt'
-
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../../'
 alias ec='emacsclient'
 
 export OOO_FORCE_DESKTOP=gnome

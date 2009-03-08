@@ -11,6 +11,8 @@ keybinding({ modkey }, "F2", revelation.revelation):add()
 -- Notification library
 require("naughty")
 
+naughty.config.presets.normal.timeout = 3
+
 -- {{{ Variable definitions
 -- Themes define colours, icons, and wallpapers
 -- The default is a dark theme
@@ -34,9 +36,7 @@ editor_cmd = "emacsclient -c"
 autorun = true
 autorunApps =
 {
-   "mpc load minden",
    "mpc random",
-   "mpc pause",
    "nm-applet",
    "xmodmap ~/.xmodmap",
    "firefox",
@@ -167,23 +167,7 @@ icon_play = beautiful.icon_play or awful.util.getdir("config") .. "/themes/defau
 icon_stop = beautiful.icon_stop or awful.util.getdir("config") .. "/themes/default/icons/stop.png"
 
 --music
-local mnot = nil --Music notification object
-
--- awesome.hooks.timer seems to forget about killing the notifications, so work around that
--- bof timer workaround, part 1
-local kill_command = "sleep 3; echo 'kill_mnot()' | awesome-client"
-
-function kill_mnot ()
-   if mnot then
-      awful.util.spawn("~/.config/awesome/kill_mnot.sh") --kill the killers
-      mnot.die()
-      mnot = nil
-   end
-end
--- eof timer workaround, part 1
-
 function show_song ()
-   kill_mnot()
    local np_file = io.popen('mpc 2> /dev/null')
    local track = np_file:read("*line")
    local icon = ''
@@ -208,10 +192,8 @@ function show_song ()
       mnot =  naughty.notify({
                                 title = "MPD",
                                 text = track.."\n"..duration,
-                                --timeout = 3,
                                 icon = icon
                              })
-      awful.util.spawn(kill_command) -- timer workaround, part 2
    end
 end
 
@@ -244,7 +226,7 @@ wicked.register(battery_widget_text, 'function', function (widgets, args)
        battery_widget_text.visible = true
        local perc = string.sub(l, string.find(l, "%d*%d*%d%%"))
        local remaining = string.sub(l, string.find(l, "%d*%d*:*%d*%d*:%d%d"))
-       text = remaining .. " (" .. perc .. ")"
+       text = highlight('Bat: ') .. remaining .. " (" .. perc .. ")"
     else
        --battery_icon.visible        = false
 	   battery_widget_text.visible = false
@@ -359,7 +341,6 @@ for s = 1, screen.count() do
                            mytaglist[s],
                            mytasklist[s],
                            mypromptbox[s],
-                           mytextbox,
                            mylayoutbox[s],
                            battery_widget_text,
                            netwidget,
@@ -419,14 +400,15 @@ for s = 1, screen.count() do
 
 			   -- Standard program
 			   key({ modkey,           }, "Return", function () awful.util.spawn(terminal) end),
+			   key({ "Control"         }, "Return", function () awful.util.spawn("xterm") end),
 			   key({ modkey, "Control" }, "r", awesome.restart),
 			   key({ modkey, "Shift"   }, "q", awesome.quit),
 
                -- Mine.
-			   key({ modkey, "Shift"   }, "p", function () awful.util.spawn('mpc prev'); show_song() end),
-			   key({ modkey, "Shift"   }, "n", function () awful.util.spawn('mpc next'); show_song() end),
+			   key({ modkey, "Shift"   }, "p", function () awful.util.spawn('mpc prev > /dev/null'); show_song() end),
+			   key({ modkey, "Shift"   }, "n", function () awful.util.spawn('mpc next > /dev/null'); show_song() end),
 			   --key({ modkey, "Shift"   }, "n", function () awful.util.spawn('mpc next') end),
-			   key({ modkey, "Shift"   }, "w", function () awful.util.spawn('mpc toggle') end),
+			   key({ modkey, "Shift"   }, "w", function () awful.util.spawn('mpc toggle > /dev/null') end),
 			   key({ modkey, "Shift"   }, "f", function () awful.util.spawn('firefox') end),
 			   key({ modkey, "Shift"   }, "e", function () awful.util.spawn(editor_cmd) end),
 			   key({ modkey, "Shift"   }, "o", function () awful.util.spawn('soffice') end),
@@ -646,11 +628,6 @@ for s = 1, screen.count() do
 			       local c = awful.client.focus.history.get(screen, 0)
 			       if c then client.focus = c end
 			   end
-		       end)
-
-		       -- Hook called every minute
-		       awful.hooks.timer.register(60, function ()
-			   mytextbox.text = os.date(" %a %b %d, %H:%M ")
 		       end)
 
                awful.hooks.timer.register(5, memInfo)
