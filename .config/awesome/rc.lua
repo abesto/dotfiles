@@ -34,6 +34,7 @@ editor_cmd = "emacsclient -c"
 
 -- Autorun programs
 autorun = true
+autorun = false
 autorunApps =
 {
    "mpc random",
@@ -167,9 +168,10 @@ icon_play = beautiful.icon_play or awful.util.getdir("config") .. "/themes/defau
 icon_stop = beautiful.icon_stop or awful.util.getdir("config") .. "/themes/default/icons/stop.png"
 
 --music
-function show_song ()
-   local np_file = io.popen('mpc 2> /dev/null')
+function show_song (hide_duration)
+   local np_file = io.popen('mpc --format "%title% - %artist%\n%album%" 2> /dev/null')
    local track = np_file:read("*line")
+   local album = np_file:read("*line")
    local icon = ''
 
    if track == nil or track:find("volume:") then
@@ -188,10 +190,12 @@ function show_song ()
 
       local dur_pattern = "%d+:%d+/%d+:%d+"
       local duration = string.find(status, dur_pattern) and string.sub(status, string.find(status, dur_pattern)) or ""
+      local text = track .. "\n" .. album
+      if hide_duration == nil then text = text .. "\n" .. duration end
 
       mnot =  naughty.notify({
-                                title = "MPD",
-                                text = track.."\n"..duration,
+                                --title = title,
+                                text = text,
                                 icon = icon
                              })
    end
@@ -405,8 +409,8 @@ for s = 1, screen.count() do
 			   key({ modkey, "Shift"   }, "q", awesome.quit),
 
                -- Mine.
-			   key({ modkey, "Shift"   }, "p", function () awful.util.spawn('mpc prev > /dev/null'); show_song() end),
-			   key({ modkey, "Shift"   }, "n", function () awful.util.spawn('mpc next > /dev/null'); show_song() end),
+			   key({ modkey, "Shift"   }, "p", function () awful.util.spawn('mpc prev > /dev/null; echo "show_song(true)" | awesome-client') end),
+			   key({ modkey, "Shift"   }, "n", function () awful.util.spawn('mpc next > /dev/null; echo "show_song(true)" | awesome-client') end),
 			   --key({ modkey, "Shift"   }, "n", function () awful.util.spawn('mpc next') end),
 			   key({ modkey, "Shift"   }, "w", function () awful.util.spawn('mpc toggle > /dev/null') end),
 			   key({ modkey, "Shift"   }, "f", function () awful.util.spawn('firefox') end),
