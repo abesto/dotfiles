@@ -36,7 +36,6 @@ editor_cmd = "emacsclient -c"
 autorun = true
 autorunApps =
 {
-   "mpc random",
    "nm-applet",
    "xmodmap ~/.xmodmap",
    "firefox",
@@ -177,6 +176,7 @@ function show_song (hide_duration)
       return
    else
       track = track:gsub('&', '&amp;')
+      album = album:gsub('&', '&amp;')
 
       local status = np_file:read("*line")
       np_file:close()
