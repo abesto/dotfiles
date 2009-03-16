@@ -11,8 +11,10 @@
 
   ;; doxymacs
   (require 'doxymacs)
-  (defun php-doxymacs-font-lock-hook ()
-    (if (eq major-mode 'php-mode)
-        (doxymacs-font-lock)))
-  (add-hook 'font-lock-mode-hook 'php-doxymacs-font-lock-hook)
+
+  ;; js2.el instead of javascript.el
+  (setq mumamo-major-modes '((asp-js-mode javascript-mode)
+                             (javascript-mode js2-mode js2-fl-mode ecmascript-mode)
+                             (java-mode jde-mode java-mode)))
+
 )

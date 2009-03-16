@@ -37,6 +37,7 @@ autorun = true
 autorunApps =
 {
    "nm-applet",
+   "mpdscribble",
    "xmodmap ~/.xmodmap",
    "firefox",
    "~/mutt",

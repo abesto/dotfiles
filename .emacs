@@ -34,7 +34,7 @@
 (autoload 'my-ruby-init "my-ruby-init")
 (autoload 'my-latex-init "my-latex-init")
 (autoload 'blog-init "blog" "Blogging stuff" t)
-(autoload 'my-php-init "my-php-init" t)
+;(autoload 'my-php-init "my-php-init" t)
 (autoload 'my-mail-init "my-mail-init")
 
 ;; Mode and mode-like hooks
