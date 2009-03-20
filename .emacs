@@ -15,7 +15,7 @@
 (require 'doremi-cmd)
 (require 'color-theme)
 (require 'tex-site)
-(require 'egg)
+;(require 'egg)
 (color-theme-initialize)
 (autoload 'word-count-mode "word-count" "Minor mode to count words" t)
 (autoload 'htmlize-file "htmlize" "Load FILE, fontify it, convert it to HTML, and save the result." t)
