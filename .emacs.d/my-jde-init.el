@@ -5,4 +5,6 @@
   (load-file (expand-file-name "~/.emacs.d/site/cedet/common/cedet.el"))
   (add-to-list 'load-path (expand-file-name "~/.emacs.d/site/elib"))
   (require 'jde)
+  (add-to-list 'load-path (expand-file-name "~/.emacs.d/site/ecb"))
+  (require 'ecb)
 )
