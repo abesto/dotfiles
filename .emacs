@@ -5,9 +5,9 @@
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/site"))
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/site/yasnippet"))
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/site/cedet/speedbar"))
-(add-to-list 'load-path (expand-file-name "~/.emacs.d/site/org-6.21a"))
+(add-to-list 'load-path (expand-file-name "~/.emacs.d/site/org"))
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/site/doxymacs"))
-(add-to-list 'load-path (expand-file-name "~/.emacs.d/site/egg"))
+;(add-to-list 'load-path (expand-file-name "~/.emacs.d/site/egg"))  Dontwant :(
 
 ;;;;;;;;;;;;;;;;;;;
 ;; Generic stuff ;;
@@ -51,8 +51,8 @@
 ;; Big environemnts ;;
 ;;;;;;;;;;;;;;;;;;;;;;
 ;;; Each contains load-* to... load it
-;(autoload 'jde-mode "jde" "JDE mode." t)
-(load "my-slime-init")    ; SLIME for editing lisp
+(load "my-jde-init")     ; A Java Development Environment for Emacs
+(load "my-slime-init")   ; SLIME for editing lisp
 (load "my-nxhtml-init")  ; nxhtml for HTML+CSS+JS+PHP+Whatever
 (load "my-haskell-init") ;
 
@@ -61,7 +61,8 @@
     (progn
       (load-slime)
       (load-nxhtml)
-      (load-haskell)))
+      (load-haskell)
+      (load-jde)))
 
 ;; Customize
 (custom-set-variables
@@ -74,7 +75,8 @@
  '(nuke-trailing-whitespace-in-hooks (quote (write-file-hooks mail-send-hook)) nil (nuke-trailing-whitespace))
  '(nxhtml-default-encoding (quote utf-8))
  '(nxhtml-skip-welcome t)
- '(show-paren-mode t))
+ '(show-paren-mode t)
+ '(use-file-dialog nil))
 (custom-set-faces
   ;; custom-set-faces was added by Custom.
   ;; If you edit it by hand, you could mess it up, so be careful.

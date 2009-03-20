@@ -1,0 +1,8 @@
+(defun load-jde ()
+  (interactive)
+  (add-to-list 'load-path (expand-file-name "~/.emacs.d/site/jde/lisp"))
+  (add-to-list 'load-path (expand-file-name "~/.emacs.d/site/cedet/common"))
+  (load-file (expand-file-name "~/.emacs.d/site/cedet/common/cedet.el"))
+  (add-to-list 'load-path (expand-file-name "~/.emacs.d/site/elib"))
+  (require 'jde)
+)

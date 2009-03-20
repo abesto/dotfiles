@@ -41,7 +41,8 @@ autorunApps =
    "xmodmap ~/.xmodmap",
    "firefox",
    "~/mutt",
-   "emacs --daemon",
+   "mail-notification",
+   "emacs --no-site --daemon",
 }
 if autorun then
    for app = 1, #autorunApps do
@@ -86,6 +87,7 @@ apptags =
     ["Navigator"] = { screen = 1, tag = 9 },
     ["mutt"] = { screen = 1, tag = 8 },
     ["pidgin"] = {screen = 1, tag = 7},
+    ["skype"] = {screen = 1, tag = 7},
     ["xchat"] = {screen = 1, tag = 7}
     -- ["mocp"] = { screen = 2, tag = 4 },
 }
