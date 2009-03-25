@@ -1,4 +1,4 @@
-colorscheme desert
+colorscheme koehler
 set nu shiftwidth=4 tabstop=8 smartindent backspace=2 fileencoding=utf-8
 set incsearch wildmenu nohlsearch
 set guioptions=ic

@@ -33,7 +33,7 @@ editor_cmd = "emacsclient -c"
 
 
 -- Autorun programs
-autorun = true
+--autorun = true
 autorunApps =
 {
    "nm-applet",
@@ -43,6 +43,9 @@ autorunApps =
    "~/mutt",
    "mail-notification",
    "emacs --no-site --daemon",
+   "xset r rate 200 30", -- keyboard autorepeat rate
+   "remind -zk'notify-send Emlékeztető %s -t 0' ~/.reminders", -- remind notifications
+   "remind -gq ~/.reminders | gxmessage -title \"Today's reminders\" -file -"  -- at startup
 }
 if autorun then
    for app = 1, #autorunApps do
@@ -460,13 +463,11 @@ for s = 1, screen.count() do
 			   key({ modkey,           }, "o",      awful.client.movetoscreen                        ),
 			   key({ modkey, "Shift"   }, "r",      function (c) c:redraw()                       end),
 			   key({ modkey }, "t", awful.client.togglemarked),
-               --[[
-			   key({ modkey,}, "m",
+			   key({ modkey, "Control" }, "m",
 			   function (c)
 			       c.maximized_horizontal = not c.maximized_horizontal
 			       c.maximized_vertical   = not c.maximized_vertical
 			   end),
-            --]]
 		       }
 
 		       -- Compute the maximum number of digit we need, limited to 9
