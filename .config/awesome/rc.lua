@@ -33,7 +33,7 @@ editor_cmd = "emacsclient -c"
 
 
 -- Autorun programs
---autorun = true
+autorun = true
 autorunApps =
 {
    "nm-applet",
@@ -44,7 +44,7 @@ autorunApps =
    "mail-notification",
    "emacs --no-site --daemon",
    "xset r rate 200 30", -- keyboard autorepeat rate
-   "remind -zk'notify-send Emlékeztető %s -t 0' ~/.reminders", -- remind notifications
+   "remind -zk'zenity --info --text %s' ~/.reminders", -- remind notifications
    "remind -gq ~/.reminders | gxmessage -title \"Today's reminders\" -file -"  -- at startup
 }
 if autorun then

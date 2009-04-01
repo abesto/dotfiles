@@ -12,6 +12,8 @@
 (mouse-avoidance-mode 'exile)           ;Move mouse when cursor is over it
 (defalias 'yes-or-no-p 'y-or-n-p)
 
+(global-set-key "\C-x\C-m" 'execute-extended-command)
+
 ;; mode-compile
 (autoload 'mode-compile "mode-compile"
 "Command to compile current buffer file based on the major mode" t)
