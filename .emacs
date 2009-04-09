@@ -15,6 +15,7 @@
 (require 'doremi-cmd)
 (require 'color-theme)
 (require 'tex-site)
+(require 'org2rem)
 ;(require 'egg)
 (color-theme-initialize)
 (autoload 'word-count-mode "word-count" "Minor mode to count words" t)
@@ -26,6 +27,7 @@
 (load "my-generic") ; Settings I always want
 (load "my-ido")     ; fuzzy search for M-x
 (load "my-viper")
+(load "my-org")     ; org-mode setup
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; My mode startup scripts ;;
@@ -76,13 +78,15 @@
  '(nuke-trailing-whitespace-in-hooks (quote (write-file-hooks mail-send-hook)) nil (nuke-trailing-whitespace))
  '(nxhtml-default-encoding (quote utf-8))
  '(nxhtml-skip-welcome t)
+ '(org-agenda-files (quote ("~/gtd/main.org")))
  '(show-paren-mode t)
+ '(transient-mark-mode (quote (only . t)))
  '(use-file-dialog nil))
 (custom-set-faces
   ;; custom-set-faces was added by Custom.
   ;; If you edit it by hand, you could mess it up, so be careful.
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :background "black" :foreground "white" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 98 :width normal :foundry "unknown" :family "DejaVu Sans Mono"))))
+ '(default ((t (:inherit nil :stipple nil :background "black" :foreground "white" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 106 :width normal :foundry "xos4" :family "Terminus"))))
  '(mumamo-background-chunk-major ((((class color) (min-colors 88) (background dark)) nil)))
  '(mumamo-background-chunk-submode ((((class color) (min-colors 88) (background dark)) nil))))

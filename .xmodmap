@@ -1,0 +1,17 @@
+!
+! Swap Caps_Lock and Control_L
+!
+remove Lock = Caps_Lock
+remove Control = Control_L
+keysym Control_L = Caps_Lock
+keysym Caps_Lock = Control_L
+add Lock = Caps_Lock
+add Control = Control_L
+
+! For Microsoft Natural 4000
+! 
+! Programmable key 5
+keycode 196 = iacute 
+! Scroll
+keysym XF86ScrollUp = Prior
+keysym XF86ScrollDown = Next

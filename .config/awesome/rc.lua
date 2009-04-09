@@ -42,10 +42,11 @@ autorunApps =
    "firefox",
    "~/mutt",
    "mail-notification",
-   "emacs --no-site --daemon",
+   "xscreensaver -nosplash",
+   "~/emacs-startup.sh",
    "xset r rate 200 30", -- keyboard autorepeat rate
-   "remind -zk'zenity --info --text %s' ~/.reminders", -- remind notifications
-   "remind -gq ~/.reminders | gxmessage -title \"Today's reminders\" -file -"  -- at startup
+   "remind -zk'zenity --info --text %s' ~/gtd", -- remind notifications
+   "remind -gq ~/gtd | gxmessage -title \"Today's reminders\" -file -"  -- at startup
 }
 if autorun then
    for app = 1, #autorunApps do
@@ -58,7 +59,7 @@ end
 -- If you do not like this or do not have such a key,
 -- I suggest you to remap Mod4 to another key using xmodmap or other tools.
 -- However, you can use another modifier like Mod1, but it may interact with others.
-modkey = "Mod1"
+modkey = "Mod4"
 
 -- Table of layouts to cover with awful.layout.inc, order matters.
 layouts =
@@ -394,13 +395,17 @@ for s = 1, screen.count() do
 			   key({ modkey, "Control" }, "j", function () awful.screen.focus( 1)       end),
 			   key({ modkey, "Control" }, "k", function () awful.screen.focus(-1)       end),
 			   key({ modkey,           }, "u", awful.client.urgent.jumpto),
-			   key({ modkey,           }, "Tab",
-			   function ()
-			       awful.client.focus.history.previous()
-			       if client.focus then
-				   client.focus:raise()
-			       end
-			   end),
+
+			   -- Multimedia keys
+			   key({},                    "XF86AudioRaiseVolume", function () awful.util.spawn("amixer set PCM 5%+") end),
+			   key({},                    "XF86AudioLowerVolume", function () awful.util.spawn("amixer set PCM 5%-") end),
+			   key({},                    "XF86AudioMute", function () awful.util.spawn("amixer set Master toggle") end),
+			   key({},                    "XF86AudioPlay", function () awful.util.spawn("mpc toggle") end),
+
+			   -- special app starters
+			   key({},                    "XF86HomePage", function () awful.util.spawn("firefox") end),
+			   key({},                    "XF86Mail", function () awful.util.spawn("/home/abesto/mutt") end),
+			   key({},                    "XF86Search", function () awful.util.spawn("firefox http://google.com") end),
 
 			   -- Jump to named tags
 			   key({ modkey,           }, "m", function () awful.tag.viewonly(tags[mouse.screen][8]) end),
