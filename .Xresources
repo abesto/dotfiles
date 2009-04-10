@@ -1,0 +1,28 @@
+xterm*foreground: white
+xterm*background: black
+xterm*cursorColor: green
+xterm*font: -*-dejavu sans mono-medium-r-*-*-13-*-*-*-*-*-iso10646-*
+xterm*font1: -*-dejavu sans mono-medium-r-*-*-9-*-*-*-*-*-iso10646-*
+xterm*font2: -*-dejavu sans mono-medium-r-*-*-10-*-*-*-*-*-iso10646-*
+xterm*font3: -*-dejavu sans mono-medium-r-*-*-12-*-*-*-*-*-iso10646-*
+xterm*font4: -*-dejavu sans mono-medium-r-*-*-13-*-*-*-*-*-iso10646-*
+xterm*font5: -*-dejavu sans mono-medium-r-*-*-15-*-*-*-*-*-iso10646-*
+xterm*font6: -*-dejavu sans mono-medium-r-*-*-17-*-*-*-*-*-iso10646-*
+
+!urxvt.font: -*-dejavu sans mono-medium-r-*-*-13-*-*-*-*-*-iso10646-*
+urxvt.font: -*-terminus-medium-*-*-*-*-140-*-*-*-*-iso8859-1
+urxvt.background: black
+urxvt.foreground: white
+urxvt*scrollBar:    false
+urxvt*scrollBar_floating:    true
+urxvt*scrollBar_right:   true
+urxvt*scrollColor:       #202020
+urxvt*urllauncher:  firefox
+urxvt*matcher.button:        1
+urxvt*saveLines:              8192
+urxvt*perl-lib: /home/abesto/.urxvt
+urxvt.perl-ext-common:         default,matcher,selection,mark-yank-urls
+urxvt.perl-ext:         default,matcher,selection,mark-yank-urls
+urxvt.keysym.M-u: perl:mark-yank-urls:activate_mark_mode
+
+Emacs.font: -*-terminus-medium-*-*-*-*-140-*-*-*-*-iso8859-1
