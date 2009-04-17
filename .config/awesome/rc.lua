@@ -2,12 +2,8 @@
 require("awful")
 -- Theme handling library
 require("beautiful")
--- Expose-like effect
-require("revelation")
 -- Widgets :p
 require("wicked")
--- Add mod + F2 key binding to start revelation
-keybinding({ modkey }, "F2", revelation.revelation):add()
 -- Notification library
 require("naughty")
 
@@ -33,20 +29,21 @@ editor_cmd = "emacsclient -c"
 
 
 -- Autorun programs
-autorun = true
+--autorun = true
 autorunApps =
 {
    "nm-applet",
    "mpdscribble",
+   "xset r rate 200 30", -- keyboard autorepeat rate
    "xmodmap ~/.xmodmap",
-   "firefox",
-   "~/mutt",
+   "~/emacs-startup.sh",
+   "remind -zk'zenity --info --text %s' ~/gtd", -- remind notifications
+   -- "firefox",
+   -- "~/mutt",
    "mail-notification",
    "xscreensaver -nosplash",
-   "~/emacs-startup.sh",
-   "xset r rate 200 30", -- keyboard autorepeat rate
-   "remind -zk'zenity --info --text %s' ~/gtd", -- remind notifications
-   "remind -gq ~/gtd | gxmessage -title \"Today's reminders\" -file -"  -- at startup
+   "gnome-do"
+   --"remind -gq ~/gtd | gxmessage -title \"Today's reminders\" -file -"  -- at startup
 }
 if autorun then
    for app = 1, #autorunApps do
@@ -80,6 +77,7 @@ floatapps =
     ["MPlayer"] = true,
     ["pinentry"] = true,
     ["gimp"] = true,
+    ["vlc"] = true,
     -- by instance
     ["mocp"] = true
 }
@@ -413,7 +411,7 @@ for s = 1, screen.count() do
 			   key({ modkey,           }, "i", function () awful.tag.viewonly(tags[mouse.screen][7]) end),
 
 			   -- Standard program
-			   key({ modkey,           }, "Return", function () awful.util.spawn(terminal) end),
+			   key({ "Mod4",           }, "Return", function () awful.util.spawn(terminal) end),
 			   key({ "Control"         }, "Return", function () awful.util.spawn("xterm") end),
 			   key({ modkey, "Control" }, "r", awesome.restart),
 			   key({ modkey, "Shift"   }, "q", awesome.quit),
