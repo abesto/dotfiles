@@ -25,8 +25,8 @@
 (global-set-key "\M--" 'word-count-set-marker)
 
 (load "my-generic") ; Settings I always want
-(load "my-ido")     ; fuzzy search for M-x
-(load "my-viper")
+(load "my-ido")     ; fuzzy search
+(load "my-viper")   ; viper-mode setup
 (load "my-org")     ; org-mode setup
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -56,7 +56,7 @@
 (load "my-jde-init")     ; A Java Development Environment for Emacs
 (load "my-slime-init")   ; SLIME for editing lisp
 (load "my-nxhtml-init")  ; nxhtml for HTML+CSS+JS+PHP+Whatever
-(load "my-haskell-init") ;
+(load "my-haskell-init")
 
 ;; Load them on startup if running in daemon mode
 (if (daemonp)

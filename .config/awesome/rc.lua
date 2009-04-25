@@ -29,11 +29,11 @@ editor_cmd = "emacsclient -c"
 
 
 -- Autorun programs
---autorun = true
+autorun = true
 autorunApps =
 {
    "nm-applet",
-   "mpdscribble",
+   --"mpdscribble",
    "xset r rate 200 30", -- keyboard autorepeat rate
    "xmodmap ~/.xmodmap",
    "~/emacs-startup.sh",
@@ -42,7 +42,8 @@ autorunApps =
    -- "~/mutt",
    "mail-notification",
    "xscreensaver -nosplash",
-   "gnome-do"
+   "gnome-do",
+   "nautilus -n"
    --"remind -gq ~/gtd | gxmessage -title \"Today's reminders\" -file -"  -- at startup
 }
 if autorun then
@@ -466,7 +467,7 @@ for s = 1, screen.count() do
 			   key({ modkey,           }, "o",      awful.client.movetoscreen                        ),
 			   key({ modkey, "Shift"   }, "r",      function (c) c:redraw()                       end),
 			   key({ modkey }, "t", awful.client.togglemarked),
-			   key({ modkey, "Control" }, "m",
+			   key({ modkey }, "n",
 			   function (c)
 			       c.maximized_horizontal = not c.maximized_horizontal
 			       c.maximized_vertical   = not c.maximized_vertical

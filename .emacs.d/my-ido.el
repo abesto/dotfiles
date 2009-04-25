@@ -14,8 +14,8 @@
 ;;                              (cons (format "%S" s) ido-execute-command-cache))))))
 ;;        ido-execute-command-cache)))))
 
-;; (setq ido-enable-flex-matching t)
 ;; (global-set-key "\M-x" 'ido-execute-command)
 ;; (global-set-key "\C-x\C-m" 'ido-execute-command)
 
+(setq ido-enable-flex-matching t)
 (ido-mode t)
