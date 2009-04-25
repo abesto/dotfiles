@@ -1,10 +1,8 @@
 # Check for an interactive session
-[ -z "$PS1" ] && return
-# PS1='[\u@\h \W]\$ '
-# PS1='\[\e[0;31m\]\u\[\e[m\] \[\e[1;34m\]\w\[\e[m\] \[\e[0;31m\]\$ \[\e[m\]\[\e[0;32m\] '
-source /etc/profile  # for autojump
-PS1='\[\e[0;32m\]\u\[\e[m\] \[\e[1;34m\]\w\[\e[m\] \[\e[m\] \[\e[1;32m\]\$ \[\e[m\]\[\e[1;37m\] '
+#[ -z "$PS1" ] && return 0
 
+source /etc/profile  # for autojump
+source ~/.bashprompt
 
 alias ls='ls --color=auto'
 alias la='ls -a'
@@ -16,6 +14,9 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 alias .....='cd ../../../../'
 alias ec='emacsclient'
+
+shopt -s cdspell
+shopt -s progcomp
 
 export OOO_FORCE_DESKTOP=gnome
 
