@@ -1,0 +1,92 @@
+#based on http://conky.sourceforge.net/conkyrc-hellfire
+
+background no
+font 7x13
+use_xft no
+
+mpd_host localhost
+mpd_port 6600
+
+update_interval 1.0
+
+total_run_times 0
+
+own_window no
+
+own_window_transparent no
+
+double_buffer yes
+
+minimum_size 280 5
+
+draw_shades yes
+draw_outline no
+draw_borders no
+draw_graph_borders yes
+stippled_borders 8
+border_margin 4
+border_width 1
+
+default_color white
+default_shade_color black
+default_outline_color black
+
+alignment middle_right
+
+maximum_width 308
+
+gap_x 12
+gap_y 12
+
+no_buffers yes
+
+uppercase no
+
+cpu_avg_samples 2
+net_avg_samples 2
+
+override_utf8_locale no
+
+use_spacer none
+
+color0 1bff2d
+color1 3fff4e
+
+# stuff after 'TEXT' will be formatted on screen
+
+TEXT
+${color0}$nodename   linux-$kernel${alignr}${time %T}
+
+${color0}System:
+${color0} Uptime:${color1} $uptime ${color0}- Load:${color1} $loadavg
+${color0} CPU Frequency:${color1} $freq_dyn_g ${color0} Maximum:${color1} $freq_g
+${color0} CPU Usage:${color1} $cpu% ${cpubar}
+${color #000000}${cpugraph cpu0 32,309 000000 3fff4e}
+${color0} RAM Usage:${color1} $mem/$memmax - $memperc% ${membar}
+${color0} Swap Usage:${color1} $swap/$swapmax - $swapperc% ${swapbar}
+${color0} Processes:${color1} $processes  ${color0}Running:${color1} $running_processes
+
+${color0}Networking:
+ ${color0}Down:${color1} ${downspeed wlan0} k/s${color0}${offset 80}Up:${color1} ${upspeed wlan0} k/s
+${color #000000}${downspeedgraph wlan0 32,150 000000 3fff4e} ${color #000000}${upspeedgraph wlan0 32,150 000000 3fffe}
+ ${color0}Address: ${color1}${addr wlan0}${alignr}${color0}TCP Connections: ${color1}${tcp_portmon 1 65535 count}
+
+${color0}File Systems:
+ ${color0}/     ${color1}${fs_used /}/${fs_size /} ${color1}${fs_bar /}
+ ${color0}/home ${color1}${fs_used /home}/${fs_size /home} ${color1}${fs_bar /home}
+ ${color0}WinXP ${color1}${fs_used /media/windows}/${fs_size /media/windows} ${color1}${fs_bar /media/windows}
+
+${color0}CPU: ${color1}${acpitemp}C
+
+${color0}MPD: ${color1}${alignc}$mpd_artist - $mpd_title
+${color1}$mpd_bar
+${color1}${alignc}$mpd_status
+
+${color0}Name              PID     CPU%   MEM%
+${color1} ${top name 1} ${top pid 1} ${top cpu 1} ${top mem 1}
+${color1} ${top name 2} ${top pid 2} ${top cpu 2} ${top mem 2}
+${color1} ${top name 3} ${top pid 3} ${top cpu 3} ${top mem 3}
+${color0}Mem usage
+${color1} ${top_mem name 1} ${top_mem pid 1} ${top_mem cpu 1} ${top_mem mem 1}
+${color1} ${top_mem name 2} ${top_mem pid 2} ${top_mem cpu 2} ${top_mem mem 2}
+${color1} ${top_mem name 3} ${top_mem pid 3} ${top_mem cpu 3} ${top_mem mem 3}

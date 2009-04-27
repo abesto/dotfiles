@@ -43,7 +43,8 @@ autorunApps =
    "mail-notification",
    "xscreensaver -nosplash",
    "gnome-do",
-   "nautilus -n"
+   "nautilus -n",
+   "conky -c ~/.conkyrc/conkyrc"
    --"remind -gq ~/gtd | gxmessage -title \"Today's reminders\" -file -"  -- at startup
 }
 if autorun then

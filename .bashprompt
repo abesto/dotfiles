@@ -57,7 +57,7 @@ fi
 prompt_type="2linebox"
 case $prompt_type in
         2linebox)
-                PS1="\n${cyan}╔═${WHITE}[${NC}\A${WHITE}]${cyan}═${WHITE}[${NC}\u$(ssh_conn)@${NC}\h${WHITE}]${cyan}═${WHITE}[ ${PWDHILIGHT}\w ${WHITE}]\n${cyan}╚═══${WHITE}[${USRHILIGHT}\$${WHITE}]${NC}> "
+                PS1="\n${cyan}╔═${WHITE}[ ${NC}\A${WHITE} ]${cyan}═${WHITE}[ ${NC}\u$(ssh_conn)@${NC}\h${WHITE} ]${cyan}═${WHITE}[ ${PWDHILIGHT}\w ${WHITE}]\n${cyan}╚═>${NC} "
                 ;;
         nocolor)
                 PS1='\u@\h \W \$ '

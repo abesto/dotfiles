@@ -13,6 +13,7 @@
 (defalias 'yes-or-no-p 'y-or-n-p)
 
 (global-set-key "\C-x\C-m" 'execute-extended-command)
+(global-set-key "\M-n" 'linum-mode)
 
 ;; mode-compile
 (autoload 'mode-compile "mode-compile"
