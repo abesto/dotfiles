@@ -1,0 +1,48 @@
+// -*- mode: javascript -*-
+require("clicks-in-new-buffer.js");
+clicks_in_new_buffer_target = OPEN_NEW_BUFFER_BACKGROUND;
+can_kill_last_buffer = false;
+editor_shell_command = "emacsclient";
+hints_auto_exit_delay = 1;
+
+require("page-modes/google-search-results.js");
+//google_search_bind_number_shortcuts();
+// override google-search-results mode keybindings for navigation
+var gs_maps = Array(
+    "j"   , "cmd_scrollLineDown",
+    "k"   , "cmd_scrollLineUp",
+    "o"   , "find-url",
+    "/"   , "isearch-forward"
+);
+for (var i = 0; i < gs_maps.length; i += 1)
+    define_key(google_search_results_keymap, gs_maps[i], gs_maps[i+1]);
+
+require('eye-guide.js');
+require('wikipedia-didyoumean.js');
+require('new-tabs.js');
+
+// Keybindings
+var maps = Array(
+    // Vimperator-like
+    "j"   , "cmd_scrollLineDown",
+    "k"   , "cmd_scrollLineUp",
+    "h"   , "cmd_scrollLeft",
+    "l"   , "cmd_scrollRight",
+    "o"   , "find-url",
+    "t"   , "find-url-new-buffer",
+    "C-i" , "go-forward",
+    "C-o" , "go-back",
+    "C-n" , "buffer-next",
+    "C-p" , "buffer-previous",
+    "d"   , "kill-current-buffer",
+    "/"   , "isearch-forward",
+    // Eye guide
+    "space", "eye-guide-scroll-down",
+    "back_space", "eye-guide-scroll-up",
+    // Vimperator-like eye guide :D
+    "C-f" , "eye-guide-scroll-down",
+    "C-b" , "eye-guide-scroll-up"
+);
+
+for (var i = 0; i < maps.length; i += 1)
+    define_key(content_buffer_normal_keymap, maps[i], maps[i+1]);
