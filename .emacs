@@ -3,6 +3,7 @@
 ;; paths
 (add-to-list 'load-path (expand-file-name "~/.emacs.d"))
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/site"))
+(add-to-list 'load-path (expand-file-name "~/.emacs.d/site/mail")) ; mail related stuff
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/site/yasnippet"))
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/site/cedet/speedbar"))
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/site/org"))
@@ -43,11 +44,14 @@
 ;; (add-hook 'python-mode-hook 'my-python-init)
 (add-hook 'LaTeX-mode-hook 'my-latex-init)
 (add-hook 'ruby-mode-hook 'my-ruby-init)
-(add-hook 'mail-mode-hook 'my-mail-init)
 (add-to-list 'auto-mode-alist '("mutt-keyrit_notepad" . mail-mode))
 (add-to-list 'auto-mode-alist '("vimperator*" . blog-init))
 (setq auto-mode-alist (cons '("\\.lua$" . lua-mode) auto-mode-alist))
 (autoload 'lua-mode "lua-mode" "Lua editing mode." t)
+;; mails
+(autoload 'post-mode "post" "mode for e-mail" t)
+(add-to-list 'auto-mode-alist '("\\.*mutt-*\\|.article\\|\\.followup" . post-mode))
+(add-hook 'post-mode-hook 'my-mail-init)
 
 ;;;;;;;;;;;;;;;;;;;;;;
 ;; Big environemnts ;;
@@ -58,13 +62,13 @@
 (load "my-nxhtml-init")  ; nxhtml for HTML+CSS+JS+PHP+Whatever
 (load "my-haskell-init")
 
-;; Load them on startup if running in daemon mode
-(if (daemonp)
-    (progn
-      (load-slime)
-      (load-nxhtml)
-      (load-haskell)
-      (load-jde)))
+; Load them on startup if running in daemon mode
+ (if (daemonp)
+     (progn
+       (load-slime)
+       (load-nxhtml)
+       (load-haskell)
+       (load-jde)))
 
 ;; Customize
 (custom-set-variables

@@ -12,6 +12,9 @@
 (mouse-avoidance-mode 'exile)           ;Move mouse when cursor is over it
 (defalias 'yes-or-no-p 'y-or-n-p)
 
+(require 'hideshow-org)
+(global-set-key "\C-ch" 'hs-org/minor-mode)
+
 (global-set-key "\C-x\C-m" 'execute-extended-command)
 (global-set-key "\M-n" 'linum-mode)
 
