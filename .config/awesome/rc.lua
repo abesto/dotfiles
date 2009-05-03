@@ -36,15 +36,16 @@ autorunApps =
    --"mpdscribble",
    "xset r rate 200 30", -- keyboard autorepeat rate
    "xmodmap ~/.xmodmap",
-   "~/emacs-startup.sh",
-   "remind -zk'zenity --info --text %s' ~/gtd", -- remind notifications
+   "emacs --daemon",
+   --"remind -zk'zenity --info --text %s' ~/gtd", -- remind notifications
    -- "firefox",
    -- "~/mutt",
    "mail-notification",
    "xscreensaver -nosplash",
    "gnome-do",
-   "nautilus -n",
-   "conky -c ~/.conkyrc/conkyrc"
+   "conky -c ~/.conkyrc/conkyrc",
+   "wmname LG3D"  -- for Java apps, see http://bbs.archlinux.org/viewtopic.php?pid=450870#p450870
+   --"nautilus -n"
    --"remind -gq ~/gtd | gxmessage -title \"Today's reminders\" -file -"  -- at startup
 }
 if autorun then
