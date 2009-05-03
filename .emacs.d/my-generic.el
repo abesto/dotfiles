@@ -1,3 +1,4 @@
+;; Appearance
 (require 'color-theme)
 (color-theme-dark-laptop)     ; Nice, dark, easy on the eyes
 (tool-bar-mode -1)            ; No toolbar, thanks
@@ -5,13 +6,16 @@
 (setq visible-bell t)         ; Can't go beeping around at midnight, now can I?
 (show-paren-mode)
 (load "toggle-fullscreen")
-;(nix-fullscreen)
-(setq-default indent-tabs-mode nil)     ;I always want spaces instead of tabs
+;(nix-fullscreen) don't need this using AwesomeWM
+
+;; Behaviour
+(setq-default indent-tabs-mode nil)     ; I always want spaces instead of tabs
 (setq default-tab-width 4)
 (setq confirm-kill-emacs 'y-or-n-p)
 (mouse-avoidance-mode 'exile)           ;Move mouse when cursor is over it
 (defalias 'yes-or-no-p 'y-or-n-p)
 
+;; Hide-show with tab, thanks!
 (require 'hideshow-org)
 (global-set-key "\C-ch" 'hs-org/minor-mode)
 
@@ -28,3 +32,10 @@
 (setq mode-compile-expert-p t)
 (require 'epa)
 (epa-file-enable)
+
+;; auto-mode-list
+(add-to-list 'auto-mode-alist '("mutt-keyrit_notepad" . mail-mode))
+(add-to-list 'auto-mode-alist '("vimperator*" . blog-init))
+(add-to-list 'auto-mode-alist '("*blogger-com-post*" . blog-init))
+(add-to-list 'auto-mode-alist '("\\.*mutt-*\\|.article\\|\\.followup" . post-mode))
+(setq auto-mode-alist (cons '("\\.lua$" . lua-mode) auto-mode-alist))

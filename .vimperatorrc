@@ -1,9 +1,9 @@
 " 1.2 (created: 2008/08/16 18:51:52)
 " Mappings
-imap <C-v> <C-v>
+" imap <C-v> <C-v>
 
 " Options
-set editor='emacsclient -c'
+" set editor='emacsclient -c'
 
 " Abbreviations
 

@@ -26,6 +26,7 @@ terminal = "urxvt"
 editor = "emacsclient"
 --editor_cmd = terminal .. " -e " .. editor
 editor_cmd = "emacsclient -c"
+browser = "conkeror"
 
 
 -- Autorun programs
@@ -404,9 +405,9 @@ for s = 1, screen.count() do
 			   key({},                    "XF86AudioPlay", function () awful.util.spawn("mpc toggle") end),
 
 			   -- special app starters
-			   key({},                    "XF86HomePage", function () awful.util.spawn("firefox") end),
+			   key({},                    "XF86HomePage", function () awful.util.spawn(browser) end),
 			   key({},                    "XF86Mail", function () awful.util.spawn("/home/abesto/mutt") end),
-			   key({},                    "XF86Search", function () awful.util.spawn("firefox http://google.com") end),
+			   key({},                    "XF86Search", function () awful.util.spawn(browser .. " http://google.com") end),
 
 			   -- Jump to named tags
 			   key({ modkey,           }, "m", function () awful.tag.viewonly(tags[mouse.screen][8]) end),
@@ -424,7 +425,7 @@ for s = 1, screen.count() do
 			   key({ modkey, "Shift"   }, "n", function () awful.util.spawn('mpc next > /dev/null; echo "show_song(true)" | awesome-client') end),
 			   --key({ modkey, "Shift"   }, "n", function () awful.util.spawn('mpc next') end),
 			   key({ modkey, "Shift"   }, "w", function () awful.util.spawn('mpc toggle > /dev/null') end),
-			   key({ modkey, "Shift"   }, "f", function () awful.util.spawn('firefox') end),
+			   key({ modkey, "Shift"   }, "f", function () awful.util.spawn(browser) end),
 			   key({ modkey, "Shift"   }, "e", function () awful.util.spawn(editor_cmd) end),
 			   key({ modkey, "Shift"   }, "o", function () awful.util.spawn('soffice') end),
                key({ modkey, "Shift"   }, "m", show_song),
