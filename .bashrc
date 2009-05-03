@@ -4,7 +4,7 @@
 source /etc/profile  # for autojump
 source ~/.bashprompt
 
-alias ls='ls --color=auto'
+alias ls='ls --color=auto --group-directories-first'
 alias la='ls -a'
 alias yup='yaourt -Syu'
 alias y='yaourt -Sy'
@@ -40,6 +40,7 @@ export EDITOR='vim'
 export VISUAL='vim'
 
 set show-all-if-ambiguous on
+set -o vi
 
 extract () {
   if [ -f $1 ] ; then
