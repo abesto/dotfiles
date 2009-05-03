@@ -35,7 +35,7 @@
 
 ;; auto-mode-list
 (add-to-list 'auto-mode-alist '("mutt-keyrit_notepad" . mail-mode))
-(add-to-list 'auto-mode-alist '("vimperator*" . blog-init))
-(add-to-list 'auto-mode-alist '("*blogger-com-post*" . blog-init))
+(add-to-list 'auto-mode-alist '("vimperator.*" . blog-init))
+(add-to-list 'auto-mode-alist '(".*blogger-com-post.*" . blog-init))
 (add-to-list 'auto-mode-alist '("\\.*mutt-*\\|.article\\|\\.followup" . post-mode))
 (setq auto-mode-alist (cons '("\\.lua$" . lua-mode) auto-mode-alist))
