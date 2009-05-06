@@ -44,5 +44,5 @@ var maps = Array(
     "C-b" , "eye-guide-scroll-up"
 );
 
-for (var i = 0; i < maps.length; i += 1)
+for (var i = 0; i < maps.length; i += 2)
     define_key(content_buffer_normal_keymap, maps[i], maps[i+1]);
