@@ -53,24 +53,25 @@ color0 cc1010
 color1 ff3030
 
 # stuff after 'TEXT' will be formatted on screen
+#Usage (Avg): ${freq_dyn_g}Ghz ${cpu cpu0}% ${alignr}${cpubar cpu0 5,80}
+#Usage (Core 1): ${freq_dyn_g cpu1}Ghz ${cpu cpu1}% ${alignr}${cpubar cpu1 5,80}
+#Usage (Core 2): ${freq_dyn_g cpu2}Ghz ${cpu cpu2}% ${alignr}${cpubar cpu2 5,80}
 
 TEXT
-${color0}$nodename   linux-$kernel${alignr}${time %T}
-
-${color0}System:
-${color0} Uptime:${color1} $uptime ${color0}- Load:${color1} $loadavg
-${color0} CPU Frequency:${color1} $freq_dyn_g ${color0} Maximum:${color1} $freq_g
-${color0} CPU Usage:${color1} $cpu% ${cpubar}
-${color #000000}${cpugraph cpu0 32,309 000000 ff3030}
-${color0} CPU Temperature: ${color1}${acpitemp}C
+${color0}$nodename${alignr}linux-$kernel
+${color0}Uptime:${color1} $uptime ${color0}
+${alignc}${color0}CPU Average: ${color1}${cpu cpu0}%
+${color0}${cpugraph cpu0 cc1010 ff3030}
+${color0}Core 1 - ${color1}${cpu cpu1}% $alignr ${cpu cpu2}%${color0} - Core 2
+${cpugraph cpu1 25,120 cc1010 ff3030} $alignr${cpugraph cpu2 25,120 cc1010 ff3030}
 
 ${color0} RAM Usage:${color1} $mem/$memmax - $memperc% ${membar}
 ${color0} Swap Usage:${color1} $swap/$swapmax - $swapperc% ${swapbar}
 ${color0} Processes:${color1} $processes  ${color0}Running:${color1} $running_processes
 
 ${color0}Networking:
- ${color0}Down:${color1} ${downspeed eth0} k/s${color0}${offset 80}Up:${color1} ${upspeed eth0} k/s
-${color #000000}${downspeedgraph eth00 32,150 000000 ff3030} ${color #000000}${upspeedgraph eth00 32,150 000000 ff3030}
+ ${color0}Down:${color1} ${downspeed eth0}${color0}${offset 80}Up:${color1} ${upspeed eth0}
+${color0}${downspeedgraph eth00 32,150 cc1010 ff3030} ${color0}${upspeedgraph eth00 32,150 cc1010 ff3030}
  ${color0}TCP Connections: ${color1}${tcp_portmon 1 65535 count}
  ${color0}Address (PPP): ${color1}${addr ppp0}
  ${color0}Address (WLan): ${color1}${addr wlan0}
