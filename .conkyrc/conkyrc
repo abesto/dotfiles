@@ -59,7 +59,8 @@ color1 ff3030
 
 TEXT
 ${color0}$nodename${alignr}linux-$kernel
-${color0}Uptime:${color1} $uptime ${color0}
+$alignc${color0}Uptime:${color1} $uptime ${color0}
+
 ${alignc}${color0}CPU Average: ${color1}${cpu cpu0}%
 ${color0}${cpugraph cpu0 cc1010 ff3030}
 ${color0}Core 1 - ${color1}${cpu cpu1}% $alignr ${cpu cpu2}%${color0} - Core 2
