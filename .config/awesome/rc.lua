@@ -13,7 +13,7 @@ naughty.config.presets.normal.timeout = 3
 -- Themes define colours, icons, and wallpapers
 -- The default is a dark theme
 -- theme_path = "/usr/share/awesome/themes/default/theme"
-theme_path = "/home/abesto/.config/awesome/themes/theme"
+theme_path = "/home/abesto/.config/awesome/themes/theme.lua"
 -- Uncommment this for a lighter theme
 -- theme_path = "/usr/share/awesome/themes/sky/theme"
 
@@ -36,24 +36,19 @@ autorunApps =
    "nm-applet",
    --"mpdscribble",
    "xset r rate 200 30", -- keyboard autorepeat rate
-   "xmodmap ~/.xmodmap",
+   "xmodmap /home/abesto/.xmodmap",
    "emacs --daemon",
    --"remind -zk'zenity --info --text %s' ~/gtd", -- remind notifications
    -- "firefox",
    -- "~/mutt",
    "mail-notification",
    "xscreensaver -nosplash",
-   "gnome-do",
-   "conky -c ~/.conkyrc/conkyrc",
+   --"gnome-do",
+   "conky -c /home/abesto/.conkyrc/conkyrc",
    "wmname LG3D"  -- for Java apps, see http://bbs.archlinux.org/viewtopic.php?pid=450870#p450870
    --"nautilus -n"
    --"remind -gq ~/gtd | gxmessage -title \"Today's reminders\" -file -"  -- at startup
 }
-if autorun then
-   for app = 1, #autorunApps do
-       awful.util.spawn(autorunApps[app])
-   end
-end
 
 -- Default modkey.
 -- Usually, Mod4 is the key with a logo between Control and Alt.
@@ -359,7 +354,7 @@ for s = 1, screen.count() do
                            membar_widget,
                            cpuwidget,
                            date_widget,
-                           s == 1 and mysystray or nil,
+                           mysystray,
                         }
 			   mywibox[s].screen = s
 		       end
@@ -406,7 +401,7 @@ for s = 1, screen.count() do
 
 			   -- special app starters
 			   key({},                    "XF86HomePage", function () awful.util.spawn(browser) end),
-			   key({},                    "XF86Mail", function () awful.util.spawn("/home/abesto/mutt") end),
+			   key({},                    "XF86Mail", function () awful.util.spawn("/home/abesto/bin/mutt") end),
 			   key({},                    "XF86Search", function () awful.util.spawn(browser .. " http://google.com") end),
 
 			   -- Jump to named tags
@@ -421,14 +416,15 @@ for s = 1, screen.count() do
 			   key({ modkey, "Shift"   }, "q", awesome.quit),
 
                -- Mine.
-			   key({ modkey, "Shift"   }, "p", function () awful.util.spawn('mpc prev > /dev/null; echo "show_song(true)" | awesome-client') end),
-			   key({ modkey, "Shift"   }, "n", function () awful.util.spawn('mpc next > /dev/null; echo "show_song(true)" | awesome-client') end),
+			   key({ modkey, "Shift"   }, "p", function () awful.util.spawn('mpc prev'); show_song(true) end),
+			   key({ modkey, "Shift"   }, "n", function () awful.util.spawn('mpc next'); show_song(true) end),
 			   --key({ modkey, "Shift"   }, "n", function () awful.util.spawn('mpc next') end),
-			   key({ modkey, "Shift"   }, "w", function () awful.util.spawn('mpc toggle > /dev/null') end),
+			   key({ modkey, "Shift"   }, "w", function () awful.util.spawn('mpc toggle') end),
 			   key({ modkey, "Shift"   }, "f", function () awful.util.spawn(browser) end),
 			   key({ modkey, "Shift"   }, "e", function () awful.util.spawn(editor_cmd) end),
 			   key({ modkey, "Shift"   }, "o", function () awful.util.spawn('soffice') end),
                key({ modkey, "Shift"   }, "m", show_song),
+               key({ modkey            }, ",", function () awful.util.spawn('perl /home/abesto/bin/lyrics.pl') end),
                -- eof mine
 
 			   key({ modkey,           }, "l",     function () awful.tag.incmwfact( 0.05)    end),
@@ -646,3 +642,9 @@ for s = 1, screen.count() do
 
                awful.hooks.timer.register(5, memInfo)
 		       -- }}}
+
+if autorun then
+   for app = 1, #autorunApps do
+       awful.util.spawn(autorunApps[app])
+   end
+end

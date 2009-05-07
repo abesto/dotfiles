@@ -46,3 +46,5 @@ var maps = Array(
 
 for (var i = 0; i < maps.length; i += 2)
     define_key(content_buffer_normal_keymap, maps[i], maps[i+1]);
+
+define_webjump("archwiki", "http://wiki.archlinux.org/index.php?title=Special%3ASearch&ns0=1&search=%s&fulltext=Advanced+search");
