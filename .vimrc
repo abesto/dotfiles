@@ -1,11 +1,9 @@
-colorscheme koehler
+colorscheme oceandeep
 set nu shiftwidth=4 tabstop=8 smartindent backspace=2 fileencoding=utf-8
 set incsearch wildmenu nohlsearch
 set guioptions=ic
 filetype plugin indent on
 syntax on
-
-set cursorline
 
 " FuzzyFinder maps
 nmap <Leader>e :FuzzyFinderFile<CR>
@@ -16,3 +14,11 @@ nmap <Leader>d :FuzzyFinderBuffer<CR>
 set grepprg=grep\ -nH\ $*
 let g:tex_flavor="latex"
 let g:Tex_DefaultTargetFormat="pdf"
+
+map <F5> <Esc>:EnableFastPHPFolds<Cr>
+map <F6> <Esc>:EnablePHPFolds<Cr>
+map <F7> <Esc>:DisablePHPFolds<Cr> 
+
+inoremap <C-P> <ESC>:call PhpDocSingle()<CR>i
+nnoremap <C-P> :call PhpDocSingle()<CR>
+vnoremap <C-P> :call PhpDocRange()<CR> 
