@@ -29,6 +29,7 @@ var maps = Array(
     "h"   , "cmd_scrollLeft",
     "l"   , "cmd_scrollRight",
     "o"   , "find-url",
+    "F"   , "follow-new-buffer",
     "t"   , "find-url-new-buffer",
     "C-i" , "go-forward",
     "C-o" , "go-back",

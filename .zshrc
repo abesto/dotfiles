@@ -24,13 +24,18 @@ setopt autocd extendedglob
 unsetopt beep
 # End of lines configured by zsh-newuser-install
 
-PROMPT=$'%{\e[0;34m%}%B[%b%{\e[0m%}%{\e[1;32m%}%n%{\e[1;30m%}@%{\e[0m%}%{\e[0;36m%}%m%{\e[0;34m%}%B]%b%{\e[0m%} - %b%{\e[0;34m%}%B[%b%{\e[1;37m%}%~%{\e[0;34m%}%B]%b%{\e[0m%} - %{\e[0;34m%}%B[%b%{\e[0;33m%}'%D{"%a %b %d, %I:%M"}%b$'%{\e[0;34m%}%B]%b%{\e[0m%}
-%{\e[0;34m%}%B%B[%{\e[1;35m%}$%{\e[0;34m%}%B]>%{\e[0m%}%b '
+PROMPT=$'%{\e[0;34m%}%B╔═[%b%{\e[0m%}%{\e[1;32m%}%n%{\e[1;30m%}@%{\e[0m%}%{\e[0;36m%}%m%{\e[0;34m%}%B]═%b%{\e[0;34m%}%B[%b%{\e[1;37m%}%~%{\e[0;34m%}%B]═%{\e[0;34m%}%B[%b%{\e[0;33m%}'%D{"%a %b %d, %I:%M"}%b$'%{\e[0;34m%}%B]%b%{\e[0m%}
+%{\e[0;34m%}%B%B╚═>%{\e[0m%}%b '
 
 autoload -U promptinit
 promptinit
 
 bindkey -e
+bindkey '^?' backward-delete-char
+bindkey '^[[3~' delete-char
+bindkey '^[[7~' beginning-of-line
+bindkey '^[[8~' end-of-line
+
 
 alias ls='ls --color=auto --group-directories-first'
 alias la='ls -a'
@@ -68,6 +73,7 @@ extract () {
           *.gz)        gunzip $1      ;;
           *.tar)       tar xvf $1     ;;
           *.tbz2)      tar xvjf $1    ;;
+          *.tar.bz)    tar xvjf $1    ;;
           *.tgz)       tar xvzf $1    ;;
           *.zip)       unzip $1       ;;
           *.Z)         uncompress $1  ;;

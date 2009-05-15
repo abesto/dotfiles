@@ -61,7 +61,8 @@ TEXT
 ${color0}$nodename${alignr}linux-$kernel
 $alignc${color0}Uptime:${color1} $uptime ${color0}
 
-${alignc}${color0}CPU Average: ${color1}${cpu cpu0}% ${color0}at${color1} ${freq_g cpu0}GB
+${alignc}${color0}CPU Temperature: ${color1}${acpitemp}°C
+$alignc${color0}CPU Average: ${color1}${cpu cpu0}% ${color0}at${color1} ${freq_g cpu0}GB
 ${color0}${cpugraph cpu0 cc1010 ff3030}
 ${color0}Core 1${alignr}Core 2
 ${color1}${cpu cpu1}% ${color0}at${color1} ${freq_g cpu1}GB $alignr ${cpu cpu2}%${color0} ${color0}at${color1} ${freq_g cpu0}GB

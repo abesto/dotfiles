@@ -40,7 +40,6 @@ export EDITOR='vim'
 export VISUAL='vim'
 
 set show-all-if-ambiguous on
-set -o vi
 
 extract () {
   if [ -f $1 ] ; then
