@@ -8,6 +8,10 @@
 (load "toggle-fullscreen")
 ;(nix-fullscreen) don't need this using AwesomeWM
 
+;; This is me
+(setq user-full-name "Zoltán Nagy")
+(setq user-mail-address "abesto0@gmail.com")
+
 ;; Behaviour
 (setq-default indent-tabs-mode nil)     ; I always want spaces instead of tabs
 (setq default-tab-width 4)
