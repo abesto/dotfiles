@@ -1,0 +1,51 @@
+<?xml version="1.0" ?>
+
+<rdf:RDF
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns="http://purl.org/rss/1.0/"
+  xmlns:snow="http://snownews.kcore.de/ns/1.0/">
+
+<snow:lastmodified>Fri, 22 May 2009 04:00:03 GMT</snow:lastmodified>
+<channel rdf:about="http://www.xkcd.com/rss.xml">
+<title>xkcd.com</title>
+<link>http://xkcd.com/</link>
+<description>xkcd.com: A webcomic of romance and math humor.</description>
+</channel>
+
+<item rdf:about="http://xkcd.com/587/">
+<title>Crime Scene</title>
+<link>http://xkcd.com/587/</link>
+<description>&lt;img src="http://imgs.xkcd.com/comics/crime_scene.png" title="I think I see a Mandlebrot set! No, that's just blood splatters. Golly." alt="I think I see a Mandlebrot set! No, that's just blood splatters. Golly." /&gt;</description>
+<snow:readstatus>1</snow:readstatus>
+<snow:hash>760feb4c76dfbf0f2c502e06cff5e823</snow:hash>
+<snow:date>1242964800</snow:date>
+</item>
+
+<item rdf:about="http://xkcd.com/586/">
+<title>Mission to Culture</title>
+<link>http://xkcd.com/586/</link>
+<description>&lt;img src="http://imgs.xkcd.com/comics/mission_to_culture.png" title="It can't be very MUCH money ... they apparently can't even afford a sampler.  I mean, with a little remixing, some of this could be kinda good!" alt="It can't be very MUCH money ... they apparently can't even afford a sampler.  I mean, with a little remixing, some of this could be kinda good!" /&gt;</description>
+<snow:readstatus>1</snow:readstatus>
+<snow:hash>737471da9dcc5b6df6f658ab8c573386</snow:hash>
+<snow:date>1242792000</snow:date>
+</item>
+
+<item rdf:about="http://xkcd.com/585/">
+<title>Outreach</title>
+<link>http://xkcd.com/585/</link>
+<description>&lt;img src="http://imgs.xkcd.com/comics/outreach.png" title="Completely implausible? Yes. Nevertheless, worth keeping a can of shark repellent next to the bed." alt="Completely implausible? Yes. Nevertheless, worth keeping a can of shark repellent next to the bed." /&gt;</description>
+<snow:readstatus>1</snow:readstatus>
+<snow:hash>8662dfb6402b75bb6d405e55c50f6ab3</snow:hash>
+<snow:date>1242619200</snow:date>
+</item>
+
+<item rdf:about="http://xkcd.com/584/">
+<title>Unsatisfied</title>
+<link>http://xkcd.com/584/</link>
+<description>&lt;img src="http://imgs.xkcd.com/comics/unsatisfied.png" title="Forever comparing, never evaluating on any external scale.  If you were a sort function, you'd never break the nlogn barrier." alt="Forever comparing, never evaluating on any external scale.  If you were a sort function, you'd never break the nlogn barrier." /&gt;</description>
+<snow:readstatus>1</snow:readstatus>
+<snow:hash>0ae50a9581e2fcb56c4128b131b3cbac</snow:hash>
+<snow:date>1242360000</snow:date>
+</item>
+
+</rdf:RDF>
