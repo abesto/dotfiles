@@ -40,7 +40,8 @@ autorunApps =
    "emacs --daemon",
    --"remind -zk'zenity --info --text %s' ~/gtd", -- remind notifications
    -- "firefox",
-   -- "~/mutt",
+   "~/bin/mutt",
+   "~/bin/snownews",
    "mail-notification",
    "xscreensaver -nosplash",
    --"gnome-do",
@@ -86,7 +87,7 @@ floatapps =
 apptags =
 {
     ["Navigator"] = { screen = 1, tag = 9 },
-    ["mutt"] = { screen = 1, tag = 8 },
+    ["conapp"] = { screen = 1, tag = 8 },
     ["pidgin"] = {screen = 1, tag = 7},
     ["skype"] = {screen = 1, tag = 7},
     ["xchat"] = {screen = 1, tag = 7}
@@ -401,7 +402,10 @@ for s = 1, screen.count() do
 
 			   -- special app starters
 			   key({},                    "XF86HomePage", function () awful.util.spawn(browser) end),
-			   key({},                    "XF86Mail", function () awful.util.spawn("/home/abesto/bin/mutt") end),
+			   key({},                    "XF86Mail", function ()
+                                                         awful.util.spawn("/home/abesto/bin/mutt")
+                                                         awful.util.spawn("/home/abesto/bin/snownews")
+                                                      end),
 			   key({},                    "XF86Search", function () awful.util.spawn(browser .. " http://google.com") end),
 
 			   -- Jump to named tags

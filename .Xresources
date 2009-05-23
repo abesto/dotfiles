@@ -24,15 +24,15 @@ URxvt.colorUL: #86a2be
 urxvt.keysym.M-u: perl:mark-yank-urls:activate_mark_mode
 urxvt*scrollBar: false
 
-mutt.font: -*-terminus-medium-*-*-*-*-140-*-*-*-*-*
-mutt.background: black
-mutt.foreground: white
-mutt*scrollBar:    false
-mutt*scrollBar_floating:    true
-mutt*scrollBar_right:   true
-mutt*scrollColor:       #202020
-mutt*matcher.button:        1
-mutt*saveLines:              8192
+conapp.font: -*-terminus-medium-*-*-*-*-140-*-*-*-*-*
+conapp.background: black
+conapp.foreground: white
+conapp*scrollBar:    false
+conapp*scrollBar_floating:    true
+conapp*scrollBar_right:   true
+conapp*scrollColor:       #202020
+conapp*matcher.button:        1
+conapp*saveLines:              8192
 
 aterm*scrollBar: false
 

@@ -13,6 +13,8 @@ zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p
 zstyle ':completion:*' verbose true
 zstyle :compinstall filename '/home/abesto/.zshrc'
 
+PATH=$PATH:/home/abesto/bin:/etc/rc.d
+
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
@@ -40,7 +42,7 @@ bindkey '^[[6~' down-line-or-history
 bindkey '^[[A' up-line-or-search
 bindkey '^[[D' backward-char
 bindkey '^[[B' down-line-or-search
-bindkey '^[[C' forward-char 
+bindkey '^[[C' forward-char
 bindkey '^[[2~' overwrite-mode
 
 
