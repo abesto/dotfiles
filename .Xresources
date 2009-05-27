@@ -1,7 +1,7 @@
 xterm*foreground: white
 xterm*background: black
 xterm*cursorColor: green
-xterm*font: -*-terminus-medium-*-*-*-*-140-*-*-*-*-u
+xterm*font: -*-terminus-medium-*-*-*-*-140-*-*-*-*-*
 !xterm*font: -*-dejavu sans mono-medium-r-*-*-12-*-*-*-*-*-iso10646-*
 xterm*font1: -*-dejavu sans mono-medium-r-*-*-9-*-*-*-*-*-iso10646-*
 xterm*font2: -*-dejavu sans mono-medium-r-*-*-10-*-*-*-*-*-iso10646-*
@@ -18,10 +18,10 @@ urxvt.foreground: white
 urxvt*urllauncher: conkeror 
 urxvt*matcher.button:        1
 urxvt*saveLines:              8192
-URxvt.perl-ext-common: default,matcher
+!URxvt.perl-ext-common: default,matcher
 URxvt.urlLauncher: conkeror
 URxvt.colorUL: #86a2be 
-urxvt.keysym.M-u: perl:mark-yank-urls:activate_mark_mode
+!urxvt.keysym.M-u: perl:mark-yank-urls:activate_mark_mode
 urxvt*scrollBar: false
 
 conapp.font: -*-terminus-medium-*-*-*-*-140-*-*-*-*-*
@@ -36,4 +36,4 @@ conapp*saveLines:              8192
 
 aterm*scrollBar: false
 
-Emacs.font: -*-terminus-medium-*-*-*-*-110-*-*-*-*-iso8859-1
+    Emacs.font: -*-terminus-medium-*-*-*-*-120-*-*-*-*-iso8859-1

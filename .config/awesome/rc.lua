@@ -25,7 +25,9 @@ terminal = "urxvt"
 --editor = os.getenv("EDITOR") or "nano"
 editor = "emacsclient"
 --editor_cmd = terminal .. " -e " .. editor
-editor_cmd = "emacsclient -c"
+
+editor_cmd = "xterm -T '" .. os.getenv("USER") .. "@keyrit' -e 'TERM=\"xterm-256color\" emacsclient -t'"
+--editor_cmd = "xterm -T " .. os.getenv("USER") .. "@" .. os.getenv("HOST") .. " -e 'TERM=" .. '"' .. "xterm-256color' emacsclient -t'
 browser = "conkeror"
 
 
@@ -40,8 +42,8 @@ autorunApps =
    "emacs --daemon",
    --"remind -zk'zenity --info --text %s' ~/gtd", -- remind notifications
    -- "firefox",
-   "~/bin/mutt",
-   "~/bin/snownews",
+   "/home/abesto/bin/mutt",
+   "/home/abesto/bin/snownews",
    "mail-notification",
    "xscreensaver -nosplash",
    --"gnome-do",
@@ -75,11 +77,8 @@ floatapps =
 {
     -- by class
     ["MPlayer"] = true,
-    ["pinentry"] = true,
     ["gimp"] = true,
     ["vlc"] = true,
-    -- by instance
-    ["mocp"] = true
 }
 
 -- Applications to be moved to a pre-defined tag by class or instance.
@@ -91,7 +90,6 @@ apptags =
     ["pidgin"] = {screen = 1, tag = 7},
     ["skype"] = {screen = 1, tag = 7},
     ["xchat"] = {screen = 1, tag = 7}
-    -- ["mocp"] = { screen = 2, tag = 4 },
 }
 
 -- Define if we want to use titlebar on all applications.
@@ -475,6 +473,7 @@ for s = 1, screen.count() do
 			       c.maximized_horizontal = not c.maximized_horizontal
 			       c.maximized_vertical   = not c.maximized_vertical
 			   end),
+               key({ modkey, "Shift"  }, "t", function (c) c.ontop = not c.ontop end)
 		       }
 
 		       -- Compute the maximum number of digit we need, limited to 9
@@ -596,6 +595,7 @@ for s = 1, screen.count() do
 			   local inst = c.instance
 			   if floatapps[cls] then
 			       awful.client.floating.set(c, floatapps[cls])
+                   c.ontop = true
 			   elseif floatapps[inst] then
 			       awful.client.floating.set(c, floatapps[inst])
 			   end

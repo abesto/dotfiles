@@ -1,6 +1,8 @@
 ;; Appearance
 (require 'color-theme)
-(color-theme-dark-laptop)     ; Nice, dark, easy on the eyes
+;(color-theme-dark-laptop)     ; Nice, dark, easy on the eyes
+;(color-theme-arjen)     ; Nice, dark, easy on the eyes
+(color-theme-clarity)
 (tool-bar-mode -1)            ; No toolbar, thanks
 (set-default 'fill-column 80) ; 80. standard. good.
 (setq visible-bell t)         ; Can't go beeping around at midnight, now can I?
