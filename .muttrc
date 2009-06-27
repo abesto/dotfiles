@@ -1,0 +1,47 @@
+set imap_user = "abesto0@gmail.com"
+set imap_pass = $GMAIL_PASS
+
+set smtp_url = "smtp://abesto0@smtp.gmail.com:587/"
+set smtp_pass = '.i!qu$0\Nr.$:an\|G?'
+set from = "abesto0@gmail.com"
+set realname = "Zoltán Nagy"
+
+set folder = "imaps://imap.gmail.com:993"
+set spoolfile = "+INBOX"
+set postponed="+[Gmail]/Piszkozatok"
+# set record="+[Gmail]/Elküldött levelek"
+set record=""
+set header_cache=~/.hcache
+set net_inc=5
+
+set header_cache=~/.mutt/cache/headers
+set message_cachedir=~/.mutt/cache/bodies
+set certificate_file=~/.mutt/certificates
+
+# abook
+set query_command = "abook --mutt-query '%s'"
+macro generic,index,pager \ca "<shell-escape>abook<return>" "launch abook"
+macro index,pager A "<pipe-message>abook --add-email<return>" "add the sender address to abook"
+
+mailboxes "+INBOX" "=[Gmail]/Arch Announce" "=[Gmail]/Python Hun Levlista"
+
+set sort=threads
+set sort_aux=date-sent
+unset metoo
+
+ignore *
+unignore from: date: subject: to: cc: reply-to:
+unignore organization: organisation: user-agent: x-mailer:
+
+auto_view text/html
+macro pager \cu |urlview\n
+
+set assumed_charset="cp1252"
+
+set move = no
+
+set editor='emacsclient %s > /dev/null'
+
+source ~/.mutt/mutt.color
+source ~/.mutt/mutt.gpg
+#source ~/.mutt/aliases

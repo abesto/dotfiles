@@ -28,7 +28,7 @@ editor_cmd = "emacsclient -c"
 -- editor_cmd = "urxvt -T 'emacs@keyrit' -e emacsclient -t"
 browser = "conkeror"
 irssi = "urxvt -name 'irssi' -T 'irssi' -e screen irssi"
-
+mutt = "urxvt -name 'conapp' -e '/home/abesto/bin/mutt'"
 
 -- Autorun programs
 autorun = true
@@ -40,7 +40,7 @@ autorunApps =
    "emacs --daemon",
    --"remind -zk'zenity --info --text %s' ~/gtd", -- remind notifications
    -- "firefox",
-   "/home/abesto/bin/mutt",
+   mutt,
    "/home/abesto/bin/snownews",
    "mail-notification",
    "xscreensaver -nosplash",
@@ -400,7 +400,7 @@ for s = 1, screen.count() do
 			   -- special app starters
 			   key({},                    "XF86HomePage", function () awful.util.spawn(browser) end),
 			   key({},                    "XF86Mail", function ()
-                                                         awful.util.spawn("/home/abesto/bin/mutt")
+                                                         awful.util.spawn(mutt)
                                                          awful.util.spawn("/home/abesto/bin/snownews")
                                                       end),
 			   key({},                    "XF86Search", function () awful.util.spawn(browser .. " http://google.com") end),
