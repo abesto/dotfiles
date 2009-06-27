@@ -3,12 +3,11 @@
 . /etc/rc.conf
 . /etc/rc.d/functions
 
-DYNDNS=1  # Use DynDNS?
 FIREHOL=1 # Use firehol?
 
 case "$1" in
     start|restart)
-        if [ $DYNDNS -eq 1 ]; then
+        if [[ "$2$3$4" =~ "dyndns" ]]; then
             stat_busy "Updating DynDNS IP"
             dyndns.sh > /dev/null 2>&1
             stat_done #TODO: check if update was succesful
@@ -22,7 +21,7 @@ case "$1" in
         fi
         ;;
     stop)
-        if [ $DYNDNS -eq 1 ]; then
+        if [[ "$2$3$4" =~ "dyndns" ]]; then
             stat_busy "Updating DynDNS IP to 127.0.0.1"
             dyndns.sh 127.0.0.1 > /dev/null 2>&1
             stat_done

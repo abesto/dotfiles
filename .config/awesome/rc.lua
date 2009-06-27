@@ -23,12 +23,11 @@ beautiful.init(theme_path)
 -- This is used later as the default terminal and editor to run.
 terminal = "urxvt"
 --editor = os.getenv("EDITOR") or "nano"
-editor = "emacsclient"
+editor_cmd = "emacsclient -c"
 --editor_cmd = terminal .. " -e " .. editor
-
-editor_cmd = "xterm -T '" .. os.getenv("USER") .. "@keyrit' -e 'TERM=\"xterm-256color\" emacsclient -t'"
---editor_cmd = "xterm -T " .. os.getenv("USER") .. "@" .. os.getenv("HOST") .. " -e 'TERM=" .. '"' .. "xterm-256color' emacsclient -t'
+-- editor_cmd = "urxvt -T 'emacs@keyrit' -e emacsclient -t"
 browser = "conkeror"
+irssi = "urxvt -name 'irssi' -T 'irssi' -e screen irssi"
 
 
 -- Autorun programs
@@ -37,8 +36,7 @@ autorunApps =
 {
    "nm-applet",
    --"mpdscribble",
-   "xset r rate 200 30", -- keyboard autorepeat rate
-   "xmodmap /home/abesto/.xmodmap",
+   "setxkbmap -option terminate:ctrl_alt_bksp", -- Zap X...
    "emacs --daemon",
    --"remind -zk'zenity --info --text %s' ~/gtd", -- remind notifications
    -- "firefox",
@@ -48,7 +46,8 @@ autorunApps =
    "xscreensaver -nosplash",
    --"gnome-do",
    "conky -c /home/abesto/.conkyrc/conkyrc",
-   "wmname LG3D"  -- for Java apps, see http://bbs.archlinux.org/viewtopic.php?pid=450870#p450870
+   "wmname LG3D",  -- for Java apps, see http://bbs.archlinux.org/viewtopic.php?pid=450870#p450870
+   "/home/abesto/bin/keyb"
    --"nautilus -n"
    --"remind -gq ~/gtd | gxmessage -title \"Today's reminders\" -file -"  -- at startup
 }
@@ -89,7 +88,7 @@ apptags =
     ["conapp"] = { screen = 1, tag = 8 },
     ["pidgin"] = {screen = 1, tag = 7},
     ["skype"] = {screen = 1, tag = 7},
-    ["xchat"] = {screen = 1, tag = 7}
+    ["irssi"] = {screen = 1, tag = 7},
 }
 
 -- Define if we want to use titlebar on all applications.
@@ -393,8 +392,8 @@ for s = 1, screen.count() do
 			   key({ modkey,           }, "u", awful.client.urgent.jumpto),
 
 			   -- Multimedia keys
-			   key({},                    "XF86AudioRaiseVolume", function () awful.util.spawn("amixer set PCM 5%+") end),
-			   key({},                    "XF86AudioLowerVolume", function () awful.util.spawn("amixer set PCM 5%-") end),
+			   key({},                    "XF86AudioRaiseVolume", function () awful.util.spawn("amixer set Master 5%+") end),
+			   key({},                    "XF86AudioLowerVolume", function () awful.util.spawn("amixer set Master 5%-") end),
 			   key({},                    "XF86AudioMute", function () awful.util.spawn("amixer set Master toggle") end),
 			   key({},                    "XF86AudioPlay", function () awful.util.spawn("mpc toggle") end),
 
@@ -425,6 +424,8 @@ for s = 1, screen.count() do
 			   key({ modkey, "Shift"   }, "f", function () awful.util.spawn(browser) end),
 			   key({ modkey, "Shift"   }, "e", function () awful.util.spawn(editor_cmd) end),
 			   key({ modkey, "Shift"   }, "o", function () awful.util.spawn('soffice') end),
+               key({ modkey, "Shift"   }, "i", function () awful.util.spawn(irssi) end),
+			   key({ modkey            }, "b", function () awful.util.spawn('/home/abesto/bin/bugmenot') end),
                key({ modkey, "Shift"   }, "m", show_song),
                key({ modkey            }, ",", function () awful.util.spawn('perl /home/abesto/bin/lyrics.pl') end),
                -- eof mine

@@ -14,7 +14,7 @@ var gs_maps = Array(
     "o"   , "find-url",
     "/"   , "isearch-forward"
 );
-for (var i = 0; i < gs_maps.length; i += 1)
+for (var i = 0; i < gs_maps.length; i += 2)
     define_key(google_search_results_keymap, gs_maps[i], gs_maps[i+1]);
 
 require('eye-guide.js');

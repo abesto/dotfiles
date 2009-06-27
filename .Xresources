@@ -1,28 +1,39 @@
 xterm*foreground: white
 xterm*background: black
-xterm*cursorColor: green
+xterm*cursorColor: white
 xterm*font: -*-terminus-medium-*-*-*-*-140-*-*-*-*-*
+!xterm*font: -*-inconsolata-*-*-*-*-*-*-*-*-*-*-*
 !xterm*font: -*-dejavu sans mono-medium-r-*-*-12-*-*-*-*-*-iso10646-*
-xterm*font1: -*-dejavu sans mono-medium-r-*-*-9-*-*-*-*-*-iso10646-*
-xterm*font2: -*-dejavu sans mono-medium-r-*-*-10-*-*-*-*-*-iso10646-*
-xterm*font3: -*-dejavu sans mono-medium-r-*-*-12-*-*-*-*-*-iso10646-*
-xterm*font4: -*-dejavu sans mono-medium-r-*-*-13-*-*-*-*-*-iso10646-*
-xterm*font5: -*-dejavu sans mono-medium-r-*-*-15-*-*-*-*-*-iso10646-*
-xterm*font6: -*-dejavu sans mono-medium-r-*-*-18-*-*-*-*-*-iso10646-*
+!xterm*font1: -*-dejavu sans mono-medium-r-*-*-9-*-*-*-*-*-iso10646-*
+!xterm*font: -*-proggysquare-*-*-*-*-11-*-*-*-*-*-*-*
+!xterm*font2: -*-dejavu sans mono-medium-r-*-*-10-*-*-*-*-*-iso10646-*
+!xterm*font3: -*-dejavu sans mono-medium-r-*-*-12-*-*-*-*-*-iso10646-*
+!xterm*font4: -*-dejavu sans mono-medium-r-*-*-13-*-*-*-*-*-iso10646-*
+!xterm*font5: -*-dejavu sans mono-medium-r-*-*-15-*-*-*-*-*-iso10646-*
+!xterm*font6: -*-dejavu sans mono-medium-r-*-*-18-*-*-*-*-*-iso10646-*
+XTerm*eightBitInput: false
+
+!Backspace, \C-h
+!*VT100.Translations:	#override \
+!	<Key>Delete: string(0x04) \n\
+!		<Key>BackSpace: string(0x7F)
+!		XTerm*ttyModes: erase ^?
+
 
 !urxvt.font: -*-dejavu sans mono-medium-r-*-*-13-*-*-*-*-*-iso10646-*
 urxvt.font: -*-terminus-medium-*-*-*-*-140-*-*-*-*-*
-!URxvt*font: xft:DejaVu Sans Mono:pixelsize=10 
+!URxvt*font: xft:DejaVu Sans Mono:pixelsize=10
 urxvt.background: black
 urxvt.foreground: white
-urxvt*urllauncher: conkeror 
+urxvt*urllauncher: conkeror
 urxvt*matcher.button:        1
 urxvt*saveLines:              8192
-!URxvt.perl-ext-common: default,matcher
+URxvt.perl-ext-common: default,matcher
 URxvt.urlLauncher: conkeror
-URxvt.colorUL: #86a2be 
-!urxvt.keysym.M-u: perl:mark-yank-urls:activate_mark_mode
+URxvt.colorUL: #86a2be
+urxvt.keysym.M-u: perl:mark-yank-urls:activate_mark_mode
 urxvt*scrollBar: false
+urxvt*urgentOnBell:true
 
 conapp.font: -*-terminus-medium-*-*-*-*-140-*-*-*-*-*
 conapp.background: black
@@ -34,6 +45,17 @@ conapp*scrollColor:       #202020
 conapp*matcher.button:        1
 conapp*saveLines:              8192
 
+irssi.font: -*-terminus-medium-*-*-*-*-140-*-*-*-*-*
+irssi.background: black
+irssi.foreground: white
+irssi*scrollBar:    false
+irssi*scrollBar_floating:    true
+irssi*scrollBar_right:   true
+irssi*scrollColor:       #202020
+irssi*matcher.button:        1
+irssi*saveLines:              8192
+irssi*urgentOnBell:true
+
 aterm*scrollBar: false
 
-    Emacs.font: -*-terminus-medium-*-*-*-*-120-*-*-*-*-iso8859-1
+Emacs.font: -*-terminus-medium-*-*-*-*-120-*-*-*-*-iso8859-1

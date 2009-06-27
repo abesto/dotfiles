@@ -1,13 +1,13 @@
 ;;;; Based on McGeary's init: http://www.emacsblog.org/2007/10/07/declaring-emacs-bankruptcy/
 
 ;; paths
-(add-to-list 'load-path (expand-file-name "~/.emacs.d"))
-(add-to-list 'load-path (expand-file-name "~/.emacs.d/site"))
-(add-to-list 'load-path (expand-file-name "~/.emacs.d/site/mail")) ; mail related stuff
-(add-to-list 'load-path (expand-file-name "~/.emacs.d/site/yasnippet"))
-(add-to-list 'load-path (expand-file-name "~/.emacs.d/site/cedet/speedbar"))
-(add-to-list 'load-path (expand-file-name "~/.emacs.d/site/org"))
-(add-to-list 'load-path (expand-file-name "~/.emacs.d/site/doxymacs"))
+(dolist (path (list "~/.emacs.d"
+                    "~/.emacs.d/site"
+                    "~/.emacs.d/site/mail"
+                    "~/.emacs.d/site/yasnippet"
+                    "~/.emacs.d/site/org"
+                    "~/.emacs.d/site/doxymacs"))
+  (add-to-list 'load-path (expand-file-name path)))
 ;(add-to-list 'load-path (expand-file-name "~/.emacs.d/site/egg"))  Dontwant :(
 
 ;;;;;;;;;;;;;;;;;;;
@@ -28,6 +28,8 @@
 (load "my-generic") ; Settings I always want
 (load "my-ido")     ; fuzzy search
 (load "my-viper")   ; viper-mode setup
+;(load "my-modal")
+;(add-hook 'find-file-hook 'vip-mode)
 (load "my-org")     ; org-mode setup
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -44,6 +46,7 @@
 ;; (add-hook 'python-mode-hook 'my-python-init)
 (add-hook 'LaTeX-mode-hook 'my-latex-init)
 (add-hook 'ruby-mode-hook 'my-ruby-init)
+(add-hook 'php-mode-user-hook 'my-php-init)
 (autoload 'lua-mode "lua-mode" "Lua editing mode." t)
 ;; mails
 (autoload 'post-mode "post" "mode for e-mail" t)
@@ -58,42 +61,25 @@
 (load "my-slime-init")   ; SLIME for editing lisp
 (load "my-nxhtml-init")  ; nxhtml for HTML+CSS+JS+PHP+Whatever
 (load "my-haskell-init")
+(load "my-ecb-init")
+(load "my-php-init")
+
+(load-php)
 
 ; Load them on startup if running in daemon mode
  (if (daemonp)
      (progn
        (load-slime)
-       (load-nxhtml)
+       ;(load-nxhtml)
        (load-haskell)
-       (load-jde)))
+       ;(load-jde)))
+       (load-ecb)
+       (load-php)
+       ))
+
+(require 'js2-mode)
+(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
 
 ;; Customize
-(custom-set-variables
-  ;; custom-set-variables was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
- '(TeX-output-view-style (quote (("^dvi$" ("^landscape$" "^pstricks$\\|^pst-\\|^psfrag$") "%(o?)dvips -t landscape %d -o && gv %f") ("^dvi$" "^pstricks$\\|^pst-\\|^psfrag$" "%(o?)dvips %d -o && gv %f") ("^dvi$" ("^a4\\(?:dutch\\|paper\\|wide\\)\\|sem-a4$" "^landscape$") "%(o?)xdvi %dS -paper a4r -s 0 %d") ("^dvi$" "^a4\\(?:dutch\\|paper\\|wide\\)\\|sem-a4$" "%(o?)xdvi %dS -paper a4 %d") ("^dvi$" ("^a5\\(?:comb\\|paper\\)$" "^landscape$") "%(o?)xdvi %dS -paper a5r -s 0 %d") ("^dvi$" "^a5\\(?:comb\\|paper\\)$" "%(o?)xdvi %dS -paper a5 %d") ("^dvi$" "^b5paper$" "%(o?)xdvi %dS -paper b5 %d") ("^dvi$" "^letterpaper$" "%(o?)xdvi %dS -paper us %d") ("^dvi$" "^legalpaper$" "%(o?)xdvi %dS -paper legal %d") ("^dvi$" "^executivepaper$" "%(o?)xdvi %dS -paper 7.25x10.5in %d") ("^dvi$" "." "%(o?)xdvi %dS %d") ("^pdf$" "." "xpdf %o %(outpage)") ("^html?$" "." "netscape %o"))))
- '(ecb-options-version "2.32")
- '(inhibit-startup-screen t)
- '(mumamo-noweb2-mode-from-ext (quote (("c" . c-mode))))
- '(mumamo-set-major-mode-delay 0.3)
- '(nuke-trailing-whitespace-in-hooks (quote (write-file-hooks mail-send-hook)) nil (nuke-trailing-whitespace))
- '(nxhtml-default-encoding (quote utf-8))
- '(nxhtml-skip-welcome t)
- '(org-agenda-files (quote ("~/proj/beluga/proj.org" "~/gtd/main.org")))
- '(org-export-author-info nil)
- '(org-export-creator-info nil)
- '(org-export-default-language "hu")
- '(org-export-preserve-breaks t)
- '(org-export-time-stamp-file nil)
- '(show-paren-mode t)
- '(transient-mark-mode (quote (only . t)))
- '(use-file-dialog nil))
-(custom-set-faces
-  ;; custom-set-faces was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
- '(mumamo-background-chunk-major ((((class color) (min-colors 88) (background dark)) nil)))
- '(mumamo-background-chunk-submode ((((class color) (min-colors 88) (background dark)) nil))))
+(setq custom-file "~/.emacs.d/custom.el")
+(load custom-file)

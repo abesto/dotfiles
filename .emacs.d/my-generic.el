@@ -14,19 +14,20 @@
 (setq user-full-name "Zoltán Nagy")
 (setq user-mail-address "abesto0@gmail.com")
 
-;; Behaviour
+;; Indenting
 (setq-default indent-tabs-mode nil)     ; I always want spaces instead of tabs
 (setq default-tab-width 4)
+(setq-default c-basic-offset 4)
+
+;; %s/yes/y, %s/no/n
 (setq confirm-kill-emacs 'y-or-n-p)
-(mouse-avoidance-mode 'exile)           ;Move mouse when cursor is over it
 (defalias 'yes-or-no-p 'y-or-n-p)
 
-;; Hide-show with tab, thanks!
-(require 'hideshow-org)
-(global-set-key "\C-ch" 'hs-org/minor-mode)
+(mouse-avoidance-mode 'exile)           ; Move mouse when point is under it
 
 (global-set-key "\C-x\C-m" 'execute-extended-command)
 (global-set-key "\M-n" 'linum-mode)
+(global-set-key (kbd "\C-c <tab>") 'align-regexp)
 
 ;; mode-compile
 (autoload 'mode-compile "mode-compile"
