@@ -53,6 +53,11 @@
 (add-to-list 'auto-mode-alist '("\\.*mutt-*\\|.article\\|\\.followup" . post-mode))
 (add-hook 'post-mode-hook 'my-mail-init)
 
+;;;;;;;;;;;;;;;;;;
+;; My functions ;;
+;;;;;;;;;;;;;;;;;;
+(load "proj")
+
 ;;;;;;;;;;;;;;;;;;;;;;
 ;; Big environemnts ;;
 ;;;;;;;;;;;;;;;;;;;;;;
