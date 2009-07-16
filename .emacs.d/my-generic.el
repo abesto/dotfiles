@@ -25,9 +25,14 @@
 
 (mouse-avoidance-mode 'exile)           ; Move mouse when point is under it
 
+;; keybindings
 (global-set-key "\C-x\C-m" 'execute-extended-command)
 (global-set-key "\M-n" 'linum-mode)
 (global-set-key (kbd "\C-c <tab>") 'align-regexp)
+
+;; highlight current line
+(global-hl-line-mode 1)
+(set-face-background 'hl-line "#222")
 
 ;; mode-compile
 (autoload 'mode-compile "mode-compile"
@@ -43,6 +48,7 @@
 ;; auto-mode-list
 (add-to-list 'auto-mode-alist '("mutt-keyrit_notepad" . mail-mode))
 (add-to-list 'auto-mode-alist '("vimperator.*" . blog-init))
+(add-to-list 'auto-mode-alist '("abesto\.host22.*" . blog-init))
 (add-to-list 'auto-mode-alist '(".*blogger-com-post.*" . blog-init))
 (add-to-list 'auto-mode-alist '("\\.*mutt-*\\|.article\\|\\.followup" . post-mode))
 (setq auto-mode-alist (cons '("\\.lua$" . lua-mode) auto-mode-alist))

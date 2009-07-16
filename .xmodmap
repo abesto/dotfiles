@@ -13,5 +13,5 @@ add Control = Control_L
 ! Programmable key 5
 keycode 196 = iacute
 ! Scroll
-keysym XF86ScrollUp = Up
-keysym XF86ScrollDown = Down
+!keysym XF86ScrollUp = Up
+!keysym XF86ScrollDown = Down

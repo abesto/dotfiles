@@ -3,19 +3,16 @@ These are third-party packages I won't push into the git repo, but here's a list
 Lines ending in .el are .el files obviously, while the others are directories.
 
 auctex
-cedet
+distel
 doxymacs
-ecb
 egg
 elib
 haskell-mode
 jde
 mail
-mail/boxquote.el
-mail/post.el
 mmm-mode
 nxhtml
-nxhtml-1.76
+nxhtml_old
 org
 slime
 themes

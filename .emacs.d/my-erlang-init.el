@@ -1,0 +1,10 @@
+(defun load-erlang ()
+  (interactive)
+  (setq erlang-root-dir "/usr/lib/erlang")
+  (setq load-path (cons "/usr/lib/erlang/lib/tools-2.6.4/emacs" load-path))
+  (setq exec-path (cons "/usr/lib/erlang/bin" exec-path))
+  (require 'erlang-start)
+
+  (require 'distel)
+  (distel-setup)
+  )

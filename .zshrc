@@ -15,6 +15,8 @@ zstyle :compinstall filename '/home/abesto/.zshrc'
 
 PATH=$PATH:/home/abesto/bin:/etc/rc.d
 
+export EDITOR='emacsclient'
+
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
@@ -56,6 +58,7 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 alias .....='cd ../../../../'
 alias ec='emacsclient'
+alias ri='ri19 -f ansi'
 
 export OOO_FORCE_DESKTOP=gnome
 

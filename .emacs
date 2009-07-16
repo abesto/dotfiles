@@ -6,7 +6,8 @@
                     "~/.emacs.d/site/mail"
                     "~/.emacs.d/site/yasnippet"
                     "~/.emacs.d/site/org"
-                    "~/.emacs.d/site/doxymacs"))
+                    "~/.emacs.d/site/doxymacs"
+                    "~/.emacs.d/site/distel/elisp"))
   (add-to-list 'load-path (expand-file-name path)))
 ;(add-to-list 'load-path (expand-file-name "~/.emacs.d/site/egg"))  Dontwant :(
 
@@ -45,7 +46,6 @@
 ;; Mode and mode-like hooks
 ;; (add-hook 'python-mode-hook 'my-python-init)
 (add-hook 'LaTeX-mode-hook 'my-latex-init)
-(add-hook 'ruby-mode-hook 'my-ruby-init)
 (add-hook 'php-mode-user-hook 'my-php-init)
 (autoload 'lua-mode "lua-mode" "Lua editing mode." t)
 ;; mails
@@ -68,19 +68,22 @@
 (load "my-haskell-init")
 (load "my-ecb-init")
 (load "my-php-init")
+(load "my-ruby-init")
+(load "my-erlang-init")
 
-(load-php)
+; (load-php)
 
 ; Load them on startup if running in daemon mode
- (if (daemonp)
-     (progn
-       (load-slime)
-       ;(load-nxhtml)
-       (load-haskell)
-       ;(load-jde)))
-       (load-ecb)
-       (load-php)
-       ))
+; I changed my mind about ^
+; (if (daemonp)
+;     (progn
+;       (load-slime)
+;       ;(load-nxhtml)
+;       (load-haskell)
+;       ;(load-jde)))
+;       (load-ecb)
+;       (load-php)
+;       ))
 
 (require 'js2-mode)
 (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))

@@ -11,7 +11,6 @@ set spoolfile = "+INBOX"
 set postponed="+[Gmail]/Piszkozatok"
 # set record="+[Gmail]/Elküldött levelek"
 set record=""
-set header_cache=~/.hcache
 set net_inc=5
 
 set header_cache=~/.mutt/cache/headers
@@ -23,7 +22,7 @@ set query_command = "abook --mutt-query '%s'"
 macro generic,index,pager \ca "<shell-escape>abook<return>" "launch abook"
 macro index,pager A "<pipe-message>abook --add-email<return>" "add the sender address to abook"
 
-mailboxes "+INBOX" "=[Gmail]/Arch Announce" "=[Gmail]/Python Hun Levlista"
+mailboxes "+INBOX" "+Arch Announce" "+Python Hun Levlista" "+uzbl"
 
 set sort=threads
 set sort_aux=date-sent
@@ -34,7 +33,7 @@ unignore from: date: subject: to: cc: reply-to:
 unignore organization: organisation: user-agent: x-mailer:
 
 auto_view text/html
-macro pager \cu |urlview\n
+macro pager \cu |conkeror\n
 
 set assumed_charset="cp1252"
 

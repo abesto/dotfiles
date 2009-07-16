@@ -1,20 +1,6 @@
-(defun load-ruby ()
-  (load "inf-ruby")
-  (autoload 'run-ruby "inf-ruby"
-    "Run an inferior Ruby process")
+(add-hook 'ruby-mode-hook 'doxymacs-yard)
 
-  (add-hook 'ruby-mode-hook 'doxymacs-ruby)
-
-  (autoload 'run-ruby "inf-ruby"
-    "Run an inferior Ruby process")
-  (autoload 'inf-ruby-keys "inf-ruby"
-    "Set local key defs for inf-ruby in ruby-mode")
-  (add-hook 'ruby-mode-hook
-            '(lambda ()
-               (inf-ruby-keys)
-               )))
-
-(defun doxymacs-ruby ()
+(defun doxymacs-yard ()
   (doxymacs-mode)
   (font-lock-add-keywords 'ruby-mode doxymacs-doxygen-keywords)
   ;; Only in effect for this buffer
@@ -30,21 +16,21 @@
 
   ;; The templates
   (setq doxymacs-file-comment-template '(
-                                         "#" > n
-                                         "# " (doxymacs-doxygen-command-char) "file   "
-                                         (if (buffer-file-name)
-                                             (file-name-nondirectory (buffer-file-name))
-                                           "") > n
-                                           "# " (doxymacs-doxygen-command-char) "author " (user-full-name)
-                                           (doxymacs-user-mail-address)
-                                           > n
-                                           "# " (doxymacs-doxygen-command-char) "date   " (current-time-string) > n
-                                           "# " > n
-                                           "# " (doxymacs-doxygen-command-char) "brief  " (p "Brief description of this file: ") > n
-                                           "# " > n
-                                           "# " p > n
-                                           "#" > n
-                                           ))
+         "#" > n
+         "# " (doxymacs-doxygen-command-char) "file   "
+         (if (buffer-file-name)
+             (file-name-nondirectory (buffer-file-name))
+           "") > n
+           "# " (doxymacs-doxygen-command-char) "author " (user-full-name)
+           (doxymacs-user-mail-address)
+           > n
+           "# " (doxymacs-doxygen-command-char) "date   " (current-time-string) > n
+           "# " > n
+           "# " (doxymacs-doxygen-command-char) "brief  " (p "Brief description of this file: ") > n
+           "# " > n
+           "# " p > n
+           "#" > n
+           ))
 
   (setq doxymacs-blank-multiline-comment-templave  '("#" > n "# " p > n "#" > n))
   (setq doxymacs-blank-singleline-comment-template '("# " > p))

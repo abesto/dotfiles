@@ -10,7 +10,7 @@ require("naughty")
 require("rodentbane")
 
 naughty.config.presets.normal.timeout = 3
-naughty.config.presets.normal.screen = 2
+naughty.config.presets.normal.screen = 1
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, and wallpapers
@@ -34,7 +34,7 @@ irssi = "urxvt -name 'irssi' -T 'irssi' -e screen irssi"
 mutt = "urxvt -name 'conapp' -e '/home/abesto/bin/mutt'"
 
 -- Autorun programs
---autorun = true
+autorun = true
 autorunApps =
    {
    "nm-applet",
@@ -49,9 +49,9 @@ autorunApps =
    "mail-notification",
    "xscreensaver -nosplash",
    --"gnome-do",
-   "conky -c /home/abesto/.conkyrc/conkyrc",
+   "conky",
    "wmname LG3D",  -- for Java apps, see http://bbs.archlinux.org/viewtopic.php?pid=450870#p450870
-   "/home/abesto/bin/keyb",
+   "/home/abesto/bin/keyb"
    --"nautilus -n"
    --"remind -gq ~/gtd | gxmessage -title \"Today's reminders\" -file -"  -- at startup
 }
@@ -195,11 +195,11 @@ function show_song (hide_duration)
 
       local dur_pattern = "%d+:%d+/%d+:%d+"
       local duration = string.find(status, dur_pattern) and string.sub(status, string.find(status, dur_pattern)) or ""
-      local text = track .. "\n" .. album
+      local text = album
       if hide_duration == nil then text = text .. "\n" .. duration end
 
       mnot =  naughty.notify({
-                                --title = title,
+                                title = track,
                                 text = text,
                                 icon = icon,
                              })
@@ -622,6 +622,8 @@ awful.hooks.manage.register(function (c, startup)
                                   c.screen = scr
                                   awful.client.movetotag(tags[scr][target.tag], c)
                                   awful.tag.viewonly(tags[scr][target.tag])
+                               else
+                                  c.screen = mouse.screen
                                end
 
                                -- Do this after tag mapping, so you don't see it on the wrong tag for a split second.
