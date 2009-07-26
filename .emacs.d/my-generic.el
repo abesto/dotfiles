@@ -1,5 +1,5 @@
 ;; Appearance
-(require 'color-theme)
+;(require 'color-theme)
 ;(color-theme-dark-laptop)     ; Nice, dark, easy on the eyes
 ;(color-theme-arjen)     ; Nice, dark, easy on the eyes
 (color-theme-clarity)
@@ -45,10 +45,16 @@
 (require 'epa)
 (epa-file-enable)
 
-;; auto-mode-list
+(require 'ledger)
+
+(autoload 'wikipedia-mode
+  "wikipedia-mode.el"
+  "Major mode for editing documents in Wikipedia markup." t)
+
 (add-to-list 'auto-mode-alist '("mutt-keyrit_notepad" . mail-mode))
 (add-to-list 'auto-mode-alist '("vimperator.*" . blog-init))
 (add-to-list 'auto-mode-alist '("abesto\.host22.*" . blog-init))
 (add-to-list 'auto-mode-alist '(".*blogger-com-post.*" . blog-init))
 (add-to-list 'auto-mode-alist '("\\.*mutt-*\\|.article\\|\\.followup" . post-mode))
+(add-to-list 'auto-mode-alist '(".*wiki.*" . my-wiki-init))
 (setq auto-mode-alist (cons '("\\.lua$" . lua-mode) auto-mode-alist))

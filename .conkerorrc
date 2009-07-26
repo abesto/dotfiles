@@ -5,6 +5,8 @@ can_kill_last_buffer = false;
 editor_shell_command = "emacsclient";
 hints_auto_exit_delay = 1;
 
+xkcd_add_title = true;
+
 require("page-modes/google-search-results.js");
 google_search_bind_number_shortcuts();
 // override google-search-results mode keybindings for navigation

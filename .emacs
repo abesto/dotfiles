@@ -42,12 +42,14 @@
 (autoload 'blog-init "blog" "Blogging stuff" t)
 ;(autoload 'my-php-init "my-php-init" t)
 (autoload 'my-mail-init "my-mail-init")
+(autoload 'my-wiki-init "my-wiki-init")
 
 ;; Mode and mode-like hooks
 ;; (add-hook 'python-mode-hook 'my-python-init)
 (add-hook 'LaTeX-mode-hook 'my-latex-init)
 (add-hook 'php-mode-user-hook 'my-php-init)
 (autoload 'lua-mode "lua-mode" "Lua editing mode." t)
+(add-to-list 'auto-mode-alist '(".*wiki.*" . wikipedia-mode))
 ;; mails
 (autoload 'post-mode "post" "mode for e-mail" t)
 (add-to-list 'auto-mode-alist '("\\.*mutt-*\\|.article\\|\\.followup" . post-mode))

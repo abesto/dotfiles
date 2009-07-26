@@ -16,6 +16,7 @@ zstyle :compinstall filename '/home/abesto/.zshrc'
 PATH=$PATH:/home/abesto/bin:/etc/rc.d
 
 export EDITOR='emacsclient'
+export LEDGER_FILE='~/ledger.dat'
 
 autoload -Uz compinit
 compinit

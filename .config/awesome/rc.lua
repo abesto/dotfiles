@@ -38,7 +38,7 @@ autorun = true
 autorunApps =
    {
    "nm-applet",
-   --"mpdscribble",
+   "mpdscribble",
    "setxkbmap -option terminate:ctrl_alt_bksp", -- Zap X...
    "emacs --daemon",
    --"remind -zk'zenity --info --text %s' ~/gtd", -- remind notifications
@@ -432,6 +432,7 @@ globalkeys =
    key({ modkey, "Shift"   }, "m", show_song),
    key({ modkey            }, ",", function () awful.util.spawn('perl /home/abesto/bin/lyrics.pl') end),
    key({ modkey            }, "r", function() rodentbane.start() end),
+   key({ modkey            }, "n", function() awful.util.spawn('tomboy --new-note') end),
    -- eof mine
 
    key({ modkey,           }, "l",     function () awful.tag.incmwfact( 0.05)    end),
@@ -473,11 +474,11 @@ clientkeys =
    key({ modkey,           }, "o",      awful.client.movetoscreen                        ),
    key({ modkey, "Shift"   }, "r",      function (c) c:redraw()                       end),
    key({ modkey }, "t", awful.client.togglemarked),
-   key({ modkey }, "n",
-       function (c)
-          c.maximized_horizontal = not c.maximized_horizontal
-          c.maximized_vertical   = not c.maximized_vertical
-       end),
+   --key({ modkey }, "n",
+       --function (c)
+          --c.maximized_horizontal = not c.maximized_horizontal
+          --c.maximized_vertical   = not c.maximized_vertical
+       --end),
    key({ modkey, "Shift"  }, "t", function (c) c.ontop = not c.ontop end)
 }
 

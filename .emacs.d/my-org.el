@@ -7,18 +7,30 @@
 
 ;; Set up remember mode: http://orgmode.org/manual/Remember.html#Remember
 (org-remember-insinuate)
-(setq org-directory "~/gtd/")
-(setq org-default-notes-file (concat org-directory "/notes.org"))
+(setq org-directory "~/org/")
+(setq org-default-notes-file (concat org-directory "~/org/notes.org"))
 (define-key global-map "\C-cr" 'org-remember)
+
+(defun insert-note-link ()
+  (interactive)
+  (insert
+   (org-make-link-string
+    (concat "./" (read-from-minibuffer "Note: ") ".org")
+    (read-from-minibuffer "Description: "))
+   )
+)
+(org-defkey org-mode-map "\C-cn" 'insert-note-link)
 
 ;; Templates
 (setq org-remember-templates
       '(("Hotel" ?h
          "** ÚJ %^{Hotel neve}\n   Kérés érkezett: %t\n   Feltöltve: \n   Fizetve: \n   %?"
          "~/proj/shop/hotelek.org" "Hotelek")
-        ("Timestamp" ?s "%T %?%&")
+        ("Note" ?n "%T %?%&")
         ("Task" ?t "** TODO %? %^G" "~/gtd/main.org" "Tasks")
-        ("Project" ?p "** TODO %^{Project name} %^G\n*** %?" "~/gtd/main.org" "Projects")
+        ("Project" ?p "* [[./%^{File name}.org][%^{Project name}]]" "~/org/projects.org")
+        ("Blogpost" ?b "* TODO %^{Title}\n  %?" "~/org/blog.org")
+        ("Quote" ?q "** %^{Text} - %^{Author}" "~/org/blog.org" "Quotes")
         ))
 
 ;; Startup options

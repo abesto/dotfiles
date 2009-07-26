@@ -13,6 +13,7 @@ set postponed="+[Gmail]/Piszkozatok"
 set record=""
 set net_inc=5
 
+set mailcap_path= ~/.mutt/mailcap
 set header_cache=~/.mutt/cache/headers
 set message_cachedir=~/.mutt/cache/bodies
 set certificate_file=~/.mutt/certificates
