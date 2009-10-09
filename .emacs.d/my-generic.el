@@ -4,6 +4,7 @@
 ;(color-theme-arjen)     ; Nice, dark, easy on the eyes
 (color-theme-clarity)
 (tool-bar-mode -1)            ; No toolbar, thanks
+(toggle-scroll-bar -1)        ; No scrollbar either
 (set-default 'fill-column 80) ; 80. standard. good.
 (setq visible-bell t)         ; Can't go beeping around at midnight, now can I?
 (show-paren-mode)
@@ -11,7 +12,7 @@
 ;(nix-fullscreen) don't need this using AwesomeWM
 
 ;; This is me
-(setq user-full-name "Zoltán Nagy")
+(setq user-full-name "Nagy Zoltán")
 (setq user-mail-address "abesto0@gmail.com")
 
 ;; Indenting
@@ -58,3 +59,5 @@
 (add-to-list 'auto-mode-alist '("\\.*mutt-*\\|.article\\|\\.followup" . post-mode))
 (add-to-list 'auto-mode-alist '(".*wiki.*" . my-wiki-init))
 (setq auto-mode-alist (cons '("\\.lua$" . lua-mode) auto-mode-alist))
+
+(require 'uniquify)

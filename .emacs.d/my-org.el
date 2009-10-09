@@ -35,3 +35,5 @@
 
 ;; Startup options
 (setq org-hide-leading-stars t)
+
+(load "note")

@@ -65,7 +65,7 @@ if (-e $file) {
     }
 } else {
     main::log "Lyrics not found in cache, fetching from web.\n";
-    $lyrics = Lyrics::Fetcher->fetch($artist, $song);
+    $lyrics = Lyrics::Fetcher->fetch($artist, $song, "LeosLyrics");
 
     open FH, '>', $TMP or die $!;
     print FH $lyrics or die $!;

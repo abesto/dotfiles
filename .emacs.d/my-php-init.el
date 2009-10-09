@@ -6,9 +6,7 @@
   ;(require 'html-php)
   ;(add-to-list 'auto-mode-alist '("\\.php\\'" . html-php-mode))
 
-  (require 'yasnippet)
-  (yas/initialize)
-  (yas/load-directory "~/.emacs.d/site/yasnippet")
+  (require 'my-yasnippet)
 
   ;; Load the php-imenu index function
   (autoload 'php-imenu-create-index "php-imenu" nil t)
@@ -20,6 +18,7 @@
                                         ;(setq php-imenu-alist-postprocessor (function reverse))
     (imenu-add-menubar-index)
     )
+
 
   (require 'doxymacs)
   (add-hook 'php-mode-hook 'ensure-doxymacs-mode)

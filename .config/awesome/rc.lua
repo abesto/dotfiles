@@ -30,13 +30,14 @@ editor_cmd = "emacsclient -c"
 --editor_cmd = terminal .. " -e " .. editor
 -- editor_cmd = "urxvt -T 'emacs@keyrit' -e emacsclient -t"
 browser = "conkeror"
-irssi = "urxvt -name 'irssi' -T 'irssi' -e screen irssi"
+im = "urxvt -name 'im' -T 'im' -e '/home/abesto/bin/im'"
 mutt = "urxvt -name 'conapp' -e '/home/abesto/bin/mutt'"
 
 -- Autorun programs
 autorun = true
 autorunApps =
    {
+   --"/home/abesto/bin/dual",
    "nm-applet",
    "mpdscribble",
    "setxkbmap -option terminate:ctrl_alt_bksp", -- Zap X...
@@ -45,11 +46,12 @@ autorunApps =
    -- "firefox",
    --"xcompmgr -a",
    mutt,
-   "/home/abesto/bin/snownews",
+   --"/home/abesto/bin/snownews",
    "mail-notification",
+   --"checkgmail",
    "xscreensaver -nosplash",
    --"gnome-do",
-   "conky",
+   --"conky",
    "wmname LG3D",  -- for Java apps, see http://bbs.archlinux.org/viewtopic.php?pid=450870#p450870
    "/home/abesto/bin/keyb"
    --"nautilus -n"
@@ -92,7 +94,7 @@ apptags =
    ["conapp"] = { screen = 2, tag = 8 },
    ["pidgin"] = {screen = 2, tag = 7},
    ["skype"] = {screen = 1, tag = 7},
-   ["irssi"] = {screen = 1, tag = 7},
+   ["im"] = {screen = 1, tag = 7},
 }
 
 -- Define if we want to use titlebar on all applications.
@@ -290,7 +292,7 @@ netwidget = widget({
                    })
 
 wicked.register(netwidget, wicked.widgets.net,
-                enclose(highlight('Net: ')..'${eth0 down} / ${eth0 up} '),
+                enclose(highlight('Net: ')..'${wlan0 down} / ${wlan0 up} '),
                 nil, nil, 3)
 
 -- Create a systray
@@ -427,12 +429,13 @@ globalkeys =
    key({ modkey, "Shift"   }, "f", function () awful.util.spawn(browser) end),
    key({ modkey, "Shift"   }, "e", function () awful.util.spawn(editor_cmd) end),
    key({ modkey, "Shift"   }, "o", function () awful.util.spawn('soffice') end),
-   key({ modkey, "Shift"   }, "i", function () awful.util.spawn(irssi) end),
+   key({ modkey, "Shift"   }, "i", function () awful.util.spawn(im) end),
    key({ modkey            }, "b", function () awful.util.spawn('/home/abesto/bin/bugmenot') end),
    key({ modkey, "Shift"   }, "m", show_song),
    key({ modkey            }, ",", function () awful.util.spawn('perl /home/abesto/bin/lyrics.pl') end),
    key({ modkey            }, "r", function() rodentbane.start() end),
    key({ modkey            }, "n", function() awful.util.spawn('tomboy --new-note') end),
+   key({ modkey, "Shift"   }, "b", function() awful.util.spawn('/home/abesto/bin/cleartheme codeblocks') end),
    -- eof mine
 
    key({ modkey,           }, "l",     function () awful.tag.incmwfact( 0.05)    end),

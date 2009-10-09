@@ -7,7 +7,9 @@
                     "~/.emacs.d/site/yasnippet"
                     "~/.emacs.d/site/org"
                     "~/.emacs.d/site/doxymacs"
-                    "~/.emacs.d/site/distel/elisp"))
+                    "~/.emacs.d/site/distel/elisp"
+                    "~/.emacs.d/site/completion-ui"
+                    ))
   (add-to-list 'load-path (expand-file-name path)))
 ;(add-to-list 'load-path (expand-file-name "~/.emacs.d/site/egg"))  Dontwant :(
 
@@ -18,6 +20,7 @@
 (require 'color-theme)
 (require 'tex-site)
 (require 'org2rem)
+(require 'completion-ui)
 ;(require 'egg)
 (color-theme-initialize)
 (autoload 'word-count-mode "word-count" "Minor mode to count words" t)
@@ -43,9 +46,11 @@
 ;(autoload 'my-php-init "my-php-init" t)
 (autoload 'my-mail-init "my-mail-init")
 (autoload 'my-wiki-init "my-wiki-init")
+(autoload 'my-c++-init "my-c++-init")
 
 ;; Mode and mode-like hooks
 ;; (add-hook 'python-mode-hook 'my-python-init)
+(add-hook 'c++-mode-hook 'my-c++-init)
 (add-hook 'LaTeX-mode-hook 'my-latex-init)
 (add-hook 'php-mode-user-hook 'my-php-init)
 (autoload 'lua-mode "lua-mode" "Lua editing mode." t)
@@ -73,6 +78,8 @@
 (load "my-ruby-init")
 (load "my-erlang-init")
 
+(require 'my-ecb-init)
+
 ; (load-php)
 
 ; Load them on startup if running in daemon mode
@@ -93,3 +100,14 @@
 ;; Customize
 (setq custom-file "~/.emacs.d/custom.el")
 (load custom-file)
+
+
+;;; This was installed by package-install.el.
+;;; This provides support for the package system and
+;;; interfacing with ELPA, the package archive.
+;;; Move this code earlier if you want to reference
+;;; packages in your .emacs.
+(when
+    (load
+     (expand-file-name "~/.emacs.d/elpa/package.el"))
+  (package-initialize))

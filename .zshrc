@@ -60,6 +60,7 @@ alias ....='cd ../../..'
 alias .....='cd ../../../../'
 alias ec='emacsclient'
 alias ri='ri19 -f ansi'
+alias ctw='ctw HUXX0002'
 
 export OOO_FORCE_DESKTOP=gnome
 

@@ -1,8 +1,8 @@
-// -*- mode: javascript -*-
+// -*- mode: js2 -*-
 require("clicks-in-new-buffer.js");
 clicks_in_new_buffer_target = OPEN_NEW_BUFFER_BACKGROUND;
 can_kill_last_buffer = false;
-editor_shell_command = "emacsclient";
+editor_shell_command = "emacsclient -c";
 hints_auto_exit_delay = 1;
 
 xkcd_add_title = true;

@@ -11,7 +11,4 @@ add Control = Control_L
 ! For Microsoft Natural 4000
 !
 ! Programmable key 5
-keycode 196 = iacute
-! Scroll
-!keysym XF86ScrollUp = Up
-!keysym XF86ScrollDown = Down
+  keycode 196 = iacute

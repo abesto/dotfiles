@@ -3,7 +3,13 @@
   ;; If you edit it by hand, you could mess it up, so be careful.
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
- '(TeX-output-view-style (quote (("^dvi$" ("^landscape$" "^pstricks$\\|^pst-\\|^psfrag$") "%(o?)dvips -t landscape %d -o && gv %f") ("^dvi$" "^pstricks$\\|^pst-\\|^psfrag$" "%(o?)dvips %d -o && gv %f") ("^dvi$" ("^a4\\(?:dutch\\|paper\\|wide\\)\\|sem-a4$" "^landscape$") "%(o?)xdvi %dS -paper a4r -s 0 %d") ("^dvi$" "^a4\\(?:dutch\\|paper\\|wide\\)\\|sem-a4$" "%(o?)xdvi %dS -paper a4 %d") ("^dvi$" ("^a5\\(?:comb\\|paper\\)$" "^landscape$") "%(o?)xdvi %dS -paper a5r -s 0 %d") ("^dvi$" "^a5\\(?:comb\\|paper\\)$" "%(o?)xdvi %dS -paper a5 %d") ("^dvi$" "^b5paper$" "%(o?)xdvi %dS -paper b5 %d") ("^dvi$" "^letterpaper$" "%(o?)xdvi %dS -paper us %d") ("^dvi$" "^legalpaper$" "%(o?)xdvi %dS -paper legal %d") ("^dvi$" "^executivepaper$" "%(o?)xdvi %dS -paper 7.25x10.5in %d") ("^dvi$" "." "%(o?)xdvi %dS %d") ("^pdf$" "." "xpdf %o %(outpage)") ("^html?$" "." "netscape %o"))))
+ '(TeX-output-view-style (quote (("^dvi$" ("^landscape$" "^pstricks$\\|^pst-\\|^psfrag$") "%(o?)dvips -t landscape %d -o && gv %f") ("^dvi$" "^pstricks$\\|^pst-\\|^psfrag$" "%(o?)dvips %d -o && gv %f") ("^dvi$" ("^a4\\(?:dutch\\|paper\\|wide\\)\\|sem-a4$" "^landscape$") "%(o?)xdvi %dS -paper a4r -s 0 %d") ("^dvi$" "^a4\\(?:dutch\\|paper\\|wide\\)\\|sem-a4$" "%(o?)xdvi %dS -paper a4 %d") ("^dvi$" ("^a5\\(?:comb\\|paper\\)$" "^landscape$") "%(o?)xdvi %dS -paper a5r -s 0 %d") ("^dvi$" "^a5\\(?:comb\\|paper\\)$" "%(o?)xdvi %dS -paper a5 %d") ("^dvi$" "^b5paper$" "%(o?)xdvi %dS -paper b5 %d") ("^dvi$" "^letterpaper$" "%(o?)xdvi %dS -paper us %d") ("^dvi$" "^legalpaper$" "%(o?)xdvi %dS -paper legal %d") ("^dvi$" "^executivepaper$" "%(o?)xdvi %dS -paper 7.25x10.5in %d") ("^dvi$" "." "%(o?)xdvi %dS %d") ("^pdf$" "." "evince %o %(outpage)") ("^html?$" "." "netscape %o"))))
+ '(browse-url-browser-function (quote browse-url-firefox))
+ '(browse-url-firefox-new-window-is-tab nil)
+ '(browse-url-firefox-program "firefox")
+ '(browse-url-generic-program "conkeror")
+ '(browse-url-mozilla-program "mozilla")
+ '(completion-use-popup-frame nil)
  '(ecb-auto-activate nil)
  '(ecb-layout-name "left4")
  '(ecb-options-version "2.40")
@@ -17,6 +23,7 @@
  '(mumamo-noweb2-mode-from-ext (quote (("c" . c-mode))))
  '(mumamo-set-major-mode-delay 0.3)
  '(nuke-trailing-whitespace-in-hooks (quote (write-file-hooks mail-send-hook)) nil (nuke-trailing-whitespace))
+ '(nuke-trailing-whitespace-p t)
  '(nxhtml-default-encoding (quote utf-8))
  '(nxhtml-skip-welcome t)
  '(nxml-mode-hook (quote (rng-validate-mode)))
@@ -30,7 +37,15 @@
  '(show-paren-mode t)
  '(smooth-scroll-margin 4)
  '(transient-mark-mode (quote (only . t)))
- '(use-file-dialog nil))
+ '(twit-minor-mode t)
+ '(twit-pass "nzpd2004")
+ '(twit-protocol "https")
+ '(twit-show-user-images nil)
+ '(twit-user "abesto")
+ '(twit-user-image-dir "~/.emacs.d//twitter-images")
+ '(uniquify-buffer-name-style (quote forward) nil (uniquify))
+ '(use-file-dialog nil)
+ '(windmove-wrap-around nil))
 (custom-set-faces
   ;; custom-set-faces was added by Custom.
   ;; If you edit it by hand, you could mess it up, so be careful.
@@ -41,6 +56,10 @@
  '(ecb-tag-header-face ((((class color) (background dark)) (:background "DarkGreen"))))
  '(mumamo-background-chunk-major ((((class color) (min-colors 88) (background dark)) nil)))
  '(mumamo-background-chunk-submode ((((class color) (min-colors 88) (background dark)) nil)))
+ '(twit-author-face ((t (:foreground "gold" :weight bold :height 0.8 :family "mono"))))
+ '(twit-info-face ((t (:foreground "gray40" :slant italic :weight thin :height 0.6))))
+ '(twit-message-face ((t (:weight thin :height 0.8 :family "monospace"))))
+ '(twit-title-face ((((background light)) (:background "PowderBlue" :underline "DeepSkyBlue" :box (:line-width 2 :color "PowderBlue" :style 0))) (((background dark)) (:background "midnight blue" :underline "DeepSkyBlue" :box (:line-width 2 :color "midnight blue" :style 0))) (t (:underline "white"))))
  '(viper-minibuffer-emacs ((((class color)) nil)))
  '(viper-minibuffer-insert ((((class color)) nil)))
  '(viper-minibuffer-vi ((((class color)) nil)))

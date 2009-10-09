@@ -22,7 +22,7 @@ XTerm*eightBitInput: false
 
 !urxvt.font: -*-dejavu sans mono-medium-r-*-*-13-*-*-*-*-*-iso10646-*
 urxvt.font: -*-terminus-medium-*-*-*-*-140-*-*-*-*-*
-!URxvt*font: xft:DejaVu Sans Mono:pixelsize=10
+!URxvt*font: xft:DejaVu Sans Mono:pixelsize=13
 urxvt.background: black
 urxvt.foreground: white
 urxvt*urllauncher: conkeror
@@ -45,16 +45,16 @@ conapp*scrollColor:       #202020
 conapp*matcher.button:        1
 conapp*saveLines:              8192
 
-irssi.font: -*-terminus-medium-*-*-*-*-140-*-*-*-*-*
-irssi.background: black
-irssi.foreground: white
-irssi*scrollBar:    false
-irssi*scrollBar_floating:    true
-irssi*scrollBar_right:   true
-irssi*scrollColor:       #202020
-irssi*matcher.button:        1
-irssi*saveLines:              8192
-irssi*urgentOnBell:true
+im.font: -*-terminus-medium-*-*-*-*-140-*-*-*-*-*
+im.background: black
+im.foreground: white
+im*scrollBar:    false
+im*scrollBar_floating:    true
+im*scrollBar_right:   true
+im*scrollColor:       #202020
+im*matcher.button:        1
+im*saveLines:              8192
+im*urgentOnBell:true
 
 aterm*scrollBar: false
 

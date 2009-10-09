@@ -23,7 +23,7 @@ set query_command = "abook --mutt-query '%s'"
 macro generic,index,pager \ca "<shell-escape>abook<return>" "launch abook"
 macro index,pager A "<pipe-message>abook --add-email<return>" "add the sender address to abook"
 
-mailboxes "+INBOX" "+Arch Announce" "+Python Hun Levlista" "+uzbl"
+mailboxes "+INBOX" "+Arch Announce" "+Python Hun Levlista" "+uzbl" "+ELTE ETR" "+caesar" "+rot6sereg"
 
 set sort=threads
 set sort_aux=date-sent
@@ -40,7 +40,7 @@ set assumed_charset="cp1252"
 
 set move = no
 
-set editor='emacsclient %s > /dev/null'
+set editor='emacsclient -c %s > /dev/null'
 
 source ~/.mutt/mutt.color
 source ~/.mutt/mutt.gpg
