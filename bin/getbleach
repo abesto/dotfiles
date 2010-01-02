@@ -1,0 +1,104 @@
+#!/usr/bin/env bash
+#
+# Get Bleach episodes from http://www.bleachget.com
+#
+# Invocation:
+# getbleach: Download episodes not found on the filesystem. Episodes found are
+#            not checked for validity/completeness.
+# getbleach -e <episode>: Download the given episode. If the download of this
+#                         episode was stopped earlier, this will continue it.
+# outdir: The directory where the downloaded episodes will be saved. Defaults to ~/movies/bleach
+#
+# A 'links' file is left in the output directory with links to watch the episodes on the 'net for your convenience.
+#
+# Author: Zoltán Nagy <abesto0@gmail.com>
+# Copyleft.
+# Disclaimer: might break if the way bleachget.com works is significantly changed
+
+DIR=/home/`whoami`/movies/bleach
+EP=""
+
+function usage {
+    cat <<EOF
+Invocation:
+ getbleach [-o outdir]
+    Download episodes not found on the filesystem. Episodes found are not
+    checked for validity/completeness.
+ getbleach -e <episode> [-o outdir]
+    Download the given episode. If the download of this episode was stopped
+    earlier, this will continue it.
+
+ outdir
+   The directory where the downloaded episodes will be saved.
+   Defaults to ~/movies/bleach
+EOF
+}
+
+function get_episode {
+	EP=$1
+	echo -n "Downloading episode $EP. Fetching HTML to find the URI of the episode... "
+	wget `grep $EP "$DIR/links"` --output-document="$DIR/ep.html" -q
+	LINK=`grep flv "$DIR/ep.html" | sed -e 's/^.*file=\([^&]*\).*$/\1/'`
+	rm "$DIR/ep.html"
+	echo 'Done. Downloading movie.'
+	wget "$LINK" --output-document="$DIR/$EP.flv" -c
+	echo 'Done.'
+}
+
+while getopts "ce:o:" optname
+do
+    case "$optname" in
+        "e")
+            # pad with 0-s from the left to 3 length (http://jonathanwagner.net/2007/04/zero-padding-in-bash/)
+            EP=`printf "%03d" "$OPTARG"`
+            ;;
+        "o")
+            if [ -d "$OPTARG" ]; then
+                DIR="$OPTARG"
+            else
+                echo "Error: $OPTARG is not a directory"
+                exit
+            fi
+            ;;
+        "?")
+            usage
+            exit
+            ;;
+    esac
+done
+
+if [ "$EP" = '' ]
+then
+    # Episode list from the index page
+	echo 'Fetching episode list...'
+	wget 'http://www.bleachget.com/' --output-document="$DIR/html" -q
+	grep subbed "$DIR/html" | sed -e 's/<tr>/\n<tr>/g' | sed -e 's/^.*href="\([^"]*\)".*$/\1/g' | grep 'bleach-episode' | uniq > "$DIR/links"
+	REMOTE=`sed -e 's~^.*episode-\([0-9]*\).*$~\1~g' "$DIR/links" | sort`
+
+    # Downloaded episodes on the FS...
+	echo 'Checking for downloaded episodes...'
+	LOCAL=''
+	for FILE in `ls "$DIR" | grep -E "\.flv$" | sed -e 's~$DIR/\([0-9].*\)\.flv~\1~'`
+	do
+		LOCAL=$LOCAL" $FILE"
+	done
+	rm html
+
+	# To download := {REMOTE}\{LOCAL}
+	TODO=''
+	for EP in $REMOTE
+	do
+		if [[ $LOCAL != *$EP* ]]; then
+			TODO=$TODO" $EP"
+		fi
+	done
+	echo 'Download list:'$TODO
+
+    # and download.
+	for EP in $TODO
+	do
+		get_episode $EP
+	done
+else
+	get_episode $EP
+fi

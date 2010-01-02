@@ -1,0 +1,4 @@
+#!/bin/sh
+# From http://ubuntuforums.org/showthread.php?t=688098
+GTKRCFILE=Clearlooks
+GTK2_RC_FILES=/usr/share/themes/"$GTKRCFILE"/gtk-2.0/gtkrc "$@" &

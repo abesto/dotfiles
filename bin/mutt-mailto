@@ -1,0 +1,21 @@
+#!/bin/bash
+MAILTO_URL="$@"
+
+#Strip off the protocol
+MAIL_DATA=$(echo "$MAILTO_URL" | /bin/sed -s 's/^mailto://I')
+
+#Get Recipient and strip it off
+RECIPIENT=$(echo "$MAIL_DATA" | cut -d? -f1 -)
+MAIL_DATA=$(echo "$MAIL_DATA" | /bin/sed -s "s/^$RECIPIENT//")
+
+#Get Subject,BCC, and CC
+SUBJECT=$(echo "$MAIL_DATA" | \
+/bin/sed -s 's/.*?subject=//I' | /bin/sed -s 's/?.*//')
+BCC=$(echo "$MAIL_DATA" | /bin/sed -s 's/.*?bcc=//I' | \
+/bin/sed -s 's/?.*//')
+CC=$(echo "$MAIL_DATA" | /bin/sed -s 's/.*?cc=//I' | \
+/bin/sed -s 's/?.*//')
+
+#Call mutt
+urxvt -name 'conapp' -e \
+/home/abesto/bin/mutt "$RECIPIENT" -b "$BCC" -c "$CC" -s "$SUBJECT"

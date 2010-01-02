@@ -1,0 +1,2 @@
+#!/bin/sh
+mplayer -playlist /home/abesto/music/playlist -shuffle -ao alsa
