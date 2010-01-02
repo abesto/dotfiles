@@ -82,7 +82,7 @@ then
 	do
 		LOCAL=$LOCAL" $FILE"
 	done
-	rm html
+	rm "$DIR/html"
 
 	# To download := {REMOTE}\{LOCAL}
 	TODO=''
