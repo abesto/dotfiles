@@ -1,0 +1,6 @@
+# NAME: inf.elte.hu
+# DESC: nazraai@inf.elte.hu
+
+set smtp_url = "smtps://nazraai@smtp.inf.elte.hu:465/"
+set smtp_pass = $INFELTE_PASS
+set from = "nazraai@inf.elte.hu"

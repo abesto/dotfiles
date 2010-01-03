@@ -1,0 +1,42 @@
+color normal     white          black           # Index screen
+color indicator  brightyellow   red             # Actual message
+color tree       red            black           # Tree
+color status     brightgreen    blue            # State
+color error      brightyellow   brightred       # Error
+color message    red            default         # Messages
+color signature  brightblue     black           # Signature
+color attachment brightyellow   blue            # MIME attachments
+color search     brightyellow   red             # Search
+color tilde      brightgreen    black           # Tildes at the end
+color markers    red            default         # + at the beginning of the lines
+color hdrdefault yellow					black           # Default headers
+color bold       red            black           # Bold text
+color underline  green          default         # Underlined text
+color quoted     green          black           # Quoted text
+color header		 brightyellow		black		  	^(From|Cc|Reply-To):
+color header     brightyellow		black  			^(Date|Subject):
+color header		 brightyellow  	black  			^(To|In-Reply-To|Mail-Followup-To):
+#color header    brightgreen    black   				.*-Agent:
+color header		 yellow					black				^X-.*:
+color body 			 brightcyan 		black 			"(^| )_[p\.d\.]:.*[a-z]+[0-9]"
+color body 			 brightred 			black 			"(«|»)"
+color body 			 brightred 			black 			"(\")"
+color body 			 brightred 			black 			"~"
+color index      red            black  			~S
+color index      blue           black  			~F
+color index      brightred      black  			~N
+color index      magenta        black  			~T
+color index 		 brightwhite 		black 			"~s OPERAÇÕES"
+color index 		 brightwhite 		black 			"~s ROOTs"
+color index			 brightwhite		black 			~p
+#color index brightwhite blue ~l # To know list
+# Highlight URLs...
+color body 			 brightcyan 		black 			"(ftp|http|https|file|mailto|finger|news)://[^ ]+"
+# ...and e-mails...
+color body 			 brightcyan			black 			"[-a-z_0-9.]+@[-a-z_0-9.]+"
+# ...and smilies...
+#color body brightcyan black "((;|:|8\\:|\\=)(-|=|~|_|-'|%|<|)(\\)|Q|P|\\)%))"
+# ...and acronyms
+#color body brightcyan black "(ACK|ROTFL|LOL|BRB|BTW|HTH|IMHO|IMNSHO|IOW|RTFM)"
+#color index	brightyellow	black		~p
+color index      yellow					black				~D

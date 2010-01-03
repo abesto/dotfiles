@@ -1,0 +1,6 @@
+# NAME: GMail
+# DESC: abesto0@gmail.com
+
+set smtp_url = "smtp://abesto0@smtp.gmail.com:587/"
+set smtp_pass = $GMAIL_PASS
+set from = "abesto0@gmail.com"
