@@ -47,13 +47,14 @@ autorunApps =
    --"xcompmgr -a",
    mutt,
    --"/home/abesto/bin/snownews",
-   "mail-notification",
+   --"mail-notification",
    --"checkgmail",
-   "xscreensaver -nosplash",
+   --"xscreensaver -nosplash",
    --"gnome-do",
    --"conky",
    "wmname LG3D",  -- for Java apps, see http://bbs.archlinux.org/viewtopic.php?pid=450870#p450870
-   "/home/abesto/bin/keyb"
+   "/home/abesto/bin/keyb",
+   "canto-fetch -fd"
    --"nautilus -n"
    --"remind -gq ~/gtd | gxmessage -title \"Today's reminders\" -file -"  -- at startup
 }
