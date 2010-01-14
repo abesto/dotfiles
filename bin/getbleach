@@ -66,6 +66,8 @@ do
     esac
 done
 
+#if [ -n -d "$DIR/raw" ]; then mkdir "$DIR/raw"; fi
+
 if [ "$EP" = '' ]
 then
     # Episode list from the index page

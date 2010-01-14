@@ -1,2 +1,8 @@
 #!/bin/sh
-screen -c ~/.screenimrc
+PID=`ps x | grep screenimrc | grep -v grep | cut -d' ' -f2`
+if [ "$PID" = "" ]
+then
+  screen -c ~/.screenimrc
+else
+  screen -r $PID
+fi

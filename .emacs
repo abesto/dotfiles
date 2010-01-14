@@ -9,6 +9,7 @@
                     "~/.emacs.d/site/doxymacs"
                     "~/.emacs.d/site/distel/elisp"
                     "~/.emacs.d/site/completion-ui"
+                    "~/.emcas.d/site/zencoding"
                     ))
   (add-to-list 'load-path (expand-file-name path)))
 ;(add-to-list 'load-path (expand-file-name "~/.emacs.d/site/egg"))  Dontwant :(

@@ -9,7 +9,7 @@ ALLDIR="`pwd`/all"
 mkdir -p "$ORGDIR"
 mkdir -p "$ALLDIR"
 
-find . -iname '*.mp3' -exec ln "{}" "$ALLDIR"/ \;
+find . -iname '*.mp3' -exec ln "{}" "$ALLDIR"/`head -10 /dev/urandom` \;
 
 for FILE in "$ALLDIR/"*
 do

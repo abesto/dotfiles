@@ -26,4 +26,7 @@
     (doxymacs-mode 1)
     (font-lock-add-keywords 'php-mode doxymacs-doxygen-keywords)
    )
+
+  (require 'zencoding-mode)
+  (add-hook 'sgml-mode-hook 'zencoding-mode)
   )

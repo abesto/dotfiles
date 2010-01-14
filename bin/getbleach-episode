@@ -1,14 +1,17 @@
 #!/usr/bin/env bash
 # Helper script for getbleach
 #
-# usage: getbleach-env <episode-number> <output-dir>
+# usage: getbleach-episode <episode-number> <output-dir>
 
 EP=$1
 DIR=$2
+cd $DIR
 echo "Downloading episode $EP... "
-wget `grep $EP "$DIR/links"` --output-document="$DIR/ep$EP.html" -cq
-LINK=`grep flv "$DIR/ep$EP.html" | sed -e 's/^.*file=\([^&]*\).*$/\1/'`
-rm "$DIR/ep$EP.html"
-wget "$LINK" --output-document="$DIR/$EP.flv.part" -cq
-mv "$DIR/$EP.flv.part" "$DIR/$EP.flv"
+wget -qc `grep $EP "$DIR/links"` --output-document="ep$EP.html"
+LINK=`grep flv "ep$EP.html" | sed -e 's/^.*file=\([^&]*\).*$/\1/'`
+rm "ep$EP.html"
+FILE=`echo $LINK | sed -e 's~.*/\(.*\)~\1~'`
+touch $FILE
+wget -c "$LINK" --output-document="$EP.flv.part"
+mv $FILE "../$EP.flv"
 echo "$EP done."
