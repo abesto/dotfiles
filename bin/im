@@ -1,8 +1,18 @@
 #!/bin/sh
-PID=`ps x | grep screenimrc | grep -v grep | cut -d' ' -f2`
-if [ "$PID" = "" ]
+#
+# Handle screen session named 'irc'
+# If the session exists and is attached, do nothing
+# If the session exists and is detached, reattach to it
+# If the session doesn't exist, create it (with ~/.screenimrc)
+
+SESSION=`screen -list | grep '.irc'`
+
+if [ "$SESSION" == '' ]
 then
-  screen -c ~/.screenimrc
-else
-  screen -r $PID
+  screen -c ~/.screentestrc
+elif [[ "$SESSION" =~ 'Attached' ]]
+then
+  exit
 fi
+
+screen -r `echo $SESSION | cut -d. -f1`
