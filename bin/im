@@ -9,7 +9,7 @@ SESSION=`screen -list | grep '.irc'`
 
 if [ "$SESSION" == '' ]
 then
-  screen -c ~/.screentestrc
+  screen -c ~/.screenimrc
 elif [[ "$SESSION" =~ 'Attached' ]]
 then
   exit

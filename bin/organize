@@ -4,12 +4,18 @@
 # 'A/Artist/Album/01. Track'  structure
 
 ORGDIR="`pwd`/organized"
-ALLDIR="`pwd`/all"
+ALLDIR="`pwd`/alldir"
 
 mkdir -p "$ORGDIR"
 mkdir -p "$ALLDIR"
 
-find . -iname '*.mp3' -exec ln "{}" "$ALLDIR"/`head -10 /dev/urandom` \;
+find . -iname '*.mp3' > all
+I=0
+while FILE="`line`"
+do
+  ln "$FILE" "$ALLDIR/$I"
+  I=`expr $I + 1`
+done < all
 
 for FILE in "$ALLDIR/"*
 do
@@ -45,4 +51,5 @@ do
     fi
 done
 
-rm all -r
+rm all
+rm "$ALLDIR" -r
