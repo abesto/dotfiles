@@ -61,5 +61,3 @@
 (setq auto-mode-alist (cons '("\\.lua$" . lua-mode) auto-mode-alist))
 
 (require 'uniquify)
-
-(set-default-font "-xos4-Terminus-normal-normal-normal-*-14-*-*-*-c-80-iso10646-1")
