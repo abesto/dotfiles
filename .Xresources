@@ -20,7 +20,7 @@ XTerm*eightBitInput: false
 !		XTerm*ttyModes: erase ^?
 
 
-!urxvt.font: -*-dejavu sans mono-medium-r-*-*-13-*-*-*-*-*-iso10646-*
+!urxvt.font: -*-dejavu sans mono-medium-r-*-*-11-*-*-*-*-*-iso10646-*
 urxvt.font: -*-terminus-medium-*-*-*-*-140-*-*-*-*-*
 !URxvt*font: xft:DejaVu Sans Mono:pixelsize=13
 urxvt.background: black

@@ -408,7 +408,6 @@ globalkeys =
    key({},                    "XF86HomePage", function () awful.util.spawn(browser) end),
    key({},                    "XF86Mail", function ()
                                              awful.util.spawn(mutt)
-                                             awful.util.spawn("/home/abesto/bin/snownews")
                                           end),
    key({},                    "XF86Search", function () awful.util.spawn(browser .. " http://google.com") end),
 
