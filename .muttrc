@@ -20,18 +20,21 @@ set sort=threads
 set sort_aux=date-sent
 unset metoo
 
-#displayed headers
+# displayed headers
 ignore *
 unignore from: date: subject: to: cc: reply-to:
 unignore organization: organisation: user-agent: x-mailer:
 
+# mail reminder
+set beep_new = yes
+set check_new = yes
+set timeout = 300
+
+# viewers, editor
 auto_view text/html
 macro pager \cu |conkeror\n
-
 set assumed_charset="cp1252"
-
 set move = no
-
 set editor='emacsclient -c %s > /dev/null'
 
 # profiles
