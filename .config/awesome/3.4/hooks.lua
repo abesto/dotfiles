@@ -69,5 +69,7 @@ client.add_signal("manage", function (c, startup)
                                else
                                   c.screen = mouse.screen
                                end
+
+                               client.focus = c
                                c.size_hints_honor = false
                             end)
