@@ -70,6 +70,3 @@ client.add_signal("manage", function (c, startup)
                                   c.screen = mouse.screen
                                end
                             end)
-
--- Hook function to execute when arranging the screen.
--- (tag switch, new client, etc)

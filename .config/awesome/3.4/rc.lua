@@ -3,7 +3,7 @@ require("awful")
 require("awful.rules")
 require("awful.autofocus")
 require("beautiful")  -- Theme handling library
-require("wicked")    -- Widgets :p
+require("vicious")    -- Widgets :p
 require("naughty")    -- Notification library
 
 -- Custom stuff --

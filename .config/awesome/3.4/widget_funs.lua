@@ -8,10 +8,10 @@ function highlight(text)
 end
 --
 
+enclose_pre = colorize('[', 'yellow')
+enclose_post = colorize(']', 'yellow')
 function enclose (text)
-   pre = colorize('[', 'yellow')
-   post = colorize(']', 'yellow')
-   return pre .. text .. post
+   return enclose_pre .. text .. enclose_post
 end
 --
 
@@ -70,5 +70,5 @@ function memInfo()
    memInUse = memTotal - memFree
    memUsePct = math.floor(memInUse / memTotal * 100)
 
-   membar_widget.text = enclose(highlight("Mem: ")..memUsePct.."%"..spacer.."("..memInUse.."M)")
+   membar_widget.text = enclose(highlight("Mem: ")..memUsePct.."% ("..memInUse.."M)")
 end

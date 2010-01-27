@@ -18,10 +18,9 @@ icon_temp = beautiful.icon_temp or awful.util.getdir("config") .. "/themes/defau
 icon_play = beautiful.icon_play or awful.util.getdir("config") .. "/themes/default/icons/play.png"
 icon_stop = beautiful.icon_stop or awful.util.getdir("config") .. "/themes/default/icons/stop.png"
 
--- Spacer
-spacer = " "
-spacer_widget = widget({ type = "textbox", name = "spacer_widget" })
-spacer_widget.text = spacer
+-- Enclosing
+enclose_pre_widget = widget({ type = "textbox", name = "enclose_pre_widget", text = enclose_pre })
+enclose_post_widget = widget({ type = "textbox", name = "enclose_post_widget", text = enclose_post })
 
 -- Date
 date_widget = widget({ type = "textbox", name = "date_widget" })
@@ -53,25 +52,31 @@ timer:add_signal("timeout", function (widgets, args)
 
 -- Memory
 membar_widget     = widget({ type = "textbox", name = "membar_widget" })
-timer:add_signal("timeout", memInfo)
+vicious.register(membar_widget, vicious.widgets.mem,
+                 enclose(highlight('Mem: ') .. "$1% ($2M / $3M)"), 3)
 
 -- CPU
-cpuwidget = widget({
+cpu_widget = widget({
                       type = 'textbox',
                       name = 'cpuwidget',
                    })
-timer:add_signal("timeout", function() cpuwidget.text = enclose(highlight('CPU: ') .. wicked.widgets.cpu("$1")[1] .. '%') end)
+vicious.register(cpu_widget, vicious.widgets.cpu,
+                 enclose(highlight('CPU: ') .. "$1% ($2% | $3%)"),
+                 3
+              )
 
 -- Network
 netwidget = widget({
                       type = 'textbox',
                       name = 'netwidget'
                    })
---timer:add_signal("timeout", function()
-                               --netwidget.text = enclose(highlight('Net: ') ..
-                                                     --wicked.widgets.net('${wlan0 down} / ${wlan0 up} ')[2])
-                            --end
-              --)
+vicious.register(netwidget, vicious.widgets.net,
+                 enclose(highlight("Net: ") .. "${wlan0 down_kb}k / ${wlan0 up_kb}k", 3))
+
+-- MPD
+mpd_widget = widget({type = 'textbox', name = 'mpdwidget' })
+vicious.register(mpd_widget, vicious.widgets.mpd, enclose(highlight('MPD: ') .. '$1'), 3, {40, 'mpdwidget'})
+
 -- Create a systray
 mysystray = widget({ type = "systray" })
 
@@ -146,14 +151,15 @@ for s = 1, screen.count() do
                               fg = beautiful.fg_normal,
                               bg = beautiful.bg_normal,
                               widgets = {{
+                                            mysystray,
                                             date_widget,
-                                            cpuwidget,
+                                            cpu_widget,
                                             membar_widget,
                                             netwidget,
                                             battery_widget_text,
+                                            mpd_widget,
                                             mylayoutbox[s],
                                             mytaglist[s],
-                                            mysystray,
                                             layout = awful.widget.layout.horizontal.rightleft
                                          },
                                          layout = awful.widget.layout.horizontal.leftright
