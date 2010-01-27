@@ -1,4 +1,4 @@
-theme_path = "/home/abesto/.config/awesome/themes/theme.lua"
+theme_path = "/usr/share/awesome/themes/zenburn/theme.lua"
 beautiful.init(theme_path)
 
 naughty.config.presets.normal.timeout = 3

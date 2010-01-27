@@ -18,9 +18,9 @@
 ;; Generic stuff ;;
 ;;;;;;;;;;;;;;;;;;;
 (require 'doremi-cmd)
-(require 'color-theme)
 (require 'tex-site)
 (require 'org2rem)
+(require 'color-theme)
 (require 'completion-ui)
 ;(require 'egg)
 (color-theme-initialize)

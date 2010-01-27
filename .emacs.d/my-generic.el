@@ -1,8 +1,7 @@
 ;; Appearance
-;(require 'color-theme)
-;(color-theme-dark-laptop)     ; Nice, dark, easy on the eyes
-;(color-theme-arjen)     ; Nice, dark, easy on the eyes
-(color-theme-clarity)
+(require 'zenburn)
+(color-theme-zenburn)
+
 (tool-bar-mode -1)            ; No toolbar, thanks
 (toggle-scroll-bar -1)        ; No scrollbar either
 (set-default 'fill-column 80) ; 80. standard. good.

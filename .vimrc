@@ -1,4 +1,4 @@
-colorscheme koehler
+colorscheme zenburn
 set nu shiftwidth=2 tabstop=8 smartindent backspace=2 fileencoding=utf-8
 set incsearch nohlsearch
 set guioptions=ic

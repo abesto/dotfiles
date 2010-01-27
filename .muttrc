@@ -44,7 +44,7 @@ send-hook abesto0@gmail.com "source ~/.mutt/profile.inf.elte.hu"
 send-hook proginf@listbox.elte.hu "source ~/.mutt/profile.inf.elte.hu"
 
 
-source ~/.mutt/mutt.color
+source ~/.mutt/mutt.color.zenburn
 source ~/.mutt/mutt.gpg
 source ~/.mutt/mutt.sidebar
 #source ~/.mutt/aliases

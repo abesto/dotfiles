@@ -138,6 +138,7 @@ for s = 1, screen.count() do
                            fg = beautiful.fg_normal,
                            bg = beautiful.bg_normal,
                            widgets = {{
+                                         mytaglist[s],
                                          mytasklist[s],
                                          layout = awful.widget.layout.horizontal.leftright
                                       },
@@ -159,8 +160,7 @@ for s = 1, screen.count() do
                                             battery_widget_text,
                                             mpd_widget,
                                             mylayoutbox[s],
-                                            mytaglist[s],
-                                            layout = awful.widget.layout.horizontal.rightleft
+                                            layout = awful.widget.layout.horizontal.leftright
                                          },
                                          layout = awful.widget.layout.horizontal.leftright
                                       }
