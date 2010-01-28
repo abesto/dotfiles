@@ -1,16 +1,5 @@
-#text/html; elinks -default-mime-type text/html %s; needsterminal;
-text/html; conkeror %s > /dev/null 2>&1
-#text/html; elinks -dump %s; nametemplate=%s.html; copiousoutput
-image/gif;  feh %s
-image/jpeg; feh %s
-image/tiff; feh %s
-image/x-portable-bitmap; feh %s
-image/x-xpixmap; feh %s
-audio/*; vlc %s
-video/mpeg; vlc %s
-video/*; vlc %s
-application/postscript; evince %s
-application/x-dvi; evince %s
-application/pdf; evince %s
-application/acrobat; evince %s
-application/msword; soffice %s
+text/*; mutt_bgrun mimeo %s
+image/*; mutt_bgrun mimeo %s
+audio/*; mutt_bgrun mimeo %s
+video/*; mutt_bgrun mimeo %s
+application/*; mutt_bgrun mimeo %s

@@ -1,0 +1,21 @@
+[MIME Cache]
+application/pdf=evince.desktop;xpdf.desktop;gimp.desktop;acroread.desktop;
+text/plain=emacsclient.desktop;gedit.desktop;gvim.desktop;gobby.desktop;
+text/english=emacsclient.desktop;gvim.desktop;
+text/x-c++hdr=emacsclient.desktop;gvim.desktop;
+text/x-chdr=emacsclient.desktop;gvim.desktop;
+text/x-tcl=emacsclient.desktop;gvim.desktop;
+application/x-shellscript=emacsclient.desktop;gvim.desktop;
+text/x-tex=emacsclient.desktop;gvim.desktop;
+text/x-pascal=emacsclient.desktop;gvim.desktop;
+text/x-c++=emacsclient.desktop;
+text/x-c++src=emacsclient.desktop;gvim.desktop;
+text/x-java=emacsclient.desktop;gvim.desktop;
+text/x-csrc=emacsclient.desktop;gvim.desktop;
+text/x-moc=emacsclient.desktop;gvim.desktop;
+text/x-makefile=emacsclient.desktop;gvim.desktop;
+text/x-c=emacsclient.desktop;gvim.desktop;
+text/html=conkeror.desktop;firefox.desktop;
+application/msword=soffice.desktop;
+image/jpeg=eog.desktop;gimp.desktop;
+image/gif=eog.desktop;gimp.desktop;

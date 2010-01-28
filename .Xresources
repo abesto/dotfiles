@@ -93,6 +93,24 @@ im*scrollColor:       #202020
 im*matcher.button:        1
 im*saveLines:              8192
 im*urgentOnBell:true
+im*background:  #3f3f3f
+im*foreground:  #dcdccc
+im*color0:      #1E2320
+im*color1:      #705050
+im*color2:      #60b48a
+im*color3:      #dfaf8f
+im*color4:      #506070
+im*color5:      #dc8cc3
+im*color6:      #8cd0d3
+im*color7:      #dcdccc
+im*color8:      #709080
+im*color9:      #dca3a3
+im*color10:     #c3bf9f
+im*color11:     #f0dfaf
+im*color12:     #94bff3
+im*color13:     #ec93d3
+im*color14:     #93e0e3
+im*color15:     #ffffff
 
 aterm*scrollBar: false
 

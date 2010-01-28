@@ -23,13 +23,13 @@ client.add_signal("unmarked", function (c)
                               end)
 
 -- Hook function to execute when the mouse enters a client.
-client.add_signal("mouse::enter", function (c)
-                                    -- Sloppy focus, but disabled for magnifier layout
-                                    if awful.layout.get(c.screen) ~= awful.layout.suit.magnifier
-                                    and awful.client.focus.filter(c) then
-                                    client.focus = c
-                                 end
-                              end)
+client.add_signal("mouse:enter", function (c)
+                                     -- Sloppy focus, but disabled for magnifier layout
+                                     if awful.layout.get(c.screen) ~= awful.layout.suit.magnifier
+                                     and awful.client.focus.filter(c) then
+                                     client.focus = c
+                                  end
+                               end)
 
 -- Hook function to execute when a new client appears.
 client.add_signal("manage", function (c, startup)
