@@ -31,9 +31,12 @@ globalkeys = awful.util.table.join(
    awful.key({ modkey, "Shift"   }, "space", function () awful.layout.inc(layouts, -1) end),
 
    -- Multimedia keys
-   awful.key({},                    "XF86AudioRaiseVolume", function () awful.util.spawn("amixer set Master 5%+") end),
-   awful.key({},                    "XF86AudioLowerVolume", function () awful.util.spawn("amixer set Master 5%-") end),
-   awful.key({},                    "XF86AudioMute",        function () awful.util.spawn("amixer set Master toggle") end),
+   awful.key({},                    "XF86AudioRaiseVolume",
+             function () awful.util.spawn("amixer set Master 5%+"); vicious.update(volume_widget) end),
+   awful.key({},                    "XF86AudioLowerVolume",
+             function () awful.util.spawn("amixer set Master 5%-"); vicious.update(volume_widget) end),
+   awful.key({},                    "XF86AudioMute",
+             function () awful.util.spawn("amixer set Master toggle"); vicious.update(volume_widget) end),
    awful.key({},                    "XF86AudioPlay",        function () awful.util.spawn("mpc toggle") end),
    awful.key({},                    "XF86HomePage",         function () awful.util.spawn(browser) end),
    awful.key({},                    "XF86Mail",             function () awful.util.spawn(mutt) end),

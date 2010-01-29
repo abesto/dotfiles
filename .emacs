@@ -36,6 +36,7 @@
 ;(load "my-modal")
 ;(add-hook 'find-file-hook 'vip-mode)
 (load "my-org")     ; org-mode setup
+(load "my-folding.el")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; My mode startup scripts ;;

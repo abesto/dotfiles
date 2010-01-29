@@ -4,12 +4,12 @@ end
 --
 
 function highlight(text)
-   return '<span color="white"><b>'..text..'</b></span>'
+   return '<span color="#ededdd"><b>'..text..'</b></span>'
 end
 --
 
-enclose_pre = colorize('[', 'yellow')
-enclose_post = colorize(']', 'yellow')
+enclose_pre = colorize('[', '#f0dfaf')
+enclose_post = colorize(']', '#f0dfaf')
 function enclose (text)
    return enclose_pre .. text .. enclose_post
 end
@@ -47,28 +47,5 @@ function show_song (hide_duration)
                                 icon = icon,
                              })
    end
-end
---
-
-function memInfo()
-   local f = io.open("/proc/meminfo")
-
-   for line in f:lines() do
-      if line:match("^MemTotal.*") then
-         memTotal = math.floor(tonumber(line:match("(%d+)")) / 1024)
-      elseif line:match("^MemFree.*") then
-         memFree = math.floor(tonumber(line:match("(%d+)")) / 1024)
-      elseif line:match("^Buffers.*") then
-         memBuffers = math.floor(tonumber(line:match("(%d+)")) / 1024)
-      elseif line:match("^Cached.*") then
-         memCached = math.floor(tonumber(line:match("(%d+)")) / 1024)
-      end
-   end
-   f:close()
-
-   memFree = memFree + memBuffers + memCached
-   memInUse = memTotal - memFree
-   memUsePct = math.floor(memInUse / memTotal * 100)
-
-   membar_widget.text = enclose(highlight("Mem: ")..memUsePct.."% ("..memInUse.."M)")
+   vicious.update(mpd_widget)
 end

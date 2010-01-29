@@ -17,6 +17,7 @@
  '(ecb-tree-buffer-style (quote ascii-guides))
  '(ecb-tree-indent 2)
  '(erc-user-full-name "Nagy Zoltán")
+ '(global-semantic-tag-folding-mode t nil (semantic-util-modes))
  '(imenu-auto-rescan t)
  '(imenu-auto-rescan-maxout 60000000)
  '(inhibit-startup-screen t)

@@ -18,7 +18,7 @@ dofile (basedir .. "mouse.lua"   ) -- mouse bindings
 dofile (basedir .. "rules.lua"  )  -- window rules
 
 -- execute autorun apps specified in generic.lua
-autorun = false
+autorun = true
 if autorun then
    for app = 1, #autorunApps do
       awful.util.spawn(autorunApps[app])
