@@ -4,9 +4,9 @@ require('eye-guide.js');
 require('new-tabs.js');
 require("page-modes/google-search-results.js");
 require("block-content-focus-change.js");
-var i;
 
 external_content_handlers = { "*": "/home/abesto/bin/mimeoc", };
+url_remoting_fn = load_url_in_new_buffer
 
 // JQuery
 function install_jquery(d) {
@@ -41,6 +41,7 @@ xkcd_add_title = true;
 
 google_search_bind_number_shortcuts();
 // override google-search-results mode keybindings for navigation
+var i;
 var gs_maps = Array(
     "j"   , "cmd_scrollLineDown",
     "k"   , "cmd_scrollLineUp",
