@@ -21,9 +21,10 @@
 
 
   (require 'doxymacs)
-  (add-hook 'php-mode-hook 'ensure-doxymacs-mode)
-  (defun ensure-doxymacs-mode ()
+  (add-hook 'php-mode-hook 'ensure-php-modes)
+  (defun ensure-php-modes ()
     (doxymacs-mode 1)
+    (flymake-mode 1)
     (font-lock-add-keywords 'php-mode doxymacs-doxygen-keywords)
    )
 

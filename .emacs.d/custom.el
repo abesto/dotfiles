@@ -4,7 +4,8 @@
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
  '(TeX-output-view-style (quote (("^dvi$" ("^landscape$" "^pstricks$\\|^pst-\\|^psfrag$") "%(o?)dvips -t landscape %d -o && gv %f") ("^dvi$" "^pstricks$\\|^pst-\\|^psfrag$" "%(o?)dvips %d -o && gv %f") ("^dvi$" ("^a4\\(?:dutch\\|paper\\|wide\\)\\|sem-a4$" "^landscape$") "%(o?)xdvi %dS -paper a4r -s 0 %d") ("^dvi$" "^a4\\(?:dutch\\|paper\\|wide\\)\\|sem-a4$" "%(o?)xdvi %dS -paper a4 %d") ("^dvi$" ("^a5\\(?:comb\\|paper\\)$" "^landscape$") "%(o?)xdvi %dS -paper a5r -s 0 %d") ("^dvi$" "^a5\\(?:comb\\|paper\\)$" "%(o?)xdvi %dS -paper a5 %d") ("^dvi$" "^b5paper$" "%(o?)xdvi %dS -paper b5 %d") ("^dvi$" "^letterpaper$" "%(o?)xdvi %dS -paper us %d") ("^dvi$" "^legalpaper$" "%(o?)xdvi %dS -paper legal %d") ("^dvi$" "^executivepaper$" "%(o?)xdvi %dS -paper 7.25x10.5in %d") ("^dvi$" "." "%(o?)xdvi %dS %d") ("^pdf$" "." "evince %o %(outpage)") ("^html?$" "." "netscape %o"))))
- '(browse-url-browser-function (quote browse-url-firefox))
+ '(before-save-hook (quote (time-stamp)))
+ '(browse-url-browser-function (quote browse-url-generic))
  '(browse-url-firefox-new-window-is-tab nil)
  '(browse-url-firefox-program "firefox")
  '(browse-url-generic-program "conkeror")
@@ -17,6 +18,9 @@
  '(ecb-tree-buffer-style (quote ascii-guides))
  '(ecb-tree-indent 2)
  '(erc-user-full-name "Nagy Zoltán")
+ '(global-semantic-idle-completions-mode nil nil (semantic-idle))
+ '(global-semantic-idle-scheduler-mode nil nil (semantic-idle))
+ '(global-semantic-idle-summary-mode nil nil (semantic-idle))
  '(global-semantic-tag-folding-mode t nil (semantic-util-modes))
  '(imenu-auto-rescan t)
  '(imenu-auto-rescan-maxout 60000000)
@@ -37,6 +41,7 @@
  '(php-manual-path "~/docs/php/html")
  '(show-paren-mode t)
  '(smooth-scroll-margin 4)
+ '(time-stamp-format "%:y-%02m-%02d %02H:%02M:%02S")
  '(twit-minor-mode t)
  '(twit-pass "nzpd2004")
  '(twit-protocol "https")

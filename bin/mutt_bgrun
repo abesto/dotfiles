@@ -111,5 +111,5 @@ cp "$file" "$tmpfile"
     "$viewer" $options "$tmpfile" 2> /dev/null
     sleep 2
     rm -f "$tmpfile"
-    rmdir "$tmpdir"
+    rm -r "$tmpdir"
 ) &

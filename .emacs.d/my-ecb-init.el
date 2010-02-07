@@ -3,5 +3,4 @@
 (global-ede-mode 1)
 (semantic-load-enable-code-helpers)
 (global-srecode-minor-mode 1)
-(global-semantic-idle-completions-mode 1)
 (provide 'my-ecb-init)
