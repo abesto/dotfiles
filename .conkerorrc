@@ -35,7 +35,7 @@ clicks_in_new_buffer_target = OPEN_NEW_BUFFER_BACKGROUND;
 can_kill_last_buffer = false;
 editor_shell_command = "emacsclient -c";
 hints_auto_exit_delay = 1;
-download_buffer_automatic_open_target = [OPEN_NEW_BUFFER_BACKGROUND, OPEN_NEW_WINDOW];
+//download_buffer_automatic_open_target = [OPEN_NEW_BUFFER_BACKGROUND, OPEN_NEW_WINDOW];
 
 xkcd_add_title = true;
 

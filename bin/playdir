@@ -1,0 +1,10 @@
+#!/usr/bin/env sh
+#
+# Play all mp3-s in current dir and subdirs
+# arguments are passed to mplayer
+
+FILE='playdir_temporary_playlist_longname_to_avoid_conflict'
+
+find . -iname '*.mp3' | sort -n > $FILE
+mplayer -playlist $FILE $*
+rm $FILE

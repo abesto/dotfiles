@@ -1,4 +1,11 @@
 modkey = "Mod4"
+function toggle_screen ()
+   if mouse.screen == 1 then
+      awful.screen.focus(2)
+   else
+      awful.screen.focus(1)
+   end
+end
 
 globalkeys = awful.util.table.join(
    awful.key({ modkey,           }, "Left",   awful.tag.viewprev       ),
@@ -16,10 +23,11 @@ globalkeys = awful.util.table.join(
              end),
 
    -- Layout manipulation
+
    awful.key({ modkey, "Shift"   }, "j", function () awful.client.swap.byidx(  1) end),
    awful.key({ modkey, "Shift"   }, "k", function () awful.client.swap.byidx( -1) end),
-   awful.key({ modkey, "Control" }, "j", function () awful.screen.focus( 1) end),
-   awful.key({ modkey, "Control" }, "k", function () awful.screen.focus(-1) end),
+   awful.key({ modkey, "Control" }, "j", toggle_screen),
+   awful.key({ modkey, "Control" }, "k", toggle_screen),
    awful.key({ modkey,           }, "u", awful.client.urgent.jumpto),
    awful.key({ modkey,           }, "l",     function () awful.tag.incmwfact( 0.05)    end),
    awful.key({ modkey,           }, "h",     function () awful.tag.incmwfact(-0.05)    end),

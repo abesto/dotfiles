@@ -1,3 +1,5 @@
+Xft.dpi: 96.0
+
 xterm*foreground: white
 xterm*background: black
 xterm*cursorColor: white

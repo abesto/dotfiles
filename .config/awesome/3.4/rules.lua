@@ -14,8 +14,9 @@ floatapps =
 apptags =
    {
    ["Navigator"] = { tag = 9 },
+   ["chromium"] = { tag = 9},
    ["conapp"] = { screen = 2, tag = 8 },
    ["pidgin"] = {screen = 2, tag = 7},
-   ["skype"] = {screen = 1, tag = 7},
-   ["im"] = {screen = 1, tag = 7},
+   ["skype"] = {screen = 2, tag = 7},
+   ["im"] = {screen = 2, tag = 7},
 }

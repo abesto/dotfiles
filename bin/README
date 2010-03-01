@@ -6,10 +6,11 @@ getbleach   : download Bleach episodes :)
 im          : start a screen session with finch and ttytter
 keyb        : switch ctrl and capslock; fastre repat rate
 lyrics.pl   : download, show, edit and save lyrics for currently playing song in MPD
-m           : start a mutt instance after decrypting IMAP and SMTP passwords
 mradio      : start playing the relay started by streamripper in the script radio
+m           : start a mutt instance after decrypting IMAP and SMTP passwords
 mutt-mailto : what it says
 organize    : organize music in current dir and subdirs (new structure: A/Artist/Album/01. Tracktitle)
+playdir     : play all mp3's in a dir and its subdirs with arguments passed to mplayer
 radio       : interactively choose an audio stream from radiok.lst and start ripping it
 radiok.lst  : list of streams for radio
 server      : rc-init-like script for httpd, mysql and dyndns all at once
