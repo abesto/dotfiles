@@ -23,7 +23,6 @@ globalkeys = awful.util.table.join(
              end),
 
    -- Layout manipulation
-
    awful.key({ modkey, "Shift"   }, "j", function () awful.client.swap.byidx(  1) end),
    awful.key({ modkey, "Shift"   }, "k", function () awful.client.swap.byidx( -1) end),
    awful.key({ modkey, "Control" }, "j", toggle_screen),
@@ -37,6 +36,7 @@ globalkeys = awful.util.table.join(
    awful.key({ modkey, "Control" }, "l",     function () awful.tag.incncol(-1)         end),
    awful.key({ modkey,           }, "space", function () awful.layout.inc(layouts,  1) end),
    awful.key({ modkey, "Shift"   }, "space", function () awful.layout.inc(layouts, -1) end),
+   awful.key({ modkey            }, "e", revelation.revelation),
 
    -- Multimedia keys
    awful.key({},                    "XF86AudioRaiseVolume",

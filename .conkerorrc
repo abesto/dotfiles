@@ -6,7 +6,7 @@ require("page-modes/google-search-results.js");
 require("block-content-focus-change.js");
 
 external_content_handlers = { "*": "/home/abesto/bin/mimeoc", };
-url_remoting_fn = load_url_in_new_buffer
+//url_remoting_fn = load_url_in_new_buffer
 
 // JQuery
 function install_jquery(d) {

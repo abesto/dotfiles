@@ -1,3 +1,5 @@
+basedir = "/home/abesto/.config/awesome/3.4/"
+
 -- System libs --
 require("awful")
 require("awful.rules")
@@ -6,16 +8,25 @@ require("beautiful")  -- Theme handling library
 require("vicious")    -- Widgets :p
 require("naughty")    -- Notification library
 
+-- 3rd party libs --
+dofile (basedir .. "lib/revelation.lua")
+
 -- Custom stuff --
-basedir = "/home/abesto/.config/awesome/3.4/"
-dofile (basedir .. "generic.lua" ) -- theme, commands and autorun apps
-dofile (basedir .. "widget_funs.lua" ) -- data providers for the info widgets
-dofile (basedir .. "widgets.lua" ) -- info widgets
-dofile (basedir .. "layout.lua"  ) -- tags, layout
-dofile (basedir .. "hooks.lua"   ) -- hooks
-dofile (basedir .. "keyboard.lua") -- key bindings
-dofile (basedir .. "mouse.lua"   ) -- mouse bindings
-dofile (basedir .. "rules.lua"  )  -- window rules
+files = {
+   "generic",     -- theme, commands and autorun apps
+   "widget_funs", -- data providers for the info widgets
+   "widgets",     -- info widgets
+   "menu",        -- menu setup
+   "layout",      -- tags, layout
+   "hooks",       -- hooks
+   "keyboard",    -- key bindings
+   "mouse",       -- mouse bindings
+   "rules"        -- window rules
+}
+for index, file in ipairs(files) do
+   dofile (basedir .. file .. ".lua"  )
+end
+
 
 -- execute autorun apps specified in generic.lua
 autorun = true
