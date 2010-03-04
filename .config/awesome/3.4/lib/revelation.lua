@@ -1,11 +1,11 @@
 -- revelation.lua
 -- This is a modification of the original awesome library that implemented
 -- expose like behavior.
--- 
+--
 -- @author Perry Hargrave (aka bioe007)
 -- perry)dot(hargrave)at(gmail.com
 -- awesome v3.4-20-g8e02306 (Closing In)
--- 
+--
 -- original file information:
 -- @author Espen Wiborg &lt;espenhw@grumblesmurf.org&gt;
 -- @author Julien Danjou &lt;julien@danjou.info&gt;
@@ -23,7 +23,7 @@
 -- NOTES: I have dumbed this down to simply merge all clients to the current tag
 -- the class filter is of little use (to me?) but I could reimplement it
 -- if anyone is interested
--- 
+--
 local math = math
 local table = table
 local pairs = pairs
@@ -40,7 +40,7 @@ local capi =
 local print = print
 --- Exposé implementation
 module("revelation")
- 
+
 --{{{ clients
 -- a now unused filter to grab clients based on their class
 --
@@ -61,7 +61,7 @@ function clients(class, s)
   return clients
 end
 --}}}
- 
+
 --{{{ selectfn
 -- executed when user selects a client from expose view
 --
@@ -77,7 +77,7 @@ function selectfn(restore)
   end
 end
 --}}}
- 
+
 --{{{ keyboardhandler
 -- Returns keyboardhandler.
 -- Arrow keys and 'hjkl' move focus, Return selects, Escape cancels. Ignores modifiers.
@@ -98,7 +98,7 @@ function keyboardhandler (restore)
         key = "Right"
       end
     end
- 
+
     --
     if key == "Escape" then
       restore()
@@ -109,12 +109,14 @@ function keyboardhandler (restore)
     elseif key == "Left" or key == "Right" or
       key == "Up" or key == "Down" then
       awful.client.focus.bydirection(key:lower())
-    end
+   elseif key == "d" then
+      capi.client.focus:kill()
+   end
     return true
   end
 end
 --}}}
- 
+
 --{{{ revelation
 -- Implement Exposé (from Mac OS X).
 -- @param class The class of clients to expose, or nil for all clients.
@@ -124,19 +126,19 @@ function revelation(class, fn, s)
   local scr = s or capi.mouse.screen
   local t = capi.screen[scr]:tags()[1]
   local oldlayout = awful.tag.getproperty( t, "layout" )
- 
+
   awful.tag.viewmore( capi.screen[scr]:tags(), t.screen )
   awful.layout.set(awful.layout.suit.fair,t)
- 
+
   local function restore()
     awful.layout.set(oldlayout,t)
     awful.tag.viewonly(t)
- 
+
     capi.keygrabber.stop()
   end
- 
+
   capi.keygrabber.run(keyboardhandler(restore))
 end
 --}}}
- 
+
 -- vim:set filetype=lua textwidth=120 fdm=marker tabstop=4 shiftwidth=4 expandtab smarttab autoindent smartindent: --
