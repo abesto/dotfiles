@@ -1,6 +1,11 @@
+awesome_config_menu = {{"rc.lua", editor_cmd..' '..basedir..'rc.lua'}}
+for i, f in ipairs(files) do
+   table.insert(awesome_config_menu, {f, editor_cmd..' '..basedir..f..".lua"})
+end
+
 awesome_menu = {
-   { "manual"      , terminal .. " -e man awesome" },
-   { "edit config" , editor_cmd .. " ~/.config/awesome/rc.lua" },
+   { "manual"      , terminal .. " -e man awesome"},
+   { "edit config" , awesome_config_menu},
    { "restart"     , awesome.restart },
    { "quit"        , awesome.quit }
 }
