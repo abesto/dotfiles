@@ -18,10 +18,11 @@ browser_menu = {
 }
 
 apps_menu = {
-   {"gimp"        , "gimp"},
+   {"charles"     , "sh /home/abesto/charles/bin/charles.sh"},
    {"gmpc"        , "gmpc"},
    {"wicd-client" , "wicd-client"},
    {"nm-applet"   , "nm-applet"},
+   {"gimp"        , "gimp"},
    {"codeblocks"  , "codeblocks"}
 }
 
@@ -44,19 +45,23 @@ table.insert(daemons, {"conkeror", "conkeror -daemon", "killall xulrunner; killa
 
 daemons_menu = {}
 for i, d in ipairs(daemons) do
-   table.insert(daemons_menu, {'--'..d[1]..'--'})
-   table.insert(daemons_menu , {'start', d[2]})
-   table.insert(daemons_menu , {'restart', d[3]})
-   table.insert(daemons_menu , {'stop', d[4]})
-   table.insert(daemons_menu, {''})
+   table.insert(daemons_menu,
+                {
+                   d[1], {
+                      {'start', d[2]},
+                      {'restart', d[3]},
+                      {'stop', d[4]}
+                   }
+                }
+             )
 end
 
-mymainmenu = awful.menu.new({ items = { { "awesome"  , awesome_menu, beautiful.awesome_icon },
+mymainmenu = awful.menu.new({ items = { { "awesome" },
                                         { "browsers" , browser_menu },
                                         { "apps"     , apps_menu},
                                         { "daemons" , daemons_menu},
                                         { "---" },
                                         { "reboot", "sudo reboot" },
-                                        { "poweroff" , "sudo shutdown" }
+                                        { "poweroff" , "sudo poweroff" }
                                       }
                             })

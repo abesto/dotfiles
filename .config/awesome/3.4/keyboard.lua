@@ -62,7 +62,7 @@ globalkeys = awful.util.table.join(
 
    -- Application launchers
    awful.key({ modkey, "Shift"   }, "f", function () awful.util.spawn(browser) end),
-   awful.key({ modkey, "Shift"   }, "e", function () awful.util.spawn(editor_cmd) end),
+   awful.key({ modkey, "Shift"   }, "e", function () awful.util.spawn(editor_cmd..' -c') end),
    awful.key({ modkey, "Shift"   }, "o", function () awful.util.spawn('soffice') end),
    awful.key({ modkey, "Shift"   }, "i", function () awful.util.spawn(im) end),
    awful.key({ modkey            }, "b", function () awful.util.spawn('/home/abesto/bin/bugmenot') end),

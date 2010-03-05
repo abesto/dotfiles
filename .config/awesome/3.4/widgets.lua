@@ -1,5 +1,10 @@
 timer = timer({ timeout = 3 })
 
+-- Launcher
+launcher = awful.widget.launcher({ image = image(beautiful.awesome_icon),
+                                   menu = mymainmenu
+                                })
+
 -- Date
 date_widget = widget({ type = "textbox", name = "date_widget" })
 timer:add_signal("timeout", function() date_widget.text = enclose(os.date("%d %b, %H:%M")) end)
@@ -130,6 +135,7 @@ for s = 1, screen.count() do
                               fg = beautiful.fg_normal,
                               bg = beautiful.bg_normal,
                               widgets = {{
+                                            launcher,
                                             cpu_widget,
                                             membar_widget,
                                             netwidget,

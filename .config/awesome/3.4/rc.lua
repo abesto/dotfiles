@@ -14,9 +14,9 @@ dofile (basedir .. "lib/revelation.lua")
 -- Custom stuff --
 files = {
    "generic",     -- theme, commands and autorun apps
+   "menu",        -- menu setup
    "widget_funs", -- data providers for the info widgets
    "widgets",     -- info widgets
-   "menu",        -- menu setup
    "layout",      -- tags, layout
    "hooks",       -- hooks
    "keyboard",    -- key bindings

@@ -15,7 +15,7 @@ mutt         = "urxvt -name 'conapp' -e '/home/abesto/bin/mutt'"
 -- Autorun programs
 autorunApps =
    {
-   "nm-applet",
+   "wicd-client",
    "mpdscribble",
    "setxkbmap -option terminate:ctrl_alt_bksp", -- Zap X
    "emacs --daemon",
