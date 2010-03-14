@@ -3,7 +3,7 @@
   (load (expand-file-name "~/.emacs.d/site/nxhtml/autostart.el"))  ;Load nxhtml
   (require 'js2-mode)
   (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
-  (add-to-list 'auto-mode-alist '("\\.php\\'" . nxhtml-mumamo-mode))
+  (add-to-list 'auto-mode-alist '("\\.mako\\'" . mako-nxhtml-mumamo-mode))
  ;(setq ido-execute-command-cache nil) ;Update ido-mode command-completion
   (tabkey2-mode t)
 

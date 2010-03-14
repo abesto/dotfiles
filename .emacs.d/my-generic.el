@@ -2,12 +2,13 @@
 (require 'zenburn)
 (color-theme-zenburn)
 
-(tool-bar-mode -1)            ; No toolbar, thanks
-(toggle-scroll-bar -1)        ; No scrollbar either
 (set-default 'fill-column 80) ; 80. standard. good.
+(tool-bar-mode -1)            ; No toolbar, thanks
+(scroll-bar-mode -1)          ; No scrollbar either
 (setq visible-bell t)         ; Can't go beeping around at midnight, now can I?
 (show-paren-mode)
 (load "toggle-fullscreen")
+(column-number-mode 1)
 ;(nix-fullscreen) don't need this using AwesomeWM
 
 ;; This is me
@@ -51,12 +52,23 @@
   "wikipedia-mode.el"
   "Major mode for editing documents in Wikipedia markup." t)
 
-(add-to-list 'auto-mode-alist '("mutt-keyrit_notepad" . mail-mode))
-(add-to-list 'auto-mode-alist '("vimperator.*" . blog-init))
-(add-to-list 'auto-mode-alist '("abesto\.host22.*" . blog-init))
-(add-to-list 'auto-mode-alist '(".*blogger-com-post.*" . blog-init))
-(add-to-list 'auto-mode-alist '("\\.*mutt-*\\|.article\\|\\.followup" . post-mode))
-(add-to-list 'auto-mode-alist '(".*wiki.*" . my-wiki-init))
-(setq auto-mode-alist (cons '("\\.lua$" . lua-mode) auto-mode-alist))
+(setq auto-mode-alist
+      (append
+       (list
+        '("mutt-keyrit_notepad" . mail-mode)
+        '("vimperator.*" . blog-init)
+        '("abesto\.host22.*" . blog-init)
+        '(".*blogger-com-post.*" . blog-init)
+        '("\\.*mutt-*\\|.article\\|\\.followup" . post-mode)
+        '(".*wiki.*" . my-wiki-init)
+        '("\\.*mutt-*\\|.article\\|\\.followup" . post-mode)
+        '(".*\.mako" . html-mode)
+        '("\\.lua$" . lua-mode)
+	) auto-mode-alist )
+)
 
 (require 'uniquify)
+
+(require 'my-yasnippet)
+(require 'zencoding-mode)
+(add-hook 'sgml-mode-hook 'zencoding-mode)

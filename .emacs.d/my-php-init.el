@@ -6,8 +6,6 @@
   ;(require 'html-php)
   ;(add-to-list 'auto-mode-alist '("\\.php\\'" . html-php-mode))
 
-  (require 'my-yasnippet)
-
   ;; Load the php-imenu index function
   (autoload 'php-imenu-create-index "php-imenu" nil t)
   ;; Add the index creation function to the php-mode-hook
@@ -27,7 +25,4 @@
     (flymake-mode 1)
     (font-lock-add-keywords 'php-mode doxymacs-doxygen-keywords)
    )
-
-  (require 'zencoding-mode)
-  (add-hook 'sgml-mode-hook 'zencoding-mode)
   )

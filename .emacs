@@ -1,28 +1,29 @@
 ;;;; Based on McGeary's init: http://www.emacsblog.org/2007/10/07/declaring-emacs-bankruptcy/
 
 ;; paths
-(dolist (path (list "~/.emacs.d"
-                    "~/.emacs.d/site"
-                    "~/.emacs.d/site/mail"
-                    "~/.emacs.d/site/yasnippet"
-                    "~/.emacs.d/site/org"
-                    "~/.emacs.d/site/doxymacs"
-                    "~/.emacs.d/site/distel/elisp"
-                    "~/.emacs.d/site/completion-ui"
-                    "~/.emacs.d/site/zencoding"
+(add-to-list 'load-path "/home/abesto/.emacs.d")
+(dolist (path (list ""
+                    "/mail"
+                    "/yasnippet"
+                    "/org"
+                    "/doxymacs"
+                    "/distel/elisp"
+                    "/completion-ui"
+                    "/zencoding"
                     ))
-  (add-to-list 'load-path (expand-file-name path)))
+  (add-to-list 'load-path (concat "/home/abesto/.emacs.d/site" path)))
 ;(add-to-list 'load-path (expand-file-name "~/.emacs.d/site/egg"))  Dontwant :(
 
 ;;;;;;;;;;;;;;;;;;;
 ;; Generic stuff ;;
 ;;;;;;;;;;;;;;;;;;;
-(require 'doremi-cmd)
+;(require 'doremi-cmd)
 (require 'tex-site)
-(require 'org2rem)
+;(require 'org2rem)
 (require 'color-theme)
-(require 'completion-ui)
+;(require 'completion-ui)
 ;(require 'egg)
+
 (color-theme-initialize)
 (autoload 'word-count-mode "word-count" "Minor mode to count words" t)
 (autoload 'htmlize-file "htmlize" "Load FILE, fontify it, convert it to HTML, and save the result." t)
@@ -36,6 +37,7 @@
 ;(load "my-modal")
 ;(add-hook 'find-file-hook 'vip-mode)
 (load "my-org")     ; org-mode setup
+(load "my-wiki")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; My mode startup scripts ;;
@@ -46,7 +48,6 @@
 (autoload 'blog-init "blog" "Blogging stuff" t)
 ;(autoload 'my-php-init "my-php-init" t)
 (autoload 'my-mail-init "my-mail-init")
-(autoload 'my-wiki-init "my-wiki-init")
 (autoload 'my-c++-init "my-c++-init")
 
 ;; Mode and mode-like hooks
@@ -55,10 +56,8 @@
 (add-hook 'LaTeX-mode-hook 'my-latex-init)
 (add-hook 'php-mode-user-hook 'my-php-init)
 (autoload 'lua-mode "lua-mode" "Lua editing mode." t)
-(add-to-list 'auto-mode-alist '(".*wiki.*" . wikipedia-mode))
 ;; mails
 (autoload 'post-mode "post" "mode for e-mail" t)
-(add-to-list 'auto-mode-alist '("\\.*mutt-*\\|.article\\|\\.followup" . post-mode))
 (add-hook 'post-mode-hook 'my-mail-init)
 
 ;;;;;;;;;;;;;;;;;;

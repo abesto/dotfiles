@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+eval $(gnome-keyring-daemon)
+export GNOME_KEYRING_PID GNOME_KEYRING_SOCKET SSH_AUTH_SOCK
+ck-launch-session nm-applet
+

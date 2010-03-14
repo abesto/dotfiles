@@ -8,6 +8,11 @@ require("block-content-focus-change.js");
 external_content_handlers = { "*": "/home/abesto/bin/mimeoc", };
 //url_remoting_fn = load_url_in_new_buffer
 
+url_completion_use_bookmarks = false;
+url_completion_use_history = true;
+
+add_delicious_webjumps("abesto");
+
 // JQuery
 function install_jquery(d) {
     var script_el = d.createElementNS(XHTML_NS, "script");

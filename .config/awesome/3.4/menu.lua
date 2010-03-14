@@ -21,7 +21,7 @@ apps_menu = {
    {"charles"     , "sh /home/abesto/charles/bin/charles.sh"},
    {"gmpc"        , "gmpc"},
    {"wicd-client" , "wicd-client"},
-   {"nm-applet"   , "nm-applet"},
+   {"nm-applet"   , "ck-launch-session nm-applet"},
    {"gimp"        , "gimp"},
    {"codeblocks"  , "codeblocks"}
 }
@@ -55,6 +55,9 @@ mymainmenu = awful.menu.new({ items = { { "awesome", awesome_config_menu },
                                         { "apps"     , apps_menu},
                                         { "daemons" , daemons_menu},
                                         { "---" },
+					{ "suspend", "sudo pm-suspend" },
+					{ "hibernate", "sudo pm-hibernate" },
+					{ '---' },
                                         { "reboot", "sudo reboot" },
                                         { "poweroff" , "sudo poweroff" }
                                       }
