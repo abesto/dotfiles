@@ -25,5 +25,6 @@ autorunApps =
    "wmname LG3D",  -- for Java apps, see http://bbs.archlinux.org/viewtopic.php?pid=450870#p450870
    "/home/abesto/bin/keyb",
    "canto-fetch -fd",
-   "conkeror -daemon"
+   "conkeror -daemon",
+   "stjerm -k f1 -sh /bin/zsh -fn \"Terminus\" -b thin"
 }

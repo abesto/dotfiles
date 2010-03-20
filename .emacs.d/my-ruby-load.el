@@ -14,6 +14,7 @@
                (inf-ruby-keys)
                )))
 
+;; Doxymacs-mode extended for Ruby
 (defun doxymacs-ruby ()
   (doxymacs-mode)
   (font-lock-add-keywords 'ruby-mode doxymacs-doxygen-keywords)

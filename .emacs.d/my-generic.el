@@ -1,7 +1,10 @@
 ;; Appearance
+(require 'color-theme)
 (require 'zenburn)
+(color-theme-initialize)
 (color-theme-zenburn)
 
+;; Window/editor stuff
 (set-default 'fill-column 80) ; 80. standard. good.
 (tool-bar-mode -1)            ; No toolbar, thanks
 (scroll-bar-mode -1)          ; No scrollbar either
@@ -9,7 +12,6 @@
 (show-paren-mode)
 (load "toggle-fullscreen")
 (column-number-mode 1)
-;(nix-fullscreen) don't need this using AwesomeWM
 
 ;; This is me
 (setq user-full-name "Nagy Zoltán")
@@ -24,9 +26,10 @@
 (setq confirm-kill-emacs 'y-or-n-p)
 (defalias 'yes-or-no-p 'y-or-n-p)
 
-(mouse-avoidance-mode 'exile)           ; Move mouse when point is under it
+;; Move mouse when point is under it
+(mouse-avoidance-mode 'exile)
 
-;; keybindings
+;; Some keybindings
 (global-set-key "\C-x\C-m" 'execute-extended-command)
 (global-set-key "\M-n" 'linum-mode)
 (global-set-key (kbd "\C-c <tab>") 'align-regexp)
@@ -35,7 +38,7 @@
 (global-hl-line-mode 1)
 (set-face-background 'hl-line "#222")
 
-;; mode-compile
+;; Mode-compile; very useful
 (autoload 'mode-compile "mode-compile"
 "Command to compile current buffer file based on the major mode" t)
 (global-set-key "\C-cc" 'mode-compile)
@@ -46,29 +49,20 @@
 (require 'epa)
 (epa-file-enable)
 
-(require 'ledger)
-
-(autoload 'wikipedia-mode
-  "wikipedia-mode.el"
-  "Major mode for editing documents in Wikipedia markup." t)
-
+;; Custom auto-modes
 (setq auto-mode-alist
       (append
        (list
         '("mutt-keyrit_notepad" . mail-mode)
-        '("vimperator.*" . blog-init)
-        '("abesto\.host22.*" . blog-init)
-        '(".*blogger-com-post.*" . blog-init)
-        '("\\.*mutt-*\\|.article\\|\\.followup" . post-mode)
-        '(".*wiki.*" . my-wiki-init)
-        '("\\.*mutt-*\\|.article\\|\\.followup" . post-mode)
         '(".*\.mako" . html-mode)
         '("\\.lua$" . lua-mode)
 	) auto-mode-alist )
 )
 
+;; Unique buffer names for files with the same name
 (require 'uniquify)
 
+;; yasnippet and zencoding: win
 (require 'my-yasnippet)
 (require 'zencoding-mode)
 (add-hook 'sgml-mode-hook 'zencoding-mode)

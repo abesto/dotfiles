@@ -12,46 +12,29 @@
                     "/zencoding"
                     ))
   (add-to-list 'load-path (concat "/home/abesto/.emacs.d/site" path)))
-;(add-to-list 'load-path (expand-file-name "~/.emacs.d/site/egg"))  Dontwant :(
 
 ;;;;;;;;;;;;;;;;;;;
 ;; Generic stuff ;;
 ;;;;;;;;;;;;;;;;;;;
-;(require 'doremi-cmd)
 (require 'tex-site)
-;(require 'org2rem)
-(require 'color-theme)
-;(require 'completion-ui)
-;(require 'egg)
 
-(color-theme-initialize)
-(autoload 'word-count-mode "word-count" "Minor mode to count words" t)
 (autoload 'htmlize-file "htmlize" "Load FILE, fontify it, convert it to HTML, and save the result." t)
 (autoload 'htmlize-buffer "htmlize" "Fontify buffer, convert it to HTML, and open the result in a new buffer." t)
 
-(global-set-key "\M--" 'word-count-set-marker)
-
 (load "my-generic") ; Settings I always want
-(load "my-ido")     ; fuzzy search
-(load "my-viper")   ; viper-mode setup
-;(load "my-modal")
-;(add-hook 'find-file-hook 'vip-mode)
+(load "my-ido")     ; Fuzzy filename search
+(load "my-viper")   ; Viper-mode setup
 (load "my-org")     ; org-mode setup
-(load "my-wiki")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; My mode startup scripts ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(autoload 'my-python-init "my-python-init")
-(autoload 'my-ruby-init "my-ruby-init")
 (autoload 'my-latex-init "my-latex-init")
-(autoload 'blog-init "blog" "Blogging stuff" t)
-;(autoload 'my-php-init "my-php-init" t)
+(autoload 'my-php-init "my-php-init")
 (autoload 'my-mail-init "my-mail-init")
 (autoload 'my-c++-init "my-c++-init")
 
-;; Mode and mode-like hooks
-;; (add-hook 'python-mode-hook 'my-python-init)
+;; Mode hooks
 (add-hook 'c++-mode-hook 'my-c++-init)
 (add-hook 'LaTeX-mode-hook 'my-latex-init)
 (add-hook 'php-mode-user-hook 'my-php-init)
@@ -60,39 +43,17 @@
 (autoload 'post-mode "post" "mode for e-mail" t)
 (add-hook 'post-mode-hook 'my-mail-init)
 
-;;;;;;;;;;;;;;;;;;
-;; My functions ;;
-;;;;;;;;;;;;;;;;;;
-(load "proj")
-
 ;;;;;;;;;;;;;;;;;;;;;;
 ;; Big environemnts ;;
 ;;;;;;;;;;;;;;;;;;;;;;
 ;;; Each contains load-* to... load it
-(load "my-jde-init")     ; A Java Development Environment for Emacs
-(load "my-slime-init")   ; SLIME for editing lisp
-(load "my-nxhtml-init")  ; nxhtml for HTML+CSS+JS+PHP+Whatever
-(load "my-haskell-init")
-(load "my-ecb-init")
-(load "my-php-init")
+(load "my-jde-load")     ; A Java Development Environment for Emacs
+(load "my-slime-load")   ; SLIME for editing lisp
+(load "my-nxhtml-load")  ; nxhtml for HTML+CSS+JS+PHP+Whatever
+(load "my-haskell-load")
+(load "my-ecb-load")
 (load "my-ruby-init")
 (load "my-erlang-init")
-
-(require 'my-ecb-init)
-
-; (load-php)
-
-; Load them on startup if running in daemon mode
-; I changed my mind about ^
-; (if (daemonp)
-;     (progn
-;       (load-slime)
-;       ;(load-nxhtml)
-;       (load-haskell)
-;       ;(load-jde)))
-;       (load-ecb)
-;       (load-php)
-;       ))
 
 (require 'js2-mode)
 (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))

@@ -1,3 +1,4 @@
+;;;###autoload
 (defun load-php ()
   (interactive)
   (require 'php-mode)

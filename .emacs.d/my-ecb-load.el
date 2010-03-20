@@ -1,0 +1,6 @@
+(defun load-ecb ()
+  (load-file "/usr/share/emacs/site-lisp/cedet/common/cedet.el")
+  (add-to-list 'load-path "/usr/share/emacs/site-lisp/ecb")
+  (global-ede-mode 1)
+  (semantic-load-enable-code-helpers)
+  (global-srecode-minor-mode 1))
