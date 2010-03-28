@@ -48,7 +48,7 @@
  '(twit-show-user-images nil)
  '(twit-user "abesto")
  '(twit-user-image-dir "~/.emacs.d//twitter-images")
- '(uniquify-buffer-name-style (quote forward) nil (uniquify))
+ '(uniquify-buffer-name-style (quote post-forward-angle-brackets) nil (uniquify))
  '(use-file-dialog nil)
  '(windmove-wrap-around nil))
 (custom-set-faces

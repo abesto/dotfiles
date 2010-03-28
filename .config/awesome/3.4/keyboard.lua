@@ -45,7 +45,7 @@ globalkeys = awful.util.table.join(
              function () awful.util.spawn("amixer set Master 5%-"); vicious.update(volume_widget) end),
    awful.key({},                    "XF86AudioMute",
              function () awful.util.spawn("amixer set Master toggle"); vicious.update(volume_widget) end),
-   awful.key({},                    "XF86AudioPlay",        function () awful.util.spawn("mpc toggle") end),
+   awful.key({},                    "XF86AudioPlay",        function () awful.util.spawn(music_toggle) end),
    awful.key({},                    "XF86HomePage",         function () awful.util.spawn(browser) end),
    awful.key({},                    "XF86Mail",             function () awful.util.spawn(mutt) end),
    awful.key({},                    "XF86Search",           function () awful.util.spawn(browser .. " http://google.com") end),
@@ -72,10 +72,10 @@ globalkeys = awful.util.table.join(
    awful.key({ modkey            }, "p", function () awful.util.spawn('gmrun') end),
 
    -- Commands
-   awful.key({ modkey, "Shift"   }, "p", function () awful.util.spawn('mpc prev'); show_song(true) end),
-   awful.key({ modkey, "Shift"   }, "n", function () awful.util.spawn('mpc next'); show_song(true) end),
-   awful.key({ modkey, "Shift"   }, "w", function () awful.util.spawn('mpc toggle') end),
-   awful.key({ modkey, "Shift"   }, "m", show_song)
+   awful.key({ modkey, "Shift"   }, "p", function () awful.util.spawn(music_prev); music_show(true) end),
+   awful.key({ modkey, "Shift"   }, "n", function () awful.util.spawn(music_next); music_show(true) end),
+   awful.key({ modkey, "Shift"   }, "w", function () awful.util.spawn(music_toggle) end),
+   awful.key({ modkey, "Shift"   }, "m", music_show)
 ) -- globalkeys
 
 clientkeys = awful.util.table.join(

@@ -15,7 +15,26 @@ function enclose (text)
 end
 --
 
-function show_song (hide_duration)
+function show_mpris_song()
+   local np_file = io.popen('/home/abesto/bin/mpris-status 2> /dev/null')
+   local track        = np_file:read("*line")
+   local artist_album = np_file:read("*line")
+   local status       = np_file:read("*line")
+   local icon         = ''
+   np_file:close()
+
+   track = track:gsub('&', '&amp;')
+   artist_album = artist_album:gsub('&', '&amp;')
+
+   mnot =  naughty.notify({
+                             title = track,
+                             text = artist_album
+                          })
+   vicious.update(mpd_widget)
+end
+--
+
+function show_mpd_song(hide_duration)
    local np_file = io.popen('mpc --format "%title% - %artist%\n%album%" 2> /dev/null')
    local track = np_file:read("*line")
    local album = np_file:read("*line")
@@ -48,4 +67,10 @@ function show_song (hide_duration)
                              })
    end
    vicious.update(mpd_widget)
+end
+
+if music_player == 'mpris' then
+   music_show = show_mpris_song
+else
+   music_show = show_mpd_song
 end

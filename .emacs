@@ -51,9 +51,8 @@
 (load "my-slime-load")   ; SLIME for editing lisp
 (load "my-nxhtml-load")  ; nxhtml for HTML+CSS+JS+PHP+Whatever
 (load "my-haskell-load")
+(load "my-php-load")
 (load "my-ecb-load")
-(load "my-ruby-init")
-(load "my-erlang-init")
 
 (require 'js2-mode)
 (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))

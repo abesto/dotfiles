@@ -12,6 +12,19 @@ browser      = "conkeror"
 im           = "urxvt -name 'im' -T 'im' -e '/home/abesto/bin/im'"
 mutt         = "urxvt -name 'conapp' -e '/home/abesto/bin/mutt'"
 
+mpris_remote = '/home/abesto/bin/mpris-remote'
+music_player = 'mpd'
+
+if music_player == 'mpris' then
+   music_next = mpris_remote .. ' next'
+   music_prev = mpris_remote .. ' prev'
+   music_toggle = mpris_remote .. ' pause'
+else
+   music_next = 'mpc next'
+   music_prev = 'mpc prev'
+   music_toggle = 'mpc toggle'
+end
+
 -- Autorun programs
 autorunApps =
    {

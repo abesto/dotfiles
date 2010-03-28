@@ -53,7 +53,7 @@
 (setq auto-mode-alist
       (append
        (list
-        '("mutt-keyrit_notepad" . mail-mode)
+        '("mutt-keyrit.*" . post-mode)
         '(".*\.mako" . html-mode)
         '("\\.lua$" . lua-mode)
 	) auto-mode-alist )
