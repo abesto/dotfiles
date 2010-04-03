@@ -31,7 +31,8 @@ do
 /=== TRCK/ { sub(/"/, "\\\"", $0);printf ("TRACK=\"%s\"\n", substr($0, 42, length($0)-1)); }
 /=== TALB/ { sub(/"/, "\\\"", $0);printf ("ALBUM=\"%s\"\n", substr($0, 35, length($0)-1)); }
 ')
-    DIR=$ORGDIR/$(echo $ARTIST | cut -c -1)/$ARTIST/$(echo $ALBUM | sed 's/(^ *| *$)//g')
+    #DIR=$ORGDIR/$(echo $ARTIST | cut -c -1)/$ARTIST/$(echo $ALBUM | sed 's/(^ *| *$)//g')
+    DIR=$ORGDIR/$ARTIST/$(echo $ALBUM | sed 's/(^ *| *$)//g')
     if [[ $DIR =~ "//" ]]; then
         continue
     fi

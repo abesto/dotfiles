@@ -161,7 +161,7 @@ ignore_leading_the = "yes"
 ## - 2 - lyricsplugin.com
 ##
 #
-lyrics_database = "2"
+lyrics_database = "1"
 #
 ##### colors definitions #####
 #
