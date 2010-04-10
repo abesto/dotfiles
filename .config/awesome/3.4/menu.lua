@@ -13,7 +13,7 @@ awesome_menu = {
 browser_menu = {
    {"conkeror" , "conkeror"},
    {"firefox"  , "firefox"},
-   {"chromium" , "chromium"},
+   {"iron"     , "iron"},
    {"opera"    , "opera"}
 }
 

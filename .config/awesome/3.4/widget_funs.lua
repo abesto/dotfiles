@@ -35,7 +35,7 @@ end
 --
 
 function show_mpd_song(hide_duration)
-   local np_file = io.popen('mpc --format "%title% - %artist%\n%album%" 2> /dev/null')
+   local np_file = io.popen('mpc -h '..mpd_socket..' --format "%title% - %artist%\n%album%" 2> /dev/null')
    local track = np_file:read("*line")
    local album = np_file:read("*line")
    local icon = ''

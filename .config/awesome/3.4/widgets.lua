@@ -12,25 +12,24 @@ timer:add_signal("timeout", function() date_widget.text = enclose(os.date("%d %b
 -- Battery
 battery_widget_text = widget({ type = "textbox", name = "battery_widget_text" })
 timer:add_signal("timeout", function (widgets, args)
-                               local cmd = "acpi -b"
-                               local f = io.popen(cmd)
-                               local l = f:read()
-                               f:close()
+                              local cmd = "acpi -b"
+                              local f = io.popen(cmd)
+                              local l = f:read()
+                              f:close()
 
-                               local text
+                              local text
 
-                               if string.find(l, "Discharging") then
-                                  battery_widget_text.visible = true
-                                  local perc = string.sub(l, string.find(l, "%d*%d*%d%%"))
-                                  local remaining = string.sub(l, string.find(l, "%d*%d*:*%d*%d*:%d%d"))
-                                  text = highlight('Bat: ') .. remaining .. " (" .. perc .. ")"
-                               else
-                                  battery_widget_text.visible = false
-                               end
+                              if string.find(l, "Discharging") then
+                                 battery_widget_text.visible = true
+                                 local perc = string.sub(l, string.find(l, "%d*%d*%d%%"))
+                                 text = highlight('Bat: ') .. perc
+                              else
+                                 battery_widget_text.visible = false
+                              end
 
-                               if text then battery_widget_text.text = enclose(text) end
-                            end
-              )
+                              if text then battery_widget_text.text = enclose(text) end
+                           end
+             )
 
 -- Memory
 membar_widget     = widget({ type = "textbox", name = "membar_widget" })
@@ -56,8 +55,8 @@ vicious.register(netwidget, vicious.widgets.net,
                  enclose(highlight("Net: ") .. "${wlan0 down_kb}k / ${wlan0 up_kb}k", 2))
 
 -- MPD
-mpd_widget = widget({type = 'textbox', name = 'mpdwidget' })
-vicious.register(mpd_widget, vicious.widgets.mpd, enclose(highlight('MPD: ') .. '$1'), 7, {40, 'mpdwidget'})
+--mpd_widget = widget({type = 'textbox', name = 'mpdwidget' })
+--vicious.register(mpd_widget, vicious.widgets.mpd, enclose(highlight('MPD: ') .. '$1'), 7, {40, 'mpdwidget'})
 
 -- Volume
 volume_widget = widget({

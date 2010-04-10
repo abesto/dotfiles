@@ -3,10 +3,10 @@ Xft.dpi: 96.0
 xterm*foreground: white
 xterm*background: black
 xterm*cursorColor: white
-xterm*font: -*-terminus-medium-*-*-*-*-140-*-*-*-*-*
+xterm*font: -*-terminus-medium-*-*-*-*-120-*-*-*-*-*
 XTerm*eightBitInput: false
 
-urxvt.font: -*-terminus-medium-*-*-*-*-140-*-*-*-*-*
+urxvt.font: -*-terminus-medium-*-*-*-*-120-*-*-*-*-*
 urxvt*urllauncher: conkeror
 urxvt*matcher.button:        1
 urxvt*saveLines:              8192
@@ -58,7 +58,7 @@ stjerm*color14:     #93e0e3
 stjerm*color15:     #ffffff
 
 
-conapp.font: -*-terminus-medium-*-*-*-*-140-*-*-*-*-*
+conapp.font: -*-terminus-medium-*-*-*-*-120-*-*-*-*-*
 conapp.background: black
 conapp.foreground: white
 conapp*scrollBar:    false
@@ -86,7 +86,7 @@ conapp*color13:     #ec93d3
 conapp*color14:     #93e0e3
 conapp*color15:     #ffffff
 
-im.font: -*-terminus-medium-*-*-*-*-140-*-*-*-*-*
+im.font: -*-terminus-medium-*-*-*-*-120-*-*-*-*-*
 im.background:  black
 im.foreground:  #dcdccc
 im*scrollBar:    false

@@ -40,7 +40,7 @@ exec 0<&9 9<&- # visszaallitjuk stdin-t
 
 menu "Melyik rádiót akarod?"
 
-streamripper ${RADIOK[$?]} -d /home/abesto/music/stream -rz 10100 &
-line
-mplayer http://localhost:10100 -really-quiet
+#streamripper ${RADIOK[$?]} -d /home/abesto/music/stream -rz 10100 &
+#line
+mplayer ${RADIOK[$?]} 
 

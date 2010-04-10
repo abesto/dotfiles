@@ -66,3 +66,7 @@
 (require 'my-yasnippet)
 (require 'zencoding-mode)
 (add-hook 'sgml-mode-hook 'zencoding-mode)
+
+;; Load auctex site file
+(load "auctex.el")
+(load "preview-latex.el")

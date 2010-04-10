@@ -16,8 +16,6 @@
 ;;;;;;;;;;;;;;;;;;;
 ;; Generic stuff ;;
 ;;;;;;;;;;;;;;;;;;;
-(require 'tex-site)
-
 (autoload 'htmlize-file "htmlize" "Load FILE, fontify it, convert it to HTML, and save the result." t)
 (autoload 'htmlize-buffer "htmlize" "Fontify buffer, convert it to HTML, and open the result in a new buffer." t)
 
@@ -60,14 +58,3 @@
 ;; Customize
 (setq custom-file "~/.emacs.d/custom.el")
 (load custom-file)
-
-
-;;; This was installed by package-install.el.
-;;; This provides support for the package system and
-;;; interfacing with ELPA, the package archive.
-;;; Move this code earlier if you want to reference
-;;; packages in your .emacs.
-(when
-    (load
-     (expand-file-name "~/.emacs.d/elpa/package.el"))
-  (package-initialize))

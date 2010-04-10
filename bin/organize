@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 #
 # Organize music in current dir and subdirs into
-# 'A/Artist/Album/01. Track'  structure
+# 'Artist/Album/01. Track'  structure
 
 ORGDIR="`pwd`/organized"
 ALLDIR="`pwd`/alldir"

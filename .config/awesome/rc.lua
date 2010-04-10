@@ -31,7 +31,7 @@ end
 
 
 -- execute autorun apps specified in generic.lua
-autorun = true
+autorun = false
 if autorun then
    for app = 1, #autorunApps do
       awful.util.spawn(autorunApps[app])

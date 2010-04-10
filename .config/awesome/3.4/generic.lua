@@ -20,9 +20,10 @@ if music_player == 'mpris' then
    music_prev = mpris_remote .. ' prev'
    music_toggle = mpris_remote .. ' pause'
 else
-   music_next = 'mpc next'
-   music_prev = 'mpc prev'
-   music_toggle = 'mpc toggle'
+   mpd_socket = '/mnt/storage/music/.mpd/socket'
+   music_next = 'mpc -h '..mpd_socket..' next'
+   music_prev = 'mpc -h '..mpd_socket..' prev'
+   music_toggle = 'mpc -h '..mpd_socket..' toggle'
 end
 
 -- Autorun programs

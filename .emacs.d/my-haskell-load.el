@@ -1,5 +1,5 @@
 (defun load-haskell ()
   (interactive)
-  (load (expand-file-name "~/.emacs.d/site/haskell-mode/haskell-site-file"))
+  (load "haskell-site-file")
   (add-hook 'haskell-mode-hook 'turn-on-haskell-doc-mode)
   (add-hook 'haskell-mode-hook 'turn-on-haskell-indent))
