@@ -73,7 +73,9 @@ globalkeys = awful.util.table.join(
 
    -- Commands
    awful.key({ modkey, "Shift"   }, "p", function () awful.util.spawn(music_prev); music_show(true) end),
+   awful.key({                   }, "XF86AudioPrev", function () awful.util.spawn(music_prev); music_show(true) end),
    awful.key({ modkey, "Shift"   }, "n", function () awful.util.spawn(music_next); music_show(true) end),
+   awful.key({                   }, "XF86AudioNext", function () awful.util.spawn(music_next); music_show(true) end),
    awful.key({ modkey, "Shift"   }, "w", function () awful.util.spawn(music_toggle) end),
    awful.key({ modkey, "Shift"   }, "m", music_show)
 ) -- globalkeys

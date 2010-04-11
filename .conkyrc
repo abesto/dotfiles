@@ -4,8 +4,7 @@ background no
 font 7x13
 use_xft no
 
-mpd_host localhost
-mpd_port 6600
+mpd_host /mnt/storage/music/.mpd/socket
 
 update_interval 1.0
 
