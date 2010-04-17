@@ -10,20 +10,18 @@ update_interval 1.0
 
 total_run_times 0
 
-own_window yes
+own_window no
 own_window_transparent yes
 own_window_type desktop
 double_buffer yes
 
-#minimum_size 280 5
-
 draw_shades yes
-draw_outline no
-draw_borders no
+draw_outline yes
+draw_borders yes
 draw_graph_borders yes
-stippled_borders 8
+stippled_borders 0
 border_margin 4
-border_width 1
+border_width 0
 
 default_color white
 default_shade_color black
@@ -36,7 +34,7 @@ maximum_width 308
 gap_x 12
 gap_y 12
 
-no_buffers yes
+no_buffers no
 
 uppercase no
 
@@ -45,7 +43,7 @@ net_avg_samples 2
 
 override_utf8_locale no
 
-use_spacer none
+use_spacer yes
 
 color0 cccccc
 color1 eeeeee
@@ -58,7 +56,7 @@ color1 eeeeee
 TEXT
 ${color0}$nodename${alignr}linux-$kernel
 $alignc${color0}Uptime:${color1} $uptime ${color0}
-$alignc${color0}Pending updates:${color1} ${execi 3600.0 /home/abesto/bin/yaourt-updates} ${color0}
+$alignc${color0}Pending updates:${color1} ${execi 3600.0 /home/abesto/bin/bauerbill-updates} ${color0}
 
 ${alignc}${color0}CPU Temperature (Core1/Core2): ${color1}${platform coretemp.0 temp 1}°C / ${platform coretemp.1 temp 1}°C
 $alignc${color0}CPU Average: ${color1}${cpu cpu0}% ${color0}at${color1} ${freq_g cpu0}Ghz

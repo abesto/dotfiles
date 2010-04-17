@@ -1,148 +1,115 @@
--- Based on And1's xmonad.hs. wfarrPrompt (obviously) from wfarr's xmonad.hs
+-- abesto's XMonad config
+-- Time-stamp: <2010-04-17 14:12:05>
 
-import XMonad
+import XMonad hiding (Tall)
 
+import XMonad.Util.EZConfig
+import XMonad.ManageHook
 import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.ManageDocks
 import XMonad.Hooks.UrgencyHook
 
 import XMonad.Layout.LayoutHints
+import XMonad.Layout.ResizableTile
 import XMonad.Layout.Tabbed
-import XMonad.Layout.NoBorders
 import XMonad.Layout.HintedTile
-
-import XMonad.Actions.WindowBringer
-import XMonad.Actions.CycleWS
-
-import XMonad.ManageHook
-
-import XMonad.Util.Run
-import XMonad.Util.EZConfig
+import XMonad.Layout.NoBorders
 import XMonad.Util.Themes
 
-import XMonad.Prompt
-import XMonad.Prompt.Shell
+import XMonad.Hooks.SetWMName
 
--- import qualified System.IO.UTF8
-
-import qualified Data.Map as M
-import qualified XMonad.Actions.FlexibleResize as Flex
 import qualified XMonad.StackSet as W
 
-main = do
-    din <- spawnPipe myStatusBar
-    din2 <- spawnPipe myTopBar
+main = xmonad =<< myStatusBar myConfig
 
-    xmonad $ myUrgencyHook $ defaultConfig
-       { normalBorderColor = "#0f0f0f"
-       , focusedBorderColor = "#0077cc"
-       , terminal = "xterm"
-       , layoutHook = myLayout
-       , manageHook = newManageHook <+> manageDocks
-       , workspaces = map show [1..9] ++ ["mail", "im", "www"]
-       --, workspaces = ["1:irc", "2:www", "3:music"] ++ map show [4..9]
-       , numlockMask = mod2Mask
-       , modMask = mod1Mask
-       , borderWidth = 1
-       , logHook = dynamicLogWithPP $ myDzenPP din
-       , focusFollowsMouse = True
-       }
-       `additionalKeysP`
-       [
-       -- Application launchers
-       ("M-S-f", spawn "firefox")
+myConfig = withUrgencyHook NoUrgencyHook defaultConfig
+       { terminal           = "urxvt"
+       , workspaces         = map show [1..9] ++ ["mail", "im", "www"]
+       , modMask            = mod4Mask
+       , borderWidth        = 2
+       , normalBorderColor  = "#4F4F4F"
+       , focusedBorderColor = "#6F6F6F"
+       , focusFollowsMouse  = True
+       , manageHook         = myManageHook <+> manageDocks <+> manageHook defaultConfig
+       , layoutHook         = myLayout
+       , startupHook        = do {setWMName "LG3D"; spawn "/home/abesto/bin/nm"}
+       } `additionalKeysP` myKeys
+
+myKeys =
+       [ ("M-S-f", browser)
        , ("M-S-<Return>", spawn "xterm")
+       , ("M-<Return>", spawn $ XMonad.terminal myConfig)
+       , ("M-S-i", im)
        , ("M-S-o", spawn "soffice")
        , ("M-S-e", spawn "emacsclient -c")
-       , ("M-S-d", spawn "pcmanfm")
-       -- Prompt
-       , ("M-p", shellPrompt wfarrPrompt)
+       , ("M-p", spawn "gmrun")
        -- MPC
-       , ("M-S-w", spawn "mpc toggle")
-       , ("M-S-p", spawn "mpc prev")
-       , ("M-S-n", (do {spawn "mpc next"; showSong}))
-       , ("M-<KP_Multiply>", spawn "mpc seek +3%")
-       , ("M-<KP_Divide>", spawn "mpc seek -3%")
-       , ("M-S-m", showSong)
+       , ("<XF86AudioPlay>", mpc "toggle")
+       , ("M-S-w", mpc "toggle")
+       , ("M-S-p", mpcShow "prev")
+       , ("<XF86AudioPrev>", mpcShow "prev")
+       , ("M-S-n", mpcShow "next")
+       , ("<XF86AudioNext>", mpcShow "next")
+       , ("M-<KP_Multiply>", mpc "seek +3%")
+       , ("M-<XF86AudioRaiseVolume>", mpc "seek +1%")
+       , ("M-<KP_Divide>", mpc "seek -3%")
+       , ("M-<XF86AudioLowerVolume>", mpc "seek -1%")
+       , ("M-S-m", mpcShow "")
        -- Workspaces
        , ("M-w", windows $ W.greedyView "www")
        , ("M-m", windows $ W.greedyView "mail")
        , ("M-i", windows $ W.greedyView "im")
        -- Volume control
-       , ("M-<KP_Add>", spawn "amixer set PCM 5%+")
-       , ("M-<KP_Subtract>", spawn "amixer set PCM 5%-")
+       , ("M-<KP_Add>", amixer "Master 5%+")
+       , ("<XF86AudioRaiseVolume>", amixer "Master 1%+")
+       , ("M-<KP_Subtract>", amixer "Master 5%-")
+       , ("<XF86AudioLowerVolume>", amixer "Master 1%-")
+       , ("<XF86AudioMute>", amixer "Master toggle")
        ]
 
-startFocus command workspace = do
-        spawn command
-	windows $ W.greedyView workspace
 
-wfarrPrompt :: XPConfig
-wfarrPrompt = defaultXPConfig { font              = "-xos4-terminus-medium-r-normal-*-12-*-*-*-c-*-iso10646-1"
-                              , bgColor           = "black"
-                              , fgColor           = "#999999"
-                              , fgHLight          = "#ffffff"
-                              , bgHLight          = "#4c7899"
-                              , promptBorderWidth = 0
-                              , position          = Bottom
-                              , height            = 18
-                              , historySize       = 128 }
+terminusMedium = "-xos4-terminus-medium-r-normal-*-12-*-*-*-c-*-iso10646-1"
+terminusLarge    = "-xos4-terminus-bold-r-normal-*-32-*-*-*-*-*-iso10646-1"
 
---myFont = "xft:DejaVu Vera Sans Mono:pixelsize=12"
-myFont    = "-xos4-terminus-medium-r-normal-*-12-*-*-*-c-*-iso10646-1"
-myFontBig = "-xos4-terminus-bold-r-normal-*-32-*-*-*-*-*-iso10646-1"
-showSong  = spawn ("(mpc | head -n1; sleep 1.5) | dzen2 -y '400' -h '40' -fn '" ++ myFontBig ++ "' -bg '#000040' -fg '#8080CC' -e")
+browser     = spawn "conkeror"
+mpc cmd     = spawn $ "mpc -h /mnt/storage/music/.mpd/socket " ++ cmd
+mpcShow cmd = mpc $ cmd ++ ("| head -n1 | dzen2 -p 2 -y '400' -h '40' -fn '" ++ terminusLarge ++ "' -bg '#000040' -fg '#8080CC' -e")
+amixer cmd  = spawn $ "amixer set " ++ cmd
+mutt :: X ()
+mutt        = spawn "urxvt -name 'conapp' -e '/home/abesto/bin/mutt'"
+im :: X ()
+im          = spawn "urxvt -name 'im' -T 'im' -e '/home/abesto/bin/im'"
 
--- Statusbars
-myStatusBar = "dzen2 -x '0' -y '0' -h '12' -w '600' -ta 'l' -fg '#f0f0ff' -bg '#0f0f0f' -fn '" ++ myFont ++ "'"
-myTopBar = "conky -c ~/.conkyrc/conky-bar | dzen2 -x '600' -y '0' -h '12' -ta 'r' -fg '#AAAAEE' -bg '#0f0f0f' -fn '" ++ myFont ++ "'"
+-- Window rules
+myManageHook = makeManageHook W.greedyView <+> makeManageHook W.shift
+    where makeManageHook f = composeAll . concat $
+                             [ [className =? c --> doFloat | c <- myFloats]
+                             , [title     =? t --> doFloat | t <- myFloats]
+                             -- Browsers
+                             , [className =? c --> doF (f "www") | c <- browsers]
+                             , [title     =? t --> doF (f "www") | t <- browsers]
+                             -- Im
+                             , [className =? c --> doF (f "im") | c <- ims]
+                             , [title     =? t --> doF (f "im") | t <- ims]
+                             ]
+          myFloats = ["Gimp", "gimp", "Xmessage", "Downloads", "*Preferences*", "Save As..."]
+          ims = ["Skype", "Pidgin", "im"]
+          browsers = ["Iron", "Conkeror", "Opera", "Firefox"]
+          myIgnores = []
 
--- Urgency hint options:
-myUrgencyHook = withUrgencyHook dzenUrgencyHook
-    { args = ["-x", "0", "-y", "1010", "-h", "12", "-ta", "r", "-expand", "l", "-fg", "#0099ff", "-bg", "#0f0f0f", "-fn", myFont] }
+-- Status bar
+myStatusBar = statusBar "xmobar" pp toggleStrutsKey
+    where pp = defaultPP { ppCurrent = xmobarColor "#FFD7A7" "" . wrap "[" "]"
+                         , ppTitle   = xmobarColor "#80D4AA"  "" . shorten 40
+                         , ppVisible = wrap "(" ")"
+                         , ppUrgent = xmobarColor "#FFA3A3" "" . xmobarStrip
+                         }
+          toggleStrutsKey XConfig {XMonad.modMask = modMask} = (modMask, xK_b)
 
 -- Layout
-myLayout = avoidStruts $ smartBorders (tabbed shrinkText (theme wfarrTheme) ||| hintedTile Wide  ||| Full)
+myLayout = avoidStruts $ smartBorders (tabbed shrinkText (theme wfarrTheme) ||| hintedTile Wide  ||| hintedTile Tall)
        where
        hintedTile = HintedTile nmaster delta ratio TopLeft
        nmaster = 1
        ratio = toRational (2/(1+sqrt(5)::Double))
        delta = 3/100
-
--- Window rules
-myManageHook = composeAll . concat $
-    [ [className =? c --> doFloat | c <- myFloats]
-    , [title =? t --> doFloat | t <- myOtherFloats]
-    , [resource =? r --> doFloat | r <- myIgnores]
-    , [className =? "Gran Paradiso" --> doF (W.shift "www")]
-    , [className =? "Pidgin" --> doF (W.shift "im")]
-    , [className =? "Thunderbird" --> doF (W.shift "mail")]
-    , [className =? "Claws-mail" --> doF (W.shift "mail")]
-    , [title =? "mutt" --> doF (W.shift "mail")]
-    ]
-    where
-    myFloats = ["Gimp", "gimp", "Xmessage"]
-    myOtherFloats = ["Downloads", "*Preferences*", "Save As..."]
-    myIgnores = []
-myViewHook = composeAll . concat $
-    [ [className =? "Gran Paradiso" --> doF (W.greedyView "www")]]
-newManageHook = myViewHook <+> myManageHook <+> manageHook defaultConfig
-
--- dynamicLog pretty printer for dzen:
-myDzenPP h = defaultPP
-    { ppCurrent = wrap "^fg(#0099ff)^bg(#333333)[^fg(#ffffff)" "^fg(#0099ff)]^fg()^bg()^p()" . \wsId -> if (':' `elem` wsId) then drop 2 wsId else wsId
-     --ppVisible = wrap "^fg(#ffffff)^bg(#333333)" "^fg()^bg()^p()" . \wsId -> if (':' `elem` wsId) then drop 2 wsId else wsId
-     , ppHidden = wrap " " " "
-     --ppHiddenNoWindows = wrap "^fg(#777777)^bg()^p()^i(/home/and1/.dzen/corner.xbm)" "^fg()^bg()^p()" . \wsId -> if (':' `elem` wsId) then drop 2 wsId else wsId
-    , ppUrgent = wrap "^fg(#0099ff)^bg()^p()" "^fg()^bg()^p()" . \wsId -> if (':' `elem` wsId) then drop 2 wsId else wsId
-    , ppSep = " "
-    , ppWsSep = ""
-    , ppTitle = dzenColor "#ffff77" "" . wrap "<" ">"
-    , ppLayout =
-        (\x -> case x of
-        "Wide" -> "[-]"
-        "Tabbed Simplest" -> "[|]"
-        "Full" -> "[ ]"
-        )
-    , ppOutput = hPutStrLn h
-    }

@@ -1,4 +1,2 @@
 #!/bin/sh
-pwds=`gpg --decrypt ~/.mutt/pass.gpg`
-eval "$pwds"
-exec mutt "$@"
+GMAIL_PASS=`gnome-keyring-query get gmail` INFELTE_PASS=`gnome-keyring-query get infelte` exec mutt "$@"
