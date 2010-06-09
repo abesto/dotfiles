@@ -56,7 +56,6 @@ color1 eeeeee
 TEXT
 ${color0}$nodename${alignr}linux-$kernel
 $alignc${color0}Uptime:${color1} $uptime ${color0}
-$alignc${color0}Pending updates:${color1} ${execi 3600.0 /home/abesto/bin/bauerbill-updates} ${color0}
 
 ${alignc}${color0}CPU Temperature (Core1/Core2): ${color1}${platform coretemp.0 temp 1}°C / ${platform coretemp.1 temp 1}°C
 $alignc${color0}CPU Average: ${color1}${cpu cpu0}% ${color0}at${color1} ${freq_g cpu0}Ghz

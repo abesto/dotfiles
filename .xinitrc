@@ -15,18 +15,20 @@ conkeror -daemon &
 emacs --daemon
 stjerm -k f1 -sh /bin/zsh -fn "Terminus" -b thin &
 feh --bg-tile ~/archlinux-zenburn-wide.jpg &
+#trayer --height 8 --SetDockType true &
 
 xsetroot -cursor_name left_ptr
 
 
-DEFAULT_SESSION=awesome
+DEFAULT_SESSION=xmonad
 
 case $1 in
 awesome)
-	exec awesome
+	dbus-launch awesome
 	;;
 xmonad)
-	dbus-launch --exit-with-session xmonad
+	dbus-launch --exec-with-session xmonad
+	#exec xmonad
 	;;
 gnome)
 	exec gnome-session
@@ -35,7 +37,7 @@ kde)
 	exec startkde
 	;;
 *)
-	exec $DEFAULT_SESSION
+	dbus-launch --exit-with-session $DEFAULT_SESSION
 	;;
 esac
 

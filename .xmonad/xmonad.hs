@@ -1,5 +1,5 @@
 -- abesto's XMonad config
--- Time-stamp: <2010-04-17 14:12:05>
+-- Time-stamp: <2010-05-26 11:14:54>
 
 import XMonad hiding (Tall)
 
@@ -30,9 +30,9 @@ myConfig = withUrgencyHook NoUrgencyHook defaultConfig
        , normalBorderColor  = "#4F4F4F"
        , focusedBorderColor = "#6F6F6F"
        , focusFollowsMouse  = True
-       , manageHook         = myManageHook <+> manageDocks <+> manageHook defaultConfig
+       , manageHook         = manageHook defaultConfig <+> myManageHook
        , layoutHook         = myLayout
-       , startupHook        = do {setWMName "LG3D"; spawn "/home/abesto/bin/nm"}
+       , startupHook        = do {setWMName "LG3D"}
        } `additionalKeysP` myKeys
 
 myKeys =
@@ -42,7 +42,9 @@ myKeys =
        , ("M-S-i", im)
        , ("M-S-o", spawn "soffice")
        , ("M-S-e", spawn "emacsclient -c")
-       , ("M-p", spawn "gmrun")
+       , ("M-S-v", spawn $ (XMonad.terminal myConfig)++" -e vifm")
+       , ("M-p", spawn "gmrun -path /home/abesto/bin")
+       , ("M-e", spawn "eaglemode")
        -- MPC
        , ("<XF86AudioPlay>", mpc "toggle")
        , ("M-S-w", mpc "toggle")
@@ -65,6 +67,8 @@ myKeys =
        , ("M-<KP_Subtract>", amixer "Master 5%-")
        , ("<XF86AudioLowerVolume>", amixer "Master 1%-")
        , ("<XF86AudioMute>", amixer "Master toggle")
+       -- Misc
+       , ("M-S-s", spawn "xset dpms force off")
        ]
 
 
@@ -81,21 +85,20 @@ im :: X ()
 im          = spawn "urxvt -name 'im' -T 'im' -e '/home/abesto/bin/im'"
 
 -- Window rules
-myManageHook = makeManageHook W.greedyView <+> makeManageHook W.shift
-    where makeManageHook f = composeAll . concat $
+myManageHook = composeAll . concat $
                              [ [className =? c --> doFloat | c <- myFloats]
                              , [title     =? t --> doFloat | t <- myFloats]
                              -- Browsers
-                             , [className =? c --> doF (f "www") | c <- browsers]
-                             , [title     =? t --> doF (f "www") | t <- browsers]
+                             , [className =? c --> doF (W.shift "www") | c <- browsers]
+                             , [title     =? t --> doF (W.shift "www") | t <- browsers]
                              -- Im
-                             , [className =? c --> doF (f "im") | c <- ims]
-                             , [title     =? t --> doF (f "im") | t <- ims]
+                             , [className =? c --> doF (W.shift "im") | c <- ims]
+                             , [title     =? t --> doF (W.shift "im") | t <- ims]
                              ]
-          myFloats = ["Gimp", "gimp", "Xmessage", "Downloads", "*Preferences*", "Save As..."]
-          ims = ["Skype", "Pidgin", "im"]
-          browsers = ["Iron", "Conkeror", "Opera", "Firefox"]
-          myIgnores = []
+          where myFloats  = ["Gimp", "gimp", "Xmessage", "Downloads", "*Preferences*", "Save As..."]
+                ims       = ["Skype", "Pidgin", "im"]
+                browsers  = ["Iron", "Opera", "Firefox"]
+                myIgnores = []
 
 -- Status bar
 myStatusBar = statusBar "xmobar" pp toggleStrutsKey

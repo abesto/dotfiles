@@ -1,0 +1,14 @@
+script load adv_windowlist
+script load nm
+script load scriptassist
+script load bitlbee_typing_notice
+script load bitlbee_autoreply
+script load nicklist
+
+window new split
+window name hilight
+window size 6
+script load hilightwin
+window 1
+
+nicklist screen

@@ -32,7 +32,7 @@ set timeout = 300
 
 # viewers, editor
 auto_view text/html
-macro pager \cu |conkeror\n
+macro pager \cu |iron\n
 set assumed_charset="cp1252"
 set move = no
 set editor='emacsclient -c %s > /dev/null'

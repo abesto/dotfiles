@@ -40,9 +40,9 @@ globalkeys = awful.util.table.join(
 
    -- Multimedia keys
    awful.key({},                    "XF86AudioRaiseVolume",
-             function () awful.util.spawn("amixer set Master 5%+"); vicious.update(volume_widget) end),
+             function () awful.util.spawn("amixer set Master 1%+"); vicious.update(volume_widget) end),
    awful.key({},                    "XF86AudioLowerVolume",
-             function () awful.util.spawn("amixer set Master 5%-"); vicious.update(volume_widget) end),
+             function () awful.util.spawn("amixer set Master 1%-"); vicious.update(volume_widget) end),
    awful.key({},                    "XF86AudioMute",
              function () awful.util.spawn("amixer set Master toggle"); vicious.update(volume_widget) end),
    awful.key({},                    "XF86AudioPlay",        function () awful.util.spawn(music_toggle) end),
@@ -69,7 +69,8 @@ globalkeys = awful.util.table.join(
    awful.key({ modkey            }, ",", function () awful.util.spawn('perl /home/abesto/bin/lyrics.pl') end),
    awful.key({ modkey            }, "r", function () rodentbane.start() end),
    awful.key({ modkey, "Shift"   }, "b", function () awful.util.spawn('/home/abesto/bin/cleartheme codeblocks') end),
-   awful.key({ modkey            }, "p", function () awful.util.spawn('gmrun') end),
+   awful.key({ modkey            }, "p", function () awful.util.spawn('gmrun --path /home/abesto/bn') end),
+   awful.key({ modkey            }, "e", function () awful.util.spawn('eaglemode') end),
 
    -- Commands
    awful.key({ modkey, "Shift"   }, "p", function () awful.util.spawn(music_prev); music_show(true) end),

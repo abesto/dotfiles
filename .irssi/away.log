@@ -1,0 +1,712 @@
+--- Log opened Wed Jun 03 06:33:02 2009
+06:53 </<>/       abesto</> ehi.
+--- Log closed Wed Jun 03 07:37:39 2009
+--- Log opened Thu Jun 04 07:41:19 2009
+--- Log closed Thu Jun 04 11:05:40 2009
+--- Log opened Thu Jun 04 16:06:47 2009
+--- Log closed Thu Jun 04 16:52:59 2009
+--- Log opened Mon Jun 08 20:11:09 2009
+--- Log closed Mon Jun 08 20:44:00 2009
+--- Log opened Mon Jun 29 10:32:12 2009
+--- Log closed Mon Jun 29 10:35:09 2009
+--- Log opened Mon Jun 29 11:27:01 2009
+--- Log closed Mon Jun 29 11:38:50 2009
+--- Log opened Tue Jun 30 08:35:41 2009
+--- Log closed Tue Jun 30 08:36:54 2009
+--- Log opened Tue Jun 30 08:36:57 2009
+--- Log opened Tue Jun 30 10:17:09 2009
+14:01 4/<>/               herneszg4/> e7/ehello ráérsz?
+14:01 </<>/                 abesto</> ehello még családiebéd meg kb egy óra mepár
+14:02 4/<>/               herneszg4/> e7/eoké
+14:02 4/<>/               herneszg4/> e7/ejolvan akkor majd irj :)
+14:02 4/<>/               herneszg4/> e7/ecsácsá
+14:02 </<>/                 abesto</> ekk
+14:02 </<>/                 abesto</> ebye
+--- Log closed Tue Jun 30 17:08:42 2009
+--- Log opened Wed Jul 01 12:43:16 2009
+13:57 </<>/        abesto</> erre
+13:58 </<>/        abesto</> eSzivett :)
+--- Log closed Wed Jul 01 13:58:30 2009
+--- Log opened Thu Jul 02 12:54:04 2009
+--- Log closed Thu Jul 02 13:07:17 2009
+--- Log opened Thu Jul 02 15:17:34 2009
+--- Log closed Thu Jul 02 16:08:12 2009
+--- Log opened Fri Jul 03 19:37:07 2009
+19:45 #archlinux: 4/<?/c>/          Arkham>/ c4/> e?/abesto: I'm using weechat and they get nice colors
+20:07 #archlinux: 4/<?/c>/               mrpink57>/ c4/> e?/abesto: when i upgraded my pgo it did not req xul
+20:07 #archlinux: 4/<?/c>/        DevoidOfWindows>/ c4/> e?/abesto:  That's right.
+20:09 #archlinux: 4/<?/c>/                   drot>/ c4/> e?/abesto: firefox-pgo
+20:10 #archlinux: 4/>/6/               mrpink57 g?/ !give abesto google aur firefox-pgo
+20:10 #archlinux: 4/<?/c>/                  phrik>/ c4/> e?/abesto: Search took 0.17 seconds: AUR (en) - firefox - pgo -beta: <http://aur.archlinux.org/packages.php?ID=22919>
+20:10 #archlinux: 4/<?/c>/               mrpink57>/ c4/> e?/abesto: exactly
+20:11 #archlinux: 4/<?/c>/                 john_f>/ c4/> e?/abesto: other apps are built with firefoxs xulrunner
+20:34 #archlinux: 4/<?/c>/       brisbin33>/ c4/> e?/abesto: rename is great just not recursive, need the find | while for that
+20:36 #archlinux: 4/<?/c>/         declan2>/ c4/> e?/abesto: Same crap
+20:36 #archlinux: 4/<?/c>/     binarycodes>/ c4/> e?/abesto, get prename its a perl rename utility
+--- Log closed Fri Jul 03 20:46:18 2009
+--- Log opened Fri Jul 03 21:33:07 2009
+21:40 #archlinux: 4/<?/c>/          BinkyTheClown>/ c4/> e?/abesto> http://xkcd.com/413/ <- lol
+21:44 #archlinux: 4/<?/c>/               fogobogo>/ c4/> e?/abesto: what more KISS? compile 200mb myself or just wait for someone else doing it?
+21:45 #archlinux: 4/<?/c>/               fogobogo>/ c4/> e?/abesto: dont get me wrong. its perfectly fine for meto compile some stuff meself. but that hog i do not want.
+21:46 #archlinux: 4/<?/c>/               fogobogo>/ c4/> e?/abesto: wtf did x64 hit the repos then and not x32?
+21:56 </<>/                 abesto</> etell brain0 we're the official ff3.5 support channel
+--- Log closed Fri Jul 03 21:58:21 2009
+--- Log opened Sat Jul 04 16:32:53 2009
+16:37 #archlinux: 4/<?/c>/        nerdshark>/ c4/> e?/abesto: no
+--- Log closed Sat Jul 04 19:42:13 2009
+--- Log opened Sun Jul 05 10:45:06 2009
+--- Log opened Sun Jul 05 15:40:21 2009
+--- Log closed Sun Jul 05 15:42:31 2009
+--- Log opened Sun Jul 05 19:44:16 2009
+19:44 </<>/          abesto</> evagyok csak rejtve.. majd írj ha vagy
+20:26 &bitlbee: 4/>/6/            root@g?/ attila1113        attila1113@hotmail.com msn(abesto@msn.co  Online
+20:26 &bitlbee: 4/>/6/            root@g?/ badicsalex        badicsalex@hotmail.com msn(abesto@msn.co  Online
+20:26 &bitlbee: 4/>/6/            root@g?/ balesz000         balesz000@msn.com msn(abesto@msn.com)     Online
+20:26 &bitlbee: 4/>/6/            root@g?/ bessenyeid        bessenyeid@hotmail.com msn(abesto@msn.co  Online
+20:26 &bitlbee: 4/>/6/            root@g?/ bonjee            bonjee@citromail.hu msn(abesto@msn.com)   Online
+20:26 &bitlbee: 4/>/6/            root@g?/ fazr              fazr@noobseries.eu msn(abesto@msn.com)    Online
+20:26 &bitlbee: 4/>/6/            root@g?/ karnerzoli        karnerzoli@gmail.com msn(abesto@msn.com)  Online
+20:26 &bitlbee: 4/>/6/            root@g?/ lennartborgman    lennart.borgman@gmail.com jabber(abesto0  Online
+20:26 &bitlbee: 4/>/6/            root@g?/ msngogolag        msngogolag@vipmail.hu msn(abesto@msn.com  Online
+20:26 &bitlbee: 4/>/6/            root@g?/ nev-r             nev-r@hotmail.com msn(abesto@msn.com)     Online
+20:26 &bitlbee: 4/>/6/            root@g?/ pinter-monika     pinter-monika@freemail.hu msn(abesto@msn  Online
+20:26 &bitlbee: 4/>/6/            root@g?/ pinterminator     pin.terminator@gmail.com msn(abesto@msn.  Online
+20:26 &bitlbee: 4/>/6/            root@g?/ silver130         silver130@gmail.com msn(abesto@msn.com)   Online
+20:26 &bitlbee: 4/>/6/            root@g?/ sniper_lonka      sniper_lonka@hotmail.com msn(abesto@msn.  Online
+20:26 &bitlbee: 4/>/6/            root@g?/ somogyi91         somogyi91@hotmail.com msn(abesto@msn.com  Online
+20:26 &bitlbee: 4/>/6/            root@g?/ tekikegyugy       tekikegyugy@citromail.hu msn(abesto@msn.  Online
+20:26 &bitlbee: 4/>/6/            root@g?/ undergrounder222  undergrounder222@hotmail.com msn(abesto@  Online
+20:26 &bitlbee: 4/>/6/            root@g?/ zsoltit           zsoltit@freemail.hu msn(abesto@msn.com)   Online
+20:26 &bitlbee: 4/>/6/            root@g?/ agecsei           agecsei@hotmail.com msn(abesto@msn.com)   Busy
+20:26 &bitlbee: 4/>/6/            root@g?/ biobocy           biobocy@freemail.hu msn(abesto@msn.com)   Away
+20:26 &bitlbee: 4/>/6/            root@g?/ frtomi            frtomi@freemail.hu msn(abesto@msn.com)    Away
+20:26 &bitlbee: 4/>/6/            root@g?/ gabbio            gabbio@freemail.hu msn(abesto@msn.com)    Away
+20:26 &bitlbee: 4/>/6/            root@g?/ kiss_balazs01     kiss_balazs01@hotmail.com msn(abesto@msn  Idle
+20:26 &bitlbee: 4/>/6/            root@g?/ menr              menr@citromail.hu msn(abesto@msn.com)     Busy
+20:26 &bitlbee: 4/>/6/            root@g?/ nonopinter        nono.pinter@hotmail.com msn(abesto@msn.c  Busy
+20:26 &bitlbee: 4/>/6/            root@g?/ pecsi7            pecsi7@freemail.hu msn(abesto@msn.com)    Busy
+20:26 &bitlbee: 4/>/6/            root@g?/ petya012          petya012@hotmail.com msn(abesto@msn.com)  Idle
+20:26 &bitlbee: 4/>/6/            root@g?/ richard_kovari    richard_kovari@hotmail.com msn(abesto@ms  Away
+20:26 &bitlbee: 4/>/6/            root@g?/ szn0907           szn0907@hotmail.com msn(abesto@msn.com)   Busy
+20:26 &bitlbee: 4/>/6/            root@g?/ tottii            tottii@freestart.hu msn(abesto@msn.com)   Away
+20:26 &bitlbee: 4/>/6/            root@g?/ zlevi1            zlevi1@vnet.hu msn(abesto@msn.com)        Busy
+20:51 #archlinux: 4/<?/c>/           afo0l>/ c4/> e?/abesto: thanks, you saved my day
+20:58 #archlinux-offtopic: 4/<?/c>/        fogobogo>/ c4/> e?/abesto: dont even need an addon
+20:59 #archlinux-offtopic: 4/<?/c>/        fogobogo>/ c4/> e?/abesto: about:config   search agent
+--- Log closed Sun Jul 05 21:02:10 2009
+--- Log opened Sun Jul 05 21:15:04 2009
+21:57 4/<>/            domi4/> e7/ecia :)
+--- Log closed Sun Jul 05 21:57:58 2009
+--- Log opened Mon Jul 06 08:13:13 2009
+--- Log opened Mon Jul 06 13:08:40 2009
+--- Log closed Mon Jul 06 17:44:14 2009
+--- Log opened Mon Jul 06 18:28:36 2009
+19:31 4/<>/         r_gabee4/> e7/ena már szánalmas vok :D
+19:31 4/<>/         r_gabee4/> e7/ejó aláírom kiicst köcsög volt a kiírásom 
+19:31 4/<>/         r_gabee4/> e7/ede na mindgy
+20:04 </<>/          abesto</> evagyok
+20:05 </<>/          abesto</> ezenéltünk kicsit családilag
+--- Log closed Mon Jul 06 20:05:08 2009
+--- Log opened Tue Jul 07 10:38:40 2009
+--- Log closed Tue Jul 07 12:39:59 2009
+--- Log opened Tue Jul 07 12:59:47 2009
+--- Log opened Tue Jul 07 15:14:06 2009
+15:23 &bitlbee: 4/>/6/          root@g?/ balesz000         balesz000@msn.com msn(abesto@msn.com)     Online
+15:23 &bitlbee: 4/>/6/          root@g?/ bicsak90          bicsak90@hotmail.com msn(abesto@msn.com)  Online
+15:23 &bitlbee: 4/>/6/          root@g?/ cemotox99         cemotox99@hotmail.com msn(abesto@msn.com  Online
+15:23 &bitlbee: 4/>/6/          root@g?/ frtomi            frtomi@freemail.hu msn(abesto@msn.com)    Online
+15:23 &bitlbee: 4/>/6/          root@g?/ mesicsrobi        mesicsrobi@hotmail.com msn(abesto@msn.co  Online
+15:23 &bitlbee: 4/>/6/          root@g?/ nev-r             nev-r@hotmail.com msn(abesto@msn.com)     Online
+15:23 &bitlbee: 4/>/6/          root@g?/ vancy             vancy@freemail.hu msn(abesto@msn.com)     Online
+15:23 &bitlbee: 4/>/6/          root@g?/ badicsalex        badicsalex@hotmail.com msn(abesto@msn.co  Away
+15:23 &bitlbee: 4/>/6/          root@g?/ biobocy           biobocy@freemail.hu msn(abesto@msn.com)   Away
+15:23 &bitlbee: 4/>/6/          root@g?/ bonjee            bonjee@citromail.hu msn(abesto@msn.com)   Busy
+15:23 &bitlbee: 4/>/6/          root@g?/ davidjanek        davidjanek@hotmail.com msn(abesto@msn.co  Busy
+15:23 &bitlbee: 4/>/6/          root@g?/ domi              dominik.aa@hotmail.com msn(abesto@msn.co  Away
+15:23 &bitlbee: 4/>/6/          root@g?/ janka55           janka55@citromail.hu msn(abesto@msn.com)  Busy
+15:23 &bitlbee: 4/>/6/          root@g?/ jon13             jon13@freemail.hu msn(abesto@msn.com)     Busy
+15:23 &bitlbee: 4/>/6/          root@g?/ kloey99           kloey99@freemail.hu msn(abesto@msn.com)   Be Right Back
+15:23 &bitlbee: 4/>/6/          root@g?/ lennartborgman    lennart.borgman@gmail.com jabber(abesto0  Away
+15:23 &bitlbee: 4/>/6/          root@g?/ petya012          petya012@hotmail.com msn(abesto@msn.com)  Busy
+15:23 &bitlbee: 4/>/6/          root@g?/ pinterminator     pin.terminator@gmail.com msn(abesto@msn.  Busy
+15:23 &bitlbee: 4/>/6/          root@g?/ syabi4            syabi4@freemail.hu msn(abesto@msn.com)    Busy
+15:23 &bitlbee: 4/>/6/          root@g?/ szn0907           szn0907@hotmail.com msn(abesto@msn.com)   Away
+15:23 &bitlbee: 4/>/6/          root@g?/ tottii            tottii@freestart.hu msn(abesto@msn.com)   Idle
+15:23 &bitlbee: 4/>/6/          root@g?/ turbogyerek       turbogyerek@freemail.hu msn(abesto@msn.c  Away
+15:30 &bitlbee: 4/>/6/            root@g?/ balesz000         balesz000@msn.com msn(abesto@msn.com)     Online
+15:30 &bitlbee: 4/>/6/            root@g?/ cemotox99         cemotox99@hotmail.com msn(abesto@msn.com  Online
+15:30 &bitlbee: 4/>/6/            root@g?/ frtomi            frtomi@freemail.hu msn(abesto@msn.com)    Online
+15:30 &bitlbee: 4/>/6/            root@g?/ mesicsrobi        mesicsrobi@hotmail.com msn(abesto@msn.co  Online
+15:30 &bitlbee: 4/>/6/            root@g?/ nev-r             nev-r@hotmail.com msn(abesto@msn.com)     Online
+15:30 &bitlbee: 4/>/6/            root@g?/ undergrounder222  undergrounder222@hotmail.com msn(abesto@  Online
+15:30 &bitlbee: 4/>/6/            root@g?/ vancy             vancy@freemail.hu msn(abesto@msn.com)     Online
+15:30 &bitlbee: 4/>/6/            root@g?/ badicsalex        badicsalex@hotmail.com msn(abesto@msn.co  Away
+15:30 &bitlbee: 4/>/6/            root@g?/ biobocy           biobocy@freemail.hu msn(abesto@msn.com)   Away
+15:30 &bitlbee: 4/>/6/            root@g?/ davidjanek        davidjanek@hotmail.com msn(abesto@msn.co  Busy
+15:30 &bitlbee: 4/>/6/            root@g?/ domi              dominik.aa@hotmail.com msn(abesto@msn.co  Away
+15:30 &bitlbee: 4/>/6/            root@g?/ janka55           janka55@citromail.hu msn(abesto@msn.com)  Busy
+15:30 &bitlbee: 4/>/6/            root@g?/ jon13             jon13@freemail.hu msn(abesto@msn.com)     Busy
+15:30 &bitlbee: 4/>/6/            root@g?/ kloey99           kloey99@freemail.hu msn(abesto@msn.com)   Be Right Back
+15:30 &bitlbee: 4/>/6/            root@g?/ lennartborgman    lennart.borgman@gmail.com jabber(abesto0  Away
+15:30 &bitlbee: 4/>/6/            root@g?/ petya012          petya012@hotmail.com msn(abesto@msn.com)  Busy
+15:30 &bitlbee: 4/>/6/            root@g?/ pinterminator     pin.terminator@gmail.com msn(abesto@msn.  Busy
+15:30 &bitlbee: 4/>/6/            root@g?/ syabi4            syabi4@freemail.hu msn(abesto@msn.com)    Busy
+15:30 &bitlbee: 4/>/6/            root@g?/ szn0907           szn0907@hotmail.com msn(abesto@msn.com)   Away
+15:30 &bitlbee: 4/>/6/            root@g?/ tottii            tottii@freestart.hu msn(abesto@msn.com)   Idle
+15:30 &bitlbee: 4/>/6/            root@g?/ turbogyerek       turbogyerek@freemail.hu msn(abesto@msn.c  Away
+--- Log closed Tue Jul 07 15:32:34 2009
+--- Log opened Tue Jul 07 15:32:46 2009
+15:34 &bitlbee: 4/>/6/          root@g?/ balesz000         balesz000@msn.com msn(abesto@msn.com)     Online
+15:34 &bitlbee: 4/>/6/          root@g?/ cemotox99         cemotox99@hotmail.com msn(abesto@msn.com  Online
+15:34 &bitlbee: 4/>/6/          root@g?/ frtomi            frtomi@freemail.hu msn(abesto@msn.com)    Online
+15:34 &bitlbee: 4/>/6/          root@g?/ kloey99           kloey99@freemail.hu msn(abesto@msn.com)   Online
+15:34 &bitlbee: 4/>/6/          root@g?/ mesicsrobi        mesicsrobi@hotmail.com msn(abesto@msn.co  Online
+15:34 &bitlbee: 4/>/6/          root@g?/ nev-r             nev-r@hotmail.com msn(abesto@msn.com)     Online
+15:34 &bitlbee: 4/>/6/          root@g?/ vancy             vancy@freemail.hu msn(abesto@msn.com)     Online
+15:34 &bitlbee: 4/>/6/          root@g?/ badicsalex        badicsalex@hotmail.com msn(abesto@msn.co  Away
+15:34 &bitlbee: 4/>/6/          root@g?/ biobocy           biobocy@freemail.hu msn(abesto@msn.com)   Away
+15:34 &bitlbee: 4/>/6/          root@g?/ davidjanek        davidjanek@hotmail.com msn(abesto@msn.co  Busy
+15:34 &bitlbee: 4/>/6/          root@g?/ domi              dominik.aa@hotmail.com msn(abesto@msn.co  Away
+15:34 &bitlbee: 4/>/6/          root@g?/ janka55           janka55@citromail.hu msn(abesto@msn.com)  Busy
+15:34 &bitlbee: 4/>/6/          root@g?/ jon13             jon13@freemail.hu msn(abesto@msn.com)     Busy
+15:34 &bitlbee: 4/>/6/          root@g?/ lennartborgman    lennart.borgman@gmail.com jabber(abesto0  Away
+15:34 &bitlbee: 4/>/6/          root@g?/ petya012          petya012@hotmail.com msn(abesto@msn.com)  Busy
+15:34 &bitlbee: 4/>/6/          root@g?/ pinterminator     pin.terminator@gmail.com msn(abesto@msn.  Busy
+15:34 &bitlbee: 4/>/6/          root@g?/ syabi4            syabi4@freemail.hu msn(abesto@msn.com)    Busy
+15:34 &bitlbee: 4/>/6/          root@g?/ szn0907           szn0907@hotmail.com msn(abesto@msn.com)   Away
+15:34 &bitlbee: 4/>/6/          root@g?/ tottii            tottii@freestart.hu msn(abesto@msn.com)   Idle
+15:34 &bitlbee: 4/>/6/          root@g?/ turbogyerek       turbogyerek@freemail.hu msn(abesto@msn.c  Away
+15:38 &bitlbee: 4/>/6/          root@g?/  0. msn, abesto@msn.com (connected)
+15:38 &bitlbee: 4/>/6/          root@g?/  1. jabber, abesto0@gmail.com (connected)
+16:06 #archlinux: 4/<?/c>/          Yagami>/ c4/> e?/abesto , i know , i think it already does it by itself
+16:09 #archlinux: 4/<?/c>/          Yagami>/ c4/> e?/abesto , thanks
+16:09 #archlinux: 4/<?/c>/          Yagami>/ c4/> e?/abesto: wow , so many :)
+16:10 #archlinux: 4/<?/c>/          Yagami>/ c4/> e?/abesto: and the best is ?!? :)
+16:12 #archlinux: 4/<?/c>/          Yagami>/ c4/> e?/abesto: heheh :)
+16:27 #archlinux: 4/<?/c>/            Mion>/ c4/> e?/abesto: man makepkg
+16:38 #archlinux-offtopic: 4/<?/c>/         bruenig>/ c4/> e?/abesto don't play
+16:42 #archlinux-offtopic: 4/<?/c>/            Mion>/ c4/> e?/abesto: depends on what you want
+16:45 #archlinux-offtopic: 4/<?/c>/      jelly12gen>/ c4/> e?/abesto: guitar is win
+16:51 &bitlbee: 4/>/6/            root@g?/ badicsalex        badicsalex@hotmail.com msn(abesto@msn.co  Online
+16:51 &bitlbee: 4/>/6/            root@g?/ kloey99           kloey99@freemail.hu msn(abesto@msn.com)   Online
+16:51 &bitlbee: 4/>/6/            root@g?/ mesicsrobi        mesicsrobi@hotmail.com msn(abesto@msn.co  Online
+16:51 &bitlbee: 4/>/6/            root@g?/ munkacsys         munkacsys@hotmail.com msn(abesto@msn.com  Online
+16:51 &bitlbee: 4/>/6/            root@g?/ nev-r             nev-r@hotmail.com msn(abesto@msn.com)     Online
+16:51 &bitlbee: 4/>/6/            root@g?/ smg               smg@gamekapocs.hu msn(abesto@msn.com)     Online
+16:51 &bitlbee: 4/>/6/            root@g?/ domi              dominik.aa@hotmail.com msn(abesto@msn.co  Away
+16:51 &bitlbee: 4/>/6/            root@g?/ jon13             jon13@freemail.hu msn(abesto@msn.com)     Busy
+16:51 &bitlbee: 4/>/6/            root@g?/ lennartborgman    lennart.borgman@gmail.com jabber(abesto0  Away
+16:51 &bitlbee: 4/>/6/            root@g?/ menr              menr@citromail.hu msn(abesto@msn.com)     Busy
+16:51 &bitlbee: 4/>/6/            root@g?/ pecsi7            pecsi7@freemail.hu msn(abesto@msn.com)    Busy
+16:51 &bitlbee: 4/>/6/            root@g?/ petya012          petya012@hotmail.com msn(abesto@msn.com)  Busy
+16:51 &bitlbee: 4/>/6/            root@g?/ tottii            tottii@freestart.hu msn(abesto@msn.com)   Idle
+16:51 &bitlbee: 4/>/6/            root@g?/ turbogyerek       turbogyerek@freemail.hu msn(abesto@msn.c  Away
+16:51 &bitlbee: 4/>/6/            root@g?/ viv0073           viv0073@hotmail.com msn(abesto@msn.com)   Away
+17:03 #archlinux-offtopic: 4/<?/c>/            Mion>/ c4/> e?/abesto: use 264 and then tell the noobs to install apropiate codecs for it
+--- Log closed Tue Jul 07 18:04:28 2009
+--- Log opened Tue Jul 07 19:39:45 2009
+19:39 &bitlbee: 4/>/6/            root@g?/ agecsei           agecsei@hotmail.com msn(abesto@msn.com)   Online
+19:39 &bitlbee: 4/>/6/            root@g?/ badicsalex        badicsalex@hotmail.com msn(abesto@msn.co  Online
+19:39 &bitlbee: 4/>/6/            root@g?/ fazr              fazr@noobseries.eu msn(abesto@msn.com)    Online
+19:39 &bitlbee: 4/>/6/            root@g?/ frtomi            frtomi@freemail.hu msn(abesto@msn.com)    Online
+19:39 &bitlbee: 4/>/6/            root@g?/ nev-r             nev-r@hotmail.com msn(abesto@msn.com)     Online
+19:39 &bitlbee: 4/>/6/            root@g?/ r_gabee           r_gabee@hotmail.com msn(abesto@msn.com)   Online
+19:39 &bitlbee: 4/>/6/            root@g?/ r_jancsik         r_jancsik@hotmail.com msn(abesto@msn.com  Online
+19:39 &bitlbee: 4/>/6/            root@g?/ smg               smg@gamekapocs.hu msn(abesto@msn.com)     Online
+19:39 &bitlbee: 4/>/6/            root@g?/ somogyi91         somogyi91@hotmail.com msn(abesto@msn.com  Online
+19:39 &bitlbee: 4/>/6/            root@g?/ tekikegyugy       tekikegyugy@citromail.hu msn(abesto@msn.  Online
+19:39 &bitlbee: 4/>/6/            root@g?/ turbogyerek       turbogyerek@freemail.hu msn(abesto@msn.c  Online
+19:39 &bitlbee: 4/>/6/            root@g?/ turcsik2          turcsik2@hotmail.com msn(abesto@msn.com)  Online
+19:39 &bitlbee: 4/>/6/            root@g?/ vancy             vancy@freemail.hu msn(abesto@msn.com)     Online
+19:39 &bitlbee: 4/>/6/            root@g?/ zsoltit           zsoltit@freemail.hu msn(abesto@msn.com)   Online
+19:39 &bitlbee: 4/>/6/            root@g?/ davidjanek        davidjanek@hotmail.com msn(abesto@msn.co  Idle
+19:39 &bitlbee: 4/>/6/            root@g?/ duggy             duggy@hotmail.de msn(abesto@msn.com)      Away
+19:39 &bitlbee: 4/>/6/            root@g?/ gery017           gery017@hotmail.com msn(abesto@msn.com)   Away
+19:39 &bitlbee: 4/>/6/            root@g?/ kiss_balazs01     kiss_balazs01@hotmail.com msn(abesto@msn  Busy
+19:39 &bitlbee: 4/>/6/            root@g?/ mcdaniel_etalon   mcdaniel_etalon@msn.com msn(abesto@msn.c  Busy
+19:39 &bitlbee: 4/>/6/            root@g?/ pecsi7            pecsi7@freemail.hu msn(abesto@msn.com)    Busy
+19:39 &bitlbee: 4/>/6/            root@g?/ petya012          petya012@hotmail.com msn(abesto@msn.com)  Busy
+19:39 &bitlbee: 4/>/6/            root@g?/ szn0907           szn0907@hotmail.com msn(abesto@msn.com)   Busy
+19:39 &bitlbee: 4/>/6/            root@g?/ tottii            tottii@freestart.hu msn(abesto@msn.com)   Idle
+19:39 &bitlbee: 4/>/6/            root@g?/ undergrounder222  undergrounder222@hotmail.com msn(abesto@  Idle
+--- Log closed Tue Jul 07 22:02:26 2009
+--- Log opened Wed Jul 08 08:02:03 2009
+--- Log closed Wed Jul 08 08:02:31 2009
+--- Log opened Wed Jul 08 08:04:57 2009
+--- Log closed Wed Jul 08 08:17:23 2009
+--- Log opened Wed Jul 08 08:17:29 2009
+--- Log closed Wed Jul 08 17:09:08 2009
+--- Log opened Thu Jul 09 07:48:57 2009
+--- Log opened Fri Jul 10 20:40:02 2009
+--- Log closed Fri Jul 10 20:42:15 2009
+--- Log opened Sun Jul 12 09:09:08 2009
+09:09 #archlinux-offtopic: 4/<?/c>/           Caleb>/ c4/> e?/abesto: i suggest weechat
+--- Log closed Sun Jul 12 09:12:53 2009
+--- Log opened Sun Jul 12 09:26:42 2009
+--- Log closed Sun Jul 12 09:34:36 2009
+--- Log opened Sun Jul 12 16:21:17 2009
+--- Log closed Sun Jul 12 16:46:33 2009
+--- Log opened Mon Jul 13 10:44:00 2009
+--- Log closed Mon Jul 13 15:09:55 2009
+--- Log opened Tue Jul 14 22:46:14 2009
+--- Log opened Wed Jul 15 11:37:26 2009
+--- Log closed Wed Jul 15 13:14:57 2009
+--- Log opened Sat Jul 18 12:58:29 2009
+13:16 4/<>/        r_gabee4/> e7/eszia
+--- Log closed Sat Jul 18 13:16:30 2009
+--- Log opened Sun Jul 19 00:11:25 2009
+00:12 4/<>/   yodamaster4/> e7/ecsá
+--- Log closed Sun Jul 19 00:12:30 2009
+--- Log opened Sun Jul 19 00:38:33 2009
+00:38 4/<>/      abespro4/> e7/eszasz
+00:40 4/<>/      abespro4/> e7/ehe
+--- Log closed Sun Jul 19 00:40:39 2009
+--- Log opened Sun Jul 19 00:41:10 2009
+00:41 4/<>/      abespro4/> e7/ehe
+00:41 4/<>/      abespro4/> e7/ehe
+--- Log closed Sun Jul 19 00:41:58 2009
+--- Log opened Sun Jul 19 00:41:59 2009
+00:42 4/<>/      abespro4/> e7/ehe
+00:42 4/<>/      abespro4/> e7/easdf
+00:42 4/<>/      abespro4/> e7/ehe
+00:43 4/<>/      abespro4/> e7/ehe
+00:44 4/<>/      abespro4/> e7/ehe
+00:44 4/<>/      abespro4/> e7/easdf
+00:44 4/<>/      abespro4/> e7/easdf
+--- Log closed Sun Jul 19 00:45:22 2009
+--- Log opened Sun Jul 19 00:46:40 2009
+00:46 4/<>/      abespro4/> e7/esejj
+00:46 4/<>/      r_gabee4/> e7/eaha
+00:46 4/<>/      abespro4/> e7/easdf
+--- Log closed Sun Jul 19 00:47:14 2009
+--- Log opened Sun Jul 19 00:51:13 2009
+00:51 4/<>/      abespro4/> e7/ehe
+--- Log closed Sun Jul 19 00:51:20 2009
+--- Log opened Sun Jul 19 00:52:15 2009
+00:52 4/<>/      abespro4/> e7/ehe
+--- Log closed Sun Jul 19 00:52:21 2009
+--- Log opened Sun Jul 19 00:52:41 2009
+00:52 4/<>/      abespro4/> e7/ehe
+00:52 4/<>/      abespro4/> e7/easdf
+--- Log closed Sun Jul 19 00:52:53 2009
+--- Log opened Sun Jul 19 00:53:02 2009
+00:53 4/<>/      abespro4/> e7/egyááááááááááááááááááááááéj
+00:53 </<>/       abesto</> eés tényleg
+00:53 </<>/       abesto</> ena elmenek alunni, majd holnap tal, hacsak fülöpke nem alkot megint...
+00:54 4/<>/      r_gabee4/> e7/eokok
+--- Log closed Sun Jul 19 00:55:02 2009
+--- Log opened Sun Jul 19 21:21:14 2009
+--- Log closed Sun Jul 19 21:29:17 2009
+--- Log opened Tue Jul 21 20:06:51 2009
+20:15 #pgt09: 4/>/6/        Ro0oBi_ g?/ szia abesto
+--- Log closed Tue Jul 21 20:16:13 2009
+--- Log opened Tue Jul 21 21:10:06 2009
+21:16 4/<>/     yodamaster4/> e7/ebaszod nem ír vissza a szomszéd
+21:16 4/<>/     yodamaster4/> e7/eígy kénytelen vagyok átmenni :D
+21:16 4/<>/     yodamaster4/> e7/eamperpor sztem nincs :D
+--- Log closed Tue Jul 21 21:17:34 2009
+--- Log opened Wed Jul 22 18:47:21 2009
+19:21 [9/@08twirssig:1] If you've been having problems with unicode support, try the latest v2.2.5beta, with a patch from 12@abesto. /twirssi_upgrade beta
+19:24 #pgt09: 4/<?/c>/     deathowl>/ c4/> e?/abesto: BAZZEEGGG!!
+19:28 #pgt09: 4/<?/c>/     deathowl>/ c4/> e?/abesto: beszélhetsz abesto_val
+19:36 [9/@08alexa_vassg:12] 12@abesto jájóó
+19:40 [9/@08deathowlzg:8] RT: 12@abesto: 12@deathowlz made me use twirssi, and wanted me to tweet this. so there. THX for mentioning me:D
+19:41 #pgt09: 4/>/6/ deathowl g?/ THX abesto:DD:
+19:49 #pgt09: 4/<?/c>/ deathowl>/ c4/> e?/abesto: twitteltem a képet
+20:08 4/<>/        hlukics4/> e7/eSzia Abi!
+20:08 4/<>/        hlukics4/> e7/eEgy nagyon nagy kérdésem lenne legalábbis nekem nagy neked nem bizti:D
+20:09 </<>/         abesto</> ehaaliho
+20:09 </<>/         abesto</> enekimélj
+20:09 4/<>/        hlukics4/> e7/eNeki álltam írni a szakdolgozatot
+20:09 </<>/         abesto</> ekirályos
+20:09 4/<>/        hlukics4/> e7/ehogy kitudjak venni képeket a forrás kódból
+20:09 4/<>/        hlukics4/> e7/enem tudsz a print screenen kívűl vmi jobbat
+20:09 </<>/         abesto</> eo.0 képeket?
+20:10 4/<>/        hlukics4/> e7/eaham
+20:10 </<>/         abesto</> eszövegről mért akarsz képet? Ctrl-c Ctrl-v
+20:10 4/<>/        hlukics4/> e7/eennyi elég szted?
+20:11 </<>/         abesto</> emért ne lenne elég?
+20:11 4/<>/        hlukics4/> e7/ejó csak úgy képzeltem el h a forrás kódból az alábbi részt lefényképzem és azt teszem be
+20:11 4/<>/        hlukics4/> e7/ede ha szted elég akkor hiszek neked:P
+20:12 </<>/         abesto</> enemtom, nekem elégnek tűnik
+20:13 4/<>/        hlukics4/> e7/eokés!
+20:13 4/<>/        hlukics4/> e7/eés te h állsz ezzel a dologgal?
+20:13 </<>/         abesto</> ekész  lesz időre :)
+20:14 4/<>/        hlukics4/> e7/e:D
+20:14 4/<>/        hlukics4/> e7/eazt gondoltam:D
+20:14 4/<>/        hlukics4/> e7/eés akk végülis te miről fogod csinálni?
+20:15 </<>/         abesto</> ea formbuilder lesz
+20:15 </<>/         abesto</> e1-2 extrával
+20:15 4/<>/        hlukics4/> e7/eértem az fasza:P
+20:15 4/<>/        hlukics4/> e7/ete megkaptad a vizsga eredményt?
+20:15 </<>/         abesto</> ea tüdőt
+20:16 4/<>/        hlukics4/> e7/e:D
+20:16 4/<>/        hlukics4/> e7/eakkor nem
+20:16 4/<>/        hlukics4/> e7/eazt hittem csak engem hagytak ki:D
+20:17 4/<>/        hlukics4/> e7/eamúgy téged is kerestek ismét a 2f iskolától, hogy tudsz e emberkét aki jövőre elkezdené a tanfolyamot?
+20:17 </<>/         abesto</> enem
+20:17 4/<>/        hlukics4/> e7/eakkor majd fog;):D
+20:17 </<>/         abesto</> eakk majd elküldöm a fenébe
+20:22 4/<>/        hlukics4/> e7/e:D
+20:22 4/<>/        hlukics4/> e7/ehelyes
+20:22 4/<>/       hlukics4/> e7/ena most meek folytatom
+20:22 4/<>/       hlukics4/> e7/ena kösz mindent
+20:22 4/<>/       hlukics4/> e7/eszia
+20:22 </<>/        abesto</> ekk
+20:22 </<>/        abesto</> ehajrá
+20:22 </<>/        abesto</> ebye
+20:28 #pgt09: 4/>/6/       deathowl g?/ ha van twittered akjkor abesto, deathowlz alexa_vass minimum:D
+20:38 4/<>/        r_gabee4/> e7/eszia
+20:38 4/<>/        r_gabee4/> e7/emizu?
+20:38 </<>/         abesto</> esziija :)
+20:38 </<>/         abesto</> ehát
+20:39 </<>/         abesto</> eratyi volt ami lejátszotta a deathonte-t
+20:39 </<>/         abesto</> emindig megállt
+20:39 </<>/         abesto</> eúgyhogy csináltam egy kis progit ami letölti az összeset :D
+20:39 </<>/         abesto</> eés most innen nézem
+20:39 4/<>/        r_gabee4/> e7/ehm az nem jó :S
+20:39 4/<>/        r_gabee4/> e7/e::
+20:39 4/<>/        r_gabee4/> e7/ed:D
+20:39 4/<>/        r_gabee4/> e7/eéttem
+20:39 4/<>/        r_gabee4/> e7/e:D
+20:39 </<>/         abesto</> eés veled?
+20:39 4/<>/        r_gabee4/> e7/evelem se semmi
+20:40 </<>/         abesto</> ena
+20:40 </<>/         abesto</> ecsak éltél mostanában :D
+20:41 4/<>/        r_gabee4/> e7/ejah dolgoztam
+20:41 </<>/         abesto</> etélleg annak ma van vége?
+20:41 4/<>/        r_gabee4/> e7/ehnap
+20:44 </<>/         abesto</> eaz jó
+20:44 </<>/         abesto</> eholnap nagy nap lesz
+20:44 4/<>/        r_gabee4/> e7/eaha xD
+20:44 4/<>/        r_gabee4/> e7/emindenféle szempontból
+20:45 </<>/         abesto</> eo.0 most viszik őket kivégezni
+20:46 </<>/         abesto</> eez úgyis valami kamu
+20:47 4/<>/        r_gabee4/> e7/emár ott tartasz a végén? :D
+20:47 </<>/         abesto</> eelméletileg ez kb a fele
+20:47 4/<>/        r_gabee4/> e7/efele? :D
+20:47 4/<>/        r_gabee4/> e7/enemtom xD
+20:47 4/<>/        r_gabee4/> e7/emár
+20:47 4/<>/        r_gabee4/> e7/e:D
+20:47 </<>/         abesto</> ehát van 37 rész
+20:48 </<>/         abesto</> eez a 17.
+20:49 </<>/         abesto</> eoooooooo
+20:49 </<>/         abesto</> e0.0o0.0o0
+20:49 </<>/         abesto</> ewtf
+20:49 </<>/         abesto</> eja vaktöltény
+20:51 </<>/         abesto</> eez de komoly :D
+20:52 4/<>/        r_gabee4/> e7/e:D
+20:54 </<>/         abesto</> ekőkemény detektívregény :D
+20:55 4/<>/        r_gabee4/> e7/ejajaj :D de végére a legjobb xD
+21:00 </<>/         abesto</> ena a nagycég... :D
+21:01 </<>/         abesto</> eez gyakorlatilag szappanopera
+21:01 </<>/         abesto</> ecsak tetszik
+21:02 4/<>/        r_gabee4/> e7/eennyiből minden szappanopera ami sorozat xD
+21:02 </<>/         abesto</> ede ez jobban
+21:02 </<>/         abesto</> e:D
+21:07 4/<>/           domi4/> e7/eszia:) képzeld mi történt ma :-O:/
+21:08 </<>/         abesto</> ehátszijja
+21:08 </<>/         abesto</> ena mi?
+21:09 4/<>/           domi4/> e7/emegyek vezetni, kinn áll gabi didaktika előtt, tök hangosan odaköszönök neki, erre elfordul:/ várom oktatóm ő is arrafele jjön megint elfordul..:/ megyünk vissza didaktikához ugye kocsival, ő már végzett gyalog megy hazafele, oktatóm is én is kiköszönünk, intünk neki, erre megint csal néz maga elé mintha észre sem venné :/ én ezt nem értem
+21:10 </<>/         abesto</> emii a hóhér
+21:11 4/<>/           domi4/> e7/eén is ezt kérdem :/
+21:13 4/<>/           domi4/> e7/ehát mindegy:) Veled am mizus?:D
+21:13 </<>/         abesto</> eáhh
+21:14 </<>/         abesto</> edolgoztam ma 8tól 3ig
+21:14 </<>/         abesto</> eaztán.. másolok
+21:14 </<>/         abesto</> e20:39 <         abesto> ratyi volt ami lejátszotta a deathonte-t                                                               
+21:14 </<>/         abesto</> e20:39 <         abesto> mindig megállt                                                                                         
+21:14 </<>/         abesto</> e20:39 <         abesto> úgyhogy csináltam egy kis progit ami letölti az összeset :D
+21:14 </<>/         abesto</> eés most filmezek :D
+21:15 4/<>/           domi4/> e7/eheh 
+21:15 4/<>/           domi4/> e7/eez jo csak igy összecsapsz egy progit :P
+21:15 </<>/         abesto</> enem nagy kunszt
+21:15 </<>/         abesto</> e:D
+21:16 4/<>/           domi4/> e7/eoooké D:
+21:16 4/<>/           domi4/> e7/ehidd el sokaknak az lenne :D
+21:17 </<>/         abesto</> eazlehet
+21:18 </<>/         abesto</> emeg fagyiztunk családilag
+21:18 4/<>/           domi4/> e7/ede jo :D
+21:18 4/<>/           domi4/> e7/eazokat ugy sezretem :$
+21:18 </<>/         abesto</> e:)
+21:21 </<>/         abesto</> eehh.. gabival meg nem tom mi lesz..
+21:21 4/<>/           domi4/> e7/ehát azt én sem :/
+21:23 4/<>/           domi4/> e7/ecsak vhol asszem maga alatt vágja a fát...
+21:23 </<>/         abesto</> ekonkrétan magának csinálja a rossz helyzeteket, és belehajszolja magát a depresszióba
+21:24 4/<>/           domi4/> e7/eigen, pontosan
+21:26 4/<>/        r_gabee4/> e7/e:D
+21:26 4/<>/        r_gabee4/> e7/emert? :D
+21:26 </<>/         abesto</> eugyanaz a fordulat megfordult 3szor
+21:27 4/<>/        r_gabee4/> e7/eez ilyen anime:D
+21:27 </<>/         abesto</> eL:D aszondja a világ három nevezetes detektíve én vagyok :D
+21:34 4/<>/        r_gabee4/> e7/e:D
+21:34 4/<>/        r_gabee4/> e7/eL az a jó
+21:34 </<>/         abesto</> enya inkább arról mesélj hogy megy a vezetés
+21:36 </<>/         abesto</> eátmennél már a vizsgán? :)
+21:36 4/<>/           domi4/> e7/enemtom h átmennék-e már, de ez volt még csak 4. és 21nek kell lennie vagy vhogy igy :D de igen elég jl megy :D
+21:37 </<>/         abesto</> eaz még jó sok idő
+21:37 4/<>/           domi4/> e7/eigen:D olyan aug közepe vége fele lesz meg elvileg :D
+21:38 </<>/         abesto</> eaz jó
+21:39 4/<>/           domi4/> e7/ejaja :D
+21:41 4/<>/        r_gabee4/> e7/ebazz :/ most hívott egy bácsi,  hogy " pizzát szeretnék rendelni, innen az aluljáróból " xD mondom hát ööö én nem árulok pizzát :D
+21:41 </<>/         abesto</> e...
+21:43 </<>/         abesto</> enekem se?
+21:43 4/<>/        r_gabee4/> e7/enem
+21:43 </<>/         abesto</> e:(
+21:43 4/<>/           domi4/> e7/ena de sztem én megyek mer reggel 8 óta fenn vok, hugom meg bnőjét strandoltattam 9től 4ig, 4től vezetés, utána szabival császkáltunk, fagyiztunk egyet, fáradt vagyok jesszus D:
+21:43 4/<>/        r_gabee4/> e7/e:D
+21:43 </<>/         abesto</> e:D:D
+21:44 </<>/         abesto</> ejólteszed
+21:44 4/<>/           domi4/> e7/emajd hnap jobban birom a gyűrődést, főleg amint kiderültek eredmények :D
+21:44 4/<>/           domi4/> e7/emajd beszélünk :)
+21:44 </<>/         abesto</> ena az érdekes lesz
+21:44 </<>/         abesto</> ejó pihenést
+21:44 </<>/         abesto</> epusza
+21:45 4/<>/           domi4/> e7/eköszike és igy előre neked is jó éjt meg pussz, aztán hnap mindenképp hivlak vagy vhogy besz h mi van, de téged ugyis felvesznek :P
+21:45 4/<>/           domi4/> e7/ecija :)
+21:45 </<>/         abesto</> emajdkiderül :)
+21:45 </<>/         abesto</> eszijja
+21:46 </<>/         abesto</> ehee
+21:46 </<>/         abesto</> e20. résztől ami van nyitódal az tényleg egész jó
+21:46 </<>/         abesto</> ekb soad
+21:48 4/<>/        r_gabee4/> e7/ejaja
+21:55 4/<>/        r_gabee4/> e7/ekül én meg lostot néztem egyet ma
+21:55 4/<>/        r_gabee4/> e7/eés :D
+21:56 4/<>/        r_gabee4/> e7/ekb 5 percenként akkorát ámultam xD
+21:56 </<>/         abesto</> eaz királyos :D
+21:56 4/<>/        r_gabee4/> e7/eés most rohadt izgi :D
+21:56 4/<>/        r_gabee4/> e7/ede most msn mellett nem lehet azt nézni xD
+21:57 </<>/         abesto</> eszemét én. egyik monitoron defnót, másikon chat
+21:58 4/<>/        r_gabee4/> e7/eáh én amit szeretek azt nem szoktam így nézni
+21:58 4/<>/        r_gabee4/> e7/evan amikor énis úgy de az akkor annyira nem köt le h mellette még tudok chatelni
+22:06 </<>/         abesto</> ejaj te ez a szőke ez annyira sötét...
+22:08 4/<>/        r_gabee4/> e7/eja xD
+22:22 4/<>/        r_gabee4/> e7/enincs vmi vicces vidoed?
+22:23 </<>/         abesto</> eeltések szerint ez jó: http://www.youtube.com/watch?v=6uw7HHzZAjM
+22:24 #pgt09: 4/>/6/        deathowl g?/ na éjt abesto
+22:27 4/<>/         r_gabee4/> e7/ehát ez xD
+22:27 4/<>/         r_gabee4/> e7/e:D
+22:27 4/<>/         r_gabee4/> e7/enemto
+22:27 4/<>/         r_gabee4/> e7/em
+22:28 </<>/          abesto</> emit mondtál kik ezek akik játszanak a defnót előtt/után?
+22:31 4/<>/         r_gabee4/> e7/eott van
+22:31 4/<>/         r_gabee4/> e7/eírják mindig xD
+22:31 4/<>/         r_gabee4/> e7/enézd
+22:31 4/<>/         r_gabee4/> e7/e:D
+22:31 4/<>/         r_gabee4/> e7/eh nézed japán?
+22:32 4/<>/         r_gabee4/> e7/eangol?
+22:32 </<>/          abesto</> emagyar
+22:32 4/<>/         r_gabee4/> e7/efuj
+22:32 </<>/          abesto</> ea feliratok japánok
+22:32 4/<>/         r_gabee4/> e7/exD
+22:32 4/<>/         r_gabee4/> e7/eakkor nem mondom el :D
+22:32 4/<>/         r_gabee4/> e7/eszentségtörés
+22:32 4/<>/         r_gabee4/> e7/exD
+22:32 </<>/          abesto</> elol
+22:59 4/<>/      yodamaster4/> e7/ecs
+23:09 4/<>/         r_gabee4/> e7/enah?
+23:09 4/<>/         r_gabee4/> e7/ekül
+23:09 4/<>/         r_gabee4/> e7/ecmi
+23:09 4/<>/         r_gabee4/> e7/emaximum of the hormon
+23:09 4/<>/         r_gabee4/> e7/evmi ilyen
+23:10 </<>/          abesto</> emegkönyörültél rajtam
+23:10 </<>/          abesto</> erökjófejvagy :D
+23:10 </<>/          abesto</> ena akk megvan mit keresek holnap
+23:10 4/<>/         r_gabee4/> e7/eyoutbon fentvannak tuti
+23:15 </<>/          abesto</> edeszar.. visszakapta a listát...
+23:17 4/<>/         r_gabee4/> e7/eevan
+23:19 </<>/          abesto</> enagyonkomoly :D
+23:19 4/<>/         r_gabee4/> e7/eaz :D
+23:20 </<>/          abesto</> ecsak kötöttek rá mégegy csomót
+23:20 </<>/          abesto</> etetszik :D
+23:20 4/<>/         r_gabee4/> e7/exD
+23:21 4/<>/         r_gabee4/> e7/esok csomó van ebben
+23:32 4/<>/      yodamaster4/> e7/ecs
+23:46 4/<>/         r_gabee4/> e7/ehttp://www.youtube.com/watch?v=1c6VXfcoeB0
+23:47 </<>/          abesto</> emindjárt nézem
+23:47 </<>/          abesto</> eL :(
+23:48 4/<>/         r_gabee4/> e7/emost halt meg?
+23:48 </<>/          abesto</> eaham
+23:48 4/<>/         r_gabee4/> e7/ejah :( az rossz rész volt
+23:49 </<>/          abesto</> emeg a szöszi halálistene is :(
+23:49 4/<>/         r_gabee4/> e7/ejah hát az egy ari isten volt
+23:50 4/<>/         r_gabee4/> e7/enem mint ryuku xD
+23:50 </<>/          abesto</> eegyébként az gáz ha én a lightnak szurkolok?
+23:50 4/<>/         r_gabee4/> e7/enem :D
+23:50 4/<>/         r_gabee4/> e7/eén is neki drukkltam :D
+23:50 4/<>/         r_gabee4/> e7/ekurva okos minden :D
+23:50 4/<>/         r_gabee4/> e7/esokkal jobb :D
+23:50 </<>/          abesto</> ekicsit seggfej dehát istenem
+23:51 4/<>/         r_gabee4/> e7/ehát ezaz
+23:51 4/<>/         r_gabee4/> e7/evégülis ő csak a világot akarta jobbá tenni
+23:51 4/<>/         r_gabee4/> e7/ecsak kicsit meghülyüt
+23:51 </<>/          abesto</> eegyébként ez a téma sok scifiben előjön
+23:52 4/<>/         r_gabee4/> e7/ehát ja érdekes téma ez
+23:52 </<>/          abesto</> ehogy mi történik hogyha a célt tényleg az eszköz fölé helyezzük
+23:53 </<>/          abesto</> evagymi
+23:53 </<>/          abesto</> ecél szentesíti
+23:53 </<>/          abesto</> eilyesmi na :D
+--- Day changed Thu Jul 23 2009
+00:03 4/<>/         r_gabee4/> e7/e:D
+00:03 4/<>/         r_gabee4/> e7/eléretm
+00:03 4/<>/         r_gabee4/> e7/e:D
+00:03 4/<>/         r_gabee4/> e7/elrtem
+00:03 4/<>/         r_gabee4/> e7/eértme
+00:04 </<>/          abesto</> elol
+00:04 </<>/          abesto</> ekicsit már álmos vagy nem?
+00:04 4/<>/           jon134/> e7/ecscs
+00:04 4/<>/         r_gabee4/> e7/emost pont nem xD csak nemtok írni :D
+00:05 </<>/          abesto</> eszeva master
+00:05 </<>/          abesto</> ehátteM
+00:05 </<>/          abesto</> e?
+00:05 4/<>/           jon134/> e7/ehát én dolgozgatok de vmi nem akar müködni :S
+00:06 </<>/          abesto</> ena
+00:06 </<>/          abesto</> enyomj egy pastebint
+00:06 4/<>/           jon134/> e7/emit??
+00:07 </<>/          abesto</> ehttp://pastebin.com
+00:07 4/<>/           jon134/> e7/eoh thy
+00:08 4/<>/           jon134/> e7/eés ez mit csinál?
+00:08 4/<>/           jon134/> e7/e:$
+00:08 </<>/          abesto</> ebelemásolod a kódot
+00:08 </<>/          abesto</> emegmondod neki h php
+00:08 </<>/          abesto</> eés elküldöd nekem a linket
+00:09 </<>/          abesto</> eh meg tudjam nézni h mi az ami nem megy
+00:10 4/<>/           jon134/> e7/ehttp://pastebin.com/d5f592950
+00:11 </<>/          abesto</> ejavaslat: érdemes lehet a select_db-t a connect-be tenni
+00:11 4/<>/           jon134/> e7/ethx
+00:12 4/<>/           jon134/> e7/emegcsi 
+00:12 </<>/          abesto</> e'SHA1(`'.$pass.'`)' ezzel van a gond nem?
+00:12 4/<>/           jon134/> e7/enem ír ki semmi hibát csak nem veszi fel az adatbázisba
+00:12 </<>/          abesto</> esok az idézőjel
+00:12 </<>/          abesto</> eahonnan ezt kimásoltad ott sima idézőjelek voltak
+00:13 4/<>/           jon134/> e7/e?
+00:13 </<>/          abesto</> ehttp://pastebin.com/m74427e3c
+00:13 </<>/          abesto</> eígy próba
+00:14 4/<>/           jon134/> e7/enem vágom ez mit akar Ram ROM izé
+00:15 </<>/          abesto</> e?
+00:16 4/<>/           jon134/> e7/enekem a pastebin ilyet ír ki 
+00:16 4/<>/           jon134/> e7/eRAM:1535                 db    1,   0,   0,   0,0EFh, 11h,0EFh, 91h ; Data layout of the 8-byte entries :
+00:16 4/<>/           jon134/> e7/estb...
+00:16 </<>/          abesto</> efrissíts
+00:16 4/<>/           jon134/> e7/eakkor is
+00:16 </<>/          abesto</> ewtf
+00:17 </<>/          abesto</> ehe tényleg
+00:17 </<>/          abesto</> erossz linket adtam ezexerint
+00:17 4/<>/           jon134/> e7/eXD
+00:17 </<>/          abesto</> ehttp://pastebin.com/m51702a59
+00:17 </<>/          abesto</> enem vágom
+00:17 </<>/          abesto</> enamind1, ez jó lesz
+00:17 4/<>/           jon134/> e7/eez jó
+00:18 4/<>/           jon134/> e7/ecsak ezeket tetted bele `?
+00:18 </<>/          abesto</> emeg kivettem '-t
+00:18 </<>/          abesto</> emeg .-t
+00:20 4/<>/           jon134/> e7/eüres az adatbázis
+00:20 4/<>/           jon134/> e7/e:(
+00:21 </<>/          abesto</> eecho mysql_error() ?
+00:22 4/<>/           jon134/> e7/eUnknown column 'BĂ�al' in 'field list' 
+00:23 </<>/          abesto</> etedd `-k közé a mezőneveket is
+00:23 4/<>/           jon134/> e7/ehol??
+00:24 </<>/          abesto</> ea lekérdezésben
+00:24 4/<>/           jon134/> e7/eaz insert into ban?? fent
+00:24 </<>/          abesto</> eigen
+00:25 4/<>/           jon134/> e7/eugyan az
+00:26 </<>/          abesto</> emi az a BĂ�al?
+00:26 4/<>/           jon134/> e7/enév amit beírtam 
+00:26 4/<>/           jon134/> e7/eBÉal volt :D
+00:26 4/<>/           jon134/> e7/eBéla akart lenni csak gyorsan
+00:27 </<>/          abesto</> eecho $sql;
+00:28 4/<>/           jon134/> e7/eNSERT INTO teams (`name`, `sponsor`, `contact_name`, `contact_mail`, `pass`) VALUES (`Béla`, `dsada`, `sadasd`, `sadas`, SHA1(`lol`))
+00:28 4/<>/           jon134/> e7/elemardt az I az elejéről 
+00:28 4/<>/           jon134/> e7/ekijelöléskor
+00:30 </<>/          abesto</> eszerintem hülye vagyok
+00:30 </<>/          abesto</> emeg álmos
+00:30 </<>/          abesto</> eaz értékeknél próbáld úgy h nem ` hanem '
+00:32 4/<>/           jon134/> e7/esemmi változás
+00:32 </<>/          abesto</> eecho $sql?
+00:33 4/<>/           jon134/> e7/eINSERT INTO teams ('name', 'sponsor', 'contact_name', 'contact_mail', 'pass') VALUES (`dsasd`, `sad`, `dsasd`, `sadasd`, SHA1(`lol`)) A program lefutott
+00:33 </<>/          abesto</> ede ne a mezőneveknél írd át hanem az értékeknél
+00:33 4/<>/           jon134/> e7/eoks
+00:33 4/<>/           jon134/> e7/ebocsi
+00:33 </<>/          abesto</> enp
+00:35 4/<>/           jon134/> e7/ejó :D
+00:35 </<>/          abesto</> eakkor bocs, hülyeséget mondtam
+00:35 </<>/          abesto</> eaz idézőjelezés úgy néz ki általános szabályként, hogy szószerinti értékeket '-el, azonosítókat (mező, tábla, stb) `-el
+00:36 4/<>/           jon134/> e7/eohhh értem 
+00:36 4/<>/           jon134/> e7/eoks 
+00:36 </<>/          abesto</> ekirályos
+00:36 </<>/          abesto</> enya én meg elmegyek aludni
+00:36 </<>/          abesto</> eholnap nagy nap lesz :D
+00:36 </<>/          abesto</> evagyis ma
+00:37 4/<>/           jon134/> e7/ejaja 
+00:37 4/<>/           jon134/> e7/eoksa
+00:37 4/<>/           jon134/> e7/eßß
+00:37 </<>/          abesto</> ebye
+00:37 </<>/          abesto</> ena el
+00:37 </<>/          abesto</> emajd ma besz :D
+00:37 </<>/          abesto</> ecija
+--- Log closed Thu Jul 23 00:38:01 2009
+--- Log opened Fri Jul 24 18:10:07 2009
+--- Log closed Fri Jul 24 18:11:32 2009
+--- Log opened Mon Jul 27 12:58:55 2009
+13:00 #pgt09: 4/<?/c>/             eax>/ c4/> e?/abesto_: http://islab.oregonstate.edu/koc/ece575/04Project2/Halim-Chanleudfa/Report.pdf
+13:13 </<>/          abesto</> enya bocsi ettem :D
+13:13 </<>/          abesto</> emégegyszer úgy kezdem a mondatot h nya akk kiugrok az ablakon
+13:13 4/<>/         zumek994/> e7/ecija
+13:13 </<>/          abesto</> eszal, beszéltetek?
+13:13 4/<>/         zumek994/> e7/eha majd leszel,írj
+--- Log closed Mon Jul 27 13:14:27 2009
+--- Log opened Mon Jul 27 18:01:00 2009
+18:01 4/<>/      yodamaster4/> e7/edudu  :P
+--- Log closed Mon Jul 27 18:07:37 2009
+--- Log opened Mon Jul 27 21:09:13 2009
+21:09 4/<>/          duggy4/> e7/e:)
+--- Log closed Mon Jul 27 21:23:23 2009
+--- Log opened Tue Jul 28 18:12:52 2009
+--- Log closed Tue Jul 28 18:42:23 2009
+--- Log opened Wed Jul 29 11:42:24 2009
+11:44 #pgt09: 4/>/6/GolyaVadasz g?/ A golyaink: deathowl Rudika ermi46 laviii akibaby maczikasz ywvz abesto j3thro
+11:45 #pgt09: 4/<?/c>/   deathowl>/ c4/> e?/abesto|away: meg én
+11:55 #pgt09: 4/>/6/GolyaVadasz g?/ A golyaink: deathowl Rudika ermi46 laviii akibaby maczikasz ywvz abesto j3thro Kokan mesttamas
+12:09 #pgt09: 4/>/6/GolyaVadasz g?/ A golyaink: deathowl Rudika ermi46 laviii akibaby maczikasz ywvz abesto j3thro Kokan mesttamas bxakos
+12:39 #golyateszt: 4/>/6/GolyaVadasz g?/ A golyaink: deathowl Rudika ermi46 laviii akibaby maczikasz ywvz abesto j3thro Kokan mesttamas bxakos
+12:44 #pgt09: 4/>/6/GolyaVadasz g?/ A golyaink: deathowl Rudika ermi46 laviii akibaby maczikasz ywvz abesto j3thro Kokan mesttamas bxakos
+12:48 #pgt09: 4/>/6/   deathowl g?/ abesto meg én
+12:48 #pgt09: 4/>/6/   deathowl g?/ abesto nagyrészt
+--- Log closed Wed Jul 29 13:11:31 2009
+--- Log opened Wed Jul 29 15:21:40 2009
+15:27 #golyateszt1: 4/<?/c>/   GolyaBombazo>/ c4/> e?/abesto|ebed felveve a golyak listajara
+15:27 4/<>/     yodamaster4/> e7/ecs
+15:30 #golyateszt1: 4/>/6/  GolyaBombazo g?/ Golyak jelen: abesto|ebed
+15:30 #golyateszt1: 4/>/6/  GolyaBombazo g?/ Golyak tavol: deathowl Rudika ermi46 laviii akibaby maczikasz ywvz abesto j3thro Kokan mesttamas bxakos beatrixsilver asdf
+15:30 #golyateszt1: 4/<?/c>/  GolyaBombazo>/ c4/> e?/abesto|ebed eltavolitva a golyak listajarol
+15:31 #golyateszt1: 4/<?/c>/  GolyaBombazo>/ c4/> e?/abesto|ebed felveve a golyak listajara
+15:31 #golyateszt1: 4/<?/c>/  GolyaBombazo>/ c4/> e?/abesto|ebed nem szerepel a golyak listajan
+15:31 #golyateszt1: 4/>/6/  GolyaBombazo g?/ Golyak tavol: deathowl Rudika ermi46 laviii akibaby maczikasz ywvz abesto j3thro Kokan mesttamas bxakos beatrixsilver asdf deathowl Rudika ermi46 laviii akibaby maczikasz ywvz abesto j3thro Kokan mesttamas bxakos beatrixsilver asdf {} abesto|ebed
+15:32 #golyateszt1: 4/>/6/  GolyaBombazo g?/ Golyak tavol: deathowl Rudika ermi46 laviii akibaby maczikasz ywvz abesto j3thro Kokan mesttamas bxakos beatrixsilver abesto|ebed asdf
+15:32 #golyateszt1: 4/>/6/  GolyaBombazo g?/ abesto eltavolitva a golyak listajarol
+15:33 #golyateszt1: 4/<?/c>/  GolyaBombazo>/ c4/> e?/abesto|ebed mar szerepel a golyak listajan
+15:33 #golyateszt1: 4/>/6/  GolyaBombazo g?/ abesto nem szerepel a golyak listajan
+15:33 #golyateszt1: 4/<?/c>/  GolyaBombazo>/ c4/> e?/abesto|ebed mar szerepel a golyak listajan
+15:33 #golyateszt1: 4/<?/c>/   GolyaBombazo>/ c4/> e?/abesto|ebed eltavolitva a golyak listajarol
+15:33 #golyateszt1: 4/<?/c>/   GolyaBombazo>/ c4/> e?/abesto|ebed felveve a golyak listajara
+15:33 #golyateszt1: 4/<?/c>/   GolyaBombazo>/ c4/> e?/abesto|ebed eltavolitva a golyak listajarol
+15:33 #golyateszt1: 4/<?/c>/   GolyaBombazo>/ c4/> e?/abesto|ebed felveve a golyak listajara
+15:39 #golyateszt1: 4/>/6/  GolyaBombazo g?/ Golyak jelen: abesto|ebed
+15:40 #golyateszt1: 4/<?/c>/  GolyaBombazo>/ c4/> e?/abesto|ebed eltavolitva a golyak listajarol
+15:40 #golyateszt1: 4/>/6/  GolyaBombazo g?/ abesto felveve a golyak listajara
+15:40 #golyateszt1: 4/>/6/  GolyaBombazo g?/ abesto mar igy is golya
+--- Log closed Wed Jul 29 15:44:24 2009
+--- Log opened Fri Jul 31 20:33:48 2009
+--- Log closed Fri Jul 31 21:00:12 2009
+--- Log opened Sat Aug 01 17:32:45 2009
+--- Log closed Sat Aug 01 17:40:35 2009
+--- Log opened Sat Aug 01 18:43:28 2009
+--- Log closed Sat Aug 01 18:58:12 2009
+--- Log opened Mon Aug 03 21:11:54 2009
+--- Log closed Mon Aug 03 21:11:58 2009
+--- Log opened Mon Aug 03 21:12:29 2009
+--- Log closed Mon Aug 03 21:25:36 2009
+--- Log opened Thu Aug 06 22:04:56 2009
+22:12 4/<>/           domi4/> e7/ehugom kiirásaD: "Vétkezni emberi dolog, de isteni érzés."
+22:12 4/<>/           domi4/> e7/ehát ien nincs D:
+--- Log closed Thu Aug 06 22:15:04 2009
