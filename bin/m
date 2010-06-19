@@ -1,2 +1,2 @@
 #!/bin/sh
-GMAIL_PASS=`gnome-keyring-query get gmail` INFELTE_PASS=`gnome-keyring-query get infelte` exec mutt "$@"
+GMAIL_PASS=`/home/abesto/bin/gkeyring.py --id 1 | cut -f2` INFELTE_PASS=`gnome-keyring-query get infelte` exec mutt "$@"

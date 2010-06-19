@@ -17,4 +17,4 @@ set postponed="+[Gmail]/Piszkozatok"
 set record=""
 set net_inc=5
 
-mailboxes "+INBOX" "+Arch Announce" "+ELTE ETR" "+visualminds" "+PGT" "+rot6sereg" "+ik-mentor" "+golyahir" "+facebook"
+mailboxes "+INBOX" "+Arch Announce" "+ELTE ETR" "+visualminds" "+rot6sereg" "+ik-mentor" "+golyahir" "+facebook"

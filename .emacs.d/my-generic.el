@@ -54,6 +54,7 @@
       (append
        (list
         '("mutt-keyrit.*" . post-mode)
+        '("kmail*" . post-mode)
         '(".*\.mako" . html-mode)
         '("\\.lua$" . lua-mode)
 	) auto-mode-alist )

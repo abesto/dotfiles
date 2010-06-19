@@ -1,5 +1,6 @@
 -- abesto's XMonad config
--- Time-stamp: <2010-05-26 11:14:54>
+
+import Monad
 
 import XMonad hiding (Tall)
 
@@ -22,7 +23,7 @@ import qualified XMonad.StackSet as W
 
 main = xmonad =<< myStatusBar myConfig
 
-myConfig = withUrgencyHook NoUrgencyHook defaultConfig
+myConfig = myUrgencyHook defaultConfig
        { terminal           = "urxvt"
        , workspaces         = map show [1..9] ++ ["mail", "im", "www"]
        , modMask            = mod4Mask
@@ -33,6 +34,7 @@ myConfig = withUrgencyHook NoUrgencyHook defaultConfig
        , manageHook         = manageHook defaultConfig <+> myManageHook
        , layoutHook         = myLayout
        , startupHook        = do {setWMName "LG3D"}
+       , logHook            = takeTopFocus
        } `additionalKeysP` myKeys
 
 myKeys =
@@ -61,6 +63,7 @@ myKeys =
        , ("M-w", windows $ W.greedyView "www")
        , ("M-m", windows $ W.greedyView "mail")
        , ("M-i", windows $ W.greedyView "im")
+       , ("M-f", focusUrgent)
        -- Volume control
        , ("M-<KP_Add>", amixer "Master 5%+")
        , ("<XF86AudioRaiseVolume>", amixer "Master 1%+")
@@ -94,11 +97,13 @@ myManageHook = composeAll . concat $
                              -- Im
                              , [className =? c --> doF (W.shift "im") | c <- ims]
                              , [title     =? t --> doF (W.shift "im") | t <- ims]
+                             -- Ignores
+                             , [resource  =? r --> doIgnore | r <- myIgnores]
                              ]
           where myFloats  = ["Gimp", "gimp", "Xmessage", "Downloads", "*Preferences*", "Save As..."]
                 ims       = ["Skype", "Pidgin", "im"]
                 browsers  = ["Iron", "Opera", "Firefox"]
-                myIgnores = []
+                myIgnores = ["XXkb"]
 
 -- Status bar
 myStatusBar = statusBar "xmobar" pp toggleStrutsKey
@@ -116,3 +121,32 @@ myLayout = avoidStruts $ smartBorders (tabbed shrinkText (theme wfarrTheme) ||| 
        nmaster = 1
        ratio = toRational (2/(1+sqrt(5)::Double))
        delta = 3/100
+
+-- Fix Java apps focus
+-- Send WM_TAKE_FOCUS
+takeTopFocus = withWindowSet $ maybe (setFocusX =<< asks theRoot) takeFocusX . W.peek
+
+atom_WM_TAKE_FOCUS      = getAtom "WM_TAKE_FOCUS"
+takeFocusX w = withWindowSet $ \ws -> do
+    dpy <- asks display
+    wmtakef <- atom_WM_TAKE_FOCUS
+    wmprot <- atom_WM_PROTOCOLS
+
+    protocols <- io $ getWMProtocols dpy w
+    when (wmtakef `elem` protocols) $ do
+        io $ allocaXEvent $ \ev -> do
+            setEventType ev clientMessage
+            setClientMessageEvent ev w wmprot 32 wmtakef currentTime
+            sendEvent dpy w False noEventMask ev
+
+-- Urgency hint configuration
+myUrgencyHook = withUrgencyHook dzenUrgencyHook
+    {
+      args = [
+         "-y", "753", "-h", "15", "-x", "1000", "-w", "424",
+         "-fg", "#aaaaaa",
+         "-bg", "#330000",
+         "-fn", terminusMedium
+         ],
+      duration = (seconds 4)
+    }
