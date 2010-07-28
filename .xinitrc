@@ -10,11 +10,12 @@
     xset r rate 200 30
 
     xbindkeys &
+    feh --bg-tile ~/archlinux-zenburn-wide.jpg &
     conky &
+    conky -c /home/abesto/.conky-fortune-rc &
     conkeror -daemon &
     emacs --daemon
     stjerm -k f1 -sh /bin/zsh -fn "Terminus" -b thin &
-    feh --bg-tile ~/archlinux-zenburn-wide.jpg &
     trayer --height 8 --SetDockType true &
 
     xsetroot -cursor_name left_ptr

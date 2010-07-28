@@ -17,6 +17,7 @@ import XMonad.Layout.HintedTile
 import XMonad.Layout.NoBorders
 import XMonad.Util.Themes
 
+import XMonad.Hooks.EwmhDesktops
 import XMonad.Hooks.SetWMName
 
 import qualified XMonad.StackSet as W
@@ -33,7 +34,7 @@ myConfig = myUrgencyHook defaultConfig
        , focusFollowsMouse  = True
        , manageHook         = manageHook defaultConfig <+> myManageHook
        , layoutHook         = myLayout
-       , startupHook        = do {setWMName "LG3D"}
+       , startupHook        = ewmhDesktopsStartup >> setWMName "LG3D"
        , logHook            = takeTopFocus
        } `additionalKeysP` myKeys
 
@@ -106,16 +107,23 @@ myManageHook = composeAll . concat $
                 myIgnores = ["XXkb"]
 
 -- Status bar
+xmobarEscape :: String -> String
+xmobarEscape = concatMap escape
+    where escape '{' = ['[']
+          escape '}' = [']']
+          escape x = [x]
+
+
 myStatusBar = statusBar "xmobar" pp toggleStrutsKey
     where pp = defaultPP { ppCurrent = xmobarColor "#FFD7A7" "" . wrap "[" "]"
-                         , ppTitle   = xmobarColor "#80D4AA"  "" . shorten 40
+                         , ppTitle   = xmobarColor "#80D4AA"  "" . shorten 40 . xmobarEscape
                          , ppVisible = wrap "(" ")"
                          , ppUrgent = xmobarColor "#FFA3A3" "" . xmobarStrip
                          }
           toggleStrutsKey XConfig {XMonad.modMask = modMask} = (modMask, xK_b)
 
 -- Layout
-myLayout = avoidStruts $ smartBorders (tabbed shrinkText (theme wfarrTheme) ||| hintedTile Wide  ||| hintedTile Tall)
+myLayout = avoidStruts $ smartBorders (tabbed shrinkText (theme wfarrTheme) ||| hintedTile Tall)
        where
        hintedTile = HintedTile nmaster delta ratio TopLeft
        nmaster = 1

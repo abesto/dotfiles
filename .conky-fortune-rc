@@ -1,0 +1,51 @@
+#based on http://conky.sourceforge.net/conkyrc-hellfire
+
+background no
+font 7x13
+use_xft no
+
+update_interval 60.0
+
+total_run_times 0
+
+own_window yes
+own_window_transparent yes
+own_window_type desktop
+double_buffer no
+
+draw_shades yes
+draw_outline yes
+draw_borders yes
+draw_graph_borders yes
+stippled_borders 0
+border_width 0
+
+default_color white
+default_shade_color black
+default_outline_color black
+
+alignment middle_right
+
+gap_x 12
+gap_y 12
+
+no_buffers no
+
+uppercase no
+
+override_utf8_locale no
+
+color0 cccccc
+color1 eeeeee
+
+minimum_size 600 500
+
+# stuff after 'TEXT' will be formatted on screen
+#Usage (Avg): ${freq_dyn_g}Ghz ${cpu cpu0}% ${alignr}${cpubar cpu0 5,80}
+#Usage (Core 1): ${freq_dyn_g cpu1}Ghz ${cpu cpu1}% ${alignr}${cpubar cpu1 5,80}
+#Usage (Core 2): ${freq_dyn_g cpu2}Ghz ${cpu cpu2}% ${alignr}${cpubar cpu2 5,80}
+
+TEXT
+${color1}FORTUNE OF THE MINUTE
+
+${color0}${exec fortune -a}
