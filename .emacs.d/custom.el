@@ -8,7 +8,7 @@
  '(browse-url-browser-function (quote browse-url-generic))
  '(browse-url-firefox-new-window-is-tab nil)
  '(browse-url-firefox-program "firefox")
- '(browse-url-generic-program "conkeror")
+ '(browse-url-generic-program "opera")
  '(browse-url-mozilla-program "mozilla")
  '(column-number-mode t)
  '(completion-use-popup-frame nil)

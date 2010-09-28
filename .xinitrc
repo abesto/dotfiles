@@ -5,18 +5,22 @@
     export GNOME_KEYRING_SOCKET 
     export SSH_AUTH_SOCK
 
+    BROWSER=opera
+    export BROWSER
+
     xrdb -merge ~/.Xresources
     xmodmap ~/.xmodmap
     xset r rate 200 30
 
     xbindkeys &
-    feh --bg-tile ~/archlinux-zenburn-wide.jpg &
+    feh --bg-fill ~/sunflowers.jpg &
     conky &
     conky -c /home/abesto/.conky-fortune-rc &
     conkeror -daemon &
     emacs --daemon
     stjerm -k f1 -sh /bin/zsh -fn "Terminus" -b thin &
     trayer --height 8 --SetDockType true &
+    syndaemon -i .5 -d
 
     xsetroot -cursor_name left_ptr
 

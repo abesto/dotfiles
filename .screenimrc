@@ -8,5 +8,5 @@ sessionname irc
 hardstatus alwayslastline '%{= wk}%?%-Lw%?%{r}(%{k}%n*%f%t%?(%u)%?%{r})%{k}%?%+Lw%?%?%= %m/%d %C%A'
 activity ''
 
-screen -ln -t "ttytter" ttytter
+#screen -ln -t "ttytter" ttytter
 screen -ln -t "finch" finch

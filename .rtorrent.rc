@@ -1,6 +1,6 @@
 # Global upload and download rate in KiB. "0" for unlimited.
 download_rate = 0
-upload_rate = 28
+upload_rate = 0
 
 # Default directory to save the downloaded torrents.
 directory = /mnt/storage/downloads

@@ -7,11 +7,11 @@ xterm*font: -*-terminus-medium-*-*-*-*-120-*-*-*-*-*
 XTerm*eightBitInput: false
 
 urxvt.font: -*-terminus-medium-*-*-*-*-120-*-*-*-*-*
-urxvt*urllauncher: conkeror
+urxvt*urllauncher: opera
 urxvt*matcher.button:        1
 urxvt*saveLines:              8192
 URxvt.perl-ext-common: default,matcher
-URxvt.urlLauncher: conkeror
+URxvt.urlLauncher: opera
 URxvt.colorUL: #86a2be
 urxvt.keysym.M-u: perl:mark-yank-urls:activate_mark_mode
 urxvt*scrollBar: false
