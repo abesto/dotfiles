@@ -1,0 +1,22 @@
+#!/bin/bash
+
+. /etc/rc.conf
+. /etc/rc.d/functions
+
+case "$1" in
+    game|start|high)
+    	stat_busy "Copying cpufreq config"
+    	cp /home/abesto/bin/cpufreq/game /etc/conf.d/cpufreq
+	stat_done
+	;;
+    normal|stop|low)
+    	stat_busy "Copying cpufreq config"
+    	cp /home/abesto/bin/cpufreq/normal /etc/conf.d/cpufreq
+	stat_done
+        ;;
+    *)
+        echo "Usage: $0 {(game|start|high) | (normal|stop|low)}"
+        exit 1;
+        ;;
+esac
+/etc/rc.d/cpufreq restart

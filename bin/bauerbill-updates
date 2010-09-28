@@ -1,0 +1,2 @@
+#!/bin/sh
+bauerbill -Qu | grep -v '^$' | wc -l

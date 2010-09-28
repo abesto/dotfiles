@@ -1,0 +1,3 @@
+#!/usr/bin/env sh
+ck-launch-session nm-applet &
+

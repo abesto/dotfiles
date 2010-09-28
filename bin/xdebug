@@ -1,0 +1,2 @@
+#!/bin/bash
+XDEBUG_CONFIG="idekey=netbeans-xdebug" php -d xdebug.remote_host=localhost -d xdebug.remote_enable=on -d xdebug.remote_autostart=1 $1
