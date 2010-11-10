@@ -16,11 +16,11 @@ own_window_type desktop
 double_buffer yes
 
 draw_shades yes
-draw_outline yes
-draw_borders yes
+draw_outline no
+draw_borders no
 draw_graph_borders yes
 stippled_borders 0
-border_margin 4
+border_margin 0
 border_width 0
 
 default_color white

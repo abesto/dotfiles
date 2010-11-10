@@ -46,8 +46,8 @@ myKeys =
        , ("M-S-o", spawn "soffice")
        , ("M-S-e", spawn "emacsclient -c")
        , ("M-S-v", spawn $ (XMonad.terminal myConfig)++" -e vifm")
-       , ("M-p", spawn "PATH=$PATH:/home/abesto/bin gmrun")
        , ("M-e", spawn "eaglemode")
+       , ("M-p", spawn "PATH=$PATH:/home/abesto/bin gmrun")
        -- MPC
        , ("<XF86AudioPlay>", mpc "toggle")
        , ("M-S-w", mpc "toggle")
@@ -102,9 +102,9 @@ myManageHook = composeAll . concat $
                              , [resource  =? r --> doIgnore | r <- myIgnores]
                              ]
           where myFloats  = ["Gimp", "gimp", "Xmessage", "Downloads", "*Preferences*", "Save As..."]
-                ims       = ["Skype", "Pidgin", "im", "gwibber"]
+                ims       = ["Skype", "Pidgin", "im", "gwibber", "TweetDeck"]
                 browsers  = ["Iron", "Opera", "Firefox"]
-                myIgnores = ["XXkb"]
+                myIgnores = ["XXkb", "Do"]
 
 -- Status bar
 xmobarEscape :: String -> String

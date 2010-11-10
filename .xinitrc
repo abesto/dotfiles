@@ -5,6 +5,11 @@
     export GNOME_KEYRING_SOCKET 
     export SSH_AUTH_SOCK
 
+    export WINDOW_MANAGER="/usr/bin/xmonad"
+    export GNOME_DESKTOP_SESSION_ID=1
+    export _JAVA_AWT_WM_NONREPARENTING=1
+    #export JAVA_OPTIONS="-Djava.library.path=/opt/java/jre/lib/i386"
+
     BROWSER=opera
     export BROWSER
 
@@ -13,12 +18,12 @@
     xset r rate 200 30
 
     xbindkeys &
-    feh --bg-fill ~/sunflowers.jpg &
+    feh --bg-fill ~/sunflowers2.jpg &
     conky &
     conky -c /home/abesto/.conky-fortune-rc &
     conkeror -daemon &
     emacs --daemon
-    stjerm -k f1 -sh /bin/zsh -fn "Terminus" -b thin &
+    stjerm -k f1 -sh /bin/zsh -fn "xft:inconsolata:pixelsize=9" -b thin &
     trayer --height 8 --SetDockType true &
     syndaemon -i .5 -d
 
@@ -37,9 +42,6 @@ case $1 in
     ;;
   gnome)
     exec gnome-session
-    ;;
-  kde)
-    exec startkde
     ;;
   *)
     dbus-launch --exit-with-session $DEFAULT_SESSION

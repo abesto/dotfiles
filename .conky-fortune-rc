@@ -14,9 +14,9 @@ own_window_type desktop
 double_buffer no
 
 draw_shades yes
-draw_outline yes
-draw_borders yes
-draw_graph_borders yes
+draw_outline no
+draw_borders no
+draw_graph_borders no
 stippled_borders 0
 border_width 0
 

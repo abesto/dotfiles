@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 #
 # Rip an internet radio; list read from radiok.lst
 
@@ -14,7 +14,7 @@ function menu
     done
 
     ID=-1
-    until [[ $ID > -1 && $ID < ${#NEVEK[@]} ]]
+    until [[ $ID -gt -1 && $ID -lt ${#NEVEK[@]} ]]
     do
         echo -n "$PROMPT "
         read ID
