@@ -1,4 +1,8 @@
 Xft.dpi: 96.0
+Xft.antialias: true
+Xft.hinting: true
+Xft.hintingstyle: full
+Xfg.rgba: rgb
 
 xterm*foreground: white
 xterm*background: black
@@ -36,26 +40,6 @@ urxvt*color12:     #94bff3
 urxvt*color13:     #ec93d3
 urxvt*color14:     #93e0e3
 urxvt*color15:     #ffffff
-
-! Zenburn for stjerm
-stjerm*background:  #3f3f3f
-stjerm*foreground:  #dcdccc
-stjerm*color0:      #1E2320
-stjerm*color1:      #705050
-stjerm*color2:      #60b48a
-stjerm*color3:      #dfaf8f
-stjerm*color4:      #506070
-stjerm*color5:      #dc8cc3
-stjerm*color6:      #8cd0d3
-stjerm*color7:      #dcdccc
-stjerm*color8:      #709080
-stjerm*color9:      #dca3a3
-stjerm*color10:     #c3bf9f
-stjerm*color11:     #f0dfaf
-stjerm*color12:     #94bff3
-stjerm*color13:     #ec93d3
-stjerm*color14:     #93e0e3
-stjerm*color15:     #ffffff
 
 
 conapp.font: -*-terminus-medium-*-*-*-*-120-*-*-*-*-*

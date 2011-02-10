@@ -1,4 +1,4 @@
-text/html; firefox %s
+text/html; opera %s
 text/*;  ~/bin/mutt_bgrun mimeo %s
 image/*; ~/bin/mutt_bgrun mimeo %s
 audio/*; ~/bin/mutt_bgrun mimeo %s

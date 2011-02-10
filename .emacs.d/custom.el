@@ -51,5 +51,15 @@
  '(twit-user-image-dir "~/.emacs.d//twitter-images")
  '(uniquify-buffer-name-style (quote post-forward-angle-brackets) nil (uniquify))
  '(use-file-dialog nil)
+ '(weblogger-config-alist (quote (("new" "http://abesto.net/textpattern/rpc/" "abesto" "" "articles") ("abesto.net" "http://abesto.net/rpc/" "abesto" "" "articles") ("abesto.net/articles" "http://abesto.net/tp/rpc/" "abesto" "" "articles"))))
+ '(weblogger-edit-entry-hook nil)
+ '(weblogger-pre-struct-hook (quote ((lambda nil (message-remove-header "X-TextType") (message-add-header "X-TextType: USE_TEXTILE")))))
+ '(weblogger-start-edit-entry-hook (quote ((lambda nil (message-goto-body) (while (search-forward "" nil t) (replace-match "" nil t))) (lambda nil (auto-fill-mode 0) (longlines-mode 1)))))
  '(windmove-wrap-around nil)
  '(yas/prompt-functions (quote (yas/dropdown-prompt yas/completing-prompt yas/ido-prompt yas/no-prompt))))
+(custom-set-faces
+  ;; custom-set-faces was added by Custom.
+  ;; If you edit it by hand, you could mess it up, so be careful.
+  ;; Your init file should contain only one such instance.
+  ;; If there is more than one, they won't work right.
+ )

@@ -39,9 +39,7 @@ set editor='emacsclient -c %s > /dev/null'
 
 # profiles
 source ~/.mutt/profile.default
-send-hook . "source ~/.mutt/profile.gmail"
-send-hook abesto0@gmail.com "source ~/.mutt/profile.inf.elte.hu"
-send-hook proginf@listbox.elte.hu "source ~/.mutt/profile.inf.elte.hu"
+source ~/.mutt/profile.gmail
 
 
 source ~/.mutt/mutt.color.zenburn

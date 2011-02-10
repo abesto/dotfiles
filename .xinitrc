@@ -21,11 +21,11 @@
     feh --bg-fill ~/sunflowers2.jpg &
     conky &
     conky -c /home/abesto/.conky-fortune-rc &
-    conkeror -daemon &
     emacs --daemon
-    stjerm -k f1 -sh /bin/zsh -fn "xft:inconsolata:pixelsize=9" -b thin &
     trayer --height 8 --SetDockType true &
     syndaemon -i .5 -d
+
+	urxvtd &
 
     xsetroot -cursor_name left_ptr
 

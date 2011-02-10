@@ -10,11 +10,8 @@ set from = "abesto0@gmail.com"
 
 set smtp_authenticators="login"
 
-set folder = "imaps://imap.gmail.com:993"
-set spoolfile = "+INBOX"
-set postponed="+[Gmail]/Piszkozatok"
-# set record="+[Gmail]/Elküldött levelek"
-set record=""
-set net_inc=5
-
-mailboxes "+INBOX" "+fflog" "+ELTE ETR" "+visualminds" "+Arch Announce" "+rot6sereg" "+facebook"
+set folder = "/home/abesto/mail"
+set spoolfile = "+inbox"
+set postponed="+bak.piszkozatok"
+mailboxes "+inbox"
+source "/home/abesto/.mutt/mailboxes"

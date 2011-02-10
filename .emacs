@@ -40,6 +40,7 @@
 ;; mails
 (autoload 'post-mode "post" "mode for e-mail" t)
 (add-hook 'post-mode-hook 'my-mail-init)
+(add-to-list 'auto-mode-alist '("sup" . post-mode))
 
 ;;;;;;;;;;;;;;;;;;;;;;
 ;; Big environemnts ;;
@@ -58,3 +59,14 @@
 ;; Customize
 (setq custom-file "~/.emacs.d/custom.el")
 (load custom-file)
+
+
+;;; This was installed by package-install.el.
+;;; This provides support for the package system and
+;;; interfacing with ELPA, the package archive.
+;;; Move this code earlier if you want to reference
+;;; packages in your .emacs.
+(when
+    (load
+     (expand-file-name "~/.emacs.d/elpa/package.el"))
+  (package-initialize))

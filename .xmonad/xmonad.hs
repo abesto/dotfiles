@@ -25,7 +25,7 @@ import qualified XMonad.StackSet as W
 main = xmonad =<< myStatusBar myConfig
 
 myConfig = myUrgencyHook defaultConfig
-       { terminal           = "urxvt"
+       { terminal           = "urxvtc"
        , workspaces         = map show [1..9] ++ ["mail", "im", "www"]
        , modMask            = mod4Mask
        , borderWidth        = 2
@@ -79,7 +79,7 @@ myKeys =
 terminusMedium = "-xos4-terminus-medium-r-normal-*-12-*-*-*-c-*-iso10646-1"
 terminusLarge    = "-xos4-terminus-bold-r-normal-*-32-*-*-*-*-*-iso10646-1"
 
-browser     = spawn "conkeror"
+browser     = spawn "opera"
 mpc cmd     = spawn $ "mpc -h /mnt/storage/music/.mpd/socket " ++ cmd
 mpcShow cmd = mpc $ cmd ++ ("| head -n1 | dzen2 -p 2 -y '400' -h '40' -fn '" ++ terminusLarge ++ "' -bg '#000040' -fg '#8080CC' -e")
 amixer cmd  = spawn $ "amixer set " ++ cmd
@@ -123,7 +123,7 @@ myStatusBar = statusBar "xmobar" pp toggleStrutsKey
           toggleStrutsKey XConfig {XMonad.modMask = modMask} = (modMask, xK_b)
 
 -- Layout
-myLayout = avoidStruts $ smartBorders (tabbed shrinkText (theme wfarrTheme) ||| hintedTile Tall)
+myLayout = avoidStruts $ smartBorders (tabbed shrinkText (theme wfarrTheme) ||| hintedTile Tall ||| hintedTile Wide)
        where
        hintedTile = HintedTile nmaster delta ratio TopLeft
        nmaster = 1
