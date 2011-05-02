@@ -4,7 +4,6 @@
 (add-to-list 'load-path "/home/abesto/.emacs.d")
 (dolist (path (list ""
                     "/mail"
-                    "/yasnippet"
                     "/org"
                     "/doxymacs"
                     "/distel/elisp"
@@ -21,7 +20,7 @@
 
 (load "my-generic") ; Settings I always want
 (load "my-ido")     ; Fuzzy filename search
-(load "my-viper")   ; Viper-mode setup
+;(load "my-viper")   ; Viper-mode setup
 (load "my-org")     ; org-mode setup
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -48,13 +47,10 @@
 ;;; Each contains load-* to... load it
 (load "my-jde-load")     ; A Java Development Environment for Emacs
 (load "my-slime-load")   ; SLIME for editing lisp
-(load "my-nxhtml-load")  ; nxhtml for HTML+CSS+JS+PHP+Whatever
+;(load "my-nxhtml-load")  ; nxhtml for HTML+CSS+JS+PHP+Whatever
 (load "my-haskell-load")
-(load "my-php-load")
+;(load "my-php-load")
 (load "my-ecb-load")
-
-(require 'js2-mode)
-(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
 
 ;; Customize
 (setq custom-file "~/.emacs.d/custom.el")
@@ -66,6 +62,13 @@
 ;;; interfacing with ELPA, the package archive.
 ;;; Move this code earlier if you want to reference
 ;;; packages in your .emacs.
+(when
+    (load
+     (expand-file-name "~/.emacs.d/elpa/package.el"))
+  (package-initialize))
+
+
+;;; ELPA
 (when
     (load
      (expand-file-name "~/.emacs.d/elpa/package.el"))

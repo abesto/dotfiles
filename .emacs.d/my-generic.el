@@ -1,8 +1,7 @@
 ;; Appearance
 (require 'color-theme)
-(require 'zenburn)
 (color-theme-initialize)
-(color-theme-zenburn)
+(color-theme-dark-laptop)
 
 ;; Window/editor stuff
 (set-default 'fill-column 80) ; 80. standard. good.
@@ -10,7 +9,10 @@
 (scroll-bar-mode -1)          ; No scrollbar either
 (setq visible-bell t)         ; Can't go beeping around at midnight, now can I?
 (show-paren-mode)
+
 (load "toggle-fullscreen")
+(nix-fullscreen)
+
 (column-number-mode 1)
 
 ;; This is me
@@ -33,10 +35,6 @@
 (global-set-key "\C-x\C-m" 'execute-extended-command)
 (global-set-key "\M-n" 'linum-mode)
 (global-set-key (kbd "\C-c <tab>") 'align-regexp)
-
-;; highlight current line
-(global-hl-line-mode 1)
-(set-face-background 'hl-line "#222")
 
 ;; Mode-compile; very useful
 (autoload 'mode-compile "mode-compile"
@@ -63,11 +61,5 @@
 ;; Unique buffer names for files with the same name
 (require 'uniquify)
 
-;; yasnippet and zencoding: win
-(require 'my-yasnippet)
-(require 'zencoding-mode)
+;; ya(require 'zencoding-mode)
 (add-hook 'sgml-mode-hook 'zencoding-mode)
-
-;; Load auctex site file
-(load "auctex.el")
-(load "preview-latex.el")
