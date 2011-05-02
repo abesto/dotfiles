@@ -1,7 +1,0 @@
-#contributor : Jimmy Wu <frozenthrone88@gmail.com>
-#name : <table ...>...</table>
-#group : table
-# --
-<table>
-  $0
-</table>

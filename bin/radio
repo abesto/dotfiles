@@ -42,5 +42,5 @@ menu "Melyik rádiót akarod?"
 
 #streamripper ${RADIOK[$?]} -d /home/abesto/music/stream -rz 10100 &
 #line
-mplayer ${RADIOK[$?]} 
+mplayer ${RADIOK[$?]} -ao pulse
 

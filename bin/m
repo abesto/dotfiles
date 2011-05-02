@@ -1,2 +1,2 @@
 #!/bin/sh
-TERM=rxvt-256color GMAIL_PASS=`gnome-keyring-query get google` exec mutt "$@"
+TERM=rxvt-unicode-256color GMAIL_PASS=`gnome-keyring-query get google` exec mutt "$@"

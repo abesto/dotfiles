@@ -13,10 +13,7 @@ zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p
 zstyle ':completion:*' verbose true
 zstyle :compinstall filename '/home/abesto/.zshrc'
 
-PATH=$PATH:/home/abesto/bin:/etc/rc.d
-
-export EDITOR='emacsclient'
-export LEDGER_FILE='~/ledger.dat'
+PATH=$PATH:/home/abesto/bin
 
 autoload -Uz compinit
 compinit
@@ -60,13 +57,10 @@ alias ....='cd ../../..'
 alias .....='cd ../../../../'
 alias ec='emacsclient'
 alias cf='cd /var/www/fruitflan'
-alias sf='screen -c /home/abesto/.screen-ff'
-
-export OOO_FORCE_DESKTOP=gnome
 
 eval `dircolors -b`
 
-export GREP_COLRO="1;33"
+export GREP_COLOR="1;33"
 alias grep='grep --color=auto'
 
 export LESS_TERMCAP_mb=$'\E[01;31m'
@@ -99,7 +93,21 @@ extract () {
   fi
 }
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-source /etc/profile.d/gpg-agent.sh
-
 export LANG=en_US.UTF-8
+
+precmd () {
+	if [[ "$TERM" = "screen" ]]; then
+		#local SHORTPWD="`basename $PWD`"
+		echo -ne "\ek$PWD\e\\"
+	fi  
+}   
+preexec () {
+	if [[ "$TERM" = "screen" ]]; then
+		local CMD="${1}"
+		if [[ ${#CMD} -ge 15 ]]; then
+			CMD="${CMD:0:15}..."
+		fi  
+		echo -ne "\ek${CMD}\e\\"
+	fi  
+}   
+
