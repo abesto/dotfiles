@@ -8,7 +8,7 @@
       viper-want-ctl-h-help 1)      ; yes I do
 
 (define-key viper-insert-global-user-map "\C-d" 'delete-char)
-(require 'redo)                    ; redo
+(require 'redo+)                   ; redo
 (require 'rect-mark)               ; nice block mode
 (setq scroll-conservatively 0)     ; vim-style scrolling
 (setq scroll-margin 5)             ; and again

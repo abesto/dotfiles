@@ -4,5 +4,3 @@ set incsearch nohlsearch nocompatible
 set guioptions=ic
 filetype plugin indent on
 syntax on
-
-set guifont=Inconsolata-g\ Medium\ 8

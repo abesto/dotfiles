@@ -1,12 +1,16 @@
 [MIME Cache]
-application/x-wine-extension-ini=wine-extension-ini.desktop
-image/gif=wine-extension-gif.desktop
+application/rtf=wine-extension-rtf.desktop;
+application/x-chm=wine-extension-chm.desktop;
+application/x-extension-htm=wine-extension-htm.desktop;
+application/x-extension-html=wine-extension-html.desktop;
+application/x-mswrite=wine-extension-wri.desktop;
+application/x-progress-quest-save=wine-extension-pq.desktop;
+application/x-wine-extension-hlp=wine-extension-hlp.desktop;
+application/x-wine-extension-ini=wine-extension-ini.desktop;
+application/x-wine-extension-msp=wine-extension-msp.desktop;
+application/xml=wine-extension-xml.desktop;
+image/gif=wine-extension-gif.desktop;
 image/jpeg=wine-extension-jpe.desktop;wine-extension-jfif.desktop;wine-extension-jpg.desktop;wine-extension-jpeg.desktop;
-image/png=wine-extension-png.desktop
-application/x-wine-extension-hlp=wine-extension-hlp.desktop
-text/html=wine-extension-htm.desktop;wine-extension-html.desktop;
-application/rtf=wine-extension-rtf.desktop
-text/plain=wine-extension-txt.desktop
-application/x-chm=wine-extension-chm.desktop
-application/xml=wine-extension-xml.desktop
-application/x-mswrite=wine-extension-wri.desktop
+image/png=wine-extension-png.desktop;
+text/plain=wine-extension-txt.desktop;
+text/x-uri=wine-extension-url.desktop;

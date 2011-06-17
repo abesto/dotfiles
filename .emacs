@@ -3,6 +3,7 @@
 ;; paths
 (add-to-list 'load-path "/home/abesto/.emacs.d")
 (dolist (path (list ""
+                    "/vimpulse"
                     "/mail"
                     "/org"
                     "/doxymacs"
@@ -20,7 +21,7 @@
 
 (load "my-generic") ; Settings I always want
 (load "my-ido")     ; Fuzzy filename search
-;(load "my-viper")   ; Viper-mode setup
+(load "my-viper")   ; Viper-mode setup
 (load "my-org")     ; org-mode setup
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -30,6 +31,9 @@
 (autoload 'my-php-init "my-php-init")
 (autoload 'my-mail-init "my-mail-init")
 (autoload 'my-c++-init "my-c++-init")
+
+(load "my-coffee-load.el")
+(require 'less-css-mode)
 
 ;; Mode hooks
 (add-hook 'c++-mode-hook 'my-c++-init)

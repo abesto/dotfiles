@@ -13,7 +13,7 @@ zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p
 zstyle ':completion:*' verbose true
 zstyle :compinstall filename '/home/abesto/.zshrc'
 
-PATH=$PATH:/home/abesto/bin
+PATH=$PATH:/home/abesto/bin:/home/abesto/build/sup/bin:/var/lib/gems/1.9.1/bin
 
 autoload -Uz compinit
 compinit

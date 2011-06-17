@@ -35,6 +35,8 @@
 (global-set-key "\C-x\C-m" 'execute-extended-command)
 (global-set-key "\M-n" 'linum-mode)
 (global-set-key (kbd "\C-c <tab>") 'align-regexp)
+(global-set-key "\M-g" 'goto-line)
+
 
 ;; Mode-compile; very useful
 (autoload 'mode-compile "mode-compile"
