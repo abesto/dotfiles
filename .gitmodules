@@ -7,3 +7,6 @@
 [submodule ".vim/bundle/vim-coffee-script"]
 	path = .vim/bundle/vim-coffee-script
 	url = /home/abesto/.vim/bundle/vim-coffee-script
+[submodule ".vim/bundle/nerdtree"]
+	path = .vim/bundle/nerdtree
+	url = /home/abesto/.vim/bundle/nerdtree
