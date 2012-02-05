@@ -1,3 +1,9 @@
 [submodule ".oh-my-zsh"]
 	path = .oh-my-zsh
 	url = /home/abesto/.oh-my-zsh
+[submodule ".vim/bundle/vim-pathogen"]
+	path = .vim/bundle/vim-pathogen
+	url = /home/abesto/.vim/bundle/vim-pathogen
+[submodule ".vim/bundle/vim-coffee-script"]
+	path = .vim/bundle/vim-coffee-script
+	url = /home/abesto/.vim/bundle/vim-coffee-script
