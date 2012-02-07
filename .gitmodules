@@ -13,3 +13,9 @@
 [submodule ".vim/bundle/nodeunit.vim"]
 	path = .vim/bundle/nodeunit.vim
 	url = /home/abesto/.vim/bundle/nodeunit.vim
+[submodule ".vim/bundle/vim-jade"]
+	path = .vim/bundle/vim-jade
+	url = /home/abesto/.vim/bundle/vim-jade
+[submodule ".vim/bundle/vim-stylus"]
+	path = .vim/bundle/vim-stylus
+	url = /home/abesto/.vim/bundle/vim-stylus
