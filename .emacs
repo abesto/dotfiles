@@ -1,7 +1,8 @@
 ;;;; Based on McGeary's init: http://www.emacsblog.org/2007/10/07/declaring-emacs-bankruptcy/
+(server-start)
 
 ;; paths
-(add-to-list 'load-path "/home/abesto/.emacs.d")
+(add-to-list 'load-path "/Users/abesto/.emacs.d")
 (dolist (path (list ""
                     "/mail"
                     "/yasnippet"
@@ -10,8 +11,9 @@
                     "/distel/elisp"
                     "/completion-ui"
                     "/zencoding"
+                    "/js2-mode"
                     ))
-  (add-to-list 'load-path (concat "/home/abesto/.emacs.d/site" path)))
+  (add-to-list 'load-path (concat "/Users/abesto/.emacs.d/site" path)))
 
 ;;;;;;;;;;;;;;;;;;;
 ;; Generic stuff ;;
@@ -52,6 +54,8 @@
 (load "my-haskell-load")
 (load "my-php-load")
 (load "my-ecb-load")
+(load "my-ruby-load")
+(load "my-coffeescript-load")
 
 (require 'js2-mode)
 (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
@@ -59,14 +63,3 @@
 ;; Customize
 (setq custom-file "~/.emacs.d/custom.el")
 (load custom-file)
-
-
-;;; This was installed by package-install.el.
-;;; This provides support for the package system and
-;;; interfacing with ELPA, the package archive.
-;;; Move this code earlier if you want to reference
-;;; packages in your .emacs.
-(when
-    (load
-     (expand-file-name "~/.emacs.d/elpa/package.el"))
-  (package-initialize))

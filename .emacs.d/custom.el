@@ -1,17 +1,18 @@
 (custom-set-variables
-  ;; custom-set-variables was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
  '(TeX-output-view-style (quote (("^dvi$" ("^landscape$" "^pstricks$\\|^pst-\\|^psfrag$") "%(o?)dvips -t landscape %d -o && gv %f") ("^dvi$" "^pstricks$\\|^pst-\\|^psfrag$" "%(o?)dvips %d -o && gv %f") ("^dvi$" ("^a4\\(?:dutch\\|paper\\|wide\\)\\|sem-a4$" "^landscape$") "%(o?)xdvi %dS -paper a4r -s 0 %d") ("^dvi$" "^a4\\(?:dutch\\|paper\\|wide\\)\\|sem-a4$" "%(o?)xdvi %dS -paper a4 %d") ("^dvi$" ("^a5\\(?:comb\\|paper\\)$" "^landscape$") "%(o?)xdvi %dS -paper a5r -s 0 %d") ("^dvi$" "^a5\\(?:comb\\|paper\\)$" "%(o?)xdvi %dS -paper a5 %d") ("^dvi$" "^b5paper$" "%(o?)xdvi %dS -paper b5 %d") ("^dvi$" "^letterpaper$" "%(o?)xdvi %dS -paper us %d") ("^dvi$" "^legalpaper$" "%(o?)xdvi %dS -paper legal %d") ("^dvi$" "^executivepaper$" "%(o?)xdvi %dS -paper 7.25x10.5in %d") ("^dvi$" "." "%(o?)xdvi %dS %d") ("^pdf$" "." "evince %o %(outpage)") ("^html?$" "." "netscape %o"))))
  '(before-save-hook (quote (time-stamp delete-trailing-whitespace)))
  '(browse-url-browser-function (quote browse-url-generic))
  '(browse-url-firefox-new-window-is-tab nil)
  '(browse-url-firefox-program "firefox")
- '(browse-url-generic-program "opera")
+ '(browse-url-generic-program "open")
  '(browse-url-mozilla-program "mozilla")
  '(column-number-mode t)
  '(completion-use-popup-frame nil)
+ '(custom-safe-themes (quote ("71b172ea4aad108801421cc5251edb6c792f3adbaecfa1c52e94e3d99634dee7" default)))
  '(display-time-mode nil)
  '(doxymacs-file-comment-template (quote ("/**" > n " * " (doxymacs-doxygen-command-char) "file   " (if (buffer-file-name) (file-name-nondirectory (buffer-file-name)) "") > n " * " (doxymacs-doxygen-command-char) "author " (user-full-name) (doxymacs-user-mail-address) > n " * " (doxymacs-doxygen-command-char) "date   Time-stamp: <>" > n " * " > n " * " (doxymacs-doxygen-command-char) "brief  " (p "Brief description of this file: ") > n " * " > n " * " p > n " */" > n)))
  '(ecb-auto-activate nil)
@@ -22,10 +23,13 @@
  '(ecb-tree-indent 2)
  '(erc-user-full-name "Nagy Zoltán")
  '(haskell-literate-default (quote tex))
+ '(haskell-mode-hook (quote (turn-on-haskell-indent turn-on-haskell-indentation turn-on-haskell-doc-mode)))
+ '(haskell-program-name "/usr/local/bin/ghci \"+.\"")
  '(imenu-auto-rescan t)
  '(imenu-auto-rescan-maxout 60000000)
  '(inhibit-startup-screen t)
  '(jde-enable-abbrev-mode t)
+ '(js-indent-level 2)
  '(mumamo-noweb2-mode-from-ext (quote (("c" . c-mode))))
  '(mumamo-set-major-mode-delay 0.3)
  '(nuke-trailing-whitespace-p t)
@@ -39,6 +43,7 @@
  '(org-export-preserve-breaks t)
  '(org-export-time-stamp-file nil)
  '(php-manual-path "~/docs/php/html")
+ '(ruby-deep-arglist nil)
  '(show-paren-mode t)
  '(show-paren-style (quote mixed))
  '(smooth-scroll-margin 4)
@@ -58,8 +63,8 @@
  '(windmove-wrap-around nil)
  '(yas/prompt-functions (quote (yas/dropdown-prompt yas/completing-prompt yas/ido-prompt yas/no-prompt))))
 (custom-set-faces
-  ;; custom-set-faces was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
  )

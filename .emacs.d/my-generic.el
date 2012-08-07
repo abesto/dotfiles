@@ -1,8 +1,10 @@
 ;; Appearance
-(require 'color-theme)
-(require 'zenburn)
-(color-theme-initialize)
-(color-theme-zenburn)
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
+(load-theme 'zenburn)
+;(require 'color-theme)
+;(require 'zenburn)
+;(color-theme-initialize)
+;(color-theme-zenburn)
 
 ;; Window/editor stuff
 (set-default 'fill-column 80) ; 80. standard. good.
@@ -10,7 +12,7 @@
 (scroll-bar-mode -1)          ; No scrollbar either
 (setq visible-bell t)         ; Can't go beeping around at midnight, now can I?
 (show-paren-mode)
-(load "toggle-fullscreen")
+;(load "toggle-fullscreen")
 (column-number-mode 1)
 
 ;; This is me
@@ -36,7 +38,7 @@
 
 ;; highlight current line
 (global-hl-line-mode 1)
-(set-face-background 'hl-line "#222")
+(set-face-background 'hl-line "#333")
 
 ;; Mode-compile; very useful
 (autoload 'mode-compile "mode-compile"
@@ -64,10 +66,10 @@
 (require 'uniquify)
 
 ;; yasnippet and zencoding: win
-(require 'my-yasnippet)
-(require 'zencoding-mode)
-(add-hook 'sgml-mode-hook 'zencoding-mode)
+;(require 'my-yasnippet)
+;(require 'zencoding-mode)
+;(add-hook 'sgml-mode-hook 'zencoding-mode)
 
 ;; Load auctex site file
-(load "auctex.el")
-(load "preview-latex.el")
+;(load "auctex.el")
+;(load "preview-latex.el")

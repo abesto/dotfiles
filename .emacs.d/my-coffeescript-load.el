@@ -1,0 +1,5 @@
+(defun load-coffeescript ()
+  (interactive)
+  (add-to-list 'load-path "~/.emacs.d/site/coffee-mode")
+  (require 'coffee-mode)
+)
