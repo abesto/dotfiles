@@ -44,6 +44,7 @@
  '(org-export-time-stamp-file nil)
  '(php-manual-path "~/docs/php/html")
  '(ruby-deep-arglist nil)
+ '(shell-file-name "/usr/local/bin/zsh")
  '(show-paren-mode t)
  '(show-paren-style (quote mixed))
  '(smooth-scroll-margin 4)

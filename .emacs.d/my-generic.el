@@ -7,10 +7,10 @@
 ;(color-theme-zenburn)
 
 ;; Window/editor stuff
-(set-default 'fill-column 80) ; 80. standard. good.
-(tool-bar-mode -1)            ; No toolbar, thanks
-(scroll-bar-mode -1)          ; No scrollbar either
-(setq visible-bell t)         ; Can't go beeping around at midnight, now can I?
+(set-default 'fill-column 80)   ; 80. standard. good.
+(tool-bar-mode -1)              ; No toolbar, thanks
+(scroll-bar-mode -1)            ; No scrollbar either
+(lambda nil (message "*beep*")) ; Can't go beeping around at midnight, now can I?
 (show-paren-mode)
 ;(load "toggle-fullscreen")
 (column-number-mode 1)
@@ -21,7 +21,7 @@
 
 ;; Indenting
 (setq-default indent-tabs-mode nil)     ; I always want spaces instead of tabs
-(setq default-tab-width 4)
+(setq tab-width 4)
 (setq-default c-basic-offset 4)
 
 ;; %s/yes/y, %s/no/n

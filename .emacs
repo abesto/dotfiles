@@ -4,61 +4,36 @@
 ;; paths
 (add-to-list 'load-path "/Users/abesto/.emacs.d")
 (dolist (path (list ""
-                    "/mail"
-                    "/yasnippet"
-                    "/org"
-                    "/doxymacs"
-                    "/distel/elisp"
-                    "/completion-ui"
-                    "/zencoding"
                     "/js2-mode"
+                    "/coffee-mode"
+                    "/find-things-fast"
                     ))
   (add-to-list 'load-path (concat "/Users/abesto/.emacs.d/site" path)))
 
 ;;;;;;;;;;;;;;;;;;;
 ;; Generic stuff ;;
 ;;;;;;;;;;;;;;;;;;;
-(autoload 'htmlize-file "htmlize" "Load FILE, fontify it, convert it to HTML, and save the result." t)
-(autoload 'htmlize-buffer "htmlize" "Fontify buffer, convert it to HTML, and open the result in a new buffer." t)
-
 (load "my-generic") ; Settings I always want
 (load "my-ido")     ; Fuzzy filename search
 (load "my-viper")   ; Viper-mode setup
 (load "my-org")     ; org-mode setup
+(load "my-ftf")     ; find-things-fast
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; My mode startup scripts ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (autoload 'my-latex-init "my-latex-init")
-(autoload 'my-php-init "my-php-init")
-(autoload 'my-mail-init "my-mail-init")
-(autoload 'my-c++-init "my-c++-init")
-
-;; Mode hooks
-(add-hook 'c++-mode-hook 'my-c++-init)
 (add-hook 'LaTeX-mode-hook 'my-latex-init)
-(add-hook 'php-mode-user-hook 'my-php-init)
-(autoload 'lua-mode "lua-mode" "Lua editing mode." t)
-;; mails
-(autoload 'post-mode "post" "mode for e-mail" t)
-(add-hook 'post-mode-hook 'my-mail-init)
-(add-to-list 'auto-mode-alist '("sup" . post-mode))
 
-;;;;;;;;;;;;;;;;;;;;;;
-;; Big environemnts ;;
-;;;;;;;;;;;;;;;;;;;;;;
-;;; Each contains load-* to... load it
-(load "my-jde-load")     ; A Java Development Environment for Emacs
-(load "my-slime-load")   ; SLIME for editing lisp
-(load "my-nxhtml-load")  ; nxhtml for HTML+CSS+JS+PHP+Whatever
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Language-specific stuff ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(load "my-slime-load")
 (load "my-haskell-load")
-(load "my-php-load")
-(load "my-ecb-load")
 (load "my-ruby-load")
 (load "my-coffeescript-load")
+(load "my-js2-load")
 
-(require 'js2-mode)
-(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
 
 ;; Customize
 (setq custom-file "~/.emacs.d/custom.el")

@@ -22,18 +22,7 @@
 (org-defkey org-mode-map "\C-cn" 'insert-note-link)
 
 ;; Templates
-(setq org-remember-templates
-      '(("Hotel" ?h
-         "** ÚJ %^{Hotel neve}\n   Kérés érkezett: %t\n   Feltöltve: \n   Fizetve: \n   %?"
-         "~/proj/shop/hotelek.org" "Hotelek")
-        ("Note" ?n "%T %?%&")
-        ("Task" ?t "** TODO %? %^G" "~/gtd/main.org" "Tasks")
-        ("Project" ?p "* [[./%^{File name}.org][%^{Project name}]]" "~/org/projects.org")
-        ("Blogpost" ?b "* TODO %^{Title}\n  %?" "~/org/blog.org")
-        ("Quote" ?q "** %^{Text} - %^{Author}" "~/org/blog.org" "Quotes")
-        ))
+;(setq org-remember-templates)
 
 ;; Startup options
 (setq org-hide-leading-stars t)
-
-(load "note")
