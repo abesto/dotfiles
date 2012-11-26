@@ -1,7 +1,8 @@
-nethack on
 startup_message off
 vbell off
 bell_msg 'Bell in window %n^G'
+defscrollback 30000 
+escape ``
 
 hardstatus alwayslastline '%{= wk}%?%-Lw%?%{r}(%{k}%n*%f%t%?(%u)%?%{r})%{k}%?%+Lw%?%?%= %m/%d %C%A'
 activity ''
