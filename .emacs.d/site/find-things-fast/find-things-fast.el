@@ -98,7 +98,7 @@
   '("*.h" "*.hpp" "*.cpp" "*.c" "*.cc" "*.cpp" "*.inl" "*.grd" "*.idl" "*.m"
     "*.mm" "*.py" "*.sh" "*.cfg" "*SConscript" "SConscript*" "*.scons"
     "*.vcproj" "*.vsprops" "*.make" "*.gyp" "*.gypi" "*.rb" "*.json" "*.coffee"
-    "*.erb")
+    "*.erb" "*.conf")
   "A list of filetype patterns that grepsource will use. Obviously biased for
 chrome development.")
 

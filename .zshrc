@@ -10,6 +10,8 @@ ZSH_THEME="dieter-mod"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias linode1="ssh linode230533@london468.linode.com"
+alias linode2="ssh linode230801@london463.linode.com"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -29,15 +31,14 @@ ZSH_THEME="dieter-mod"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git brew osx python autojump rvm ruby gem python npm extract)
+plugins=(git osx python autojump rvm npm extract zsh-syntax-highlighting screen taskwarrior)
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:
+export PATH=/Library/Perl/5.12/auto/share/dist/Cope:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:$HOME/.rvm/bin:$HOME/.cabal/bin:/usr/local/go/bin
 export FLEX_HOME='/Applications/Adobe Flash Builder 4.6/sdks/3.6.0'
-export EDITOR='emacsclient -c'
-
-PATH=$PATH:$HOME/.rvm/bin:$HOME/.cabal/bin
+export EDITOR='emacsclient'
 
 unsetopt correct_all
+

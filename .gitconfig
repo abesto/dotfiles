@@ -1,0 +1,23 @@
+[user]
+	name = Zoltán Nagy
+	email = abesto@abesto.net
+[color]
+	ui = true
+[core]
+	editor = vim
+	whitespace = trailing-space,space-before-tab
+	excludesfile = /Users/abesto/.gitignore_global
+	ignorecase = false
+[merge]
+	tool = vimdiff
+	guitool = gvimdiff
+[alias]
+	st = status
+	co = checkout
+[ui]
+	color = auto
+[push]
+	default = tracking
+[rerere]
+	enabled = true
+

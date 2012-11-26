@@ -1,0 +1,4 @@
+.emacs.d/auto-save-list
+*.elc
+~*
+
