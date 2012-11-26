@@ -1,4 +1,4 @@
 .emacs.d/auto-save-list
 *.elc
 ~*
-
+.irssi/away.log
