@@ -1,2 +1,0 @@
-#!/bin/bash
-XDEBUG_CONFIG="idekey=netbeans-xdebug" phpunit -dxdebug.remote_host=`echo $SSH_CLIENT | cut -d "=" -f 2 | awk '{print $1}'` $1

@@ -1,1 +1,0 @@
-xrandr --output LVDS1 --set "scaling mode" "Full aspect"

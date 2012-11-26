@@ -1,2 +1,0 @@
-#!/bin/bash
-$(mimeo -c "$1")

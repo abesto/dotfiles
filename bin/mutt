@@ -1,4 +1,0 @@
-#!/bin/sh
-pwds=`gpg --decrypt ~/.mutt/pass.gpg`
-eval "$pwds"
-exec mutt "$@"
