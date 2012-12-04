@@ -36,7 +36,13 @@ plugins=(git osx python autojump rvm npm extract zsh-syntax-highlighting screen 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/Library/Perl/5.12/auto/share/dist/Cope:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:$HOME/.rvm/bin:$HOME/.cabal/bin:/usr/local/go/bin
+PATH=$HOME/bin                                                     # Mine, all mine!
+PATH=$PATH:/Library/Perl/5.12/auto/share/dist/Cope                 # Cope: color wrapper for some gnu core utils (OSX path)
+PATH=$PATH:$HOME/.rvm/bin:$HOME/.cabal/bin:/usr/local/go/bin       # language-specific stuff
+PATH=$PATH:/usr/X11/bin                                            # X11
+PATH=$PATH:/sbin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin  # System-wide binaries
+PATH=$PATH:/usr/local/Cellar/gettext/0.18.1.1/bin                  # gettext from homebrew
+export PATH
 export FLEX_HOME='/Applications/Adobe Flash Builder 4.6/sdks/3.6.0'
 export EDITOR='emacsclient'
 
