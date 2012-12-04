@@ -7,6 +7,7 @@ ksbu() { knife spork bump $1 && knife spork upload $1 }
 alias gd='git diff'
 alias gcaa='gca --amend'
 alias gk='gitk'
+alias grh='git reset --hard'
 
 alias sr='ssh -l root'
 alias sp='ssh -l publisher'
