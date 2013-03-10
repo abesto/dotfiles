@@ -1,10 +1,9 @@
+(package-initialize)
+
 ;; Appearance
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
-(load-theme 'zenburn)
-;(require 'color-theme)
-;(require 'zenburn)
-;(color-theme-initialize)
-;(color-theme-zenburn)
+(load-theme 'wombat)
+(powerline-center-theme)
 
 ;; Window/editor stuff
 (set-default 'fill-column 80)   ; 80. standard. good.
@@ -14,6 +13,8 @@
 (show-paren-mode)
 ;(load "toggle-fullscreen")
 (column-number-mode 1)
+(when (fboundp 'winner-mode) (winner-mode 1))
+
 
 ;; This is me
 (setq user-full-name "Nagy Zoltán")
@@ -32,13 +33,12 @@
 (mouse-avoidance-mode 'exile)
 
 ;; Some keybindings
-(global-set-key "\C-x\C-m" 'execute-extended-command)
 (global-set-key "\M-n" 'linum-mode)
 (global-set-key (kbd "\C-c <tab>") 'align-regexp)
 
 ;; highlight current line
 (global-hl-line-mode 1)
-(set-face-background 'hl-line "#333")
+;(set-face-background 'hl-line "#333")
 
 ;; Mode-compile; very useful
 (autoload 'mode-compile "mode-compile"
@@ -73,3 +73,8 @@
 ;; Load auctex site file
 ;(load "auctex.el")
 ;(load "preview-latex.el")
+
+;; MELPA
+(require 'package)
+(add-to-list 'package-archives
+             '("melpa" . "http://melpa.milkbox.net/packages/") t)

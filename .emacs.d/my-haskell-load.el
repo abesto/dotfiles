@@ -1,7 +1,6 @@
 (add-to-list 'load-path (concat "/Users/abesto/.emacs.d/site/haskell-mode"))
 (add-to-list 'load-path "/Users/abesto/.cabal/share/ghc-mod-1.11.0")
 (add-to-list 'exec-path "/Users/abesto/.cabal/bin")
-(load "haskell-site-file")
 
 (defun scion-hook ()
   (scion-mode 1)

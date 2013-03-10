@@ -4,6 +4,8 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(TeX-output-view-style (quote (("^dvi$" ("^landscape$" "^pstricks$\\|^pst-\\|^psfrag$") "%(o?)dvips -t landscape %d -o && gv %f") ("^dvi$" "^pstricks$\\|^pst-\\|^psfrag$" "%(o?)dvips %d -o && gv %f") ("^dvi$" ("^a4\\(?:dutch\\|paper\\|wide\\)\\|sem-a4$" "^landscape$") "%(o?)xdvi %dS -paper a4r -s 0 %d") ("^dvi$" "^a4\\(?:dutch\\|paper\\|wide\\)\\|sem-a4$" "%(o?)xdvi %dS -paper a4 %d") ("^dvi$" ("^a5\\(?:comb\\|paper\\)$" "^landscape$") "%(o?)xdvi %dS -paper a5r -s 0 %d") ("^dvi$" "^a5\\(?:comb\\|paper\\)$" "%(o?)xdvi %dS -paper a5 %d") ("^dvi$" "^b5paper$" "%(o?)xdvi %dS -paper b5 %d") ("^dvi$" "^letterpaper$" "%(o?)xdvi %dS -paper us %d") ("^dvi$" "^legalpaper$" "%(o?)xdvi %dS -paper legal %d") ("^dvi$" "^executivepaper$" "%(o?)xdvi %dS -paper 7.25x10.5in %d") ("^dvi$" "." "%(o?)xdvi %dS %d") ("^pdf$" "." "evince %o %(outpage)") ("^html?$" "." "netscape %o"))))
+ '(ack-and-a-half-arguments nil)
+ '(ack-and-a-half-executable "/usr/local/bin/ag")
  '(before-save-hook (quote (time-stamp delete-trailing-whitespace)))
  '(browse-url-browser-function (quote browse-url-generic))
  '(browse-url-firefox-new-window-is-tab nil)
@@ -26,9 +28,14 @@
  '(face-font-family-alternatives (quote (("arial black" "arial" "DejaVu Sans") ("arial" "DejaVu Sans") ("verdana" "DejaVu Sans"))))
  '(font-lock-keywords-case-fold-search t t)
  '(global-font-lock-mode t nil (font-lock))
+ '(grep-command "ag --nogroup --column -S ")
  '(haskell-literate-default (quote tex))
  '(haskell-mode-hook (quote (turn-on-haskell-indent turn-on-haskell-indentation turn-on-haskell-doc-mode)) t)
  '(haskell-program-name "/usr/local/bin/ghci \"+.\"")
+ '(helm-idle-delay 0.3)
+ '(helm-input-idle-delay 0.3)
+ '(helm-never-delay-on-input t)
+ '(helm-quick-update t)
  '(imenu-auto-rescan t)
  '(imenu-auto-rescan-maxout 60000000)
  '(inhibit-startup-screen t)

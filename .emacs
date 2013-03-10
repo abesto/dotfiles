@@ -3,21 +3,17 @@
 
 ;; paths
 (add-to-list 'load-path "/Users/abesto/.emacs.d")
-(dolist (path (list ""
-                    "/js2-mode"
-                    "/coffee-mode"
-                    "/find-things-fast"
-                    ))
-  (add-to-list 'load-path (concat "/Users/abesto/.emacs.d/site" path)))
+(add-to-list 'load-path "/Users/abesto/.emacs.d/site")
 
 ;;;;;;;;;;;;;;;;;;;
 ;; Generic stuff ;;
 ;;;;;;;;;;;;;;;;;;;
 (load "my-generic") ; Settings I always want
 (load "my-ido")     ; Fuzzy filename search
-(load "my-viper")   ; Viper-mode setup
 (load "my-org")     ; org-mode setup
-(load "my-ftf")     ; find-things-fast
+(load "my-helm")
+(load "my-projectile")
+(load "my-evil")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; My mode startup scripts ;;
@@ -31,9 +27,7 @@
 (load "my-slime-load")
 (load "my-haskell-load")
 (load "my-ruby-load")
-(load "my-coffeescript-load")
-(load "my-js2-load")
-
+(load "my-perl-load")
 
 ;; Customize
 (setq custom-file "~/.emacs.d/custom.el")

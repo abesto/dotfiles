@@ -6,7 +6,6 @@
 (add-hook 'org-mode-hook 'turn-on-font-lock)
 
 ;; Set up remember mode: http://orgmode.org/manual/Remember.html#Remember
-(org-remember-insinuate)
 (setq org-directory "~/org/")
 (setq org-default-notes-file (concat org-directory "~/org/notes.org"))
 (define-key global-map "\C-cr" 'org-remember)
@@ -19,7 +18,6 @@
     (read-from-minibuffer "Description: "))
    )
 )
-(org-defkey org-mode-map "\C-cn" 'insert-note-link)
 
 ;; Templates
 ;(setq org-remember-templates)

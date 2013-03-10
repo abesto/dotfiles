@@ -95,16 +95,16 @@
 ;;; Code:
 
 (defvar ftf-filetypes
-  '("*.h" "*.hpp" "*.cpp" "*.c" "*.cc" "*.cpp" "*.inl" "*.grd" "*.idl" "*.m"
-    "*.mm" "*.py" "*.sh" "*.cfg" "*SConscript" "SConscript*" "*.scons"
-    "*.vcproj" "*.vsprops" "*.make" "*.gyp" "*.gypi" "*.rb" "*.json" "*.coffee"
-    "*.erb" "*.conf")
-  "A list of filetype patterns that grepsource will use. Obviously biased for
-chrome development.")
+  '("*")
+  "A list of filetype patterns that grepsource will use.")
 
 (defvar ftf-ignored-filetypes
-  '("*.o" "*.pyc" "*.hi" "*.so")
+  '("*.o" "*.pyc" "*.hi" "*.so" "*~" ".bzr*" ".git*" ".#*")
   "A list of filetype patterns that will be ignored.")
+
+(defvar ftf-grep-command
+  "grep -nH -e"
+  "The grep command.")
 
 (defun ftf-add-filetypes (types)
   "Makes `ftf-filetypes' local to this buffer and adds the
@@ -152,11 +152,11 @@ adds the elements of list types to the list"
 (defun ftf-get-find-command ()
   "Creates the raw, shared find command from `ftf-filetypes'."
   (defun wrap-string (str operation)
-    (concat " -or -name \"" str "\" -" operation))
+    (concat " -or -name '" str "' -" operation))
   (defun wrap-prune (str)
     (wrap-string str "prune"))
   (defun wrap-print (str)
-    (wrap-string str "print0"))
+    (wrap-string str "type f -print0"))
   (concat "find -L . -path '*/.svn' -prune"
           (mapconcat 'wrap-prune ftf-ignored-filetypes " ")
           (mapconcat 'wrap-print ftf-filetypes " ")))
@@ -197,20 +197,18 @@ otherwise defaulting to `find-tag-default'."
       spec))))
 
 (defun ftf-grepsource-actual (cmd-args)
-  ;; When we're in a git repository, use git grep so we don't have to
-  ;; find-files.
-  (let ((quoted (replace-regexp-in-string "\"" "\\\\\"" cmd-args))
-        (git-toplevel (ftf-get-top-git-dir default-directory))
+  "When we're in a git repository, use git grep so we don't have to
+  find-files."
+  (let ((git-toplevel (ftf-get-top-git-dir default-directory))
+        (quoted (replace-regexp-in-string "\"" "\\\\\"" cmd-args))
         (grep-use-null-device nil))
-    (cond (git-toplevel ;; We can accelerate our grep using the git data.
-           (grep (concat "git --no-pager grep --no-color -n -e \""
-                         quoted
-                         "\" -- \""
-                         (mapconcat 'identity ftf-filetypes "\" \"")
-                         "\"")))
-          (t            ;; Fallback on find|xargs
-             (grep (concat (ftf-get-find-command)
-                           " | xargs -0 grep -i -nH -e \"" quoted "\""))))))
+    (cond (git-toplevel
+           (grep (concat "PAGER=cat git grep -n \"" quoted "\"")))
+          (t
+           (grep (concat (ftf-get-find-command)
+                         " | xargs -0 "
+                         ftf-grep-command
+                         " \"" quoted "\""))))))
 
 (defun ftf-grepsource (cmd-args)
   "Greps the current project, leveraging local repository data
@@ -226,14 +224,17 @@ if none of the above is found."
   (interactive (ftf-interactive-default-read "Grep project for string: "))
   (with-ftf-project-root (ftf-grepsource-actual cmd-args)))
 
+(defun ftf-get-git-find-command ()
+  (concat "git ls-files -- '"
+          (mapconcat 'identity ftf-filetypes "' '")
+          "'"))
+
 (defun ftf-project-files-string ()
   "Returns a string with the raw output of ."
   (let ((git-toplevel (ftf-get-top-git-dir default-directory)))
     (cond (git-toplevel
-           (shell-command-to-string
-            (concat "git ls-files -- \""
-                    (mapconcat 'identity ftf-filetypes "\" \"")
-                    "\"")))
+           (replace-regexp-in-string "\n" "\000"
+             (shell-command-to-string (ftf-get-git-find-command))))
           (t
            (shell-command-to-string (ftf-get-find-command))))))
 
@@ -241,7 +242,7 @@ if none of the above is found."
   "Returns a hashtable filled with file names as the key and "
   (let ((table (make-hash-table :test 'equal)))
     (mapcar (lambda (file)
-              (let* ((file-name (file-name-nondirectory file))
+              (let* ((file-name file)
                      (full-path (expand-file-name file))
                      (pathlist (cons full-path (gethash file-name table nil))))
                 (puthash file-name pathlist table)))
@@ -271,9 +272,7 @@ directory they are found in so that they are unique."
 (defun ftf-uniqueify (file-cons)
   "Set the car of the argument to include the directory name plus
 the file name."
-  (setcar file-cons
-	  (concat (car file-cons) ": "
-		  (cadr (reverse (split-string (cdr file-cons) "/"))))))
+  (setcar file-cons (car file-cons)))
 
 (defun ftf-find-file-actual ()
   (let* ((project-files (ftf-project-files-alist))
