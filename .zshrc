@@ -42,9 +42,41 @@ PATH=$PATH:$HOME/.rvm/bin:$HOME/.cabal/bin:/usr/local/go/bin       # language-sp
 PATH=$PATH:/usr/X11/bin                                            # X11
 PATH=$PATH:/sbin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin  # System-wide binaries
 PATH=$PATH:/usr/local/Cellar/gettext/0.18.1.1/bin                  # gettext from homebrew
+PATH=$PATH:/Users/abesto/.prezi/simply
+export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
 export PATH
+export EDITOR='vim'
+
+# GNU Tools
+PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
+PATH="/usr/local/opt/gnu-tar/libexec/gnubin:$PATH"
+PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"  
+MANPATH="/usr/local/opt/gnu-sed/libexec/gnuman:$MANPATH"
+
+# JVM, Java, Scala
+export JAVA_HOME=$(/usr/libexec/java_home)
+export SCALA_HOME=/usr/local/Cellar/scala/2.9.2/libexec
+export JAVACMD=drip
+export DRIP_SHUTDOWN=30
+export SBT_OPTS="-XX:+UseConcMarkSweepGC -XX:+CMSClassUnloadingEnabled"
+
 export FLEX_HOME='/Applications/Adobe Flash Builder 4.6/sdks/3.6.0'
-export EDITOR='emacsclient'
+
+# AWS
+export EC2_PRIVATE_KEY="$(/bin/ls "$HOME"/.ec2/pk-*.pem | /usr/bin/head -1)"
+export EC2_CERT="$(/bin/ls "$HOME"/.ec2/cert-*.pem | /usr/bin/head -1)"
+export EC2_HOME="/usr/local/Cellar/ec2-api-tools/1.6.12.0/libexec"
+export AWS_CREDENTIAL_FILE="$HOME"/.ec2/aws-credential
+export AWS_CLOUDFORMATION_HOME="/usr/local/Library/LinkedKegs/aws-cfn-tools/jars"
+export AWS_AUTO_SCALING_HOME="/usr/local/Library/LinkedKegs/auto-scaling/jars"
+export AWS_ELASTICACHE_HOME="/usr/local/Cellar/aws-elasticache/1.9.000/libexec"
+export AWS_SNS_HOME="/usr/local/Library/LinkedKegs/aws-sns-cli/jars"
+export AWS_CLOUDWATCH_HOME="/usr/local/Library/LinkedKegs/cloud-watch/jars"
+export SERVICE_HOME="$AWS_CLOUDWATCH_HOME"
+export EC2_AMITOOL_HOME="/usr/local/Library/LinkedKegs/ec2-ami-tools/jars"
+export AWS_ELB_HOME="/usr/local/Cellar/elb-tools/1.0.23.0/libexec"
+export AWS_RDS_HOME="/usr/local/Cellar/rds-command-line-tools/1.14.001/libexec"
 
 unsetopt correct_all
 

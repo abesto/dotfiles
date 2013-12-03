@@ -9,7 +9,7 @@
 typeset -A host_repr
 
 # translate hostnames into shortened, colorcoded strings
-host_repr=('Zoltans-MacBook-Air.local' "%{$fg_bold[green]%}air"
+host_repr=('Zoltans-MacBook-Pro.local' "%{$fg_bold[green]%}air"
            'localhost.localdomain' "%{$fg_bold[green]%}air")
 
 # local time, color coded by last return code
