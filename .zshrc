@@ -31,7 +31,7 @@ alias linode2="ssh linode230801@london463.linode.com"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git osx python autojump rvm npm extract zsh-syntax-highlighting screen taskwarrior)
+plugins=(git osx python autojump rvm npm extract zsh-syntax-highlighting screen taskwarrior sublime)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -55,11 +55,12 @@ PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 MANPATH="/usr/local/opt/gnu-sed/libexec/gnuman:$MANPATH"
 
 # JVM, Java, Scala
-export JAVA_HOME=$(/usr/libexec/java_home)
-export SCALA_HOME=/usr/local/Cellar/scala/2.9.2/libexec
-export JAVACMD=drip
-export DRIP_SHUTDOWN=30
-export SBT_OPTS="-XX:+UseConcMarkSweepGC -XX:+CMSClassUnloadingEnabled"
+#export JAVA_HOME=$(/usr/libexec/java_home)
+#export SCALA_HOME=/usr/local/Cellar/scala/2.9.2/libexec
+#export JAVACMD=drip
+#export DRIP_SHUTDOWN=30
+export SBT_OPTS="-XX:+UseConcMarkSweepGC -XX:+CMSClassUnloadingEnabled -XX:MaxPermSize=256M"
+export MAVEN_OPTS='-Xms384M -Xmx512M -XX:MaxPermSize=256M'
 
 export FLEX_HOME='/Applications/Adobe Flash Builder 4.6/sdks/3.6.0'
 
@@ -78,5 +79,13 @@ export EC2_AMITOOL_HOME="/usr/local/Library/LinkedKegs/ec2-ami-tools/jars"
 export AWS_ELB_HOME="/usr/local/Cellar/elb-tools/1.0.23.0/libexec"
 export AWS_RDS_HOME="/usr/local/Cellar/rds-command-line-tools/1.14.001/libexec"
 
+# Diary config
+#export DIARY_EDITOR=/Applications/Mou.app/Contents/MacOS/Mou
+export DIARY_FILE=$HOME/Dropbox/diary.gpg
+export DIARY_SYMMETRIC=yes
+
 unsetopt correct_all
+
+# LANG!
+export LANG=en_US.UTF-8
 

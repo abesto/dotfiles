@@ -25,11 +25,20 @@ v() {
 }
 alias d='deactivate'
 alias z=j
+f() {
+    find . -iname "*$**"
+}
 
 alias mt='./manage.py test'
 alias mr='./manage.py runserver'
 alias ms='./manage.py shell'
 alias rmt='TEST_WITH_REMOTE=1 ./manage.py test'
+
+mtt() {
+	mt $(echo $1 | totest)
+}
+alias rmtt='TEST_WITH_REMOTE=1 mtt'
+
 alias irc-tunnel='ssh -f abesto@direct.abesto.net -L 6667:direct.abesto.net:6667 -N'
 
 # from https://github.com/prezi/dotfiles/blob/zsol/ec2/aliases.zsh
@@ -55,7 +64,7 @@ s() {
         shift
         ec2_ssh $id "$@"
     else
-        chef_ssh "$@"
+        ssh "$@"
     fi
 }
 # eof stolen from zsol
@@ -84,4 +93,3 @@ smp() {
     (sr $h "$cmd" | tee -a $h.out) &
   done
 }
-

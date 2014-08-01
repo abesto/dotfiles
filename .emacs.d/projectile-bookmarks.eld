@@ -1,1 +1,1 @@
-("~/Workspace/prezi-chef/" "~/Workspace/link-checker/" "~/Workspace/please/" "~/Workspace/mission-control/" "~/Workspace/placement-daemon/")
+("~/.prezi/logster/" "~/Workspace/prezi-chef/" "~/Workspace/link-checker/" "~/Workspace/please/" "~/Workspace/mission-control/" "~/Workspace/placement-daemon/")
