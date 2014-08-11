@@ -43,6 +43,9 @@ alias rmtt='TEST_WITH_REMOTE=1 mtt'
 alias irc-tunnel='ssh -f abesto@direct.abesto.net -L 6667:direct.abesto.net:6667 -N'
 
 CHEF_HOME=${CHEF_HOME:-$HOME/.prezi/prezi-chef}
+ssh_debug() {
+    [ -n "$SSH_DEBUG" ] && echo "$@"
+}
 find_roles() {
     regex="$1"; shift
     ls $CHEF_HOME/roles | sed 's/\.json$//' | grep -E "$regex"
@@ -55,7 +58,7 @@ essh() {
 }
 ec2_ssh() {
     id=$1; shift
-    echo "Logging in to EC2 instance $id"
+    ssh_debug "Logging in to EC2 instance $id"
     ec2host=$(ec2-describe-instances --show-empty-fields $id | grep '^INSTANCE' | cut -f4)
     ssh $ec2host "$@"
 }
@@ -63,12 +66,12 @@ chef_ssh() {
     role_regex=$1; shift
     role=$(find_roles "$role_regex")
     if [ $(echo "$role" | wc -w) = '0' ]; then
-        echo "No matching Chef role found"
+        echo "No idea how to SSH into $role"
     elif [ $(echo "$role" | wc -w) != '1' ]; then
         echo "Found more than one matching Chef role:"
         echo "$role"
     else
-        echo "Logging in to nodes with Chef role $role"
+        ssh_debug "Logging in to nodes with Chef role $role"
         cd $CHEF_HOME
         knife ssh roles:$role cssh -x root
     fi
@@ -77,21 +80,21 @@ s() {
     id=$(echo $1 | grep -o 'i-[0-9a-f]\{8\}')
     if [ $? -eq 0 ]; then
         shift
-        echo "First argument looks like an EC2 instance id"
+        ssh_debug "First argument looks like an EC2 instance id"
         ec2_ssh $id "$@"
-    elif timeout 0.1 host "$1" > /dev/null; then
-        echo "First argument doesn't look like an EC2 instance id, but I can resolve it as a hostname. Logging in directly."
+    elif timeout 2 host "$1" > /dev/null; then
+        ssh_debug "First argument doesn't look like an EC2 instance id, but I can resolve it as a hostname. Logging in directly."
         ssh "$@"
     else
-        echo "First argument doesn't look like an EC2 instance id, I can't resolve it as a hostname, assuming it's a Chef role (maybe a regex)"
+        ssh_debug "First argument doesn't look like an EC2 instance id, I can't resolve it as a hostname, assuming it's a Chef role (maybe a regex)"
         chef_ssh "$@"
     fi
 }
 sr() {
-	s "$@" -l root
+    s "$@" -l root
 }
 sp() {
-	s "$@" -l publisher
+    s "$@" -l publisher
 }
 
 sm() {
