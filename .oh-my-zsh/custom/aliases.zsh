@@ -70,7 +70,7 @@ chef_ssh() {
     else
         echo "Logging in to nodes with Chef role $role"
         cd $CHEF_HOME
-        knife ssh roles:$role csshx -x root
+        knife ssh roles:$role cssh -x root
     fi
 }
 s() {
