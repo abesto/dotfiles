@@ -45,7 +45,7 @@ alias irc-tunnel='ssh -f abesto@direct.abesto.net -L 6667:direct.abesto.net:6667
 CHEF_HOME=${CHEF_HOME:-$HOME/.prezi/prezi-chef}
 find_roles() {
     regex="$1"; shift
-    ls $CHEF_HOME/roles | grep "$regex" | sed 's/\.json$//'
+    ls $CHEF_HOME/roles | sed 's/\.json$//' | grep -E "$regex"
 }
 alias instances="ec2-describe-instances"
 essh() {
