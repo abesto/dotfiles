@@ -66,7 +66,7 @@ chef_ssh() {
     role_regex=$1; shift
     role=$(find_roles "$role_regex")
     if [ $(echo "$role" | wc -w) = '0' ]; then
-        echo "No idea how to SSH into $role"
+        echo "No idea how to SSH into $role_regex"
     elif [ $(echo "$role" | wc -w) != '1' ]; then
         echo "Found more than one matching Chef role:"
         echo "$role"
