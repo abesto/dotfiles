@@ -1,5 +1,5 @@
 [user]
-	name = Zoltán Nagy
+	name = Zoltan Nagy
 	email = abesto@abesto.net
 [color]
 	ui = true
@@ -21,3 +21,5 @@
 [rerere]
 	enabled = true
 
+[rebase]
+	autostash = true
