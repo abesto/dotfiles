@@ -1,5 +1,5 @@
 function fish_right_prompt -d "Write out the right prompt"
     set_color blue
     date "+%H:%M:%H"
-    set_color white
+    set_color normal
 end
