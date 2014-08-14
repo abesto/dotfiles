@@ -8,3 +8,4 @@ alias grh='git reset --hard'
 alias glg="git log --graph --pretty=format:'%Cred%H%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 alias gri="git rebase --interactive"
 alias gup="git up"
+alias gp="git push"
