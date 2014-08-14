@@ -1,4 +1,4 @@
-set PATH $HOME/bin                                                     # Mine, all mine!
+set PATH $HOME/bin $PATH                                               # Mine, all mine!
 set PATH $PATH $HOME/.rvm/bin $HOME/.cabal/bin /usr/local/go/bin       # language-specific stuff
 set PATH $PATH /usr/X11/bin                                            # X11
 set PATH $PATH /sbin /usr/local/bin /usr/local/sbin /usr/bin /bin /usr/sbin  # System-wide binaries
