@@ -10,3 +10,4 @@ alias gri="git rebase --interactive"
 alias gup="git up"
 alias gp="git push"
 alias gco='git checkout'
+alias g=git
