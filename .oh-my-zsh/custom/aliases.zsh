@@ -91,10 +91,12 @@ s() {
     fi
 }
 sr() {
-    s "$@" -l root
+    target=$1; shift
+    s "$target" -l root "$@"
 }
 sp() {
-    s "$@" -l publisher
+    target=$1; shift
+    s "$target" -l publisher "$@"
 }
 
 sm() {
