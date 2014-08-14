@@ -9,3 +9,4 @@ alias glg="git log --graph --pretty=format:'%Cred%H%Creset -%C(yellow)%d%Creset 
 alias gri="git rebase --interactive"
 alias gup="git up"
 alias gp="git push"
+alias gco='git checkout'
