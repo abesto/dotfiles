@@ -1,5 +1,0 @@
-(add-to-list 'load-path "/Users/abesto/.emacs.d/site/find-things-fast")
-(require 'find-things-fast)
-(setq ftf-grep-command "ag -S --nogroup --column")
-(global-set-key '[f1] 'ftf-find-file)
-(global-set-key '[f2] 'ftf-grepsource)
