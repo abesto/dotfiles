@@ -10,7 +10,18 @@ end
 
 function find_roles
     set regex $argv[1]
-    ls $CHEF_HOME/roles | sed 's/\.json$//' | grep -E "$regex"
+    set candidates (ls $CHEF_HOME/roles | sed 's/\.json$//' | grep -E "$regex")
+    # If we have an exact match, use it
+    for candidate in $candidates
+        if [ "$regex" = "$candidate" ]
+            echo $candidate
+            return
+        end
+    end
+    # Otherwise return all the candidates
+    for candidate in $candidates
+        echo $candidate
+    end
 end
 
 function ec2_ssh
