@@ -1,1 +1,1 @@
-alias _=sudo
+alias -=sudo
