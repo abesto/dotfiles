@@ -10,7 +10,7 @@ set fish_theme agnoster
 set fish_plugins autojump brew ec2 extract rvm
 
 # Path to your custom folder (default path is $FISH/custom)
-#set fish_custom $HOME/dotfiles/oh-my-fish
+set fish_custom $HOME/.prezi/dotfiles/.oh-my-fish/custom
 
 # Load oh-my-fish configuration.
-. $fish_path/oh-my-fish.fish
+source $fish_path/oh-my-fish.fish
