@@ -1,6 +1,6 @@
 alias ga='git add'
 alias gd='git diff'
-alias gc='git commit'
+alias gc='git commit -v'
 alias gca='gc -a'
 alias gcaa='gca --amend'
 alias gk='gitk'
