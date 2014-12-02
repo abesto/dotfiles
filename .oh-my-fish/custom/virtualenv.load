@@ -6,4 +6,4 @@ function v
 		end
 	end
 end
-alias d='deactivate'
+balias d='deactivate'

@@ -1,2 +1,2 @@
-alias t=task
-alias ta='task add'
+balias t=task
+balias ta='task add'
