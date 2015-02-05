@@ -10,7 +10,7 @@ set fish_theme agnoster
 set fish_plugins brew ec2 extract rvm bak better-alias gi localhost node python
 
 # Path to your custom folder (default path is $FISH/custom)
-set fish_custom $HOME/.prezi/dotfiles/.oh-my-fish/custom
+set fish_custom $HOME/playground/dotfiles/.oh-my-fish/custom
 
 # Load oh-my-fish configuration.
 source $fish_path/oh-my-fish.fish
