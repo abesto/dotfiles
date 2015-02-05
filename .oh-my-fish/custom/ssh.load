@@ -26,7 +26,7 @@ end
 
 function ec2_ssh
     set id $argv[1]
-    set ec2host (ec2-describe-instances --show-empty-fields $id | grep '^INSTANCE' | cut -f4)
+    set ec2host (aws ec2 describe-instances --instance-id $id --region us-east-1 | jq '.Reservations[0].Instances[0].PublicIpAddress' -r)
     ssh_debug "Logging in to EC2 instance $id. Host: $ec2host. Extra args: $extra_args"
     set argv[1] $ec2host
     ssh $argv
