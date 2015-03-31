@@ -42,8 +42,8 @@ function chef_ssh
         echo $role
     else
         ssh_debug "Logging in to nodes with Chef role $role"
-        cd $CHEF_HOME
-        knife ssh roles:$role cssh -x root
+        set ips (knife search node "roles:$role" -F json | jq '.rows | map(.automatic.cloud_v2.public_ipv4 // .automatic.ipaddress) | join("\n")' -r)
+        env SHELL=bash tmux-cssh -u root $ips
     end
 end
 
