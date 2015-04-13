@@ -43,7 +43,13 @@ function chef_ssh
     else
         ssh_debug "Logging in to nodes with Chef role $role"
         set ips (knife search node "roles:$role" -F json | jq '.rows | map(.automatic.cloud_v2.public_ipv4 // .automatic.ipaddress) | join("\n")' -r)
-        env SHELL=bash tmux-cssh -u root $ips
+        if [ (count $ips) -eq 0 ];
+            echo "No nodes found with role $role"
+        else if [ (count $ips) -eq 1 ];
+            ssh -l root $ips
+        else
+            tmux-cssh -u root $ips
+        end
     end
 end
 
