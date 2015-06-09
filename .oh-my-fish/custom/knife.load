@@ -11,3 +11,6 @@ balias kns='knife node show'
 function ksr
     knife search node roles:$argv[1]
 end
+function kr
+	ls ~/.prezi/prezi-chef/roles | ag $argv[1]
+end
