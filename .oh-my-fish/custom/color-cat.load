@@ -1,1 +1,1 @@
-alias cat "pygmentize -g"
+alias ccat "pygmentize -g"
