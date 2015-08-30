@@ -1,5 +1,5 @@
 function fish_greeting
-    cat ~/.weather
+    #archey -c
     set_color white
     fortune
     set_color black

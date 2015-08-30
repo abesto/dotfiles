@@ -6,3 +6,5 @@ escape ``
 
 hardstatus alwayslastline '%{= wk}%?%-Lw%?%{r}(%{k}%n*%f%t%?(%u)%?%{r})%{k}%?%+Lw%?%?%= %m/%d %C%A'
 activity ''
+
+setenv PYTHONUNBUFFERED 1

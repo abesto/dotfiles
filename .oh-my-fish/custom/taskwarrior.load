@@ -1,4 +1,0 @@
-balias t=task
-balias ta='task add'
-balias tl='task +techlead'
-balias tla='task add +techlead'

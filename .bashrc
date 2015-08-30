@@ -2,13 +2,8 @@
 #[ -z "$PS1" ] && return 0
 
 source /etc/profile  # for autojump
-source ~/.bashprompt
 
-alias ls='ls --color=auto --group-directories-first'
 alias la='ls -a'
-alias yup='yaourt -Syu'
-alias y='yaourt -Sy'
-alias ys='yaourt'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
@@ -63,6 +58,4 @@ extract () {
 }
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-
-clear
 
