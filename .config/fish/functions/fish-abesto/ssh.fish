@@ -4,3 +4,5 @@ set easyssh_filter '(list (ec2-instance-id us-east-1) (ec2-instance-id us-west-1
 alias s "easyssh -e='$easyssh_executor' -d='$easyssh_discoverer' -f='$easyssh_filter'"
 alias sr 's -l root'
 alias sp 's -l publisher'
+
+alias sf "easyssh -l root -e='$easyssh_executor' -d='$easyssh_discoverer' -f='(list $easyssh_filter (external peco --select-1))'"

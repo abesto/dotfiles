@@ -1,13 +1,13 @@
-balias ksb='knife spork bump'
-balias ksu='knife spork upload'
-balias kcu='knife cookbook upload'
+alias ksb='knife spork bump'
+alias ksu='knife spork upload'
+alias kcu='knife cookbook upload'
 function kcuf 
     knife cookbook upload $argv[1] --force 
 end
 function ksbu
     knife spork bump $argv[1]; and knife spork upload $argv[1]
 end
-balias kns='knife node show'
+alias kns='knife node show'
 function ksr
     knife search node roles:$argv[1]
 end
