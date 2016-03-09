@@ -4,23 +4,11 @@ Tree-based autoenv
 env autoenv source autoenvfish cd set
 hutenosa
 
-autoinit
-https://github.com/fishery/autoinit
-Add init event support
-init emit events oh-my-fish source
-bucaran
-
 autojump
 https://github.com/jethrokuan/fish-autojump
 Clean autojump loading support
 j cd
 jethrokuan
-
-available
-https://github.com/fishery/available
-Test if a function or command is available
-test status legacy
-bucaran
 
 bass
 https://github.com/edc/bass
@@ -76,6 +64,12 @@ POSIX error code/string translator
 posix error code
 derekstavis
 
+fasd
+https://github.com/oh-my-fish/plugin-fasd
+fasd integration for fish
+fasd jump cd z
+simnalamburt
+
 fishtape
 https://github.com/fishery/fishtape
 TAP producing test runner
@@ -103,7 +97,7 @@ bucaran
 git-branch-name
 https://github.com/fishery/git-branch-name
 Get the name of the current Git branch
-git status info function
+git status info branch
 bucaran
 
 git-is-dirty
@@ -136,6 +130,18 @@ Test if there are changes in the working tree
 git status info function
 bucaran
 
+git-util
+https://github.com/fishery/git-util
+Collection of git utilities
+git status info function
+bucaran
+
+grc
+https://github.com/oh-my-fish/plugin-grc
+grc colorizer for various commands
+grc color wrapper
+tannhuber
+
 hash
 https://github.com/oh-my-fish/plugin-hash
 Compute string digests
@@ -148,17 +154,17 @@ Hulk-inspired, powerful green prompt
 prompt hulk superhero
 bucaran
 
+joker
+https://github.com/fishery/joker
+Crazy prompt inspired by the Joker
+prompt powerline joker batman
+bucaran
+
 lambda
 https://github.com/hasanozgan/theme-lambda
 Multiline, git-ware lambda prompt
 prompt multiline git lambda
 hasanozgan
-
-legacy
-https://github.com/fishery/legacy
-Compatibility with Oh My Fish!
-compat legacy
-bucaran
 
 lolfish
 https://github.com/er0/lolfish
@@ -171,6 +177,12 @@ https://github.com/oh-my-fish/theme-mars
 Git-aware, simple martian theme
 prompt git mars
 mvader
+
+masenko
+https://github.com/fishery/masenko
+Namekian prompt inspired by the demon blast
+prompt powerline dbz
+bucaran
 
 narwhal
 https://github.com/0rax/narwhal
@@ -262,6 +274,12 @@ Text colorization declarative DSL
 color ansi styles text
 derekstavis
 
+thefuck
+https://github.com/oh-my-fish/plugin-thefuck
+thefuck integration for fish
+cli thefuck correct
+scorphus
+
 title
 https://github.com/oh-my-fish/plugin-title
 Change the tab/window title string
@@ -273,6 +291,12 @@ https://github.com/fishery/fish-z
 Pure-fish z directory jumping
 z search cd jump
 jethrokuan
+
+zealot
+https://github.com/fishery/zealot
+Prompt inspired by the Protoss
+prompt powerline starcraft
+bucaran
 
 zish
 https://github.com/oh-my-fish/theme-zish
