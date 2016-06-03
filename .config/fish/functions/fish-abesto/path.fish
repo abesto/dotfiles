@@ -1,13 +1,10 @@
 set PATH $HOME/bin $PATH                                               # Mine, all mine!
-set PATH $PATH $HOME/.rvm/bin $HOME/.cabal/bin /usr/local/go/bin       # language-specific stuff
+set PATH $PATH $HOME/.rvm/bin                                          # language-specific stuff
 set PATH $PATH /usr/X11/bin                                            # X11
 set PATH $PATH /sbin /usr/local/bin /usr/local/sbin /usr/bin /bin /usr/sbin  # System-wide binaries
-set PATH $PATH /usr/local/Cellar/gettext/0.18.1.1/bin                  # gettext from homebrew
 set PATH $PATH $HOME/.prezi/simply
 
 # GNU Tools
 set PATH /usr/local/opt/coreutils/libexec/gnubin $PATH
 set MANPATH /usr/local/opt/coreutils/libexec/gnuman $MANPATH
 set PATH /usr/local/opt/gnu-tar/libexec/gnubin $PATH
-set PATH /usr/local/opt/gnu-sed/libexec/gnubin $PATH
-set MANPATH /usr/local/opt/gnu-sed/libexec/gnuman $MANPATH

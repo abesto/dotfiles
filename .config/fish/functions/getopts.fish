@@ -1,0 +1,1 @@
+/Users/abesto/.config/fisherman/getopts/getopts.fish

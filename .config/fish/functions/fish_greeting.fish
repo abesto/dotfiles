@@ -1,0 +1,1 @@
+/Users/abesto/.config/fisherman/functions/fish_greeting.fish

@@ -1,0 +1,1 @@
+/Users/abesto/.config/fisherman/completions/debug.fish

@@ -1,0 +1,1 @@
+/Users/abesto/.config/fisherman/functions/rvm.fish
