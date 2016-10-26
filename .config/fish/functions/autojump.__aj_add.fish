@@ -1,1 +1,0 @@
-/Users/abesto/.config/fisherman/conf.d/autojump.__aj_add.fish

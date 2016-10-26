@@ -1,1 +1,0 @@
-/Users/abesto/.config/fisherman/functions/fish_title.fish

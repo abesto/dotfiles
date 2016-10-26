@@ -1,1 +1,0 @@
-/Users/abesto/.config/fisherman/completions/spin.fish

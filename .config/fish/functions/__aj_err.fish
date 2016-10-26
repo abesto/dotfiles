@@ -1,1 +1,0 @@
-/Users/abesto/.config/fisherman/functions/__aj_err.fish
