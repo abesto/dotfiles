@@ -1,1 +1,1 @@
-rvm current > /dev/null
+rvm use > /dev/null

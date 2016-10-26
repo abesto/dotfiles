@@ -5,7 +5,7 @@ set PATH $PATH /sbin /usr/local/bin /usr/local/sbin /usr/bin /bin /usr/sbin  # S
 test -d ~/.prezi/simply; and set PATH $PATH $HOME/.prezi/simply
 
 # GNU Tools
-if test -d /usr/local/opt/coreutils; then
+if test -d /usr/local/opt/coreutils
     set PATH /usr/local/opt/coreutils/libexec/gnubin $PATH
     set MANPATH /usr/local/opt/coreutils/libexec/gnuman $MANPATH
 end
