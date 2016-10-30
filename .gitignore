@@ -2,3 +2,7 @@
 *.elc
 ~*
 .irssi/away.log
+.xmonad/xmonad-x86_64-linux
+.xmonad/xmonad.errors
+.xmonad/xmonad.hi
+.xmonad/xmonad.o
