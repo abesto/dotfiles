@@ -1,0 +1,18 @@
+-- -*- mode: haskell -*-
+
+Config { template = "%StdinReader%}{%top% | %swap% | %memory% | %dynnetwork% | %diskio% | %date%"
+       , commands = [ Run StdinReader
+                    , Run DynNetwork [ "--template", "<dev>: <rx> <tx>"
+                                     , "--suffix", "True"
+                                     , "--minwidth", "7"
+                                     ] 10
+                    , Run Memory [ "--template", "Mem: <usedratio>%"
+                                 , "--minwidth", "3"
+                                 ] 10
+                    , Run Swap [ "--minwidth", "3" ] 10
+                    , Run TopProc [] 50
+                    , Run DiskIO
+                      [("/", "Root FS: <read> <write>")]
+                      [ "--minwidth", "7" ] 10
+                    ]
+       }
