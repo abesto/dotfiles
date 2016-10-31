@@ -220,11 +220,11 @@ user code."
  This function is called at the very end of Spacemacs initialization after
 layers configuration. You are free to put any user code."
   ;; Python stuff
-  (add-hook 'python-mode-hook
-            (lambda ()
-              (setq python-shell-interpreter "/usr/local/bin/python")
-              (setq anaconda-mode-server-script
-                    "/usr/local/lib/python2.7/site-packages/anaconda_mode.py")))
+  ;(add-hook 'python-mode-hook
+            ;(lambda ()
+              ;(setq python-shell-interpreter "/usr/local/bin/python")
+              ;(setq anaconda-mode-server-script
+                    ;"/usr/local/lib/python2.7/site-packages/anaconda_mode.py")))
   ;; editorconfig
   (load "editorconfig")
   (editorconfig-mode 1)
@@ -255,11 +255,11 @@ layers configuration. You are free to put any user code."
      ("#A41F99" . 85)
      ("#49483E" . 100))))
  '(magit-diff-use-overlays nil)
- '(monokai-height-minus-1 1)
- '(monokai-height-plus-1 1)
- '(monokai-height-plus-2 1)
- '(monokai-height-plus-3 1)
- '(monokai-height-plus-4 1)
+ '(monokai-height-minus-1 1.0)
+ '(monokai-height-plus-1 1.0)
+ '(monokai-height-plus-2 1.0)
+ '(monokai-height-plus-3 1.0)
+ '(monokai-height-plus-4 1.0)
  '(monokai-use-variable-pitch nil)
  '(package-selected-packages
    (quote
