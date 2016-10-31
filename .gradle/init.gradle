@@ -1,0 +1,39 @@
+apply plugin: AddEnsimePlugin
+
+class AddEnsimePlugin  implements Plugin<Gradle> {
+  def supportedPlugins = [
+    'org.gradle.api.plugins.JavaPlugin',
+    'org.gradle.api.plugins.ScalaPlugin',
+    'jp.leafytree.gradle.AndroidScalaPlugin'
+  ]
+
+  void apply(Gradle gradle) {
+    def added = false
+
+    gradle.allprojects { project ->
+      project.with {
+        if (parent == null) {
+          buildscript {
+            repositories {
+              jcenter()
+              maven {
+                name 'JFrog OSS Snapshot Repository'
+                url 'http://oss.jfrog.org/oss-snapshot-local'
+              }
+            }
+            dependencies {
+              classpath 'net.coacoas.gradle:ensime-gradle:0.2.8'
+            }
+          }
+        }
+
+        plugins.whenPluginAdded { plugin ->
+          if (!added && supportedPlugins.contains(plugin.class.name)) {
+            rootProject.apply plugin: 'org.ensime.gradle'
+            added = true
+          }
+        }
+      }
+    }
+  }
+}
