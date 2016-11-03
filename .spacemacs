@@ -242,7 +242,7 @@ layers configuration. You are free to put any user code."
    (quote
     ("05411251e1232959144334e4359f8af0931c6c1a2f3a109d0d9e6753b6dfecfe" "196cc00960232cfc7e74f4e95a94a5977cb16fd28ba7282195338f68c84058ec" "bffa9739ce0752a37d9b1eee78fc00ba159748f50dc328af4be661484848e476" "38ba6a938d67a452aeb1dada9d7cdeca4d9f18114e9fc8ed2b972573138d4664" default)))
  '(evil-want-Y-yank-to-eol t)
- '(exec-path-from-shell-arguments (quote ("--rcfile" "~/.bashrc-nofish")))
+ '(exec-path-from-shell-arguments (quote ("--rcfile" "~/.bashrc-nofish" "-i")))
  '(exec-path-from-shell-variables (quote ("PATH" "MANPATH" "SSH_AUTH_SOCK" "SSH_AGENT_PID")))
  '(fci-rule-color "#49483E" t)
  '(highlight-changes-colors (quote ("#FD5FF0" "#AE81FF")))
