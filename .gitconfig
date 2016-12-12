@@ -14,6 +14,7 @@
 [alias]
 	st = status
 	co = checkout
+	up = pull --rebase --autostash
 [ui]
 	color = auto
 [push]
