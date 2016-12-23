@@ -213,7 +213,9 @@ user code."
   (setq etcc--evil-insert-state-cursor 'bar)
   (setq etcc--evil-visual-state-cursor 'box)
   (setq etcc--evil-emacs-state-cursor 'hbar)
-  (setq exec-path-from-shell-check-startup-files nil))
+  (setq exec-path-from-shell-check-startup-files nil)
+  (push '("melpa-stable" . "stable.melpa.org/packages/") configuration-layer--elpa-archives)
+  (push '(ensime . "melpa-stable") package-pinned-packages))
 
 (defun dotspacemacs/user-config ()
   "Configuration function for user code.
