@@ -1,5 +1,12 @@
-!!https://gist.github.com/yevgenko/1167205
+urxvt.scrollTtyOutput: false
+urxvt.scrollWithBuffer: true
+urxvt.scrollTtyKeypress: true
 
+urxvt.secondaryScreen: 1
+urxvt.secondaryScroll: 0
+urxvt.secondaryWheel: 1
+
+!!color scheme from https://gist.github.com/yevgenko/1167205
 urxvt.background: #002b36
 urxvt.foreground: #657b83
 !!*fading: 40
