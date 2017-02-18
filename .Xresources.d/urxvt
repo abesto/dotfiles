@@ -40,4 +40,4 @@ urxvt.color14: #93a1a1
 urxvt.color7: #eee8d5
 urxvt.color15: #fdf6e3
 
-urxvt.font: Source Code Pro:style=Semibold:size=11
+urxvt.font: xft:Source Code Pro:style=Semibold:size=11
