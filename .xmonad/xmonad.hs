@@ -70,7 +70,7 @@ myManageHook = composeAll
     , resource  =? "gpicview"       --> doFloat
     , className =? "slack"          --> doShift "4:comm"
     , className =? "wmail"          --> doShift "4:comm"
-    , className =? "Spotify"        --> doShift "5:media"
+    , className =? "spotify"        --> doShift "5:media"
     , className =? "stalonetray"    --> doIgnore
     , className =? "emacs"          --> doShift "1:code"
     , isFullscreen --> (doF W.focusDown <+> doFullFloat)]
@@ -87,10 +87,10 @@ myManageHook = composeAll
 -- which denotes layout choice.
 --
 myLayout = avoidStruts (
+    tabbed shrinkText tabConfig |||
     ThreeColMid 1 (3/100) (1/2) |||
     Tall 1 (3/100) (1/2) |||
     Mirror (Tall 1 (3/100) (1/2)) |||
-    tabbed shrinkText tabConfig |||
     Full |||
     spiral (6/7)) |||
     noBorders (fullscreenFull Full)
