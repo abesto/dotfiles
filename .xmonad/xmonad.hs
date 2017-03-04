@@ -69,6 +69,7 @@ myManageHook = composeAll
     , className =? "Gimp"           --> doFloat
     , resource  =? "gpicview"       --> doFloat
     , className =? "slack"          --> doShift "4:comm"
+    , title     =? "Gitter"         --> doShift "4:comm"
     , className =? "wmail"          --> doShift "4:comm"
     , className =? "spotify"        --> doShift "5:media"
     , className =? "stalonetray"    --> doIgnore

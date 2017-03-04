@@ -19,3 +19,4 @@ start_once spotify
 start_once wmail
 start_once google-chrome-stable chrome
 start_once slack
+start_once gitter
