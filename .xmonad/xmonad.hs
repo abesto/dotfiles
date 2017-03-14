@@ -180,11 +180,19 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
 
   -- Play/pause.
   , ((0, 0x1008FF14),
-     spawn "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPaus")
+     spawn "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause")
 
   -- Audio next.
   , ((0, 0x1008FF17),
      spawn "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next")
+
+  -- Brightness down
+  , ((0, xF86XK_MonBrightnessDown),
+     spawn "xbacklight -dec 10")
+
+  -- Brightness up
+  , ((0, xF86XK_MonBrightnessUp),
+     spawn "xbacklight -inc 10")
 
   -- Eject CD tray.
   , ((0, 0x1008FF2C),
