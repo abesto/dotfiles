@@ -3,7 +3,7 @@
 Config {
     bgColor = "#000000",
     fgColor = "#ffffff",
-    position = Static { xpos = 0, ypos = 0, width = 1920, height = 16 },
+    font = "xft:Source Code Pro:style=Semibold:size=8"
     lowerOnStart = True,
     commands = [
         Run MultiCpu ["-t","Cpu: <total0>","-L","30","-H","60","-h","#FFB6B0","-l","#CEFFAC","-n","#FFFFCC","-w","3"] 10,
