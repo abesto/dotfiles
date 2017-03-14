@@ -111,7 +111,9 @@ tabConfig = defaultTheme {
     activeColor = "#000000",
     inactiveBorderColor = "#7C7C7C",
     inactiveTextColor = "#EEEEEE",
-    inactiveColor = "#000000"
+    inactiveColor = "#000000",
+    fontName = "xft:Source Code Pro:style=Semibold:size=8",
+    decoHeight = 32
 }
 
 -- Color of current window title in xmobar.
