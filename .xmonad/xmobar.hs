@@ -14,7 +14,7 @@ Config {
         Run StdinReader,
         Run TopProc [] 10,
         Run TopMem [] 10,
-        Run Battery ["-t", "Battery: <acstatus><timeleft> (<left>%)",
+        Run Battery ["-t", "Battery: <acstatus> <timeleft> (<left>%)",
                "-L", "10", "-H", "80", "-p", "3",
                "--", "-O", "<fc=green>On</fc> - ", "-i", "",
                "-L", "-15", "-H", "-5",
