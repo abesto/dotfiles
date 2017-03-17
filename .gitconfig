@@ -15,9 +15,11 @@
 [alias]
 	st = status
 	co = checkout
-	up = pull --rebase --autostash
+	up = pull
 [ui]
 	color = auto
+[pull]
+	rebase = true
 [push]
 	default = tracking
 [rerere]
