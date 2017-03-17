@@ -1,6 +1,6 @@
 [user]
 	name = Zoltan Nagy
-	email = abesto@abesto.net
+	email = abesto0@gmail.com
 [color]
 	ui = true
 [core]
@@ -36,3 +36,5 @@
 	oldHighlight = red bold 52
 	newNormal = green bold
 	newHighlight = green bold 22
+[commit]
+	gpgsign = true
