@@ -1,0 +1,6 @@
+icon_size 8
+window_type normal
+geometry 8x1+900
+window_strut none
+background black
+icon_gravity NE
