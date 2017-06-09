@@ -147,7 +147,7 @@ icon_folders = /usr/share/icons/Paper/16x16/mimetypes/:/usr/share/icons/Paper/48
 
 
 [frame]
-width = 3
+width = 2
 color = "#8EC07C"
 
 [shortcuts]
