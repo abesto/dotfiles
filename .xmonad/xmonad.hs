@@ -164,15 +164,15 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
 
   -- Mute volume.
   , ((0, xF86XK_AudioMute),
-     spawn "pactl set-sink-mute 0 toggle")
+     spawn "pulseaudio-ctl mute")
 
   -- Decrease volume.
   , ((0, xF86XK_AudioLowerVolume),
-     spawn "pactl set-sink-volume 0 -5%")
+     spawn "pulseaudio-ctl down")
 
   -- Increase volume.
   , ((0, xF86XK_AudioRaiseVolume),
-     spawn "pactl set-sink-volume 0 +5%")
+     spawn "pulseaudio-ctl up")
 
   -- Audio previous.
   , ((0, 0x1008FF16),
