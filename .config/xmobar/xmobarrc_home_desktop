@@ -1,18 +1,21 @@
 -- -*- mode: haskell -*-
+-- heavily based on http://github.com/vicfryzel/xmonad-config
 
-Config { template = "%StdinReader%}{%top% | %swap% | %memory% | %dynnetwork% | %diskio% | %date%"
-       , commands = [ Run StdinReader
-                    , Run DynNetwork [ "--template", "<dev>: <rx> <tx>"
-                                     , "--suffix", "True"
-                                     , "--minwidth", "7"
-                                     ] 10
-                    , Run Memory [ "--template", "Mem: <usedratio>%"
-                                 , "--minwidth", "3"
-                                 ] 10
-                    , Run Swap [ "--minwidth", "3" ] 10
-                    , Run TopProc [] 50
-                    , Run DiskIO
-                      [("/", "Root FS: <read> <write>")]
-                      [ "--minwidth", "7" ] 10
-                    ]
-       }
+Config {
+    bgColor = "#000000",
+    fgColor = "#ffffff",
+    font = "xft:Source Code Pro:style=Semibold:size=8",
+    lowerOnStart = True,
+    commands = [
+        Run MultiCpu ["-L","30","-H","70","-h","#FFB6B0","-n","green","-p","2","-t","Cpu%: <autototal>"] 10,
+        Run CoreTemp ["-L","40","-H","60","-h","#FFB6B0","-t","Temp: <core0> <core1> <core2> <core3>"] 10,
+        Run Memory ["-t","Mem: <usedratio>%","-H","8192","-L","4096","-h","#FFB6B0","-l","#CEFFAC","-n","#FFFFCC","-p","3"] 10,
+        Run DynNetwork ["-H","1024","-L","100","-h","#FFB6B0","-l","#CEFFAC","-n","#FFFFCC","-w","4"] 10,
+        Run Date "%a %b %_d %Y %H:%M:%S" "date" 10,
+        Run StdinReader,
+        Run TopProc ["-w","15","-a","r"] 10
+    ],
+    sepChar = "%",
+    alignSep = "}{",
+    template = "%StdinReader%}{<%top%><%multicpu%><%coretemp%><%memory%><%dynnetwork%> <fc=#FFFFCC>%date%</fc>"
+}
