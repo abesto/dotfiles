@@ -1,6 +1,6 @@
 icon_size 28
 window_type normal
 geometry 8x1+1800
-window-strut none
+window_strut none
 background black
 icon-gravity NE
