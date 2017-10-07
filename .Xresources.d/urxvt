@@ -7,7 +7,7 @@ urxvt.secondaryScreen: 1
 urxvt.secondaryScroll: 0
 urxvt.secondaryWheel: 1
 
-urxvt.font: xft:Source Code Pro:style=Semibold:size=11
+urxvt.font: xft:SourceCodePro NF:style=SemiBold:size=11
 
 ! https://raw.githubusercontent.com/johntyree/dotfiles/master/Xresources.d/urxvt-colours-tango-dark
 ! Tango colour theme for rxvt-unicode
