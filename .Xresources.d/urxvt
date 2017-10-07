@@ -9,33 +9,24 @@ urxvt.secondaryWheel: 1
 
 urxvt.font: xft:Source Code Pro:style=Semibold:size=11
 
-*background: #0f0f0f
-*foreground: #c8c8c8
+! https://raw.githubusercontent.com/johntyree/dotfiles/master/Xresources.d/urxvt-colours-tango-dark
+! Tango colour theme for rxvt-unicode
+URxvt.background: #000000000000
+URxvt.foreground: #BBBBBBBBBBBB
+URxvt.color0: #17171A1A1B1B
+URxvt.color1: #CCCC00000000
+URxvt.color2: #4E4E9A9A0606
+URxvt.color3: #C4C4A0A00000
+URxvt.color4: #34346565A4A4
+URxvt.color5: #757550507B7B
+URxvt.color6: #060698209A9A
+URxvt.color7: #D3D3D7D7CFCF
+URxvt.color8: #555557575353
+URxvt.color9: #EFEF29292929
+URxvt.color10: #8A8AE2E23434
+URxvt.color11: #FCFCE9E94F4F
+URxvt.color12: #72729F9FCFCF
+URxvt.color13: #ADAD7F7FA8A8
+URxvt.color14: #3434E2E2E2E2
+URxvt.color15: #EEEEEEEEECEC
 
-! Colors
-URxvt*background: #000000
-URxvt*foreground: #B2B2B2
-! black
-URxvt*color0:  #000000
-URxvt*color8:  #686868
-! red
-URxvt*color1:  #B21818
-URxvt*color9:  #FF5454
-! green
-URxvt*color2:  #18B218
-URxvt*color10: #54FF54
-! yellow
-URxvt*color3:  #B26818
-URxvt*color11: #FFFF54
-! blue
-URxvt*color4:  #4848C2
-URxvt*color12: #B4B4FF
-! purple
-URxvt*color5:  #B218B2
-URxvt*color13: #FF54FF
-! cyan
-URxvt*color6:  #18B2B2
-URxvt*color14: #54FFFF
-! white
-URxvt*color7:  #B2B2B2
-URxvt*color15: #FFFFFF
