@@ -8,6 +8,7 @@ urxvt.secondaryScroll: 0
 urxvt.secondaryWheel: 1
 
 urxvt.font: xft:SourceCodePro NF:style=SemiBold:size=11
+urxvt.letterSpace: -1
 
 ! https://raw.githubusercontent.com/johntyree/dotfiles/master/Xresources.d/urxvt-colours-tango-dark
 ! Tango colour theme for rxvt-unicode
