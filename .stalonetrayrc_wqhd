@@ -1,0 +1,8 @@
+icon_size 28
+window_type normal
+geometry 1x77+0+26
+vertical true
+window_strut none
+background black
+window_strut left
+icon_gravity NE
