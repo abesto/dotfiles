@@ -1,2 +1,3 @@
 #!/bin/bash
+sudo modprobe msr
 sudo wrmsr 0x1FC 2
