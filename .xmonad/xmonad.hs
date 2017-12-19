@@ -27,7 +27,7 @@ import qualified Data.Map        as M
 myTerminal = "urxvt -e tmux"
 
 -- The command to lock the screen or show the screensaver.
-myScreensaver = "/usr/bin/gnome-screensaver-command --lock"
+myScreensaver = "test -x /usr/bin/gnome-screensaver-command && /usr/bin/gnome-screensaver-command --lock || /usr/bin/xscreensaver-command -lock"
 
 -- The command to take a selective screenshot, where you select
 -- what you'd like to capture on the screen.
