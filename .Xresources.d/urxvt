@@ -7,7 +7,7 @@ urxvt.secondaryScreen: 1
 urxvt.secondaryScroll: 0
 urxvt.secondaryWheel: 1
 
-urxvt.font: xft:SourceCodePro NF:style=SemiBold:size=11
+urxvt.font: xft:SauceCodePro Nerd Font Mono:style=SemiBold:size=11
 urxvt.letterSpace: -1
 
 ! https://raw.githubusercontent.com/johntyree/dotfiles/master/Xresources.d/urxvt-colours-tango-dark
