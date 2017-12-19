@@ -38,7 +38,7 @@ myScreenshot = "screenshot"
 
 -- The command to use as a launcher, to launch commands that don't have
 -- preset keybindings.
-myLauncher = "$(~/.cabal/bin/yeganesh -x -- -nb '#000000' -nf '#FFFFFF' -sb '#7C7C7C' -sf '#CEFFAC')"
+myLauncher = "$($(test -x ~/.cabal/bin/yeganesh && ~/.cabal/bin/yeganesh || yegonesh) -x -- -nb '#000000' -nf '#FFFFFF' -sb '#7C7C7C' -sf '#CEFFAC')"
 
 
 ------------------------------------------------------------------------
