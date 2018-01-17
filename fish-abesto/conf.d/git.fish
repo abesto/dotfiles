@@ -11,3 +11,4 @@ alias gup="git up"
 alias gp="git push"
 alias gco='git checkout'
 alias g=git
+alias gpo="git push --set-upstream origin (git rev-parse --abbrev-ref HEAD)"
