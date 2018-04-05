@@ -4,11 +4,13 @@ function auto_v --on-variable PWD
         for candidate in virtualenv venv '';
             set -l venv "$root/$candidate"
             set -l activate "$venv/bin/activate.fish"
-            if [ -f "$activate" -a "$venv" != "$VIRTUAL_ENV" ];
-                if [ -n "$VIRTUAL_ENV" ]
-                    deactivate
+            if [ -f "$activate" ]
+                if [ "$venv" != "$VIRTUAL_ENV" ]
+                  if [ -n "$VIRTUAL_ENV" ]
+                      deactivate
+                  end
+                  source "$activate"
                 end
-                source "$activate"
                 return
             end
         end
