@@ -10,3 +10,8 @@ if test -d /usr/local/opt/coreutils
     set MANPATH /usr/local/opt/coreutils/libexec/gnuman $MANPATH
 end
 test -d /usr/local/opt/gnu-tar; and set PATH /usr/local/opt/gnu-tar/libexec/gnubin $PATH
+
+# Go, if installed on the system
+if which go >/dev/null 2>/dev/null
+    set PATH $PATH (go env GOPATH)/bin
+end
