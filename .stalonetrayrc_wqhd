@@ -1,5 +1,6 @@
 icon_size 28
 geometry 1x77+0+18
+max_geometry 1x77+0+18
 vertical true
 window_strut none
 background black
