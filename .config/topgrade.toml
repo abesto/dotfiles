@@ -1,0 +1,4 @@
+git_repos = [
+    "~/dotfiles",
+    "~/.ansible/plugins/modules/aur"
+]
