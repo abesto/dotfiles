@@ -13,9 +13,10 @@ Config {
         Run DynNetwork ["-H","1000000","-L","100000","-h","#FFB6B0","-n","#CEFFAC","-w","4"] 10,
         Run Date "%a %b %_d %Y %H:%M:%S" "date" 10,
         Run StdinReader,
-        Run TopProc ["-w","15","-a","r"] 10
+        Run TopProc ["-w","15","-a","r"] 10,
+        Run Com "task" ["+in","+PENDING","count"] "" 10
     ],
     sepChar = "%",
     alignSep = "}{",
-    template = "%StdinReader%}{<%top%><%multicpu%><%coretemp%><%memory%><%dynnetwork%> <fc=#FFFFCC>%date%</fc>"
+    template = "%StdinReader%}{<%top%><%multicpu%><%coretemp%><%memory%><%dynnetwork%><+in:%task%> <fc=#FFFFCC>%date%</fc>"
 }
