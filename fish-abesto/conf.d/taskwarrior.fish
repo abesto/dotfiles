@@ -2,6 +2,7 @@ alias t task
 alias ta 'task add'
 alias in 'task add +in'
 alias someday 'task add +someday'
+alias weekly 'task proj:gtd.weekly'
 
 function tickle
     command task add +in +tickle wait:$argv[1] $argv[2..-1]
