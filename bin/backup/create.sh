@@ -1,5 +1,6 @@
 #!/bin/bash
 
+set -x
 set -euo pipefail
 
 borg create -p -v --stats \
@@ -19,4 +20,4 @@ borg create -p -v --stats \
      --exclude "$HOME/.sbt/*" \
      --exclude "$HOME/.bundle/*" \
      --exclude "*/backend/workdir/*" \
-     "${bak_mnt:-/mnt}"/'borgbackup-{hostname}::{now:%Y-%m-%d}' "$HOME"
+     "${bak_mnt:-/run/media/$USER/borgbackup}"/'borgbackup-{hostname}::{now:%Y-%m-%d}' "$HOME"
