@@ -14,7 +14,7 @@ report.in.filter      = status:pending limit:page (+in)
 report.in.labels      = ID,Description
 
 # GTD:next report
-report.next.filter = status:pending -someday limit:page (+DUE or due.none: )
+report.next.filter = status:pending -someday limit:page
 
 # GTD:someday report
 report.someday.columns     = id,tags,description
