@@ -9,7 +9,7 @@ Config {
     commands = [
         Run MultiCpu ["-L","30","-H","70","-h","#FFB6B0","-n","#CEFFAC","-p","3","-t","Cpu%: <autototal>"] 10,
         Run CoreTemp ["-L","40","-H","60","-h","#FFB6B0","-t","Temp: <core0> <core1> <core2> <core3>"] 10,
-        Run Memory ["-t","Mem: <usedratio>%","-H","8192","-L","4096","-h","#FFB6B0","-l","#CEFFAC","-n","#FFFFCC","-p","3"] 10,
+        Run Memory ["-t","Mem: <usedratio>%","-H","85","-L","60","-h","#FFB6B0","-l","#CEFFAC","-n","#FFFFCC","-p","3"] 10,
         Run DynNetwork ["-H","1000000","-L","100000","-h","#FFB6B0","-n","#CEFFAC","-w","4"] 10,
         Run Date "%a %b %_d %Y %H:%M:%S" "date" 10,
         Run StdinReader,
