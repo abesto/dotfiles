@@ -14,7 +14,7 @@ function auto_v --on-variable PWD
                 return
             end
         end
-        set -l root (dirname "$root")
+        set root (dirname "$root")
     end
     if [ -n "$VIRTUAL_ENV" ]
         deactivate
